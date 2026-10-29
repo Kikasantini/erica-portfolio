@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "resume": "CV",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Bonjour, je m'appelle Erica.",
+    "introduction": "Je suis développeuse logiciel à Montréal, au Canada. Bienvenue dans mon portfolio."
+  }
+}

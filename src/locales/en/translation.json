@@ -1,0 +1,18 @@
+{
+    "navigation":{
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "resume": "Resume",
+        "contact": "Contact"
+    },
+    "home":{
+        "title": "Hi, I'm Erica.",
+        "introduction": "I'm a software developer based in Montreal, Canada. Welcome to my portfolio."
+    },
+    "about": {
+  "title": "About me",
+  "paragraph1": "I'm a software developer early in my career, with experience building and customizing full-stack applications for manufacturing systems.",
+  "paragraph2": "My recent work has involved Java, Spring Boot, Angular, TypeScript, PostgreSQL, and REST APIs. I also have a background in business administration, alongside my computer programming studies."
+}
+}

@@ -1,10 +1,12 @@
-import { siteContent } from "../data/siteContent";
+import { useTranslation } from "react-i18next";
 
 export default function Home(){
+    const { t } = useTranslation();
+
     return(
         <main>
-            <h1>{siteContent.home.title}</h1>
-            <p>{siteContent.home.introduction}</p>
+            <h1>{t("home.title")}</h1>
+            <p>{t("home.introduction")}</p>
         </main>
     );
 }
