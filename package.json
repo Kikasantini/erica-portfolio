@@ -36,11 +36,10 @@
     "vite": "^8.3.5"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "**/*.{ts,tsx}": [
       "prettier --write",
       "eslint --fix"
     ],
-    "*.js": "prettier --write",
-    "package.json": "prettier --write"
+    "**/*.{js,jsx,json,css,html,yml,yaml}": "prettier --write"
   }
 }
