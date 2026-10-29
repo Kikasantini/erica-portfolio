@@ -16,11 +16,11 @@ export default defineConfig([
       reactRefresh.configs.vite,
     ],
     rules: {
-  "@typescript-eslint/no-unused-vars": [
-    "error",
-    { enableAutofixRemoval: { imports: true } },
-  ],
-},
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { enableAutofixRemoval: { imports: true } },
+      ],
+    },
     languageOptions: {
       globals: globals.browser,
     },
