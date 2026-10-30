@@ -4,7 +4,13 @@
     "home": "Início",
     "journey": "Meu percurso",
     "projects": "Projetos",
-    "languageLabel": "Trocar idioma"
+    "languageLabel": "Trocar idioma",
+    "changeTo": "Mudar para {{language}}",
+    "languageNames": {
+      "en": "inglês",
+      "fr": "francês",
+      "pt": "português"
+    }
   },
   "colorEditor": {
     "title": "Personalizar cores do site",
@@ -13,14 +19,15 @@
     "description": "As alterações aparecem na hora e ficam salvas neste dispositivo.",
     "reset": "Restaurar esta paleta",
     "groups": {
-      "surfaces": "Fundos e superfícies",
+      "page": "Página",
       "text": "Textos",
-      "accents": "Destaques",
-      "borders": "Bordas e interações"
+      "headerNavigation": "Cabeçalho e navegação",
+      "buttons": "Botões",
+      "technologyTags": "Etiquetas de tecnologias",
+      "timeline": "Linha do tempo"
     },
     "fields": {
       "pageBackground": "Fundo da página",
-      "technologyTagsBackground": "Fundo das etiquetas de tecnologias",
       "mainText": "Texto principal",
       "paragraphText": "Texto dos parágrafos",
       "metaText": "Detalhes e datas",
@@ -28,15 +35,20 @@
       "headings": "Títulos das páginas",
       "sectionTitles": "Títulos das seções",
       "logo": "Logo",
-      "timelineMarkers": "Marcadores da linha do tempo",
       "headerDivider": "Divisor do cabeçalho",
       "navigationHover": "Realce ao passar na navegação",
-      "languageSelectorBorder": "Borda do seletor de idioma",
-      "outlineButtonsBorder": "Borda dos botões",
-      "timelineLine": "Linha do tempo",
-      "technologyTagsBorder": "Borda das etiquetas de tecnologias",
-      "textOnAccent": "Texto sobre fundo de destaque",
-      "controlText": "Texto dos controles e das etiquetas"
+      "navigationActiveBackground": "Fundo da aba selecionada",
+      "languageSelectorBorder": "Borda do menu de idiomas",
+      "buttonBackground": "Fundo dos botões",
+      "buttonText": "Texto dos botões",
+      "outlineButtonsBorder": "Contorno dos botões",
+      "buttonHoverBackground": "Fundo dos botões ao passar o mouse",
+      "textOnAccent": "Texto dos botões ao passar o mouse",
+      "technologyTagsBackground": "Fundo das etiquetas",
+      "technologyTagsBorder": "Contorno das etiquetas",
+      "technologyTagsText": "Texto das etiquetas",
+      "timelineMarkers": "Marcadores da linha do tempo",
+      "timelineLine": "Linha do tempo"
     },
     "pickerLabel": "Escolher cor de {color}",
     "hexLabel": "Valor hexadecimal de {color}",
@@ -51,5 +63,6 @@
       "mauveStone": "Malva e pedra",
       "blueFog": "Névoa azul"
     }
-  }
+  },
+  "brandName": "Érica Santini"
 }

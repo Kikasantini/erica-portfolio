@@ -4,7 +4,13 @@
     "home": "Home",
     "journey": "My Journey",
     "projects": "Projects",
-    "languageLabel": "Change language"
+    "languageLabel": "Change language",
+    "changeTo": "Switch to {{language}}",
+    "languageNames": {
+      "en": "English",
+      "fr": "French",
+      "pt": "Portuguese"
+    }
   },
   "colorEditor": {
     "title": "Customize site colors",
@@ -13,14 +19,15 @@
     "description": "Changes preview immediately and are saved on this device.",
     "reset": "Reset this palette",
     "groups": {
-      "surfaces": "Backgrounds and surfaces",
+      "page": "Page",
       "text": "Text",
-      "accents": "Accents",
-      "borders": "Borders and interactions"
+      "headerNavigation": "Header and navigation",
+      "buttons": "Buttons",
+      "technologyTags": "Technology tags",
+      "timeline": "Timeline"
     },
     "fields": {
       "pageBackground": "Page background",
-      "technologyTagsBackground": "Technology tag background",
       "mainText": "Main text",
       "paragraphText": "Paragraph text",
       "metaText": "Details and dates",
@@ -28,15 +35,20 @@
       "headings": "Page titles",
       "sectionTitles": "Section headings",
       "logo": "Logo",
-      "timelineMarkers": "Timeline markers",
       "headerDivider": "Header divider",
       "navigationHover": "Navigation hover",
-      "languageSelectorBorder": "Language selector border",
-      "outlineButtonsBorder": "Outlined button border",
-      "timelineLine": "Timeline line",
-      "technologyTagsBorder": "Technology tag border",
-      "textOnAccent": "Text on accent background",
-      "controlText": "Controls and technology labels"
+      "navigationActiveBackground": "Selected navigation background",
+      "languageSelectorBorder": "Language menu border",
+      "buttonBackground": "Button background",
+      "buttonText": "Button text",
+      "outlineButtonsBorder": "Button border",
+      "buttonHoverBackground": "Button hover background",
+      "textOnAccent": "Button hover text",
+      "technologyTagsBackground": "Tag background",
+      "technologyTagsBorder": "Tag border",
+      "technologyTagsText": "Tag text",
+      "timelineMarkers": "Timeline markers",
+      "timelineLine": "Timeline line"
     },
     "pickerLabel": "Choose {color} color",
     "hexLabel": "Hex value for {color}",
@@ -51,5 +63,6 @@
       "mauveStone": "Mauve & Stone",
       "blueFog": "Blue Fog"
     }
-  }
+  },
+  "brandName": "Erica Santini"
 }

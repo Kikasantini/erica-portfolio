@@ -77,8 +77,9 @@ export default function Home() {
         <AnimatedTitleLayer text={title} variant="original" />
         <AnimatedTitleLayer text={nicknameTitle} variant="nickname" />
       </h1>
-      <p className="home-ai-note">{t('aiIntro')}</p>
-      <p className="home-intro">{t('personalIntro')}</p>
+      <p className="home-intro">
+        {t('aiIntro')} {t('personalIntro')}
+      </p>
 
       <nav className="home-contact" aria-label={t('contactTitle')}>
         {contactLinks.map((link) => {
@@ -91,8 +92,21 @@ export default function Home() {
               href={link.url}
               target={isExternal ? '_blank' : undefined}
               rel={isExternal ? 'noreferrer' : undefined}
+              aria-label={link.label}
             >
-              {link.label}
+              <svg className="home-contact__icon" aria-hidden="true" viewBox="0 0 24 24">
+                {link.id === 'linkedin' ? (
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.026-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.456v6.285ZM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124ZM3.56 20.452h3.554V9H3.56v11.452Z" />
+                ) : link.id === 'github' ? (
+                  <path fillRule="evenodd" d="M12 .75a11.25 11.25 0 0 0-3.558 21.924c.563.104.77-.244.77-.542 0-.268-.01-.976-.015-1.916-3.13.68-3.79-1.508-3.79-1.508-.512-1.3-1.25-1.647-1.25-1.647-1.022-.698.077-.684.077-.684 1.13.08 1.724 1.16 1.724 1.16 1.004 1.72 2.635 1.223 3.278.935.102-.726.393-1.223.715-1.504-2.498-.284-5.126-1.25-5.126-5.565 0-1.23.44-2.235 1.16-3.023-.116-.285-.503-1.43.11-2.98 0 0 .945-.303 3.094 1.155a10.75 10.75 0 0 1 5.63 0c2.15-1.458 3.093-1.155 3.093-1.155.615 1.55.228 2.695.112 2.98.722.788 1.158 1.793 1.158 3.023 0 4.326-2.633 5.278-5.138 5.557.404.35.763 1.04.763 2.095 0 1.513-.014 2.735-.014 3.108 0 .3.203.65.772.54A11.25 11.25 0 0 0 12 .75Z" clipRule="evenodd" />
+                ) : (
+                  <>
+                    <path d="M3 5.5h18a1.5 1.5 0 0 1 1.5 1.5v10a1.5 1.5 0 0 1-1.5 1.5H3A1.5 1.5 0 0 1 1.5 17V7A1.5 1.5 0 0 1 3 5.5Z" fill="none" stroke="currentColor" strokeWidth="1.7" />
+                    <path d="m2.5 7 9.5 7 9.5-7" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                  </>
+                )}
+              </svg>
+              <span className="visually-hidden">{link.label}</span>
             </a>
           )
         })}

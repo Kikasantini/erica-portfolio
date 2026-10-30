@@ -4,7 +4,13 @@
     "home": "Accueil",
     "journey": "Mon parcours",
     "projects": "Projets",
-    "languageLabel": "Changer de langue"
+    "languageLabel": "Changer de langue",
+    "changeTo": "Passer en {{language}}",
+    "languageNames": {
+      "en": "anglais",
+      "fr": "français",
+      "pt": "portugais"
+    }
   },
   "colorEditor": {
     "title": "Personnaliser les couleurs du site",
@@ -13,14 +19,15 @@
     "description": "Les changements s’affichent immédiatement et sont enregistrés sur cet appareil.",
     "reset": "Rétablir cette palette",
     "groups": {
-      "surfaces": "Arrière-plans et surfaces",
+      "page": "Page",
       "text": "Texte",
-      "accents": "Accents",
-      "borders": "Bordures et interactions"
+      "headerNavigation": "En-tête et navigation",
+      "buttons": "Boutons",
+      "technologyTags": "Étiquettes de technologies",
+      "timeline": "Chronologie"
     },
     "fields": {
       "pageBackground": "Arrière-plan de la page",
-      "technologyTagsBackground": "Fond des étiquettes de technologies",
       "mainText": "Texte principal",
       "paragraphText": "Texte des paragraphes",
       "metaText": "Détails et dates",
@@ -28,15 +35,20 @@
       "headings": "Titres des pages",
       "sectionTitles": "Titres de section",
       "logo": "Logo",
-      "timelineMarkers": "Repères de la chronologie",
       "headerDivider": "Séparateur de l’en-tête",
       "navigationHover": "Survol de la navigation",
-      "languageSelectorBorder": "Bordure du sélecteur de langue",
+      "navigationActiveBackground": "Fond de la page sélectionnée",
+      "languageSelectorBorder": "Bordure du menu de langue",
+      "buttonBackground": "Fond des boutons",
+      "buttonText": "Texte des boutons",
       "outlineButtonsBorder": "Bordure des boutons",
-      "timelineLine": "Ligne de la chronologie",
-      "technologyTagsBorder": "Bordure des étiquettes de technologies",
-      "textOnAccent": "Texte sur fond accentué",
-      "controlText": "Texte des contrôles et des étiquettes"
+      "buttonHoverBackground": "Fond des boutons au survol",
+      "textOnAccent": "Texte des boutons au survol",
+      "technologyTagsBackground": "Fond des étiquettes",
+      "technologyTagsBorder": "Bordure des étiquettes",
+      "technologyTagsText": "Texte des étiquettes",
+      "timelineMarkers": "Repères de la chronologie",
+      "timelineLine": "Ligne de la chronologie"
     },
     "pickerLabel": "Choisir la couleur pour {color}",
     "hexLabel": "Valeur hexadécimale pour {color}",
@@ -51,5 +63,6 @@
       "mauveStone": "Mauve et pierre",
       "blueFog": "Brume bleue"
     }
-  }
+  },
+  "brandName": "Erica Santini"
 }

@@ -22,10 +22,14 @@ export default function Projects() {
           <article className="project-item" key={project.id}>
             <h2>{project.title}</h2>
             <p className="project-item__description">{project.description}</p>
-            <p className="project-item__technologies">
-              <span>{t('technologiesTitle')}: </span>
-              {project.technologies}
-            </p>
+            <div className="project-item__technologies">
+              <p>{t('technologiesTitle')}</p>
+              <ul className="technology-list">
+                {project.technologies.split('·').map((technology) => (
+                  <li key={technology.trim()}>{technology.trim()}</li>
+                ))}
+              </ul>
+            </div>
             <a
               className="outline-button project-link"
               href={project.githubUrl}

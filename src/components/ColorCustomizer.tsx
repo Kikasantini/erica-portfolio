@@ -11,7 +11,6 @@ const PALETTE_PRESETS = {
     "headings": "#576d73",
     "sectionTitles": "#687f6f",
     "logo": "#687f6f",
-    "controlText": "#53685a",
     "timelineMarkers": "#728b76",
     "headerDivider": "#dadfd8",
     "navigationHover": "#e7eae3",
@@ -20,7 +19,12 @@ const PALETTE_PRESETS = {
     "timelineLine": "#d8ded5",
     "technologyTagsBorder": "#dadbd2",
     "technologyTagsBackground": "#ebede6",
-    "textOnAccent": "#ffffff"
+    "textOnAccent": "#ffffff",
+    "buttonBackground": "#f3f1eb",
+    "buttonText": "#53685a",
+    "buttonHoverBackground": "#576d73",
+    "navigationActiveBackground": "#e7eae3",
+    "technologyTagsText": "#53685a"
   },
   inkTeal: {
     "pageBackground": "#f2f6f5",
@@ -31,7 +35,6 @@ const PALETTE_PRESETS = {
     "headings": "#16324f",
     "sectionTitles": "#257c83",
     "logo": "#257c83",
-    "controlText": "#1e6971",
     "timelineMarkers": "#257c83",
     "headerDivider": "#dbe4e3",
     "navigationHover": "#e2eeed",
@@ -40,7 +43,12 @@ const PALETTE_PRESETS = {
     "timelineLine": "#d0e0df",
     "technologyTagsBorder": "#ccdddd",
     "technologyTagsBackground": "#e8f1f0",
-    "textOnAccent": "#ffffff"
+    "textOnAccent": "#ffffff",
+    "buttonBackground": "#f2f6f5",
+    "buttonText": "#1e6971",
+    "buttonHoverBackground": "#16324f",
+    "navigationActiveBackground": "#e2eeed",
+    "technologyTagsText": "#1e6971"
   },
   mauveStone: {
     "pageBackground": "#f4f0f3",
@@ -51,7 +59,6 @@ const PALETTE_PRESETS = {
     "headings": "#6a536e",
     "sectionTitles": "#876f87",
     "logo": "#876f87",
-    "controlText": "#68576d",
     "timelineMarkers": "#907795",
     "headerDivider": "#e0d8e0",
     "navigationHover": "#eee8ee",
@@ -60,7 +67,12 @@ const PALETTE_PRESETS = {
     "timelineLine": "#e1d7e2",
     "technologyTagsBorder": "#e4dbe4",
     "technologyTagsBackground": "#f0eaf0",
-    "textOnAccent": "#ffffff"
+    "textOnAccent": "#ffffff",
+    "buttonBackground": "#f4f0f3",
+    "buttonText": "#68576d",
+    "buttonHoverBackground": "#6a536e",
+    "navigationActiveBackground": "#eee8ee",
+    "technologyTagsText": "#68576d"
   },
   blueFog: {
     "pageBackground": "#f0f4f7",
@@ -71,7 +83,6 @@ const PALETTE_PRESETS = {
     "headings": "#3d5d7a",
     "sectionTitles": "#627f99",
     "logo": "#627f99",
-    "controlText": "#50677d",
     "timelineMarkers": "#67849f",
     "headerDivider": "#d9e1e9",
     "navigationHover": "#e6ecf2",
@@ -80,7 +91,12 @@ const PALETTE_PRESETS = {
     "timelineLine": "#d5dfe8",
     "technologyTagsBorder": "#d4dee7",
     "technologyTagsBackground": "#e9eff4",
-    "textOnAccent": "#ffffff"
+    "textOnAccent": "#ffffff",
+    "buttonBackground": "#f0f4f7",
+    "buttonText": "#50677d",
+    "buttonHoverBackground": "#3d5d7a",
+    "navigationActiveBackground": "#e6ecf2",
+    "technologyTagsText": "#50677d"
   }
 } as const
 
@@ -110,7 +126,12 @@ const CSS_VARIABLES: Record<ColorKey, string> = {
   "headings": "--heading-color",
   "sectionTitles": "--section-title-color",
   "logo": "--logo-color",
-  "controlText": "--control-text-color",
+  "buttonBackground": "--button-background-color",
+  "buttonText": "--button-text-color",
+  "buttonHoverBackground": "--button-hover-background-color",
+  "textOnAccent": "--button-hover-text-color",
+  "navigationActiveBackground": "--navigation-active-background-color",
+  "technologyTagsText": "--technology-tag-text-color",
   "timelineMarkers": "--timeline-marker-color",
   "headerDivider": "--header-divider-color",
   "navigationHover": "--navigation-hover-color",
@@ -118,49 +139,28 @@ const CSS_VARIABLES: Record<ColorKey, string> = {
   "outlineButtonsBorder": "--outline-button-border-color",
   "timelineLine": "--timeline-line-color",
   "technologyTagsBorder": "--technology-tag-border-color",
-  "technologyTagsBackground": "--technology-tag-background-color",
-  "textOnAccent": "--text-on-accent-color"
+  "technologyTagsBackground": "--technology-tag-background-color"
 }
 
 const COLOR_GROUPS = [
+  { id: "page", keys: ["pageBackground"] },
   {
-    "id": "surfaces",
-    "keys": [
-      "pageBackground",
-      "technologyTagsBackground"
-    ]
+    id: "text",
+    keys: ["mainText", "paragraphText", "metaText", "brandName", "headings", "sectionTitles"]
   },
   {
-    "id": "text",
-    "keys": [
-      "mainText",
-      "paragraphText",
-      "metaText",
-      "brandName"
-    ]
+    id: "headerNavigation",
+    keys: ["logo", "headerDivider", "navigationHover", "navigationActiveBackground", "languageSelectorBorder"]
   },
   {
-    "id": "accents",
-    "keys": [
-      "headings",
-      "sectionTitles",
-      "logo",
-      "controlText",
-      "timelineMarkers",
-      "textOnAccent"
-    ]
+    id: "buttons",
+    keys: ["buttonBackground", "buttonText", "outlineButtonsBorder", "buttonHoverBackground", "textOnAccent"]
   },
   {
-    "id": "borders",
-    "keys": [
-      "headerDivider",
-      "navigationHover",
-      "languageSelectorBorder",
-      "outlineButtonsBorder",
-      "timelineLine",
-      "technologyTagsBorder"
-    ]
-  }
+    id: "technologyTags",
+    keys: ["technologyTagsBackground", "technologyTagsBorder", "technologyTagsText"]
+  },
+  { id: "timeline", keys: ["timelineMarkers", "timelineLine"] }
 ] as const
 
 const STORAGE_KEY = 'erica-portfolio-color-palette-v1'
@@ -183,7 +183,11 @@ function isPaletteId(value: unknown): value is PaletteId {
 function mergeSavedColors(target: ColorPalette, saved: unknown) {
   if (!saved || typeof saved !== 'object') return
 
-  const values = saved as Partial<ColorPalette>
+  const values = saved as Partial<ColorPalette> & { controlText?: unknown }
+  if (typeof values.controlText === 'string' && HEX_COLOR.test(values.controlText)) {
+    target.buttonText = values.controlText
+    target.technologyTagsText = values.controlText
+  }
   for (const key of Object.keys(DEFAULT_COLORS) as ColorKey[]) {
     const value = values[key]
     if (typeof value === 'string' && HEX_COLOR.test(value)) {
