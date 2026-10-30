@@ -13,30 +13,40 @@ export default function Home() {
   }) as ContactLink[]
 
   return (
-    <main>
+    <main className="home-page">
+      <p className="home-eyebrow">{t('roleLocation')}</p>
       <h1>{t('title')}</h1>
-      <p>{t('personalIntro')}</p>
-      <p>{t('professionalSummary')}</p>
+      <p className="home-intro">{t('personalIntro')}</p>
 
-      <section aria-labelledby="contact-title">
-        <h2 id="contact-title">{t('contactTitle')}</h2>
-        <ul>
-          {contactLinks.map((link) => {
-            const isExternal = link.id !== 'email'
+      <nav className="home-contact" aria-label={t('contactTitle')}>
+        {contactLinks.map((link) => {
+          const isExternal = link.id !== 'email'
 
-            return (
-              <li key={link.id}>
-                <a
-                  href={link.url}
-                  target={isExternal ? '_blank' : undefined}
-                  rel={isExternal ? 'noreferrer' : undefined}
-                >
-                  {link.label}
-                </a>
-              </li>
-            )
-          })}
-        </ul>
+          return (
+            <a
+              className="home-contact__link"
+              key={link.id}
+              href={link.url}
+              target={isExternal ? '_blank' : undefined}
+              rel={isExternal ? 'noreferrer' : undefined}
+            >
+              {link.label}
+            </a>
+          )
+        })}
+      </nav>
+
+      <section className="home-section" aria-labelledby="home-work-title">
+        <h2 id="home-work-title">{t('workTitle')}</h2>
+        <p>{t('professionalSummary')}</p>
+      </section>
+
+      <section
+        className="home-section home-section--personal"
+        aria-labelledby="home-interests-title"
+      >
+        <h2 id="home-interests-title">{t('interestsTitle')}</h2>
+        <p>{t('personalInterests')}</p>
       </section>
     </main>
   )
