@@ -11,7 +11,7 @@
     "open": "Couleurs",
     "close": "Fermer",
     "description": "Les changements s’affichent immédiatement et sont enregistrés sur cet appareil.",
-    "reset": "Rétablir les couleurs d’origine",
+    "reset": "Rétablir cette palette",
     "groups": {
       "surfaces": "Arrière-plans et surfaces",
       "text": "Texte",
@@ -39,6 +39,17 @@
       "controlText": "Texte des contrôles et des étiquettes"
     },
     "pickerLabel": "Choisir la couleur pour {color}",
-    "hexLabel": "Valeur hexadécimale pour {color}"
+    "hexLabel": "Valeur hexadécimale pour {color}",
+    "copy": "Copier les couleurs sélectionnées",
+    "copied": "Couleurs copiées",
+    "copyFailed": "Impossible de copier les couleurs",
+    "palettesTitle": "Choisir une palette",
+    "selectPalette": "Sélectionner la palette {palette}",
+    "palettes": {
+      "softSage": "Sauge douce",
+      "inkTeal": "Encre et bleu sarcelle",
+      "mauveStone": "Mauve et pierre",
+      "blueFog": "Brume bleue"
+    }
   }
 }

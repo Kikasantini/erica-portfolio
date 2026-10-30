@@ -11,7 +11,7 @@
     "open": "Cores",
     "close": "Fechar",
     "description": "As alterações aparecem na hora e ficam salvas neste dispositivo.",
-    "reset": "Restaurar cores originais",
+    "reset": "Restaurar esta paleta",
     "groups": {
       "surfaces": "Fundos e superfícies",
       "text": "Textos",
@@ -39,6 +39,17 @@
       "controlText": "Texto dos controles e das etiquetas"
     },
     "pickerLabel": "Escolher cor de {color}",
-    "hexLabel": "Valor hexadecimal de {color}"
+    "hexLabel": "Valor hexadecimal de {color}",
+    "copy": "Copiar cores selecionadas",
+    "copied": "Cores copiadas",
+    "copyFailed": "Não foi possível copiar as cores",
+    "palettesTitle": "Escolha uma paleta",
+    "selectPalette": "Selecionar a paleta {palette}",
+    "palettes": {
+      "softSage": "Sálvia suave",
+      "inkTeal": "Marinho e azul-petróleo",
+      "mauveStone": "Malva e pedra",
+      "blueFog": "Névoa azul"
+    }
   }
 }

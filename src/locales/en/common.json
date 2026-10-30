@@ -11,7 +11,7 @@
     "open": "Colors",
     "close": "Close",
     "description": "Changes preview immediately and are saved on this device.",
-    "reset": "Reset to original colors",
+    "reset": "Reset this palette",
     "groups": {
       "surfaces": "Backgrounds and surfaces",
       "text": "Text",
@@ -39,6 +39,17 @@
       "controlText": "Controls and technology labels"
     },
     "pickerLabel": "Choose {color} color",
-    "hexLabel": "Hex value for {color}"
+    "hexLabel": "Hex value for {color}",
+    "copy": "Copy selected colors",
+    "copied": "Colors copied",
+    "copyFailed": "Could not copy colors",
+    "palettesTitle": "Choose a palette",
+    "selectPalette": "Select the {palette} palette",
+    "palettes": {
+      "softSage": "Soft Sage",
+      "inkTeal": "Ink & Teal",
+      "mauveStone": "Mauve & Stone",
+      "blueFog": "Blue Fog"
+    }
   }
 }
