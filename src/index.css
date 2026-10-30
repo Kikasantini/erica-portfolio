@@ -177,27 +177,17 @@ p {
   margin-top: 43px;
 }
 
-.home-highlights {
+.home-interests {
+  display: flex;
   max-width: 760px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  flex-direction: column;
+  gap: 13px;
 }
 
-.home-highlights li {
-  display: grid;
-  grid-template-columns: minmax(210px, 0.9fr) minmax(0, 1.5fr);
-  gap: 8px 24px;
-  padding: 13px 0;
-  border-top: 1px solid #e7e0d4;
+.home-interests p {
   color: #4c4a44;
   font-size: 15px;
-  line-height: 1.6;
-}
-
-.home-highlights__label {
-  color: #657c68;
-  font-weight: 500;
+  line-height: 1.8;
 }
 
 @media (max-width: 620px) {
@@ -229,11 +219,6 @@ p {
 
   .home-section--personal {
     margin-top: 38px;
-  }
-
-  .home-highlights li {
-    grid-template-columns: 1fr;
-    gap: 2px;
   }
 }
 

@@ -8,8 +8,7 @@ type ContactLink = {
 
 type PersonalHighlight = {
   id: string
-  label: string
-  value: string
+  text: string
 }
 
 export default function Home() {
@@ -55,14 +54,11 @@ export default function Home() {
         aria-labelledby="home-interests-title"
       >
         <h2 id="home-interests-title">{t('interestsTitle')}</h2>
-        <ul className="home-highlights">
+        <div className="home-interests">
           {personalHighlights.map((highlight) => (
-            <li key={highlight.id}>
-              <span className="home-highlights__label">{highlight.label}</span>
-              <span>{highlight.value}</span>
-            </li>
+            <p key={highlight.id}>{highlight.text}</p>
           ))}
-        </ul>
+        </div>
       </section>
     </main>
   )

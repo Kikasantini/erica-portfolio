@@ -8,18 +8,15 @@
   "personalHighlights": [
     {
       "id": "conversationStarter",
-      "label": "Pour lancer la conversation",
-      "value": "Les chats (j'en ai deux)."
+      "text": "Besoin d'un sujet pour lancer la conversation? Les chats sont toujours un bon choix. Je vis avec deux chattes et je parle volontiers de leur personnalité, de leurs habitudes et de leurs dernières bêtises."
     },
     {
       "id": "oneWord",
-      "label": "Un mot pour me décrire",
-      "value": "Pragmatique."
+      "text": "Si je devais me décrire en un mot, je dirais que je suis pragmatique."
     },
     {
       "id": "gamer",
-      "label": "En dehors du travail",
-      "value": "Je suis joueuse de jeux vidéo."
+      "text": "Je suis une gameuse."
     }
   ],
   "contactTitle": "Liens de contact",

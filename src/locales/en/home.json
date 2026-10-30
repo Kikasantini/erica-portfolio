@@ -8,18 +8,15 @@
   "personalHighlights": [
     {
       "id": "conversationStarter",
-      "label": "Conversation starter",
-      "value": "Cats (I have two)."
+      "text": "Need a conversation starter? Cats are always a good one. I share my home with two, and I'm happy to talk about their personalities, habits, and latest antics."
     },
     {
       "id": "oneWord",
-      "label": "One word to describe me",
-      "value": "Practical."
+      "text": "If I had to describe myself in one word, I'd say practical."
     },
     {
       "id": "gamer",
-      "label": "Outside work",
-      "value": "I'm a gamer."
+      "text": "I'm a gamer."
     }
   ],
   "contactTitle": "Contact links",
