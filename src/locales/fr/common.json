@@ -3,6 +3,7 @@
     "accessibilityLabel": "Navigation principale",
     "home": "Accueil",
     "journey": "Mon parcours",
-    "projects": "Projets"
+    "projects": "Projets",
+    "languageLabel": "Changer de langue"
   }
 }

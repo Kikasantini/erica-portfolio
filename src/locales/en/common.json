@@ -3,6 +3,7 @@
     "accessibilityLabel": "Main navigation",
     "home": "Home",
     "journey": "My Journey",
-    "projects": "Projects"
+    "projects": "Projects",
+    "languageLabel": "Change language"
   }
 }
