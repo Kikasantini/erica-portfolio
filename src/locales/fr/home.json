@@ -1,6 +1,7 @@
 {
   "title": "Bonjour, je m'appelle Erica.",
   "hoverTitle": "Kika, pour les intimes.",
+  "aiIntro": "Je suis une développeuse de logiciels bien humaine, qui apprend à travailler aux côtés d'un autocompléteur infatigable qui écrit du code plus vite que moi.",
   "roleLocation": "Développeuse de logiciels · Montréal, Canada",
   "personalIntro": "J'aime trouver des solutions pratiques, avoir des conversations profondes et parfois me laisser entraîner dans un sujet captivant au point d'en oublier l'heure.",
   "workTitle": "À propos de mon travail",
@@ -9,7 +10,7 @@
   "personalHighlights": [
     {
       "id": "conversationStarter",
-      "text": "Besoin d'un sujet pour lancer la conversation? Les chats sont toujours un bon choix. Je vis avec deux chattes et je parle volontiers de leur personnalité, de leurs habitudes et de leurs dernières bêtises."
+      "text": "Besoin d'un sujet pour lancer la conversation? Les chats sont toujours un bon choix."
     },
     {
       "id": "oneWord",
@@ -17,7 +18,7 @@
     },
     {
       "id": "gamer",
-      "text": "Je suis une gameuse."
+      "text": "Les jeux vidéo sont l'une de mes façons préférées de décrocher, et je suis toujours partante pour parler de ce à quoi je joue."
     }
   ],
   "contactTitle": "Liens de contact",

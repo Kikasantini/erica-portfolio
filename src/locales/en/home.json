@@ -1,6 +1,7 @@
 {
   "title": "Hi, I'm Erica.",
   "hoverTitle": "But you can call me Kika.",
+  "aiIntro": "I'm a human software developer learning to work alongside a tireless autocomplete that writes code faster than I do.",
   "roleLocation": "Software developer · Montreal, Canada",
   "personalIntro": "I enjoy finding practical solutions, having deep conversations, and occasionally getting lost in a good rabbit hole.",
   "workTitle": "About my work",
@@ -9,7 +10,7 @@
   "personalHighlights": [
     {
       "id": "conversationStarter",
-      "text": "Need a conversation starter? Cats are always a good one. I share my home with two, and I'm happy to talk about their personalities, habits, and latest antics."
+      "text": "Need a conversation starter? Cats are always a good one."
     },
     {
       "id": "oneWord",
@@ -17,7 +18,7 @@
     },
     {
       "id": "gamer",
-      "text": "I'm a gamer."
+      "text": "Games are one of my favorite ways to unwind—and I’m always up for a chat about what I’m playing."
     }
   ],
   "contactTitle": "Contact links",

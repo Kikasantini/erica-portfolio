@@ -37,7 +37,6 @@
         "REST APIs"
       ],
       "additionalTechnologies": [
-        "Hibernate/JPA (uso básico)",
         "JavaScript",
         "RxJS",
         "Reactive Forms",
@@ -53,23 +52,24 @@
         "CI/CD",
         "IntelliJ IDEA",
         "JUnit",
-        "Flyway (uso básico)",
         "Lombok",
         "Jackson",
         "Logback",
         "SLF4J",
-        "Bean Validation (@NotNull, noções básicas)",
         "DBeaver",
         "pgAdmin",
         "Chrome DevTools",
-        "XML (noções básicas)",
         "JSON",
         "YAML",
         "Confluence",
         "Microsoft Teams",
         "Notion",
         "JasperReports",
-        "OpenAI Codex"
+        "OpenAI Codex",
+        "Hibernate/JPA",
+        "Flyway",
+        "Bean Validation",
+        "XML"
       ]
     },
     {
@@ -90,14 +90,13 @@
         "Sage X3 4GL",
         "SQL",
         "Microsoft SQL Server",
-        "Crystal Reports"
-      ],
-      "additionalTechnologies": [
+        "Crystal Reports",
         "Eclipse",
         "SQL Server Management Studio",
-        "Postman (uso básico)",
-        "Microsoft Teams"
-      ]
+        "Microsoft Teams",
+        "Postman"
+      ],
+      "additionalTechnologies": []
     },
     {
       "id": "developerIntern",
@@ -111,11 +110,10 @@
       ],
       "coreTechnologies": [
         "Node.js",
-        "Sage X3 REST API"
-      ],
-      "additionalTechnologies": [
+        "Sage X3 REST API",
         "Microsoft Teams"
-      ]
+      ],
+      "additionalTechnologies": []
     },
     {
       "id": "producer",
@@ -130,14 +128,13 @@
       ],
       "coreTechnologies": [
         "C#",
-        "Unity"
-      ],
-      "additionalTechnologies": [
+        "Unity",
         "Trello",
         "Miro",
         "Discord",
         "Notion"
-      ]
+      ],
+      "additionalTechnologies": []
     },
     {
       "id": "projectManagementIntern",
@@ -149,13 +146,13 @@
         "Atuei como Scrum Master interina de uma pequena equipe de desenvolvimento de jogos mobile.",
         "Apoiei o planejamento de sprints, a organização de tarefas, a coordenação e comunicação da equipe, a resolução de problemas e as entregas, incluindo estimativas com Planning Poker."
       ],
-      "coreTechnologies": [],
-      "additionalTechnologies": [
+      "coreTechnologies": [
         "Trello",
         "Miro",
         "Discord",
         "Notion"
-      ]
+      ],
+      "additionalTechnologies": []
     }
   ],
   "education": [

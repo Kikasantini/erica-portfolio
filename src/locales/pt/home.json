@@ -1,6 +1,7 @@
 {
   "title": "Oi, eu sou Erica.",
   "hoverTitle": "Kika, para os íntimos.",
+  "aiIntro": "Sou uma desenvolvedora de software de carne e osso, aprendendo a trabalhar ao lado de um autocomplete incansável que escreve código mais rápido do que eu.",
   "roleLocation": "Desenvolvedora de software · Montreal, Canadá",
   "personalIntro": "Gosto de encontrar soluções práticas, ter conversas profundas e, de vez em quando, me deixar levar por um assunto interessante a ponto de perder a noção do tempo.",
   "workTitle": "Sobre meu trabalho",
@@ -9,7 +10,7 @@
   "personalHighlights": [
     {
       "id": "conversationStarter",
-      "text": "Quer um assunto para começar uma conversa? Gatos são sempre uma boa pedida. Tenho duas gatas e adoro falar sobre a personalidade delas, os hábitos e as últimas travessuras."
+      "text": "Quer um assunto para começar uma conversa? Gatos são sempre uma boa pedida."
     },
     {
       "id": "oneWord",
@@ -17,7 +18,7 @@
     },
     {
       "id": "gamer",
-      "text": "Sou gamer."
+      "text": "Jogar é uma das minhas formas favoritas de relaxar, e adoro conversar sobre o que estou jogando."
     }
   ],
   "contactTitle": "Links de contato",

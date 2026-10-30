@@ -52,7 +52,7 @@ p {
 
 .site-brand {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 10px;
   color: #51465e;
   font-size: 15px;
@@ -205,6 +205,14 @@ p {
 .home-title--hovered .home-title__layer--nickname .home-title__letter {
   opacity: 1;
   transform: rotateY(0deg);
+}
+
+.home-ai-note {
+  max-width: 660px;
+  margin-bottom: 12px;
+  color: #4c4a44;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .home-intro {

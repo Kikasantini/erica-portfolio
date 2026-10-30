@@ -53,7 +53,7 @@ export default function Home() {
   const { t } = useTranslation('home')
   const [isHovered, setIsHovered] = useState(false)
   const title = t('title')
-  const nicknameTitle = t('nicknameTitle')
+  const nicknameTitle = t('hoverTitle')
   const contactLinks = t('contactLinks', {
     returnObjects: true,
   }) as ContactLink[]
@@ -77,6 +77,7 @@ export default function Home() {
         <AnimatedTitleLayer text={title} variant="original" />
         <AnimatedTitleLayer text={nicknameTitle} variant="nickname" />
       </h1>
+      <p className="home-ai-note">{t('aiIntro')}</p>
       <p className="home-intro">{t('personalIntro')}</p>
 
       <nav className="home-contact" aria-label={t('contactTitle')}>

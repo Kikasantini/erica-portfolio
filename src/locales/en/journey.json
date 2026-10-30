@@ -37,7 +37,6 @@
         "REST APIs"
       ],
       "additionalTechnologies": [
-        "Hibernate/JPA (basic exposure)",
         "JavaScript",
         "RxJS",
         "Reactive Forms",
@@ -53,23 +52,24 @@
         "CI/CD",
         "IntelliJ IDEA",
         "JUnit",
-        "Flyway (basic)",
         "Lombok",
         "Jackson",
         "Logback",
         "SLF4J",
-        "Bean Validation (@NotNull, basic)",
+        "Bean Validation",
         "DBeaver",
         "pgAdmin",
         "Chrome DevTools",
-        "XML (basic)",
         "JSON",
         "YAML",
         "Confluence",
         "Microsoft Teams",
         "Notion",
         "JasperReports",
-        "OpenAI Codex"
+        "OpenAI Codex",
+        "Hibernate/JPA",
+        "Flyway",
+        "XML"
       ]
     },
     {
@@ -90,14 +90,13 @@
         "Sage X3 4GL",
         "SQL",
         "Microsoft SQL Server",
-        "Crystal Reports"
-      ],
-      "additionalTechnologies": [
+        "Crystal Reports",
         "Eclipse",
         "SQL Server Management Studio",
-        "Postman (basic)",
-        "Microsoft Teams"
-      ]
+        "Microsoft Teams",
+        "Postman"
+      ],
+      "additionalTechnologies": []
     },
     {
       "id": "developerIntern",
@@ -111,11 +110,10 @@
       ],
       "coreTechnologies": [
         "Node.js",
-        "Sage X3 REST API"
-      ],
-      "additionalTechnologies": [
+        "Sage X3 REST API",
         "Microsoft Teams"
-      ]
+      ],
+      "additionalTechnologies": []
     },
     {
       "id": "producer",
@@ -130,14 +128,13 @@
       ],
       "coreTechnologies": [
         "C#",
-        "Unity"
-      ],
-      "additionalTechnologies": [
+        "Unity",
         "Trello",
         "Miro",
         "Discord",
         "Notion"
-      ]
+      ],
+      "additionalTechnologies": []
     },
     {
       "id": "projectManagementIntern",
@@ -149,13 +146,13 @@
         "Served as acting Scrum Master for a small mobile game development team.",
         "Supported sprint planning, task organization, team coordination, communication, problem solving, and delivery, including estimation using Planning Poker."
       ],
-      "coreTechnologies": [],
-      "additionalTechnologies": [
+      "coreTechnologies": [
         "Trello",
         "Miro",
         "Discord",
         "Notion"
-      ]
+      ],
+      "additionalTechnologies": []
     }
   ],
   "education": [
