@@ -1,6 +1,7 @@
 {
-  "roleLocation": "Développeuse de logiciels · Montréal, Canada",
   "title": "Bonjour, je m'appelle Erica.",
+  "hoverTitle": "Kika, pour les intimes.",
+  "roleLocation": "Développeuse de logiciels · Montréal, Canada",
   "personalIntro": "J'aime trouver des solutions pratiques, avoir des conversations profondes et parfois me laisser entraîner dans un sujet captivant au point d'en oublier l'heure.",
   "workTitle": "À propos de mon travail",
   "professionalSummary": "Je suis développeuse logicielle en début de carrière et j'ai de l'expérience dans le développement et l'adaptation d'applications full-stack pour des systèmes de fabrication. Mon expérience récente comprend Java, Spring Boot, Angular, TypeScript, PostgreSQL et les API REST.",

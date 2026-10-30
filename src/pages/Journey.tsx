@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 
 type ExperienceItem = {
@@ -19,6 +19,42 @@ type EducationItem = {
   location: string
   period: string
   details: string[]
+}
+
+function CollapsibleJourneySection({
+  id,
+  title,
+  children,
+}: {
+  id: string
+  title: string
+  children: ReactNode
+}) {
+  const [isExpanded, setIsExpanded] = useState(true)
+  const contentId = 'journey-section-' + id
+
+  return (
+    <section className="journey-section">
+      <h2>
+        <button
+          className="journey-section__toggle"
+          type="button"
+          aria-expanded={isExpanded}
+          aria-controls={contentId}
+          onClick={() => setIsExpanded((expanded) => !expanded)}
+        >
+          <span>{title}</span>
+          <span
+            className={`journey-section__chevron${isExpanded ? ' is-expanded' : ''}`}
+            aria-hidden="true"
+          />
+        </button>
+      </h2>
+      <div id={contentId} hidden={!isExpanded}>
+        {children}
+      </div>
+    </section>
+  )
 }
 
 function ExperienceEntry({ item }: { item: ExperienceItem }) {
@@ -98,17 +134,18 @@ export default function Journey() {
     <main className="journey-page">
       <h1>{t('title')}</h1>
 
-      <section className="journey-section">
-        <h2>{t('experienceTitle')}</h2>
+      <CollapsibleJourneySection
+        id="experience"
+        title={t('experienceTitle')}
+      >
         <div className="timeline">
           {experience.map((item) => (
             <ExperienceEntry item={item} key={item.id} />
           ))}
         </div>
-      </section>
+      </CollapsibleJourneySection>
 
-      <section className="journey-section">
-        <h2>{t('educationTitle')}</h2>
+      <CollapsibleJourneySection id="education" title={t('educationTitle')}>
         <div className="timeline">
           {education.map((item) => (
             <article className="timeline-item" key={item.id}>
@@ -125,7 +162,7 @@ export default function Journey() {
             </article>
           ))}
         </div>
-      </section>
+      </CollapsibleJourneySection>
     </main>
   )
 }

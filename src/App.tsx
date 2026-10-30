@@ -47,7 +47,8 @@ function LocalizedLayout() {
     <>
       <header className="site-header">
         <NavLink className="site-brand" to={'/' + activeLanguage} end>
-          Erica Santini
+          <img className="site-brand__logo" src="/erica-logo.png" alt="" />
+          <span>Erica Santini</span>
         </NavLink>
 
         <nav className="site-nav" aria-label={t('navigation.accessibilityLabel')}>

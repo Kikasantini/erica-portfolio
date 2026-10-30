@@ -1,3 +1,4 @@
+import { useState, type CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
 
 type ContactLink = {
@@ -11,8 +12,48 @@ type PersonalHighlight = {
   text: string
 }
 
+function AnimatedTitleLayer({
+  text,
+  variant,
+}: {
+  text: string
+  variant: 'original' | 'nickname'
+}) {
+  let letterIndex = 0
+
+  return (
+    <span
+      className={`home-title__layer home-title__layer--${variant}`}
+      aria-hidden="true"
+    >
+      {text.trim().split(/\s+/).map((word, wordIndex) => (
+        <span className="home-title__word" key={variant + '-word-' + wordIndex}>
+          {Array.from(word).map((character) => {
+            const currentIndex = letterIndex++
+
+            return (
+              <span
+                className="home-title__letter"
+                key={variant + '-letter-' + currentIndex}
+                style={
+                  { '--letter-index': currentIndex } as CSSProperties
+                }
+              >
+                {character}
+              </span>
+            )
+          })}
+        </span>
+      ))}
+    </span>
+  )
+}
+
 export default function Home() {
   const { t } = useTranslation('home')
+  const [isHovered, setIsHovered] = useState(false)
+  const title = t('title')
+  const nicknameTitle = t('nicknameTitle')
   const contactLinks = t('contactLinks', {
     returnObjects: true,
   }) as ContactLink[]
@@ -23,7 +64,19 @@ export default function Home() {
   return (
     <main className="home-page">
       <p className="home-eyebrow">{t('roleLocation')}</p>
-      <h1>{t('title')}</h1>
+      <h1
+        className={`home-title${isHovered ? ' home-title--hovered' : ''}`}
+        aria-label={title}
+        onPointerEnter={(event) => {
+          if (event.pointerType === 'mouse') setIsHovered(true)
+        }}
+        onPointerLeave={(event) => {
+          if (event.pointerType === 'mouse') setIsHovered(false)
+        }}
+      >
+        <AnimatedTitleLayer text={title} variant="original" />
+        <AnimatedTitleLayer text={nicknameTitle} variant="nickname" />
+      </h1>
       <p className="home-intro">{t('personalIntro')}</p>
 
       <nav className="home-contact" aria-label={t('contactTitle')}>
