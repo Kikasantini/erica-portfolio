@@ -7,6 +7,8 @@ type ExperienceItem = {
   location: string
   period: string
   details: string[]
+  coreTechnologies: string[]
+  additionalTechnologies: string[]
 }
 
 type EducationItem = {
@@ -36,20 +38,52 @@ export default function Journey() {
       <section>
         <h2>{t('experienceTitle')}</h2>
 
-        {experience.map((item) => (
-          <article key={item.id}>
-            <h3>{item.role}</h3>
-            <p>
-              {item.company} · {item.location}
-            </p>
-            <p>{item.period}</p>
-            <ul>
-              {item.details.map((detail, index) => (
-                <li key={`${item.id}-detail-${index}`}>{detail}</li>
-              ))}
-            </ul>
-          </article>
-        ))}
+        {experience.map((item) => {
+          const coreTechnologies = item.coreTechnologies ?? []
+          const additionalTechnologies = item.additionalTechnologies ?? []
+
+          return (
+            <article key={item.id}>
+              <h3>{item.role}</h3>
+              <p>
+                {item.company} · {item.location}
+              </p>
+              <p>{item.period}</p>
+
+              <ul>
+                {item.details.map((detail, index) => (
+                  <li key={`${item.id}-detail-${index}`}>{detail}</li>
+                ))}
+              </ul>
+
+              {coreTechnologies.length > 0 && (
+                <div>
+                  <h4>{t('coreTechnologiesTitle')}</h4>
+                  <ul>
+                    {coreTechnologies.map((technology) => (
+                      <li key={`${item.id}-core-${technology}`}>
+                        {technology}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {additionalTechnologies.length > 0 && (
+                <div>
+                  <h4>{t('additionalTechnologiesTitle')}</h4>
+                  <ul>
+                    {additionalTechnologies.map((technology) => (
+                      <li key={`${item.id}-additional-${technology}`}>
+                        {technology}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </article>
+          )
+        })}
       </section>
 
       <section>

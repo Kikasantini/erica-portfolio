@@ -1,76 +1,156 @@
 {
-  "title": "Meu percurso",
+  "title": "Minha trajetória",
   "experienceTitle": "Experiência profissional",
-  "educationTitle": "Estudos",
+  "educationTitle": "Formação",
+  "coreTechnologiesTitle": "Tecnologias principais",
+  "additionalTechnologiesTitle": "Outras ferramentas e tecnologias",
+  "showAdditionalTechnologies": "Mostrar outras tecnologias",
+  "hideAdditionalTechnologies": "Ocultar outras tecnologias",
   "experience": [
     {
       "id": "fullStackDeveloper",
-      "role": "Desenvolvedora Full-Stack",
+      "role": "Desenvolvedora de Software Full Stack",
       "company": "4CAD Group Logiciels Inc.",
       "location": "Montréal, QC",
-      "period": "Fevereiro de 2024 – outubro de 2026",
+      "period": "Fevereiro de 2024 - outubro de 2026",
       "details": [
-        "Desenvolvi e adaptei funcionalidades de backend e fluxos em Angular para processos de fabricação e estoque em um sistema MES empresarial.",
-        "Criei fluxos de importação, exportação e integração com APIs. Implementei validação de CSV, tratamento de erros e rollback transacional para evitar importações incompletas, além de verificações para impedir o registro de consumo de materiais acima do estoque disponível.",
-        "Investiguei problemas em produção, testei correções, participei de revisões de código e apoiei releases com GitLab e Jenkins."
+        "Desenvolvi novas funcionalidades no backend e adaptei funcionalidades existentes à lógica de negócio e aos processos de fabricação de cada cliente.",
+        "Criei e modifiquei fluxos de trabalho e interfaces frontend para usuários de um sistema MES corporativo.",
+        "Criei fluxos de importação e exportação de dados, inclusive para ordens de produção, e integrações entre o Aquiweb, APIs e outros sistemas.",
+        "Gerei relatórios personalizados com JasperReports.",
+        "Trabalhei em processos de fabricação e estoque que envolviam registro da produção, consumo de materiais, uso do estoque, unidades de movimentação e comportamentos específicos de equipamentos.",
+        "Implementei validações de quantidades necessárias e estoque disponível, incluindo uma regra que impedia informar um consumo de materiais superior ao estoque disponível.",
+        "Adicionei validação de arquivos CSV e tratamento de erros aos fluxos de importação. O rollback transacional evitava a criação de registros parciais ou incompletos quando uma importação falhava.",
+        "Investiguei problemas em produção usando logs, consultas SQL e fluxos de trabalho dos usuários; reproduzi os problemas, rastreei suas causas, testei correções e apoiei as liberações.",
+        "Participei de testes unitários, funcionais e de regressão, revisões de código, documentação técnica e fluxos de CI/CD com GitLab e Jenkins, incluindo builds, integrações, deploys e validação em produção.",
+        "Participei do planejamento de sprints e de estimativas usando Planning Poker.",
+        "Colaborei com desenvolvedores, consultores funcionais, clientes e outras partes interessadas para esclarecer requisitos e entregar funcionalidades adequadas aos usuários e processos envolvidos.",
+        "Usei OpenAI Codex para entender a base de código, depurar problemas, apoiar testes e documentação e explorar soluções. Revisei e validei as sugestões antes de usá-las."
+      ],
+      "coreTechnologies": [
+        "Java 21",
+        "Spring Boot 3.4",
+        "Angular 18",
+        "TypeScript",
+        "PostgreSQL",
+        "SQL",
+        "REST APIs"
+      ],
+      "additionalTechnologies": [
+        "Hibernate/JPA (uso básico)",
+        "JavaScript",
+        "RxJS",
+        "Reactive Forms",
+        "Angular Routing",
+        "HTML",
+        "CSS",
+        "SCSS",
+        "Git",
+        "GitLab",
+        "Jenkins",
+        "Gradle",
+        "Yarn",
+        "CI/CD",
+        "IntelliJ IDEA",
+        "JUnit",
+        "Flyway (uso básico)",
+        "Lombok",
+        "Jackson",
+        "Logback",
+        "SLF4J",
+        "Bean Validation (@NotNull, noções básicas)",
+        "DBeaver",
+        "pgAdmin",
+        "Chrome DevTools",
+        "XML (noções básicas)",
+        "JSON",
+        "YAML",
+        "Confluence",
+        "Microsoft Teams",
+        "Notion",
+        "JasperReports",
+        "OpenAI Codex"
       ]
     },
     {
       "id": "sageConsultant",
-      "role": "Consultora de desenvolvimento de software",
+      "role": "Consultora de Desenvolvimento de Software",
       "company": "4CAD Group Logiciels Inc.",
       "location": "Montréal, QC",
-      "period": "Janeiro de 2023 – janeiro de 2024",
+      "period": "Janeiro de 2023 - janeiro de 2024",
       "details": [
-        "Personalizei e mantive funcionalidades do ERP Sage X3 usando Sage X3 4GL e SQL para atender aos fluxos de trabalho dos clientes.",
-        "Investiguei problemas na aplicação e no banco de dados, testei alterações e criei relatórios personalizados no Crystal Reports.",
-        "Trabalhei com clientes em francês e inglês para entender requisitos e validar soluções."
+        "Personalizei e mantive funcionalidades do ERP Sage X3 usando Sage X3 4GL e SQL, principalmente em um contexto de consultoria para clientes.",
+        "Adaptei comportamentos e funcionalidades existentes do ERP às necessidades e aos fluxos de trabalho dos clientes.",
+        "Investiguei problemas na aplicação e no banco de dados, reproduzi falhas, testei alterações e apoiei a resolução de problemas técnicos.",
+        "Trabalhei diretamente com clientes francófonos e anglófonos para esclarecer requisitos e validar soluções.",
+        "Criei e mantive relatórios personalizados no Crystal Reports, incluindo fórmulas, lógica condicional, parâmetros, formatação e sub-relatórios."
+      ],
+      "coreTechnologies": [
+        "Sage X3",
+        "Sage X3 4GL",
+        "SQL",
+        "Microsoft SQL Server",
+        "Crystal Reports"
+      ],
+      "additionalTechnologies": [
+        "Eclipse",
+        "SQL Server Management Studio",
+        "Postman (uso básico)",
+        "Microsoft Teams"
       ]
     },
     {
       "id": "developerIntern",
-      "role": "Estagiária de desenvolvimento",
+      "role": "Estagiária de Desenvolvimento",
       "company": "4CAD Group Logiciels Inc.",
       "location": "Montréal, QC",
-      "period": "Outubro de 2022 – dezembro de 2022",
+      "period": "Outubro de 2022 - dezembro de 2022",
       "details": [
-        "Criei um protótipo em Node.js com a API REST do Sage X3 para buscar dados de ordens de fabricação e exibi-los em uma interface web com calendário semanal.",
-        "O protótipo não foi implantado nem adotado em produção."
-      ]
+        "Criei um protótipo em Node.js integrado à API REST do Sage X3 para recuperar dados de ordens de produção e exibi-los em uma interface web com um calendário semanal.",
+        "O protótipo não foi implantado nem utilizado em produção."
+      ],
+      "coreTechnologies": ["Node.js", "Sage X3 REST API"],
+      "additionalTechnologies": ["Microsoft Teams"]
     },
     {
       "id": "producer",
       "role": "Produtora",
       "company": "Imgnation Studios",
       "location": "Santa Maria, Brasil",
-      "period": "Fevereiro de 2021 – dezembro de 2021",
+      "period": "Fevereiro de 2021 - dezembro de 2021",
       "details": [
         "Desenvolvi e depurei funcionalidades para jogos mobile usando C# e Unity.",
-        "Participei do planejamento de sprints, testes, QA, registro de bugs e entrega de versões."
-      ]
+        "Participei do desenvolvimento ágil, do planejamento e das estimativas de sprints com Planning Poker, dos testes, do controle de qualidade, do acompanhamento e da documentação de bugs e da entrega de versões.",
+        "Apoiei a implementação de funcionalidades e validei seu funcionamento antes das versões."
+      ],
+      "coreTechnologies": ["C#", "Unity"],
+      "additionalTechnologies": ["Trello", "Miro", "Discord", "Notion"]
     },
     {
       "id": "projectManagementIntern",
-      "role": "Estagiária de gestão de projetos",
+      "role": "Estagiária de Gestão de Projetos",
       "company": "Imgnation Studios",
       "location": "Santa Maria, Brasil",
-      "period": "Agosto de 2020 – janeiro de 2021",
+      "period": "Agosto de 2020 - janeiro de 2021",
       "details": [
-        "Atuei como Scrum Master interina em uma pequena equipe de desenvolvimento de jogos mobile.",
-        "Apoiei o planejamento de sprints, a organização de tarefas, a coordenação da equipe e as entregas."
-      ]
+        "Atuei como Scrum Master interina de uma pequena equipe de desenvolvimento de jogos mobile.",
+        "Apoiei o planejamento de sprints, a organização de tarefas, a coordenação e comunicação da equipe, a resolução de problemas e as entregas, incluindo estimativas com Planning Poker."
+      ],
+      "coreTechnologies": [],
+      "additionalTechnologies": ["Trello", "Miro", "Discord", "Notion"]
     }
   ],
   "education": [
     {
       "id": "dec",
-      "program": "DEC em Técnicas de Computação: Programação para Novas Mídias",
+      "program": "DEC em Técnicas de Computação: Programação de Novas Mídias",
       "institution": "Institut Grasset",
       "location": "Montréal, QC",
-      "period": "Agosto de 2021 – dezembro de 2022",
+      "period": "Agosto de 2021 - dezembro de 2022",
       "details": [
-        "Formada em primeiro lugar na turma, com média ponderada de 94%.",
-        "Estudei desenvolvimento web, JavaScript, Node.js, bancos de dados e programação orientada a objetos; fui tutora de programação orientada a objetos em C++ e tive aulas práticas com Arduino."
+        "Concluí o curso em primeiro lugar na turma, com média ponderada de 94%.",
+        "Estudei desenvolvimento web, JavaScript, Node.js, bancos de dados e programação orientada a objetos.",
+        "Fui tutora de programação orientada a objetos em C++ e concluí atividades práticas com Arduino, além de desenvolver pequenos projetos pessoais com Arduino."
       ]
     },
     {
@@ -78,21 +158,21 @@
       "program": "Bacharelado em Administração de Empresas",
       "institution": "Universidade Federal de Santa Maria (UFSM)",
       "location": "Santa Maria, Brasil",
-      "period": "Março de 2017 – janeiro de 2021",
+      "period": "Março de 2017 - janeiro de 2021",
       "details": [
-        "Recebi uma bolsa de pesquisa e participei de uma empresa júnior com foco em consultoria empresarial e planejamento estratégico.",
+        "Recebi uma bolsa de pesquisa e participei de uma Empresa Júnior focada em consultoria empresarial e planejamento estratégico.",
         "Fiz intercâmbio estudantil na Université du Québec à Montréal (UQAM)."
       ]
     },
     {
       "id": "computerScienceCoursework",
-      "program": "Disciplinas cursadas em Ciência da Computação",
+      "program": "Disciplinas de Ciência da Computação",
       "institution": "Universidade Federal de Santa Maria (UFSM)",
       "location": "Santa Maria, Brasil",
-      "period": "Março de 2013 – novembro de 2016",
+      "period": "Março de 2013 - novembro de 2016",
       "details": [
-        "Cursei disciplinas de estrutura de dados, algoritmos, C, C++, programação orientada a objetos e bancos de dados.",
-        "Fui tutora de programação em C, participei de uma competição ICPC e ajudei a oferecer oficinas introdutórias de lógica de programação para estudantes do ensino médio."
+        "Cursei disciplinas de estruturas de dados, algoritmos, C, C++, programação orientada a objetos e bancos de dados.",
+        "Fui tutora de programação em C, participei de uma competição ICPC e ajudei a ministrar oficinas introdutórias de lógica de programação para estudantes do ensino médio."
       ]
     }
   ]
