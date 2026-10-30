@@ -1,0 +1,99 @@
+{
+  "title": "Meu percurso",
+  "experienceTitle": "Experiência profissional",
+  "educationTitle": "Estudos",
+  "experience": [
+    {
+      "id": "fullStackDeveloper",
+      "role": "Desenvolvedora Full-Stack",
+      "company": "4CAD Group Logiciels Inc.",
+      "location": "Montréal, QC",
+      "period": "Fevereiro de 2024 – outubro de 2026",
+      "details": [
+        "Desenvolvi e adaptei funcionalidades de backend e fluxos em Angular para processos de fabricação e estoque em um sistema MES empresarial.",
+        "Criei fluxos de importação, exportação e integração com APIs. Implementei validação de CSV, tratamento de erros e rollback transacional para evitar importações incompletas, além de verificações para impedir o registro de consumo de materiais acima do estoque disponível.",
+        "Investiguei problemas em produção, testei correções, participei de revisões de código e apoiei releases com GitLab e Jenkins."
+      ]
+    },
+    {
+      "id": "sageConsultant",
+      "role": "Consultora de desenvolvimento de software",
+      "company": "4CAD Group Logiciels Inc.",
+      "location": "Montréal, QC",
+      "period": "Janeiro de 2023 – janeiro de 2024",
+      "details": [
+        "Personalizei e mantive funcionalidades do ERP Sage X3 usando Sage X3 4GL e SQL para atender aos fluxos de trabalho dos clientes.",
+        "Investiguei problemas na aplicação e no banco de dados, testei alterações e criei relatórios personalizados no Crystal Reports.",
+        "Trabalhei com clientes em francês e inglês para entender requisitos e validar soluções."
+      ]
+    },
+    {
+      "id": "developerIntern",
+      "role": "Estagiária de desenvolvimento",
+      "company": "4CAD Group Logiciels Inc.",
+      "location": "Montréal, QC",
+      "period": "Outubro de 2022 – dezembro de 2022",
+      "details": [
+        "Criei um protótipo em Node.js com a API REST do Sage X3 para buscar dados de ordens de fabricação e exibi-los em uma interface web com calendário semanal.",
+        "O protótipo não foi implantado nem adotado em produção."
+      ]
+    },
+    {
+      "id": "producer",
+      "role": "Produtora",
+      "company": "Imgnation Studios",
+      "location": "Santa Maria, Brasil",
+      "period": "Fevereiro de 2021 – dezembro de 2021",
+      "details": [
+        "Desenvolvi e depurei funcionalidades para jogos mobile usando C# e Unity.",
+        "Participei do planejamento de sprints, testes, QA, registro de bugs e entrega de versões."
+      ]
+    },
+    {
+      "id": "projectManagementIntern",
+      "role": "Estagiária de gestão de projetos",
+      "company": "Imgnation Studios",
+      "location": "Santa Maria, Brasil",
+      "period": "Agosto de 2020 – janeiro de 2021",
+      "details": [
+        "Atuei como Scrum Master interina em uma pequena equipe de desenvolvimento de jogos mobile.",
+        "Apoiei o planejamento de sprints, a organização de tarefas, a coordenação da equipe e as entregas."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "dec",
+      "program": "DEC em Técnicas de Computação: Programação para Novas Mídias",
+      "institution": "Institut Grasset",
+      "location": "Montréal, QC",
+      "period": "Agosto de 2021 – dezembro de 2022",
+      "details": [
+        "Formada em primeiro lugar na turma, com média ponderada de 94%.",
+        "Estudei desenvolvimento web, JavaScript, Node.js, bancos de dados e programação orientada a objetos; fui tutora de programação orientada a objetos em C++ e tive aulas práticas com Arduino."
+      ]
+    },
+    {
+      "id": "businessAdministration",
+      "program": "Bacharelado em Administração de Empresas",
+      "institution": "Universidade Federal de Santa Maria (UFSM)",
+      "location": "Santa Maria, Brasil",
+      "period": "Março de 2017 – janeiro de 2021",
+      "details": [
+        "Recebi uma bolsa de pesquisa e participei de uma empresa júnior com foco em consultoria empresarial e planejamento estratégico.",
+        "Fiz intercâmbio estudantil na Université du Québec à Montréal (UQAM)."
+      ]
+    },
+    {
+      "id": "computerScienceCoursework",
+      "program": "Disciplinas cursadas em Ciência da Computação",
+      "institution": "Universidade Federal de Santa Maria (UFSM)",
+      "location": "Santa Maria, Brasil",
+      "period": "Março de 2013 – novembro de 2016",
+      "details": [
+        "Cursei disciplinas de estrutura de dados, algoritmos, C, C++, programação orientada a objetos e bancos de dados.",
+        "Fui tutora de programação em C, participei de uma competição ICPC e ajudei a oferecer oficinas introdutórias de lógica de programação para estudantes do ensino médio."
+      ]
+    }
+  ]
+}

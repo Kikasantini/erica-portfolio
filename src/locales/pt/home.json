@@ -1,0 +1,23 @@
+{
+  "title": "Oi, eu sou a Kika",
+  "personalIntro": "Sou a Kika: desenvolvedora de software, gamer desde sempre e mãe de duas gatas, Wanda e Jett. Gosto de transformar ideias em coisas que as pessoas possam usar, explorar e jogar.",
+  "professionalSummary": "Estou no início da minha carreira em desenvolvimento de software e tenho experiência criando funcionalidades específicas para clientes de sistemas de manufatura. Já trabalhei com back-end em Java e Spring Boot, front-end em Angular e TypeScript, APIs, bancos de dados, testes e investigação de problemas em produção.",
+  "contactTitle": "Vamos conversar",
+  "contactLinks": [
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/erica-santini/"
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/Kikasantini"
+    },
+    {
+      "id": "email",
+      "label": "E-mail",
+      "url": "mailto:ericasantini92@hotmail.com"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Hi, I'm Kika",
+  "personalIntro": "I'm Kika: a software developer, lifelong gamer, and cat mom to Wanda and Jett. I like turning curious ideas into things people can use, explore, and play.",
+  "professionalSummary": "I'm early in my software development career, with experience building client-specific features for manufacturing software. I've worked across Java and Spring Boot back ends, Angular and TypeScript front ends, APIs, databases, testing, and production troubleshooting.",
+  "contactTitle": "Say hello",
+  "contactLinks": [
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/erica-santini/"
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/Kikasantini"
+    },
+    {
+      "id": "email",
+      "label": "Email",
+      "url": "mailto:ericasantini92@hotmail.com"
+    }
+  ]
+}

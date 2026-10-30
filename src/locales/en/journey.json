@@ -1,0 +1,99 @@
+{
+  "title": "My Journey",
+  "experienceTitle": "Professional Experience",
+  "educationTitle": "Education",
+  "experience": [
+    {
+      "id": "fullStackDeveloper",
+      "role": "Full-Stack Software Developer",
+      "company": "4CAD Group Logiciels Inc.",
+      "location": "Montréal, QC",
+      "period": "February 2024 – October 2026",
+      "details": [
+        "Developed and adapted backend features and Angular workflows for manufacturing and inventory processes in an enterprise MES.",
+        "Built data import, export, and API integration workflows. Added CSV validation, error handling, and transactional rollback to prevent incomplete imports, along with checks to prevent material consumption above available stock.",
+        "Investigated production issues, tested fixes, reviewed code, and supported releases with GitLab and Jenkins."
+      ]
+    },
+    {
+      "id": "sageConsultant",
+      "role": "Software Developer Consultant",
+      "company": "4CAD Group Logiciels Inc.",
+      "location": "Montréal, QC",
+      "period": "January 2023 – January 2024",
+      "details": [
+        "Customized and maintained Sage X3 ERP functionality using Sage X3 4GL and SQL to match client workflows.",
+        "Investigated application and database issues, tested changes, and created client-specific Crystal Reports.",
+        "Worked with English- and French-speaking clients to clarify requirements and validate solutions."
+      ]
+    },
+    {
+      "id": "developerIntern",
+      "role": "Developer Intern",
+      "company": "4CAD Group Logiciels Inc.",
+      "location": "Montréal, QC",
+      "period": "October 2022 – December 2022",
+      "details": [
+        "Built a Node.js prototype using the Sage X3 REST API to retrieve manufacturing order data and display it in a web interface with a weekly calendar.",
+        "The prototype was not deployed or adopted in production."
+      ]
+    },
+    {
+      "id": "producer",
+      "role": "Producer",
+      "company": "Imgnation Studios",
+      "location": "Santa Maria, Brazil",
+      "period": "February 2021 – December 2021",
+      "details": [
+        "Developed and debugged mobile game functionality using C# and Unity.",
+        "Participated in sprint planning, testing, QA, bug tracking, and release delivery."
+      ]
+    },
+    {
+      "id": "projectManagementIntern",
+      "role": "Project Management Intern",
+      "company": "Imgnation Studios",
+      "location": "Santa Maria, Brazil",
+      "period": "August 2020 – January 2021",
+      "details": [
+        "Served as acting Scrum Master for a small mobile game development team.",
+        "Supported sprint planning, task organization, team coordination, and delivery."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "dec",
+      "program": "DEC in Computer Techniques: New Media Programming",
+      "institution": "Institut Grasset",
+      "location": "Montréal, QC",
+      "period": "August 2021 – December 2022",
+      "details": [
+        "Graduated at the top of the class with a 94% weighted average.",
+        "Studied web development, JavaScript, Node.js, databases, and object-oriented programming; tutored C++ and completed hands-on Arduino coursework."
+      ]
+    },
+    {
+      "id": "businessAdministration",
+      "program": "Bachelor of Business Administration",
+      "institution": "Universidade Federal de Santa Maria (UFSM)",
+      "location": "Santa Maria, Brazil",
+      "period": "March 2017 – January 2021",
+      "details": [
+        "Received a research scholarship and participated in a Junior Enterprise focused on business consulting and strategic planning.",
+        "Completed a student exchange at Université du Québec à Montréal (UQAM)."
+      ]
+    },
+    {
+      "id": "computerScienceCoursework",
+      "program": "Computer Science Coursework",
+      "institution": "Universidade Federal de Santa Maria (UFSM)",
+      "location": "Santa Maria, Brazil",
+      "period": "March 2013 – November 2016",
+      "details": [
+        "Completed coursework in data structures, algorithms, C, C++, object-oriented programming, and databases.",
+        "Tutored C programming, participated in an ICPC programming contest, and helped deliver introductory programming workshops for high school students."
+      ]
+    }
+  ]
+}

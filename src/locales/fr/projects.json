@@ -1,0 +1,21 @@
+{
+  "title": "Projets",
+  "items": [
+    {
+      "id": "runnerRpg",
+      "title": "RunnerRPG",
+      "description": "Un prototype de jeu de rôle mobile créé avec Unity et C#. J’ai travaillé sur les mécaniques de jeu, les combats au tour par tour, la progression des personnages, l’équipement et l’interface. J’ai aussi créé des illustrations vectorielles pour l’interface.",
+      "technologies": "C# · Unity · Unity UI · ScriptableObjects",
+      "githubUrl": "https://github.com/Kikasantini/RunnerRPG",
+      "githubLabel": "Voir sur GitHub"
+    },
+    {
+      "id": "translationCompany",
+      "title": "Automatisation d’une entreprise de traduction",
+      "description": "Un projet Python qui automatise les tâches d’une entreprise de traduction fictive. Ses scripts calculent les coûts de traduction, ajoutent les informations de registre et les pages de signature aux fichiers traduits, puis enregistrent les revenus quotidiens.",
+      "technologies": "Python 3 · PyPDF2 · ReportLab · Crontab · Shell · Linux",
+      "githubUrl": "https://github.com/Kikasantini/scripting-translationCompany",
+      "githubLabel": "Voir sur GitHub"
+    }
+  ]
+}

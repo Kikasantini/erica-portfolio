@@ -1,0 +1,21 @@
+{
+  "title": "Projects",
+  "items": [
+    {
+      "id": "runnerRpg",
+      "title": "RunnerRPG",
+      "description": "A mobile RPG prototype built with Unity and C#.",
+      "technologies": "C# · Unity · ScriptableObjects",
+      "githubUrl": "https://github.com/Kikasantini/RunnerRPG",
+      "githubLabel": "View on GitHub"
+    },
+    {
+      "id": "translationCompany",
+      "title": "Translation Company Automation",
+      "description": "A Python project that automates tasks for a fictional translation company.",
+      "technologies": "Python 3 · PyPDF2 · ReportLab · Crontab",
+      "githubUrl": "https://github.com/Kikasantini/scripting-translationCompany",
+      "githubLabel": "View on GitHub"
+    }
+  ]
+}
