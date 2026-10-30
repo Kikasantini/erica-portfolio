@@ -95,7 +95,9 @@ p {
   border: 0;
 }
 
-.home-page {
+.home-page,
+.journey-page,
+.projects-page {
   max-width: 1000px;
   margin: 0 auto;
   padding: clamp(66px, 9vw, 104px) 30px 90px;
@@ -109,7 +111,9 @@ p {
   text-transform: uppercase;
 }
 
-.home-page h1 {
+.home-page h1,
+.journey-page h1,
+.projects-page h1 {
   margin: 18px 0 20px;
   color: #705d85;
   font-size: clamp(44px, 7vw, 72px);
@@ -132,13 +136,18 @@ p {
   margin-top: 27px;
 }
 
+.outline-button,
 .home-contact a {
-  display: inline-block;
-  padding: 10px 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 9px 15px;
   border: 1px solid #a99ab6;
   border-radius: 5px;
   color: #5f526e;
   background: transparent;
+  font: inherit;
   font-size: 13px;
   text-decoration: none;
   transition:
@@ -147,10 +156,17 @@ p {
     border-color 160ms ease;
 }
 
+.outline-button:hover,
 .home-contact a:hover {
   border-color: #705d85;
   color: #fff;
   background: #705d85;
+}
+
+.outline-button:focus-visible,
+.home-contact a:focus-visible {
+  outline: 2px solid #705d85;
+  outline-offset: 3px;
 }
 
 .home-section {
@@ -158,7 +174,8 @@ p {
   margin-top: 62px;
 }
 
-.home-section h2 {
+.home-section h2,
+.journey-section > h2 {
   margin: 0 0 15px;
   color: #657c68;
   font-size: 12px;
@@ -190,6 +207,163 @@ p {
   line-height: 1.8;
 }
 
+.journey-page h1,
+.projects-page h1 {
+  margin-bottom: 0;
+}
+
+.journey-section {
+  margin-top: 58px;
+}
+
+.journey-section > h2 {
+  margin-bottom: 26px;
+  font-size: 14px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-left: 5px;
+  padding-left: 27px;
+  border-left: 2px solid #d8cfe0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 42px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  position: absolute;
+  top: 5px;
+  left: -34px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #f7f3ea;
+  border-radius: 50%;
+  background: #796895;
+  content: '';
+}
+
+.timeline-item h3,
+.project-item h2 {
+  margin: 0 0 8px;
+  color: #51465e;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.timeline-item__meta,
+.timeline-item__period {
+  color: #55514a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.timeline-item__period {
+  margin-top: 4px;
+  color: #657c68;
+  font-weight: 500;
+}
+
+.journey-details {
+  display: grid;
+  gap: 8px;
+  margin: 15px 0 0;
+  padding-left: 20px;
+  color: #4c4a44;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.journey-details li::marker {
+  color: #796895;
+}
+
+.technology-group {
+  margin-top: 20px;
+}
+
+.technology-group h4 {
+  margin: 0 0 10px;
+  color: #657c68;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.technology-list li {
+  padding: 5px 9px;
+  border: 1px solid #ddd5c7;
+  border-radius: 4px;
+  color: #5f526e;
+  background: #f0ebe3;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.technology-group--additional {
+  margin-top: 17px;
+}
+
+.technology-group--additional > div:not([hidden]) {
+  margin-top: 16px;
+}
+
+.technology-toggle {
+  cursor: pointer;
+}
+
+.project-list {
+  display: grid;
+  gap: 46px;
+  max-width: 760px;
+  margin-top: 54px;
+}
+
+.project-item h2 {
+  margin-bottom: 12px;
+  color: #705d85;
+  font-size: 24px;
+}
+
+.project-item__description,
+.project-item__technologies {
+  color: #4c4a44;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.project-item__technologies {
+  margin-top: 14px;
+  color: #657c68;
+  font-size: 13px;
+}
+
+.project-item__technologies span {
+  font-weight: 600;
+}
+
+.project-link {
+  margin-top: 18px;
+}
+
 @media (max-width: 620px) {
   .site-header {
     flex-wrap: wrap;
@@ -209,7 +383,9 @@ p {
     margin-left: auto;
   }
 
-  .home-page {
+  .home-page,
+  .journey-page,
+  .projects-page {
     padding: 70px 23px 80px;
   }
 
@@ -220,9 +396,36 @@ p {
   .home-section--personal {
     margin-top: 38px;
   }
+
+  .journey-section {
+    margin-top: 46px;
+  }
+
+  .timeline {
+    margin-left: 4px;
+    padding-left: 22px;
+  }
+
+  .timeline-item::before {
+    left: -29px;
+  }
+
+  .timeline-item {
+    padding-bottom: 36px;
+  }
+
+  .journey-details {
+    font-size: 14px;
+  }
+
+  .project-list {
+    gap: 38px;
+    margin-top: 42px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .outline-button,
   .home-contact a {
     transition: none;
   }
