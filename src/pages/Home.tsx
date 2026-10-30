@@ -6,11 +6,20 @@ type ContactLink = {
   url: string
 }
 
+type PersonalHighlight = {
+  id: string
+  label: string
+  value: string
+}
+
 export default function Home() {
   const { t } = useTranslation('home')
   const contactLinks = t('contactLinks', {
     returnObjects: true,
   }) as ContactLink[]
+  const personalHighlights = t('personalHighlights', {
+    returnObjects: true,
+  }) as PersonalHighlight[]
 
   return (
     <main className="home-page">
@@ -46,7 +55,14 @@ export default function Home() {
         aria-labelledby="home-interests-title"
       >
         <h2 id="home-interests-title">{t('interestsTitle')}</h2>
-        <p>{t('personalInterests')}</p>
+        <ul className="home-highlights">
+          {personalHighlights.map((highlight) => (
+            <li key={highlight.id}>
+              <span className="home-highlights__label">{highlight.label}</span>
+              <span>{highlight.value}</span>
+            </li>
+          ))}
+        </ul>
       </section>
     </main>
   )

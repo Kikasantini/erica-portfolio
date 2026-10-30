@@ -5,7 +5,23 @@
   "workTitle": "Sobre meu trabalho",
   "professionalSummary": "Estou no início da minha carreira como desenvolvedora de software e tenho experiência no desenvolvimento e na customização de aplicações full-stack para sistemas de manufatura. Meu trabalho recente inclui Java, Spring Boot, Angular, TypeScript, PostgreSQL e APIs REST.",
   "interestsTitle": "Um pouco além do trabalho",
-  "personalInterests": "Quer um assunto para começar uma conversa? Gatos são sempre uma boa opção. Moro com duas gatas e adoro falar sobre a personalidade delas, seus hábitos e as últimas travessuras.",
+  "personalHighlights": [
+    {
+      "id": "conversationStarter",
+      "label": "Assunto para começar uma conversa",
+      "value": "Gatos (tenho duas gatas)."
+    },
+    {
+      "id": "oneWord",
+      "label": "Uma palavra que me define",
+      "value": "Prática."
+    },
+    {
+      "id": "gamer",
+      "label": "Fora do trabalho",
+      "value": "Sou gamer."
+    }
+  ],
   "contactTitle": "Links de contato",
   "contactLinks": [
     {

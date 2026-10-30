@@ -5,7 +5,23 @@
   "workTitle": "About my work",
   "professionalSummary": "I'm an early-career software developer with experience building and customizing full-stack applications for manufacturing systems. My recent work includes Java, Spring Boot, Angular, TypeScript, PostgreSQL, and REST APIs.",
   "interestsTitle": "A little beyond work",
-  "personalInterests": "Need a conversation starter? Cats are always a good one. I share my home with two, and I'm happy to talk about their personalities, habits, and latest antics.",
+  "personalHighlights": [
+    {
+      "id": "conversationStarter",
+      "label": "Conversation starter",
+      "value": "Cats (I have two)."
+    },
+    {
+      "id": "oneWord",
+      "label": "One word to describe me",
+      "value": "Practical."
+    },
+    {
+      "id": "gamer",
+      "label": "Outside work",
+      "value": "I'm a gamer."
+    }
+  ],
   "contactTitle": "Contact links",
   "contactLinks": [
     {
