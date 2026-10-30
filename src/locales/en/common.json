@@ -24,7 +24,9 @@
       "headerNavigation": "Header and navigation",
       "buttons": "Buttons",
       "technologyTags": "Technology tags",
-      "timeline": "Timeline"
+      "timeline": "Timeline",
+      "factCardsFront": "Cards — front",
+      "factCardsBack": "Cards — back"
     },
     "fields": {
       "pageBackground": "Page background",
@@ -48,7 +50,13 @@
       "technologyTagsBorder": "Tag border",
       "technologyTagsText": "Tag text",
       "timelineMarkers": "Timeline markers",
-      "timelineLine": "Timeline line"
+      "timelineLine": "Timeline line",
+      "factCardFrontBackground": "Front background",
+      "factCardFrontText": "Front text",
+      "factCardFrontBorder": "Front border",
+      "factCardBackBackground": "Back background",
+      "factCardBackText": "Back text",
+      "factCardBackBorder": "Back border"
     },
     "pickerLabel": "Choose {color} color",
     "hexLabel": "Hex value for {color}",

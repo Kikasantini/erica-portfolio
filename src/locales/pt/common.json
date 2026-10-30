@@ -24,7 +24,9 @@
       "headerNavigation": "Cabeçalho e navegação",
       "buttons": "Botões",
       "technologyTags": "Etiquetas de tecnologias",
-      "timeline": "Linha do tempo"
+      "timeline": "Linha do tempo",
+      "factCardsFront": "Frente dos cards",
+      "factCardsBack": "Verso dos cards"
     },
     "fields": {
       "pageBackground": "Fundo da página",
@@ -48,7 +50,13 @@
       "technologyTagsBorder": "Contorno das etiquetas",
       "technologyTagsText": "Texto das etiquetas",
       "timelineMarkers": "Marcadores da linha do tempo",
-      "timelineLine": "Linha do tempo"
+      "timelineLine": "Linha do tempo",
+      "factCardFrontBackground": "Fundo da frente",
+      "factCardFrontText": "Texto da frente",
+      "factCardFrontBorder": "Borda da frente",
+      "factCardBackBackground": "Fundo do verso",
+      "factCardBackText": "Texto do verso",
+      "factCardBackBorder": "Borda do verso"
     },
     "pickerLabel": "Escolher cor de {color}",
     "hexLabel": "Valor hexadecimal de {color}",

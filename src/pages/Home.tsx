@@ -9,7 +9,8 @@ type ContactLink = {
 
 type PersonalHighlight = {
   id: string
-  text: string
+  front: string
+  back: string
 }
 
 function AnimatedTitleLayer({
@@ -52,6 +53,7 @@ function AnimatedTitleLayer({
 export default function Home() {
   const { t } = useTranslation('home')
   const [isHovered, setIsHovered] = useState(false)
+  const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({})
   const title = t('title')
   const nicknameTitle = t('hoverTitle')
   const contactLinks = t('contactLinks', {
@@ -122,10 +124,35 @@ export default function Home() {
         aria-labelledby="home-interests-title"
       >
         <h2 id="home-interests-title">{t('interestsTitle')}</h2>
-        <div className="home-interests">
-          {personalHighlights.map((highlight) => (
-            <p key={highlight.id}>{highlight.text}</p>
-          ))}
+        <div className="home-fun-cards">
+          {personalHighlights.map((card) => {
+            const isFlipped = Boolean(flippedCards[card.id])
+
+            return (
+              <button
+                className={`home-fun-card${isFlipped ? ' is-flipped' : ''}`}
+                type="button"
+                key={card.id}
+                aria-label={isFlipped ? card.back : card.front}
+                aria-pressed={isFlipped}
+                onClick={() =>
+                  setFlippedCards((current) => ({
+                    ...current,
+                    [card.id]: !current[card.id],
+                  }))
+                }
+              >
+                <span className="home-fun-card__inner" aria-hidden="true">
+                  <span className="home-fun-card__face home-fun-card__face--front">
+                    {card.front}
+                  </span>
+                  <span className="home-fun-card__face home-fun-card__face--back">
+                    {card.back}
+                  </span>
+                </span>
+              </button>
+            )
+          })}
         </div>
       </section>
     </main>

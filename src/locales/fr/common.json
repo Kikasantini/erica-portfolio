@@ -24,7 +24,9 @@
       "headerNavigation": "En-tête et navigation",
       "buttons": "Boutons",
       "technologyTags": "Étiquettes de technologies",
-      "timeline": "Chronologie"
+      "timeline": "Chronologie",
+      "factCardsFront": "Cartes — recto",
+      "factCardsBack": "Cartes — verso"
     },
     "fields": {
       "pageBackground": "Arrière-plan de la page",
@@ -48,7 +50,13 @@
       "technologyTagsBorder": "Bordure des étiquettes",
       "technologyTagsText": "Texte des étiquettes",
       "timelineMarkers": "Repères de la chronologie",
-      "timelineLine": "Ligne de la chronologie"
+      "timelineLine": "Ligne de la chronologie",
+      "factCardFrontBackground": "Fond du recto",
+      "factCardFrontText": "Texte du recto",
+      "factCardFrontBorder": "Bordure du recto",
+      "factCardBackBackground": "Fond du verso",
+      "factCardBackText": "Texte du verso",
+      "factCardBackBorder": "Bordure du verso"
     },
     "pickerLabel": "Choisir la couleur pour {color}",
     "hexLabel": "Valeur hexadécimale pour {color}",

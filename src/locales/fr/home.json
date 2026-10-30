@@ -10,15 +10,18 @@
   "personalHighlights": [
     {
       "id": "conversationStarter",
-      "text": "Besoin d'un sujet pour lancer la conversation? Les chats sont toujours un bon choix."
+      "front": "Besoin d'un sujet pour lancer la conversation ?",
+      "back": "Les chats, c'est toujours un bon sujet."
     },
     {
       "id": "oneWord",
-      "text": "Si je devais me décrire en un mot, je dirais que je suis pragmatique."
+      "front": "Si je devais me décrire en un mot, je dirais...",
+      "back": "... pragmatique et méticuleuse — ça fait deux mots."
     },
     {
       "id": "gamer",
-      "text": "Les jeux vidéo sont l'une de mes façons préférées de décrocher, et je suis toujours partante pour parler de ce à quoi je joue."
+      "front": "Ma façon préférée de décrocher, c'est évidemment...",
+      "back": "... un puzzle, de la musique en fond, de bons petits plats et la bonne compagnie."
     }
   ],
   "contactTitle": "Liens de contact",

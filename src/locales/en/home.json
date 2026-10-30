@@ -10,15 +10,18 @@
   "personalHighlights": [
     {
       "id": "conversationStarter",
-      "text": "Need a conversation starter? Cats are always a good one."
+      "front": "Need a conversation starter?",
+      "back": "Cats are always a good one."
     },
     {
       "id": "oneWord",
-      "text": "If I had to describe myself in one word, I'd say practical."
+      "front": "If I had to describe myself in one word, I'd say...",
+      "back": "... practical and thorough — and that's two words."
     },
     {
       "id": "gamer",
-      "text": "Games are one of my favorite ways to unwind—and I’m always up for a chat about what I’m playing."
+      "front": "My favorite way to unwind is obviously...",
+      "back": "... a jigsaw puzzle, music in the background, good food & the right company."
     }
   ],
   "contactTitle": "Contact links",

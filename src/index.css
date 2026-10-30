@@ -24,6 +24,12 @@
   --timeline-line-color: var(--timeline-line-color);
   --technology-tag-border-color: var(--technology-tag-border-color);
   --technology-tag-background-color: var(--technology-tag-background-color);
+  --fact-card-front-background-color: var(--fact-card-front-background-color);
+  --fact-card-front-text-color: var(--fact-card-front-text-color);
+  --fact-card-front-border-color: var(--fact-card-front-border-color);
+  --fact-card-back-background-color: var(--fact-card-back-background-color);
+  --fact-card-back-text-color: var(--fact-card-back-text-color);
+  --fact-card-back-border-color: var(--fact-card-back-border-color);
   font-family: 'Roboto', Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -222,7 +228,7 @@ p {
 .projects-page {
   max-width: 1000px;
   margin: 0 auto;
-  padding: clamp(40px, 5vw, 64px) 30px 90px;
+  padding: clamp(28px, 3.5vw, 42px) 30px 90px;
 }
 
 .home-eyebrow {
@@ -377,17 +383,89 @@ p {
   margin-top: 43px;
 }
 
-.home-interests {
-  display: flex;
+.home-fun-cards {
+  display: grid;
   max-width: 760px;
-  flex-direction: column;
-  gap: 13px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  perspective: 1100px;
 }
 
-.home-interests p {
-  color: var(--paragraph-text);
+.home-fun-card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  min-height: 190px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  perspective: 1100px;
+}
+
+.home-fun-card:focus-visible {
+  outline: 2px solid var(--heading-color);
+  outline-offset: 4px;
+}
+
+.home-fun-card__inner {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  transform-style: preserve-3d;
+  transition: transform 600ms cubic-bezier(0.2, 0.72, 0.2, 1);
+}
+
+.home-fun-card.is-flipped .home-fun-card__inner {
+  transform: rotateY(180deg);
+}
+
+.home-fun-card__face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  border: 1px solid;
+  border-radius: 8px;
+  backface-visibility: hidden;
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.home-fun-card__face--front {
+  border-color: var(--fact-card-front-border-color);
+  color: var(--fact-card-front-text-color);
+  background: var(--fact-card-front-background-color);
+}
+
+.home-fun-card__face--back {
+  border-color: var(--fact-card-back-border-color);
+  color: var(--fact-card-back-text-color);
+  background: var(--fact-card-back-background-color);
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 760px) {
+  .home-fun-cards {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .home-fun-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .home-fun-card {
+    min-height: 140px;
+  }
 }
 
 .journey-page h1,
@@ -608,7 +686,7 @@ p {
   .home-page,
   .journey-page,
   .projects-page {
-    padding: 44px 23px 80px;
+    padding: 28px 23px 80px;
   }
 
   .home-section {
@@ -924,6 +1002,7 @@ p {
   .home-contact a,
   .language-control__toggle,
   .home-title__letter,
+  .home-fun-card__inner,
   .journey-section__chevron,
   .color-customizer__toggle,
   .color-customizer__close,

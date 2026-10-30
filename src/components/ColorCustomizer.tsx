@@ -24,7 +24,13 @@ const PALETTE_PRESETS = {
     "buttonText": "#53685a",
     "buttonHoverBackground": "#576d73",
     "navigationActiveBackground": "#e7eae3",
-    "technologyTagsText": "#53685a"
+    "technologyTagsText": "#53685a",
+    "factCardFrontBackground": "#ebede6",
+    "factCardFrontText": "#363a3b",
+    "factCardFrontBorder": "#cbd4ca",
+    "factCardBackBackground": "#e7eae3",
+    "factCardBackText": "#363a3b",
+    "factCardBackBorder": "#98a991"
   },
   inkTeal: {
     "pageBackground": "#f2f6f5",
@@ -48,7 +54,13 @@ const PALETTE_PRESETS = {
     "buttonText": "#1e6971",
     "buttonHoverBackground": "#16324f",
     "navigationActiveBackground": "#e2eeed",
-    "technologyTagsText": "#1e6971"
+    "technologyTagsText": "#1e6971",
+    "factCardFrontBackground": "#e8f1f0",
+    "factCardFrontText": "#24343a",
+    "factCardFrontBorder": "#c5d6d6",
+    "factCardBackBackground": "#e2eeed",
+    "factCardBackText": "#24343a",
+    "factCardBackBorder": "#6e9fa1"
   },
   mauveStone: {
     "pageBackground": "#f4f0f3",
@@ -72,7 +84,13 @@ const PALETTE_PRESETS = {
     "buttonText": "#68576d",
     "buttonHoverBackground": "#6a536e",
     "navigationActiveBackground": "#eee8ee",
-    "technologyTagsText": "#68576d"
+    "technologyTagsText": "#68576d",
+    "factCardFrontBackground": "#f0eaf0",
+    "factCardFrontText": "#3b353d",
+    "factCardFrontBorder": "#d8cad7",
+    "factCardBackBackground": "#eee8ee",
+    "factCardBackText": "#3b353d",
+    "factCardBackBorder": "#b49eb3"
   },
   blueFog: {
     "pageBackground": "#f0f4f7",
@@ -96,7 +114,13 @@ const PALETTE_PRESETS = {
     "buttonText": "#50677d",
     "buttonHoverBackground": "#3d5d7a",
     "navigationActiveBackground": "#e6ecf2",
-    "technologyTagsText": "#50677d"
+    "technologyTagsText": "#50677d",
+    "factCardFrontBackground": "#e9eff4",
+    "factCardFrontText": "#303b47",
+    "factCardFrontBorder": "#c9d5e0",
+    "factCardBackBackground": "#e6ecf2",
+    "factCardBackText": "#303b47",
+    "factCardBackBorder": "#9cafc0"
   }
 } as const
 
@@ -139,7 +163,13 @@ const CSS_VARIABLES: Record<ColorKey, string> = {
   "outlineButtonsBorder": "--outline-button-border-color",
   "timelineLine": "--timeline-line-color",
   "technologyTagsBorder": "--technology-tag-border-color",
-  "technologyTagsBackground": "--technology-tag-background-color"
+  "technologyTagsBackground": "--technology-tag-background-color",
+  "factCardFrontBackground": "--fact-card-front-background-color",
+  "factCardFrontText": "--fact-card-front-text-color",
+  "factCardFrontBorder": "--fact-card-front-border-color",
+  "factCardBackBackground": "--fact-card-back-background-color",
+  "factCardBackText": "--fact-card-back-text-color",
+  "factCardBackBorder": "--fact-card-back-border-color"
 }
 
 const COLOR_GROUPS = [
@@ -160,6 +190,8 @@ const COLOR_GROUPS = [
     id: "technologyTags",
     keys: ["technologyTagsBackground", "technologyTagsBorder", "technologyTagsText"]
   },
+  { id: "factCardsFront", keys: ["factCardFrontBackground", "factCardFrontText", "factCardFrontBorder"] },
+  { id: "factCardsBack", keys: ["factCardBackBackground", "factCardBackText", "factCardBackBorder"] },
   { id: "timeline", keys: ["timelineMarkers", "timelineLine"] }
 ] as const
 
