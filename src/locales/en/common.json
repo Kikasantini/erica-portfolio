@@ -5,5 +5,40 @@
     "journey": "My Journey",
     "projects": "Projects",
     "languageLabel": "Change language"
+  },
+  "colorEditor": {
+    "title": "Customize site colors",
+    "open": "Colors",
+    "close": "Close",
+    "description": "Changes preview immediately and are saved on this device.",
+    "reset": "Reset to original colors",
+    "groups": {
+      "surfaces": "Backgrounds and surfaces",
+      "text": "Text",
+      "accents": "Accents",
+      "borders": "Borders and interactions"
+    },
+    "fields": {
+      "pageBackground": "Page background",
+      "technologyTagsBackground": "Technology tag background",
+      "mainText": "Main text",
+      "paragraphText": "Paragraph text",
+      "metaText": "Details and dates",
+      "brandName": "Brand name",
+      "headings": "Page titles",
+      "sectionTitles": "Section headings",
+      "logo": "Logo",
+      "timelineMarkers": "Timeline markers",
+      "headerDivider": "Header divider",
+      "navigationHover": "Navigation hover",
+      "languageSelectorBorder": "Language selector border",
+      "outlineButtonsBorder": "Outlined button border",
+      "timelineLine": "Timeline line",
+      "technologyTagsBorder": "Technology tag border",
+      "textOnAccent": "Text on accent background",
+      "controlText": "Controls and technology labels"
+    },
+    "pickerLabel": "Choose {color} color",
+    "hexLabel": "Hex value for {color}"
   }
 }

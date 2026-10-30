@@ -5,5 +5,40 @@
     "journey": "Meu percurso",
     "projects": "Projetos",
     "languageLabel": "Trocar idioma"
+  },
+  "colorEditor": {
+    "title": "Personalizar cores do site",
+    "open": "Cores",
+    "close": "Fechar",
+    "description": "As alterações aparecem na hora e ficam salvas neste dispositivo.",
+    "reset": "Restaurar cores originais",
+    "groups": {
+      "surfaces": "Fundos e superfícies",
+      "text": "Textos",
+      "accents": "Destaques",
+      "borders": "Bordas e interações"
+    },
+    "fields": {
+      "pageBackground": "Fundo da página",
+      "technologyTagsBackground": "Fundo das etiquetas de tecnologias",
+      "mainText": "Texto principal",
+      "paragraphText": "Texto dos parágrafos",
+      "metaText": "Detalhes e datas",
+      "brandName": "Nome da marca",
+      "headings": "Títulos das páginas",
+      "sectionTitles": "Títulos das seções",
+      "logo": "Logo",
+      "timelineMarkers": "Marcadores da linha do tempo",
+      "headerDivider": "Divisor do cabeçalho",
+      "navigationHover": "Realce ao passar na navegação",
+      "languageSelectorBorder": "Borda do seletor de idioma",
+      "outlineButtonsBorder": "Borda dos botões",
+      "timelineLine": "Linha do tempo",
+      "technologyTagsBorder": "Borda das etiquetas de tecnologias",
+      "textOnAccent": "Texto sobre fundo de destaque",
+      "controlText": "Texto dos controles e das etiquetas"
+    },
+    "pickerLabel": "Escolher cor de {color}",
+    "hexLabel": "Valor hexadecimal de {color}"
   }
 }

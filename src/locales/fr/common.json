@@ -5,5 +5,40 @@
     "journey": "Mon parcours",
     "projects": "Projets",
     "languageLabel": "Changer de langue"
+  },
+  "colorEditor": {
+    "title": "Personnaliser les couleurs du site",
+    "open": "Couleurs",
+    "close": "Fermer",
+    "description": "Les changements s’affichent immédiatement et sont enregistrés sur cet appareil.",
+    "reset": "Rétablir les couleurs d’origine",
+    "groups": {
+      "surfaces": "Arrière-plans et surfaces",
+      "text": "Texte",
+      "accents": "Accents",
+      "borders": "Bordures et interactions"
+    },
+    "fields": {
+      "pageBackground": "Arrière-plan de la page",
+      "technologyTagsBackground": "Fond des étiquettes de technologies",
+      "mainText": "Texte principal",
+      "paragraphText": "Texte des paragraphes",
+      "metaText": "Détails et dates",
+      "brandName": "Nom de la marque",
+      "headings": "Titres des pages",
+      "sectionTitles": "Titres de section",
+      "logo": "Logo",
+      "timelineMarkers": "Repères de la chronologie",
+      "headerDivider": "Séparateur de l’en-tête",
+      "navigationHover": "Survol de la navigation",
+      "languageSelectorBorder": "Bordure du sélecteur de langue",
+      "outlineButtonsBorder": "Bordure des boutons",
+      "timelineLine": "Ligne de la chronologie",
+      "technologyTagsBorder": "Bordure des étiquettes de technologies",
+      "textOnAccent": "Texte sur fond accentué",
+      "controlText": "Texte des contrôles et des étiquettes"
+    },
+    "pickerLabel": "Choisir la couleur pour {color}",
+    "hexLabel": "Valeur hexadécimale pour {color}"
   }
 }

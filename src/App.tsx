@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next'
 import Home from './pages/Home'
 import Journey from './pages/Journey'
 import Projects from './pages/Projects'
+import ColorCustomizer from './components/ColorCustomizer'
 
 const supportedLanguages = ['en', 'fr', 'pt']
 
@@ -47,7 +48,7 @@ function LocalizedLayout() {
     <>
       <header className="site-header">
         <NavLink className="site-brand" to={'/' + activeLanguage} end>
-          <img className="site-brand__logo" src="/erica-logo.png" alt="" />
+          <span className="site-brand__logo" aria-hidden="true" />
           <span>Erica Santini</span>
         </NavLink>
 
@@ -80,6 +81,7 @@ function LocalizedLayout() {
       </header>
 
       <Outlet />
+      <ColorCustomizer />
     </>
   )
 }
