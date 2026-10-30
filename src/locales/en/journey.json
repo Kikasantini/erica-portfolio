@@ -11,7 +11,7 @@
       "id": "fullStackDeveloper",
       "role": "Full-Stack Software Developer",
       "company": "4CAD Group Logiciels Inc.",
-      "location": "Montréal, QC",
+      "location": "Montreal, QC",
       "period": "February 2024 - October 2026",
       "details": [
         "Developed new backend functionality and adapted existing features to client-specific business logic and manufacturing processes.",
@@ -76,7 +76,7 @@
       "id": "sageConsultant",
       "role": "Software Developer Consultant",
       "company": "4CAD Group Logiciels Inc.",
-      "location": "Montréal, QC",
+      "location": "Montreal, QC",
       "period": "January 2023 - January 2024",
       "details": [
         "Customized and maintained Sage X3 ERP functionality using Sage X3 4GL and SQL, primarily in a client-consulting context.",
@@ -103,14 +103,19 @@
       "id": "developerIntern",
       "role": "Developer Intern",
       "company": "4CAD Group Logiciels Inc.",
-      "location": "Montréal, QC",
+      "location": "Montreal, QC",
       "period": "October 2022 - December 2022",
       "details": [
         "Built a Node.js prototype integrated with the Sage X3 REST API to retrieve manufacturing order data and display it in a web interface with a weekly calendar.",
         "The prototype was not deployed or adopted in production."
       ],
-      "coreTechnologies": ["Node.js", "Sage X3 REST API"],
-      "additionalTechnologies": ["Microsoft Teams"]
+      "coreTechnologies": [
+        "Node.js",
+        "Sage X3 REST API"
+      ],
+      "additionalTechnologies": [
+        "Microsoft Teams"
+      ]
     },
     {
       "id": "producer",
@@ -123,8 +128,16 @@
         "Participated in Agile development, sprint planning, estimation using Planning Poker, testing, QA, bug tracking and documentation, and release delivery.",
         "Supported feature implementation and validated functionality before releases."
       ],
-      "coreTechnologies": ["C#", "Unity"],
-      "additionalTechnologies": ["Trello", "Miro", "Discord", "Notion"]
+      "coreTechnologies": [
+        "C#",
+        "Unity"
+      ],
+      "additionalTechnologies": [
+        "Trello",
+        "Miro",
+        "Discord",
+        "Notion"
+      ]
     },
     {
       "id": "projectManagementIntern",
@@ -137,7 +150,12 @@
         "Supported sprint planning, task organization, team coordination, communication, problem solving, and delivery, including estimation using Planning Poker."
       ],
       "coreTechnologies": [],
-      "additionalTechnologies": ["Trello", "Miro", "Discord", "Notion"]
+      "additionalTechnologies": [
+        "Trello",
+        "Miro",
+        "Discord",
+        "Notion"
+      ]
     }
   ],
   "education": [
@@ -145,7 +163,7 @@
       "id": "dec",
       "program": "DEC in Computer Techniques: New Media Programming",
       "institution": "Institut Grasset",
-      "location": "Montréal, QC",
+      "location": "Montreal, QC",
       "period": "August 2021 - December 2022",
       "details": [
         "Graduated at the top of the class with a 94% weighted average.",

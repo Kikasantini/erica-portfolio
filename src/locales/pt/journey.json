@@ -11,7 +11,7 @@
       "id": "fullStackDeveloper",
       "role": "Desenvolvedora de Software Full Stack",
       "company": "4CAD Group Logiciels Inc.",
-      "location": "Montréal, QC",
+      "location": "Montreal, QC",
       "period": "Fevereiro de 2024 - outubro de 2026",
       "details": [
         "Desenvolvi novas funcionalidades no backend e adaptei funcionalidades existentes à lógica de negócio e aos processos de fabricação de cada cliente.",
@@ -76,7 +76,7 @@
       "id": "sageConsultant",
       "role": "Consultora de Desenvolvimento de Software",
       "company": "4CAD Group Logiciels Inc.",
-      "location": "Montréal, QC",
+      "location": "Montreal, QC",
       "period": "Janeiro de 2023 - janeiro de 2024",
       "details": [
         "Personalizei e mantive funcionalidades do ERP Sage X3 usando Sage X3 4GL e SQL, principalmente em um contexto de consultoria para clientes.",
@@ -103,14 +103,19 @@
       "id": "developerIntern",
       "role": "Estagiária de Desenvolvimento",
       "company": "4CAD Group Logiciels Inc.",
-      "location": "Montréal, QC",
+      "location": "Montreal, QC",
       "period": "Outubro de 2022 - dezembro de 2022",
       "details": [
         "Criei um protótipo em Node.js integrado à API REST do Sage X3 para recuperar dados de ordens de produção e exibi-los em uma interface web com um calendário semanal.",
         "O protótipo não foi implantado nem utilizado em produção."
       ],
-      "coreTechnologies": ["Node.js", "Sage X3 REST API"],
-      "additionalTechnologies": ["Microsoft Teams"]
+      "coreTechnologies": [
+        "Node.js",
+        "Sage X3 REST API"
+      ],
+      "additionalTechnologies": [
+        "Microsoft Teams"
+      ]
     },
     {
       "id": "producer",
@@ -123,8 +128,16 @@
         "Participei do desenvolvimento ágil, do planejamento e das estimativas de sprints com Planning Poker, dos testes, do controle de qualidade, do acompanhamento e da documentação de bugs e da entrega de versões.",
         "Apoiei a implementação de funcionalidades e validei seu funcionamento antes das versões."
       ],
-      "coreTechnologies": ["C#", "Unity"],
-      "additionalTechnologies": ["Trello", "Miro", "Discord", "Notion"]
+      "coreTechnologies": [
+        "C#",
+        "Unity"
+      ],
+      "additionalTechnologies": [
+        "Trello",
+        "Miro",
+        "Discord",
+        "Notion"
+      ]
     },
     {
       "id": "projectManagementIntern",
@@ -137,7 +150,12 @@
         "Apoiei o planejamento de sprints, a organização de tarefas, a coordenação e comunicação da equipe, a resolução de problemas e as entregas, incluindo estimativas com Planning Poker."
       ],
       "coreTechnologies": [],
-      "additionalTechnologies": ["Trello", "Miro", "Discord", "Notion"]
+      "additionalTechnologies": [
+        "Trello",
+        "Miro",
+        "Discord",
+        "Notion"
+      ]
     }
   ],
   "education": [
@@ -145,7 +163,7 @@
       "id": "dec",
       "program": "DEC em Técnicas de Computação: Programação de Novas Mídias",
       "institution": "Institut Grasset",
-      "location": "Montréal, QC",
+      "location": "Montreal, QC",
       "period": "Agosto de 2021 - dezembro de 2022",
       "details": [
         "Concluí o curso em primeiro lugar na turma, com média ponderada de 94%.",
