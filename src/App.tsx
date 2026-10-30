@@ -40,28 +40,32 @@ function LocalizedLayout() {
   function handleLanguageChange(nextLanguage: string) {
     const currentPage = location.pathname.replace(/^\/(en|fr|pt)(?=\/|$)/, '')
 
-    navigate(`/${nextLanguage}${currentPage}`)
+    navigate('/' + nextLanguage + currentPage)
   }
 
   return (
     <>
-      <header>
-        <nav aria-label={t('navigation.accessibilityLabel')}>
-          <NavLink to={`/${activeLanguage}`} end>
+      <header className="site-header">
+        <NavLink className="site-brand" to={'/' + activeLanguage} end>
+          Erica Santini
+        </NavLink>
+
+        <nav className="site-nav" aria-label={t('navigation.accessibilityLabel')}>
+          <NavLink to={'/' + activeLanguage} end>
             {t('navigation.home')}
           </NavLink>
 
-          <NavLink to={`/${activeLanguage}/journey`}>
+          <NavLink to={'/' + activeLanguage + '/journey'}>
             {t('navigation.journey')}
           </NavLink>
 
-          <NavLink to={`/${activeLanguage}/projects`}>
+          <NavLink to={'/' + activeLanguage + '/projects'}>
             {t('navigation.projects')}
           </NavLink>
         </nav>
 
-        <label>
-          <span aria-hidden="true">🌐</span>
+        <label className="language-control">
+          <span className="visually-hidden">{t('navigation.languageLabel')}</span>
           <select
             aria-label={t('navigation.languageLabel')}
             value={activeLanguage}

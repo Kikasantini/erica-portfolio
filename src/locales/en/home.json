@@ -1,8 +1,28 @@
 {
-  "title": "Hi, I'm Kika",
-  "personalIntro": "I'm Kika: a software developer, lifelong gamer, and cat mom to Wanda and Jett. I like turning curious ideas into things people can use, explore, and play.",
-  "professionalSummary": "I'm early in my software development career, with experience building client-specific features for manufacturing software. I've worked across Java and Spring Boot back ends, Angular and TypeScript front ends, APIs, databases, testing, and production troubleshooting.",
-  "contactTitle": "Say hello",
+  "roleLocation": "Software developer · Montréal, Canada",
+  "title": "Hi, I'm Erica Santini.",
+  "personalIntro": "Curious by nature, I love learning how things work, solving puzzles, and occasionally getting lost in a good rabbit hole.",
+  "workTitle": "About my work",
+  "professionalSummary": "I'm an early-career software developer with experience building and customizing full-stack applications for manufacturing systems. My recent work includes Java, Spring Boot, Angular, TypeScript, PostgreSQL, and REST APIs.",
+  "interestsTitle": "A little beyond work",
+  "personalHighlights": [
+    {
+      "id": "conversationStarter",
+      "label": "Conversation starter",
+      "value": "Cats (I have two)."
+    },
+    {
+      "id": "oneWord",
+      "label": "One word to describe me",
+      "value": "Practical."
+    },
+    {
+      "id": "gamer",
+      "label": "Outside work",
+      "value": "I'm a gamer."
+    }
+  ],
+  "contactTitle": "Contact links",
   "contactLinks": [
     {
       "id": "linkedin",

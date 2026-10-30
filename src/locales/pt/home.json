@@ -1,8 +1,28 @@
 {
-  "title": "Oi, eu sou a Kika",
-  "personalIntro": "Sou a Kika: desenvolvedora de software, gamer desde sempre e mãe de duas gatas, Wanda e Jett. Gosto de transformar ideias em coisas que as pessoas possam usar, explorar e jogar.",
-  "professionalSummary": "Estou no início da minha carreira em desenvolvimento de software e tenho experiência criando funcionalidades específicas para clientes de sistemas de manufatura. Já trabalhei com back-end em Java e Spring Boot, front-end em Angular e TypeScript, APIs, bancos de dados, testes e investigação de problemas em produção.",
-  "contactTitle": "Vamos conversar",
+  "roleLocation": "Desenvolvedora de software · Montreal, Canadá",
+  "title": "Oi, eu sou Erica Santini.",
+  "personalIntro": "Curiosa por natureza, adoro aprender como as coisas funcionam, resolver problemas e, às vezes, me aprofundar em um assunto que despertou minha curiosidade.",
+  "workTitle": "Sobre meu trabalho",
+  "professionalSummary": "Estou no início da minha carreira como desenvolvedora de software e tenho experiência no desenvolvimento e na customização de aplicações full-stack para sistemas de manufatura. Meu trabalho recente inclui Java, Spring Boot, Angular, TypeScript, PostgreSQL e APIs REST.",
+  "interestsTitle": "Um pouco além do trabalho",
+  "personalHighlights": [
+    {
+      "id": "conversationStarter",
+      "label": "Assunto para começar uma conversa",
+      "value": "Gatos (tenho duas gatas)."
+    },
+    {
+      "id": "oneWord",
+      "label": "Uma palavra que me define",
+      "value": "Prática."
+    },
+    {
+      "id": "gamer",
+      "label": "Fora do trabalho",
+      "value": "Sou gamer."
+    }
+  ],
+  "contactTitle": "Links de contato",
   "contactLinks": [
     {
       "id": "linkedin",

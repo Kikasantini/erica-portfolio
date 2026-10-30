@@ -1,8 +1,28 @@
 {
-  "title": "Salut, moi, c'est Kika",
-  "personalIntro": "Je suis Kika : développeuse logiciel, joueuse depuis toujours et maman de deux chattes, Wanda et Jett. J'aime transformer des idées en choses que les gens peuvent utiliser, explorer et essayer.",
-  "professionalSummary": "Je suis au début de ma carrière en développement logiciel et j'ai de l'expérience dans la création de fonctionnalités adaptées aux clients pour des logiciels de fabrication. J'ai travaillé sur des backends en Java et Spring Boot, des interfaces Angular et TypeScript, des API, des bases de données, des tests et le dépannage en production.",
-  "contactTitle": "Faisons connaissance",
+  "roleLocation": "Développeuse de logiciels · Montréal, Canada",
+  "title": "Bonjour, je m'appelle Erica Santini.",
+  "personalIntro": "Curieuse de nature, j'aime comprendre comment les choses fonctionnent, résoudre des énigmes et parfois me plonger dans un sujet qui pique ma curiosité.",
+  "workTitle": "À propos de mon travail",
+  "professionalSummary": "Je suis développeuse logicielle en début de carrière et j'ai de l'expérience dans le développement et l'adaptation d'applications full-stack pour des systèmes de fabrication. Mon expérience récente comprend Java, Spring Boot, Angular, TypeScript, PostgreSQL et les API REST.",
+  "interestsTitle": "Un peu en dehors du travail",
+  "personalHighlights": [
+    {
+      "id": "conversationStarter",
+      "label": "Pour lancer la conversation",
+      "value": "Les chats (j'en ai deux)."
+    },
+    {
+      "id": "oneWord",
+      "label": "Un mot pour me décrire",
+      "value": "Pragmatique."
+    },
+    {
+      "id": "gamer",
+      "label": "En dehors du travail",
+      "value": "Je suis joueuse de jeux vidéo."
+    }
+  ],
+  "contactTitle": "Liens de contact",
   "contactLinks": [
     {
       "id": "linkedin",
