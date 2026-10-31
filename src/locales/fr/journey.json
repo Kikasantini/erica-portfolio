@@ -11,7 +11,7 @@
       "id": "fullStackDeveloper",
       "role": "Développeuse full-stack",
       "company": "4CAD Group Logiciels Inc.",
-      "location": "Montréal, QC",
+      "location": "Montréal, QC, Canada",
       "period": "Février 2024 - octobre 2026",
       "details": [
         "Développé de nouvelles fonctionnalités backend et adapté des fonctionnalités existantes à la logique métier et aux processus de fabrication propres à chaque client.",
@@ -76,7 +76,7 @@
       "id": "sageConsultant",
       "role": "Consultante en développement logiciel",
       "company": "4CAD Group Logiciels Inc.",
-      "location": "Montréal, QC",
+      "location": "Montréal, QC, Canada",
       "period": "Janvier 2023 - janvier 2024",
       "details": [
         "Personnalisé et maintenu les fonctionnalités de l'ERP Sage X3 avec Sage X3 4GL et SQL, principalement dans un contexte de consultation auprès de clients.",
@@ -102,7 +102,7 @@
       "id": "developerIntern",
       "role": "Stagiaire en développement",
       "company": "4CAD Group Logiciels Inc.",
-      "location": "Montréal, QC",
+      "location": "Montréal, QC, Canada",
       "period": "Octobre 2022 - décembre 2022",
       "details": [
         "Créé un prototype Node.js intégré à l'API REST de Sage X3 pour récupérer des données d'ordres de fabrication et les afficher dans une interface web avec une vue calendrier hebdomadaire.",
@@ -119,7 +119,7 @@
       "id": "producer",
       "role": "Productrice",
       "company": "Imgnation Studios",
-      "location": "Santa Maria, Brésil",
+      "location": "Brésil",
       "period": "Février 2021 - décembre 2021",
       "details": [
         "Développé et débogué des fonctionnalités de jeux mobiles avec C# et Unity.",
@@ -140,7 +140,7 @@
       "id": "projectManagementIntern",
       "role": "Stagiaire en gestion de projet",
       "company": "Imgnation Studios",
-      "location": "Santa Maria, Brésil",
+      "location": "Brésil",
       "period": "Août 2020 - janvier 2021",
       "details": [
         "Assumé le rôle de Scrum Master par intérim pour une petite équipe de développement de jeux mobiles.",
@@ -160,7 +160,7 @@
       "id": "dec",
       "program": "DEC en techniques informatiques : programmation des nouveaux médias",
       "institution": "Institut Grasset",
-      "location": "Montréal, QC",
+      "location": "Montréal, QC, Canada",
       "period": "Août 2021 - décembre 2022",
       "details": [
         "Diplômée au premier rang de la classe avec une moyenne pondérée de 94 %.",
@@ -172,7 +172,7 @@
       "id": "businessAdministration",
       "program": "Baccalauréat en administration des affaires",
       "institution": "Universidade Federal de Santa Maria (UFSM)",
-      "location": "Santa Maria, Brésil",
+      "location": "Brésil",
       "period": "Mars 2017 - janvier 2021",
       "details": [
         "Reçu une bourse de recherche et participé à une Junior Enterprise axée sur le conseil en gestion et la planification stratégique.",
@@ -183,12 +183,14 @@
       "id": "computerScienceCoursework",
       "program": "Cours en informatique",
       "institution": "Universidade Federal de Santa Maria (UFSM)",
-      "location": "Santa Maria, Brésil",
+      "location": "Brésil",
       "period": "Mars 2013 - novembre 2016",
       "details": [
         "Suivi des cours sur les structures de données, les algorithmes, C, C++, la programmation orientée objet et les bases de données.",
         "Tutoré la programmation en C, participé à un concours ICPC et contribué à des ateliers d'introduction à la logique de programmation pour des élèves du secondaire."
       ]
     }
-  ]
+  ],
+  "showSection": "Afficher",
+  "hideSection": "Masquer"
 }

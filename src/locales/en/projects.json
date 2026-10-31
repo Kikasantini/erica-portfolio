@@ -15,7 +15,9 @@
       "description": "A Python project that automates tasks for a fictional translation company.",
       "technologies": "Python 3 · PyPDF2 · ReportLab · Crontab",
       "githubUrl": "https://github.com/Kikasantini/scripting-translationCompany",
-      "githubLabel": "View on GitHub"
+      "githubLabel": "View on GitHub",
+      "image": "/projects/translation-company-automation.jpg",
+      "imageAlt": "Ubuntu terminal showing a Python automation script"
     }
   ],
   "technologiesTitle": "Technologies"

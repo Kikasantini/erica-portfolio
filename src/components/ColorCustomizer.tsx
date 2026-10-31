@@ -30,7 +30,8 @@ const PALETTE_PRESETS = {
     "factCardFrontBorder": "#cbd4ca",
     "factCardBackBackground": "#e7eae3",
     "factCardBackText": "#363a3b",
-    "factCardBackBorder": "#98a991"
+    "factCardBackBorder": "#98a991",
+    "additionalTechnologiesLinkText": "#53685a"
   },
   inkTeal: {
     "pageBackground": "#f2f6f5",
@@ -60,7 +61,8 @@ const PALETTE_PRESETS = {
     "factCardFrontBorder": "#c5d6d6",
     "factCardBackBackground": "#e2eeed",
     "factCardBackText": "#24343a",
-    "factCardBackBorder": "#6e9fa1"
+    "factCardBackBorder": "#6e9fa1",
+    "additionalTechnologiesLinkText": "#1e6971"
   },
   mauveStone: {
     "pageBackground": "#f4f0f3",
@@ -90,7 +92,8 @@ const PALETTE_PRESETS = {
     "factCardFrontBorder": "#d8cad7",
     "factCardBackBackground": "#eee8ee",
     "factCardBackText": "#3b353d",
-    "factCardBackBorder": "#b49eb3"
+    "factCardBackBorder": "#b49eb3",
+    "additionalTechnologiesLinkText": "#68576d"
   },
   blueFog: {
     "pageBackground": "#f0f4f7",
@@ -120,7 +123,8 @@ const PALETTE_PRESETS = {
     "factCardFrontBorder": "#c9d5e0",
     "factCardBackBackground": "#e6ecf2",
     "factCardBackText": "#303b47",
-    "factCardBackBorder": "#9cafc0"
+    "factCardBackBorder": "#9cafc0",
+    "additionalTechnologiesLinkText": "#50677d"
   }
 } as const
 
@@ -169,7 +173,8 @@ const CSS_VARIABLES: Record<ColorKey, string> = {
   "factCardFrontBorder": "--fact-card-front-border-color",
   "factCardBackBackground": "--fact-card-back-background-color",
   "factCardBackText": "--fact-card-back-text-color",
-  "factCardBackBorder": "--fact-card-back-border-color"
+  "factCardBackBorder": "--fact-card-back-border-color",
+  "additionalTechnologiesLinkText": "--additional-technologies-link-color"
 }
 
 const COLOR_GROUPS = [
@@ -184,7 +189,7 @@ const COLOR_GROUPS = [
   },
   {
     id: "buttons",
-    keys: ["buttonBackground", "buttonText", "outlineButtonsBorder", "buttonHoverBackground", "textOnAccent"]
+    keys: ["buttonBackground", "buttonText", "outlineButtonsBorder", "buttonHoverBackground", "textOnAccent", "additionalTechnologiesLinkText"]
   },
   {
     id: "technologyTags",

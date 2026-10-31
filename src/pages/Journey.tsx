@@ -31,10 +31,11 @@ function CollapsibleJourneySection({
   children: ReactNode
 }) {
   const [isExpanded, setIsExpanded] = useState(true)
+  const { t } = useTranslation('journey')
   const contentId = 'journey-section-' + id
 
   return (
-    <section className="journey-section">
+    <section className={`journey-section${isExpanded ? '' : ' journey-section--collapsed'}`}>
       <h2>
         <button
           className="journey-section__toggle"
@@ -44,10 +45,13 @@ function CollapsibleJourneySection({
           onClick={() => setIsExpanded((expanded) => !expanded)}
         >
           <span>{title}</span>
-          <span
-            className={`journey-section__chevron${isExpanded ? ' is-expanded' : ''}`}
-            aria-hidden="true"
-          />
+          <span className="journey-section__action">
+            <span>{t(isExpanded ? 'hideSection' : 'showSection')}</span>
+            <span
+              className={`journey-section__chevron${isExpanded ? ' is-expanded' : ''}`}
+              aria-hidden="true"
+            />
+          </span>
         </button>
       </h2>
       <div id={contentId} hidden={!isExpanded}>

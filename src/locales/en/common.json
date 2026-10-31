@@ -56,7 +56,8 @@
       "factCardFrontBorder": "Front border",
       "factCardBackBackground": "Back background",
       "factCardBackText": "Back text",
-      "factCardBackBorder": "Back border"
+      "factCardBackBorder": "Back border",
+      "additionalTechnologiesLinkText": "Additional technologies link text"
     },
     "pickerLabel": "Choose {color} color",
     "hexLabel": "Hex value for {color}",

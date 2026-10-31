@@ -56,7 +56,8 @@
       "factCardFrontBorder": "Borda da frente",
       "factCardBackBackground": "Fundo do verso",
       "factCardBackText": "Texto do verso",
-      "factCardBackBorder": "Borda do verso"
+      "factCardBackBorder": "Borda do verso",
+      "additionalTechnologiesLinkText": "Texto do link de tecnologias adicionais"
     },
     "pickerLabel": "Escolher cor de {color}",
     "hexLabel": "Valor hexadecimal de {color}",

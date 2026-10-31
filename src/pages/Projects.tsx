@@ -7,6 +7,8 @@ type ProjectItem = {
   technologies: string
   githubUrl: string
   githubLabel: string
+  image?: string
+  imageAlt?: string
 }
 
 export default function Projects() {
@@ -19,26 +21,39 @@ export default function Projects() {
 
       <div className="project-list">
         {projects.map((project) => (
-          <article className="project-item" key={project.id}>
-            <h2>{project.title}</h2>
-            <p className="project-item__description">{project.description}</p>
-            <div className="project-item__technologies">
-              <p>{t('technologiesTitle')}</p>
-              <ul className="technology-list">
-                {project.technologies.split('·').map((technology) => (
-                  <li key={technology.trim()}>{technology.trim()}</li>
-                ))}
-              </ul>
+          <article
+            className={`project-item${project.image ? ' project-item--with-image' : ''}`}
+            key={project.id}
+          >
+            {project.image && (
+              <img
+                className="project-item__image"
+                src={project.image}
+                alt={project.imageAlt ?? ''}
+                loading="lazy"
+              />
+            )}
+            <div className="project-item__content">
+              <h2>{project.title}</h2>
+              <p className="project-item__description">{project.description}</p>
+              <div className="project-item__technologies">
+                <p>{t('technologiesTitle')}</p>
+                <ul className="technology-list">
+                  {project.technologies.split('·').map((technology) => (
+                    <li key={technology.trim()}>{technology.trim()}</li>
+                  ))}
+                </ul>
+              </div>
+              <a
+                className="project-link"
+                href={project.githubUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={project.githubLabel + ': ' + project.title}
+              >
+                {project.githubLabel}
+              </a>
             </div>
-            <a
-              className="outline-button project-link"
-              href={project.githubUrl}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={project.githubLabel + ': ' + project.title}
-            >
-              {project.githubLabel}
-            </a>
           </article>
         ))}
       </div>

@@ -11,7 +11,7 @@
       "id": "fullStackDeveloper",
       "role": "Full-Stack Software Developer",
       "company": "4CAD Group Logiciels Inc.",
-      "location": "Montreal, QC",
+      "location": "Montreal, QC, Canada",
       "period": "February 2024 - October 2026",
       "details": [
         "Developed new backend functionality and adapted existing features to client-specific business logic and manufacturing processes.",
@@ -76,7 +76,7 @@
       "id": "sageConsultant",
       "role": "Software Developer Consultant",
       "company": "4CAD Group Logiciels Inc.",
-      "location": "Montreal, QC",
+      "location": "Montreal, QC, Canada",
       "period": "January 2023 - January 2024",
       "details": [
         "Customized and maintained Sage X3 ERP functionality using Sage X3 4GL and SQL, primarily in a client-consulting context.",
@@ -102,7 +102,7 @@
       "id": "developerIntern",
       "role": "Developer Intern",
       "company": "4CAD Group Logiciels Inc.",
-      "location": "Montreal, QC",
+      "location": "Montreal, QC, Canada",
       "period": "October 2022 - December 2022",
       "details": [
         "Built a Node.js prototype integrated with the Sage X3 REST API to retrieve manufacturing order data and display it in a web interface with a weekly calendar.",
@@ -119,7 +119,7 @@
       "id": "producer",
       "role": "Producer",
       "company": "Imgnation Studios",
-      "location": "Santa Maria, Brazil",
+      "location": "Brazil",
       "period": "February 2021 - December 2021",
       "details": [
         "Developed and debugged mobile game functionality using C# and Unity.",
@@ -140,7 +140,7 @@
       "id": "projectManagementIntern",
       "role": "Project Management Intern",
       "company": "Imgnation Studios",
-      "location": "Santa Maria, Brazil",
+      "location": "Brazil",
       "period": "August 2020 - January 2021",
       "details": [
         "Served as acting Scrum Master for a small mobile game development team.",
@@ -160,7 +160,7 @@
       "id": "dec",
       "program": "DEC in Computer Techniques: New Media Programming",
       "institution": "Institut Grasset",
-      "location": "Montreal, QC",
+      "location": "Montreal, QC, Canada",
       "period": "August 2021 - December 2022",
       "details": [
         "Graduated at the top of the class with a 94% weighted average.",
@@ -172,7 +172,7 @@
       "id": "businessAdministration",
       "program": "Bachelor of Business Administration",
       "institution": "Universidade Federal de Santa Maria (UFSM)",
-      "location": "Santa Maria, Brazil",
+      "location": "Brazil",
       "period": "March 2017 - January 2021",
       "details": [
         "Received a research scholarship and participated in a Junior Enterprise focused on business consulting and strategic planning.",
@@ -183,12 +183,14 @@
       "id": "computerScienceCoursework",
       "program": "Computer Science Coursework",
       "institution": "Universidade Federal de Santa Maria (UFSM)",
-      "location": "Santa Maria, Brazil",
+      "location": "Brazil",
       "period": "March 2013 - November 2016",
       "details": [
         "Completed coursework in data structures, algorithms, C, C++, object-oriented programming, and databases.",
         "Tutored C programming, participated in an ICPC programming contest, and helped deliver introductory logic-programming workshops for high school students."
       ]
     }
-  ]
+  ],
+  "showSection": "Show",
+  "hideSection": "Hide"
 }

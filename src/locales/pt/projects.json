@@ -15,7 +15,9 @@
       "description": "Um projeto em Python que automatiza tarefas de uma empresa de tradução fictícia. Os scripts calculam os custos de tradução, adicionam dados de registro e páginas de assinatura aos arquivos traduzidos e registram a receita diária.",
       "technologies": "Python 3 · PyPDF2 · ReportLab · Crontab · Shell · Linux",
       "githubUrl": "https://github.com/Kikasantini/scripting-translationCompany",
-      "githubLabel": "Ver no GitHub"
+      "githubLabel": "Ver no GitHub",
+      "image": "/projects/translation-company-automation.jpg",
+      "imageAlt": "Terminal Ubuntu mostrando um script de automação em Python"
     }
   ],
   "technologiesTitle": "Tecnologias"
