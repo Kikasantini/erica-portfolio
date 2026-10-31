@@ -82,6 +82,21 @@
   color-scheme: dark;
 }
 
+
+/* Ease the light/dark palette change without animating layout. */
+:root,
+body,
+#root,
+body * {
+  transition:
+    color 260ms ease-in-out,
+    background-color 260ms ease-in-out,
+    border-color 260ms ease-in-out,
+    text-decoration-color 260ms ease-in-out,
+    fill 260ms ease-in-out,
+    stroke 260ms ease-in-out;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1393,6 +1408,13 @@ p {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  :root,
+  body,
+  #root,
+  body * {
+    transition-duration: 0ms !important;
+  }
+
   .outline-button,
   .home-contact a,
   .language-control__toggle,
