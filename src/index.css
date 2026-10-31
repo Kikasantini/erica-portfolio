@@ -521,10 +521,6 @@ p {
   text-transform: uppercase;
 }
 
-.home-section--personal {
-  margin-top: 43px;
-}
-
 .home-fun-cards {
   display: grid;
   max-width: 760px;
@@ -992,10 +988,6 @@ p {
 
   .home-section {
     margin-top: 48px;
-  }
-
-  .home-section--personal {
-    margin-top: 38px;
   }
 
   .journey-section {

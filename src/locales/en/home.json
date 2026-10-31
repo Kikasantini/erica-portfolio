@@ -5,7 +5,7 @@
   "roleLocation": "Software developer · Montreal, Canada",
   "personalIntro": "I enjoy finding practical solutions, having deep conversations, and occasionally getting lost in a good rabbit hole.",
   "workTitle": "About my work",
-  "professionalSummary": "I'm an early-career software developer with experience building and customizing full-stack applications for manufacturing systems. My recent work includes Java, Spring Boot, Angular, TypeScript, PostgreSQL, and REST APIs.",
+  "professionalSummary": "As an early-career software developer, my hands-on experience includes building and customizing full-stack features for manufacturing systems, from user-facing workflows to backend logic. Recent work has involved Java, Spring Boot, Angular, TypeScript, PostgreSQL, and REST APIs.",
   "interestsTitle": "A little beyond work",
   "personalHighlights": [
     {
@@ -49,5 +49,5 @@
     }
   ],
   "careerTitle": "Where I’m headed",
-  "careerSummary": "I’m building on my full-stack experience while exploring how AI can help solve practical problems. I’m interested in roles where I can keep learning, contribute to useful products, and gradually grow into AI-focused development."
+  "careerSummary": "Building on my full-stack background, I’m open to a wide range of software development roles and technologies. I’m curious about areas such as AI, cloud computing, automation, data systems, and observability, and I’m eager to keep learning while contributing to useful products."
 }
