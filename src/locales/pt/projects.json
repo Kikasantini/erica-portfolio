@@ -8,23 +8,17 @@
         {
           "id": "portfolioWebsite",
           "title": "Site de portfólio",
-          "description": "Um portfólio multilíngue que desenvolvi para aprender React e aprimorar meus conhecimentos em desenvolvimento web, além de apresentar minha trajetória e meus projetos.",
+          "description": "Um portfólio multilíngue (este site que você está visitando agora), desenvolvido como projeto prático para aprender React e aprimorar meus conhecimentos em desenvolvimento web, além de apresentar minha trajetória e meus projetos.",
           "technologies": "React · TypeScript · Vite · React Router · i18next",
           "githubUrl": "https://github.com/Kikasantini/erica-portfolio",
           "githubLabel": "Ver no GitHub",
-          "media": [
-            {
-              "type": "image",
-              "src": "/projects/portfolio-react/screenshot_1.jpg",
-              "alt": "Captura de tela do site de portfólio"
-            }
-          ]
+          "media": []
         }
       ]
     },
     {
       "id": "pastProjects",
-      "title": "Projetos de quando...",
+      "title": "Projetos de quando a IA era um filme do Steven Spielberg estrelado pelo garoto de O Sexto Sentido",
       "items": [
         {
           "id": "runnerRpg",
@@ -84,5 +78,5 @@
   "nextMedia": "Próxima mídia",
   "openMedia": "Abrir visualização ampliada",
   "closeMedia": "Fechar visualização ampliada",
-  "imagePlaceholder": "Imagem do projeto em breve"
+  "imagePlaceholder": "Sem imagem"
 }
