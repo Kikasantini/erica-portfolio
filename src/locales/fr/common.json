@@ -73,5 +73,10 @@
       "blueFog": "Brume bleue"
     }
   },
-  "brandName": "Erica Santini"
+  "brandName": "Erica Santini",
+  "pageTitles": {
+    "home": "Accueil | Erica Santini",
+    "journey": "Mon parcours | Erica Santini",
+    "projects": "Projets | Erica Santini"
+  }
 }

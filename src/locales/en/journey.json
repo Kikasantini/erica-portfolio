@@ -105,8 +105,7 @@
       "location": "Montreal, QC, Canada",
       "period": "October 2022 - December 2022",
       "details": [
-        "Built a Node.js prototype integrated with the Sage X3 REST API to retrieve manufacturing order data and display it in a web interface with a weekly calendar.",
-        "The prototype was not deployed or adopted in production."
+        "Built a Node.js prototype integrated with the Sage X3 REST API to retrieve manufacturing order data and display it in a web interface with a weekly calendar."
       ],
       "coreTechnologies": [
         "Node.js",
@@ -164,8 +163,9 @@
       "period": "August 2021 - December 2022",
       "details": [
         "Graduated at the top of the class with a 94% weighted average.",
-        "Studied web development, JavaScript, Node.js, databases, and object-oriented programming.",
-        "Tutored C++ and completed hands-on Arduino coursework, as well as small personal Arduino projects."
+        "Coursework covered web development, JavaScript, Node.js, databases, object-oriented programming, and other areas of the program.",
+        "Tutored classmates from my cohort in C++ for two semesters.",
+        "Completed hands-on Arduino coursework and built small personal Arduino projects."
       ]
     },
     {
@@ -175,7 +175,8 @@
       "location": "Brazil",
       "period": "March 2017 - January 2021",
       "details": [
-        "Received a research scholarship and participated in a Junior Enterprise focused on business consulting and strategic planning.",
+        "Received a research scholarship for two consecutive semesters.",
+        "Participated in a Junior Enterprise focused on business consulting and strategic planning.",
         "Completed a student exchange at Université du Québec à Montréal (UQAM)."
       ]
     },
@@ -187,7 +188,9 @@
       "period": "March 2013 - November 2016",
       "details": [
         "Completed coursework in data structures, algorithms, C, C++, object-oriented programming, and databases.",
-        "Tutored C programming, participated in an ICPC programming contest, and helped deliver introductory logic-programming workshops for high school students."
+        "Tutored fellow students in C programming for two semesters.",
+        "Competed in an ICPC programming contest after my Logic and Algorithms professor selected me as one of two students.",
+        "Helped deliver introductory logic-programming workshops for high school students."
       ]
     }
   ],

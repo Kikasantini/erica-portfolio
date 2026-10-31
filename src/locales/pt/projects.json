@@ -2,14 +2,29 @@
   "title": "Projetos",
   "sections": [
     {
+      "id": "recentProjects",
+      "title": "Projetos recentes",
+      "items": [
+        {
+          "id": "portfolioWebsite",
+          "title": "Site de portfólio",
+          "description": "Um portfólio multilíngue que desenvolvi para aprender React e aprimorar meus conhecimentos em desenvolvimento web, além de apresentar minha trajetória e meus projetos.",
+          "technologies": "React · TypeScript · Vite · React Router · i18next",
+          "githubUrl": "https://github.com/Kikasantini/erica-portfolio",
+          "githubLabel": "Ver no GitHub",
+          "media": []
+        }
+      ]
+    },
+    {
       "id": "pastProjects",
       "title": "Na época em que IA era um filme do Steven Spielberg com o garoto de O Sexto Sentido",
       "items": [
         {
           "id": "runnerRpg",
           "title": "RunnerRPG",
-          "description": "Um protótipo de RPG para dispositivos móveis feito com Unity e C#. Trabalhei nas mecânicas de jogo, nos combates por turnos, na progressão dos personagens, nos equipamentos e na interface. Também criei ilustrações vetoriais para a interface.",
-          "technologies": "C# · Unity · Unity UI · ScriptableObjects",
+          "description": "Projeto pessoal de RPG para Android, com combates por turnos, progressão de personagens, melhorias de equipamento e ilustrações vetoriais próprias para a interface.",
+          "technologies": "C# · Unity · Unity UI · ScriptableObjects · Adobe Illustrator · Adobe Photoshop · Inkscape",
           "githubUrl": "https://github.com/Kikasantini/RunnerRPG",
           "githubLabel": "Ver no GitHub",
           "media": [
@@ -21,7 +36,7 @@
             {
               "type": "image",
               "src": "/projects/runner-rpg/gameplay-01.jpg",
-              "alt": "Imagem 1 do RunnerRPG"
+              "alt": "Captura de tela do RunnerRPG"
             },
             {
               "type": "image",
@@ -43,7 +58,7 @@
         {
           "id": "translationCompany",
           "title": "Automação de uma empresa de tradução",
-          "description": "Um projeto em Python que automatiza tarefas de uma empresa de tradução fictícia. Os scripts calculam os custos de tradução, adicionam dados de registro e páginas de assinatura aos arquivos traduzidos e registram a receita diária.",
+          "description": "Projeto acadêmico que automatiza o processamento de documentos para uma empresa fictícia de tradução: cálculo de preços de PDFs, adição de marcas-d’água datadas e páginas de registro, organização de arquivos e acompanhamento da receita diária.",
           "technologies": "Python 3 · PyPDF2 · ReportLab · Crontab · Shell · Linux",
           "githubUrl": "https://github.com/Kikasantini/scripting-translationCompany",
           "githubLabel": "Ver no GitHub",
@@ -51,19 +66,16 @@
             {
               "type": "image",
               "src": "/projects/translation-company-automation/1.png",
-              "alt": "Terminal Ubuntu mostrando um script de automação em Python"
+              "alt": "Terminal Ubuntu mostrando scripts de automação em Python"
             }
           ]
         }
       ]
-    },
-    {
-      "id": "inProgress",
-      "title": "Em andamento",
-      "items": []
     }
   ],
   "technologiesTitle": "Tecnologias",
   "previousMedia": "Mídia anterior",
-  "nextMedia": "Próxima mídia"
+  "nextMedia": "Próxima mídia",
+  "openMedia": "Abrir visualização ampliada",
+  "closeMedia": "Fechar visualização ampliada"
 }

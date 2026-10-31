@@ -105,8 +105,7 @@
       "location": "Montréal, QC, Canada",
       "period": "Octobre 2022 - décembre 2022",
       "details": [
-        "Créé un prototype Node.js intégré à l'API REST de Sage X3 pour récupérer des données d'ordres de fabrication et les afficher dans une interface web avec une vue calendrier hebdomadaire.",
-        "Le prototype n'a pas été déployé ni utilisé en production."
+        "Créé un prototype Node.js intégré à l'API REST de Sage X3 pour récupérer des données d'ordres de fabrication et les afficher dans une interface web avec une vue calendrier hebdomadaire."
       ],
       "coreTechnologies": [
         "Node.js",
@@ -164,8 +163,9 @@
       "period": "Août 2021 - décembre 2022",
       "details": [
         "Diplômée au premier rang de la classe avec une moyenne pondérée de 94 %.",
-        "Étudié le développement web, JavaScript, Node.js, les bases de données et la programmation orientée objet.",
-        "Tutoré la programmation orientée objet en C++ et suivi des cours pratiques sur Arduino, en plus de réaliser de petits projets personnels avec Arduino."
+        "Le programme couvrait le développement web, JavaScript, Node.js, les bases de données, la programmation orientée objet et d’autres matières.",
+        "J’ai été tutrice en C++ auprès de collègues de ma cohorte pendant deux semestres.",
+        "J’ai suivi des cours pratiques sur Arduino et réalisé de petits projets personnels avec cette plateforme."
       ]
     },
     {
@@ -175,8 +175,9 @@
       "location": "Brésil",
       "period": "Mars 2017 - janvier 2021",
       "details": [
-        "Reçu une bourse de recherche et participé à une Junior Enterprise axée sur le conseil en gestion et la planification stratégique.",
-        "Effectué un échange étudiant à l'Université du Québec à Montréal (UQAM)."
+        "J’ai obtenu une bourse de recherche pendant deux semestres consécutifs.",
+        "J’ai participé à une Junior Enterprise axée sur le conseil en gestion et la planification stratégique.",
+        "J’ai effectué un échange étudiant à l’Université du Québec à Montréal (UQAM)."
       ]
     },
     {
@@ -187,7 +188,9 @@
       "period": "Mars 2013 - novembre 2016",
       "details": [
         "Suivi des cours sur les structures de données, les algorithmes, C, C++, la programmation orientée objet et les bases de données.",
-        "Tutoré la programmation en C, participé à un concours ICPC et contribué à des ateliers d'introduction à la logique de programmation pour des élèves du secondaire."
+        "J’ai été tutrice en programmation C auprès d’autres étudiants pendant deux semestres.",
+        "J’ai participé à un concours de programmation de l’ICPC après avoir été sélectionnée par mon professeur de logique et d’algorithmes comme l’une des deux étudiantes.",
+        "J’ai contribué à animer des ateliers d’introduction à la logique de programmation destinés aux élèves du secondaire."
       ]
     }
   ],

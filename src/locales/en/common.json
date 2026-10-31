@@ -73,5 +73,10 @@
       "blueFog": "Blue Fog"
     }
   },
-  "brandName": "Erica Santini"
+  "brandName": "Erica Santini",
+  "pageTitles": {
+    "home": "Home | Erica Santini",
+    "journey": "My Journey | Erica Santini",
+    "projects": "Projects | Erica Santini"
+  }
 }

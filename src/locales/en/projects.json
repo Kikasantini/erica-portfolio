@@ -2,14 +2,29 @@
   "title": "Projects",
   "sections": [
     {
+      "id": "recentProjects",
+      "title": "Recent Projects",
+      "items": [
+        {
+          "id": "portfolioWebsite",
+          "title": "Portfolio Website",
+          "description": "A multilingual portfolio built as a hands-on project to learn React and strengthen my web development skills while showcasing my experience and projects.",
+          "technologies": "React · TypeScript · Vite · React Router · i18next",
+          "githubUrl": "https://github.com/Kikasantini/erica-portfolio",
+          "githubLabel": "View on GitHub",
+          "media": []
+        }
+      ]
+    },
+    {
       "id": "pastProjects",
       "title": "Back when AI was a Steven Spielberg movie starring the kid from The Sixth Sense",
       "items": [
         {
           "id": "runnerRpg",
           "title": "RunnerRPG",
-          "description": "A mobile RPG prototype built with Unity and C#.",
-          "technologies": "C# · Unity · ScriptableObjects",
+          "description": "A personal Android RPG project featuring turn-based battles, character progression, equipment upgrades, and custom vector artwork for the interface.",
+          "technologies": "C# · Unity · Unity UI · ScriptableObjects · Adobe Illustrator · Adobe Photoshop · Inkscape",
           "githubUrl": "https://github.com/Kikasantini/RunnerRPG",
           "githubLabel": "View on GitHub",
           "media": [
@@ -21,7 +36,7 @@
             {
               "type": "image",
               "src": "/projects/runner-rpg/gameplay-01.jpg",
-              "alt": "RunnerRPG gameplay screenshot 1"
+              "alt": "RunnerRPG gameplay screenshot"
             },
             {
               "type": "image",
@@ -43,27 +58,24 @@
         {
           "id": "translationCompany",
           "title": "Translation Company Automation",
-          "description": "A Python project that automates tasks for a fictional translation company.",
-          "technologies": "Python 3 · PyPDF2 · ReportLab · Crontab",
+          "description": "An academic project that automates document processing for a fictional translation company, including PDF pricing, date-stamped watermarks and registry pages, file organization, and daily revenue tracking.",
+          "technologies": "Python 3 · PyPDF2 · ReportLab · Crontab · Shell · Linux",
           "githubUrl": "https://github.com/Kikasantini/scripting-translationCompany",
           "githubLabel": "View on GitHub",
           "media": [
             {
               "type": "image",
               "src": "/projects/translation-company-automation/1.png",
-              "alt": "Ubuntu terminal showing a Python automation script"
+              "alt": "Ubuntu terminal showing Python automation scripts"
             }
           ]
         }
       ]
-    },
-    {
-      "id": "inProgress",
-      "title": "In Progress",
-      "items": []
     }
   ],
   "technologiesTitle": "Technologies",
   "previousMedia": "Previous media",
-  "nextMedia": "Next media"
+  "nextMedia": "Next media",
+  "openMedia": "Open media viewer",
+  "closeMedia": "Close media viewer"
 }

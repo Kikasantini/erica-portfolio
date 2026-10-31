@@ -39,6 +39,16 @@ function LocalizedLayout() {
   }, [activeLanguage, i18n])
 
   useEffect(() => {
+    const titleKey = location.pathname.endsWith('/journey')
+      ? 'pageTitles.journey'
+      : location.pathname.endsWith('/projects')
+        ? 'pageTitles.projects'
+        : 'pageTitles.home'
+
+    document.title = t(titleKey)
+  }, [activeLanguage, i18n.language, location.pathname, t])
+
+  useEffect(() => {
     if (!isLanguageMenuOpen) return
 
     function handlePointerDown(event: PointerEvent) {

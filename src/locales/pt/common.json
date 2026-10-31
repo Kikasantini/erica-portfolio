@@ -73,5 +73,10 @@
       "blueFog": "Névoa azul"
     }
   },
-  "brandName": "Érica Santini"
+  "brandName": "Érica Santini",
+  "pageTitles": {
+    "home": "Início | Érica Santini",
+    "journey": "Meu percurso | Érica Santini",
+    "projects": "Projetos | Érica Santini"
+  }
 }
