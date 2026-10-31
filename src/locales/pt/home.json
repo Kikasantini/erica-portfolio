@@ -1,0 +1,47 @@
+{
+  "title": "Oi, eu sou Érica.",
+  "hoverTitle": "Kika, para os íntimos.",
+  "aiIntro": "Sou uma desenvolvedora de software de carne e osso, aprendendo a trabalhar ao lado de um autocomplete incansável que escreve código mais rápido do que eu.",
+  "roleLocation": "Desenvolvedora de software · Montreal, Canadá",
+  "personalIntro": "Gosto de encontrar soluções práticas, ter conversas profundas e, de vez em quando, me deixar levar por um assunto interessante a ponto de perder a noção do tempo.",
+  "workTitle": "Sobre meu trabalho",
+  "professionalSummary": "Estou no início da minha carreira como desenvolvedora de software e tenho experiência no desenvolvimento e na customização de aplicações full-stack para sistemas de manufatura. Meu trabalho recente inclui Java, Spring Boot, Angular, TypeScript, PostgreSQL e APIs REST.",
+  "interestsTitle": "Um pouco além do trabalho",
+  "personalHighlights": [
+    {
+      "id": "conversationStarter",
+      "front": "Precisa de um assunto para começar uma conversa?",
+      "back": "Gatos são sempre uma boa pedida."
+    },
+    {
+      "id": "oneWord",
+      "front": "Se eu tivesse que me definir em uma palavra, diria...",
+      "back": "... prática e meticulosa — mas aí já são duas palavras."
+    },
+    {
+      "id": "gamer",
+      "front": "Meu jeito favorito de relaxar é, obviamente...",
+      "back": "... um quebra-cabeça, música de fundo, comida boa e a companhia certa."
+    }
+  ],
+  "contactTitle": "Links de contato",
+  "contactLinks": [
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/erica-santini/"
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/Kikasantini"
+    },
+    {
+      "id": "email",
+      "label": "E-mail",
+      "url": "mailto:ericasantini92@hotmail.com"
+    }
+  ],
+  "careerTitle": "O caminho que quero seguir",
+  "careerSummary": "Quero ampliar minha experiência full-stack enquanto exploro como a IA pode ajudar a resolver problemas práticos. Busco oportunidades em que eu possa continuar aprendendo, contribuir para produtos úteis e, aos poucos, me aproximar do desenvolvimento focado em IA."
+}

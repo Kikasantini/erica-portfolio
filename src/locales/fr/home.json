@@ -1,0 +1,47 @@
+{
+  "title": "Bonjour, je m'appelle Erica.",
+  "hoverTitle": "Kika, pour les intimes.",
+  "aiIntro": "Je suis une développeuse de logiciels bien humaine, qui apprend à travailler aux côtés d'un autocompléteur infatigable qui écrit du code plus vite que moi.",
+  "roleLocation": "Développeuse de logiciels · Montréal, Canada",
+  "personalIntro": "J'aime trouver des solutions pratiques, avoir des conversations profondes et parfois me laisser entraîner dans un sujet captivant au point d'en oublier l'heure.",
+  "workTitle": "À propos de mon travail",
+  "professionalSummary": "Je suis développeuse logicielle en début de carrière et j'ai de l'expérience dans le développement et l'adaptation d'applications full-stack pour des systèmes de fabrication. Mon expérience récente comprend Java, Spring Boot, Angular, TypeScript, PostgreSQL et les API REST.",
+  "interestsTitle": "Un peu en dehors du travail",
+  "personalHighlights": [
+    {
+      "id": "conversationStarter",
+      "front": "Besoin d'un sujet pour lancer la conversation ?",
+      "back": "Les chats, c'est toujours un bon sujet."
+    },
+    {
+      "id": "oneWord",
+      "front": "Si je devais me décrire en un mot, je dirais...",
+      "back": "... pragmatique et méticuleuse — ça fait deux mots."
+    },
+    {
+      "id": "gamer",
+      "front": "Ma façon préférée de décrocher, c'est évidemment...",
+      "back": "... un puzzle, de la musique en fond, de bons petits plats et la bonne compagnie."
+    }
+  ],
+  "contactTitle": "Liens de contact",
+  "contactLinks": [
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/erica-santini/"
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/Kikasantini"
+    },
+    {
+      "id": "email",
+      "label": "Courriel",
+      "url": "mailto:ericasantini92@hotmail.com"
+    }
+  ],
+  "careerTitle": "La direction que je souhaite prendre",
+  "careerSummary": "Je m’appuie sur mon expérience full-stack tout en explorant comment l’IA peut aider à résoudre des problèmes concrets. Je souhaite continuer à apprendre, contribuer à des produits utiles et m’orienter progressivement vers le développement axé sur l’IA."
+}

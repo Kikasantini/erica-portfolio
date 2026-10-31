@@ -1,0 +1,83 @@
+{
+  "navigation": {
+    "accessibilityLabel": "Navigation principale",
+    "home": "Accueil",
+    "journey": "Mon parcours",
+    "projects": "Projets",
+    "languageLabel": "Changer de langue",
+    "changeTo": "Passer en {{language}}",
+    "languageNames": {
+      "en": "anglais",
+      "fr": "français",
+      "pt": "portugais"
+    },
+    "switchToDark": "Passer au mode sombre",
+    "switchToLight": "Passer au mode clair"
+  },
+  "colorEditor": {
+    "title": "Personnaliser les couleurs du site",
+    "open": "Couleurs",
+    "close": "Fermer",
+    "description": "Les changements s’affichent immédiatement et sont enregistrés sur cet appareil.",
+    "reset": "Rétablir ces couleurs",
+    "groups": {
+      "page": "Page",
+      "text": "Texte",
+      "headerNavigation": "En-tête et navigation",
+      "buttons": "Boutons",
+      "technologyTags": "Étiquettes de technologies",
+      "timeline": "Chronologie",
+      "factCardsFront": "Cartes — recto",
+      "factCardsBack": "Cartes — verso",
+      "projectCards": "Cartes de projet"
+    },
+    "fields": {
+      "pageBackground": "Arrière-plan de la page",
+      "mainText": "Texte principal",
+      "paragraphText": "Texte des paragraphes",
+      "metaText": "Détails et dates",
+      "brandName": "Nom de la marque",
+      "headings": "Titres des pages",
+      "sectionTitles": "Titres de section",
+      "logo": "Logo",
+      "headerDivider": "Séparateur de l’en-tête",
+      "navigationHover": "Survol de la navigation",
+      "navigationActiveBackground": "Fond de la page sélectionnée",
+      "languageSelectorBorder": "Bordure du menu de langue",
+      "buttonBackground": "Fond des boutons",
+      "buttonText": "Texte des boutons",
+      "outlineButtonsBorder": "Bordure des boutons",
+      "buttonHoverBackground": "Fond des boutons au survol",
+      "textOnAccent": "Texte des boutons au survol",
+      "technologyTagsBackground": "Fond des étiquettes",
+      "technologyTagsBorder": "Bordure des étiquettes",
+      "technologyTagsText": "Texte des étiquettes",
+      "timelineMarkers": "Repères de la chronologie",
+      "timelineLine": "Ligne de la chronologie",
+      "factCardFrontBackground": "Fond du recto",
+      "factCardFrontText": "Texte du recto",
+      "factCardFrontBorder": "Bordure du recto",
+      "factCardBackBackground": "Fond du verso",
+      "factCardBackText": "Texte du verso",
+      "factCardBackBorder": "Bordure du verso",
+      "additionalTechnologiesLinkText": "Texte du lien des technologies supplémentaires",
+      "projectCardBackground": "Fond de la carte",
+      "projectCardBorder": "Bordure de la carte",
+      "projectCardMediaBackground": "Zone de l’image"
+    },
+    "pickerLabel": "Choisir la couleur pour {color}",
+    "hexLabel": "Valeur hexadécimale pour {color}",
+    "copy": "Copier toutes les couleurs sélectionnées",
+    "copied": "Couleurs copiées",
+    "copyFailed": "Impossible de copier les couleurs",
+    "editingTheme": "Modifier les couleurs du thème",
+    "lightMode": "Mode clair",
+    "darkMode": "Mode sombre"
+  },
+  "brandName": "Erica Santini",
+  "pageTitles": {
+    "home": "Accueil | Erica Santini",
+    "journey": "Mon parcours | Erica Santini",
+    "projects": "Projets | Erica Santini"
+  }
+}
