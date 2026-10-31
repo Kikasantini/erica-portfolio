@@ -151,8 +151,6 @@ function ProjectMediaViewer({
   onNext: () => void
 }) {
   const closeButtonRef = useRef<HTMLButtonElement>(null)
-  const actionRef = useRef({ onClose, onPrevious, onNext })
-  actionRef.current = { onClose, onPrevious, onNext }
   const currentMedia = viewer.media[viewer.currentIndex]
 
   useEffect(() => {
@@ -161,9 +159,9 @@ function ProjectMediaViewer({
     closeButtonRef.current?.focus()
 
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === 'Escape') actionRef.current.onClose()
-      if (event.key === 'ArrowLeft') actionRef.current.onPrevious()
-      if (event.key === 'ArrowRight') actionRef.current.onNext()
+      if (event.key === 'Escape') onClose()
+      if (event.key === 'ArrowLeft') onPrevious()
+      if (event.key === 'ArrowRight') onNext()
     }
 
     document.addEventListener('keydown', handleKeyDown)
@@ -171,7 +169,7 @@ function ProjectMediaViewer({
       document.body.style.overflow = previousOverflow
       document.removeEventListener('keydown', handleKeyDown)
     }
-  }, [])
+  }, [onClose, onPrevious, onNext])
 
   return (
     <div className="media-viewer" onClick={onClose}>
@@ -294,7 +292,9 @@ export default function Projects() {
 
                 <div className="project-item__content">
                   <h3>{project.title}</h3>
-                  <p className="project-item__description">{project.description}</p>
+                  <p className="project-item__description">
+                    {project.description}
+                  </p>
                   <div className="project-item__technologies">
                     <p>{t('technologiesTitle')}</p>
                     <ul className="technology-list">
