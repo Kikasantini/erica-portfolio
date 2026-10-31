@@ -20,22 +20,22 @@
             },
             {
               "type": "image",
-              "src": "/projects/runner-rpg/1.jpg",
+              "src": "/projects/runner-rpg/gameplay-01.jpg",
               "alt": "Capture d’écran 1 du jeu RunnerRPG"
             },
             {
               "type": "image",
-              "src": "/projects/runner-rpg/2.jpg",
+              "src": "/projects/runner-rpg/gameplay-02.jpg",
               "alt": "Capture d’écran 2 du jeu RunnerRPG"
             },
             {
               "type": "image",
-              "src": "/projects/runner-rpg/3.jpg",
+              "src": "/projects/runner-rpg/gameplay-03.jpg",
               "alt": "Capture d’écran 3 du jeu RunnerRPG"
             },
             {
               "type": "image",
-              "src": "/projects/runner-rpg/4.jpg",
+              "src": "/projects/runner-rpg/gameplay-04.jpg",
               "alt": "Capture d’écran 4 du jeu RunnerRPG"
             }
           ]
@@ -50,7 +50,7 @@
           "media": [
             {
               "type": "image",
-              "src": "/projects/translation-company-automation.jpg",
+              "src": "/projects/translation-company-automation/1.png",
               "alt": "Terminal Ubuntu affichant un script d’automatisation en Python"
             }
           ]

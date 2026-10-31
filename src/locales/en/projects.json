@@ -20,22 +20,22 @@
             },
             {
               "type": "image",
-              "src": "/projects/runner-rpg/1.jpg",
+              "src": "/projects/runner-rpg/gameplay-01.jpg",
               "alt": "RunnerRPG gameplay screenshot 1"
             },
             {
               "type": "image",
-              "src": "/projects/runner-rpg/2.jpg",
+              "src": "/projects/runner-rpg/gameplay-02.jpg",
               "alt": "RunnerRPG gameplay screenshot 2"
             },
             {
               "type": "image",
-              "src": "/projects/runner-rpg/3.jpg",
+              "src": "/projects/runner-rpg/gameplay-03.jpg",
               "alt": "RunnerRPG gameplay screenshot 3"
             },
             {
               "type": "image",
-              "src": "/projects/runner-rpg/4.jpg",
+              "src": "/projects/runner-rpg/gameplay-04.jpg",
               "alt": "RunnerRPG gameplay screenshot 4"
             }
           ]
@@ -50,7 +50,7 @@
           "media": [
             {
               "type": "image",
-              "src": "/projects/translation-company-automation.jpg",
+              "src": "/projects/translation-company-automation/1.png",
               "alt": "Ubuntu terminal showing a Python automation script"
             }
           ]
