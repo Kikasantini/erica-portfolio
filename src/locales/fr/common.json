@@ -18,7 +18,7 @@
     "title": "Personnaliser les couleurs du site",
     "open": "Couleurs",
     "close": "Fermer",
-    "description": "Les changements s’affichent immédiatement et sont enregistrés sur cet appareil.",
+    "description": "Les changements restent dans cette session du navigateur. Appliquez-les pour prévisualiser le thème sur tout le site; actualiser la page rétablit les couleurs par défaut du projet.",
     "reset": "Rétablir cette palette",
     "groups": {
       "page": "Page",
@@ -80,7 +80,8 @@
     },
     "editingTheme": "Modifier les couleurs du thème",
     "lightMode": "Mode clair",
-    "darkMode": "Mode sombre"
+    "darkMode": "Mode sombre",
+    "apply": "Appliquer les couleurs à tout le site"
   },
   "brandName": "Erica Santini",
   "pageTitles": {

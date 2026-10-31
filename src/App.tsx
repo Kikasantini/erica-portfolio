@@ -17,7 +17,10 @@ import Projects from './pages/Projects'
 import ColorCustomizer from './components/ColorCustomizer'
 
 const supportedLanguages = ['en', 'fr', 'pt']
-const SHOW_COLOR_CUSTOMIZER = true
+const SHOW_COLOR_CUSTOMIZER =
+  import.meta.env.VITE_SHOW_COLOR_CUSTOMIZER === 'true' &&
+  ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname)
+const COLOR_PALETTE_STORAGE_KEY = 'erica-portfolio-color-palette-v1'
 const LANGUAGE_STORAGE_KEY = 'erica-portfolio-language-v1'
 const THEME_STORAGE_KEY = 'erica-portfolio-theme-v1'
 type ThemeMode = 'light' | 'dark'
@@ -53,6 +56,14 @@ function LocalizedLayout() {
   const activeLanguage = supportedLanguages.includes(language ?? '')
     ? language!
     : null
+
+  useEffect(() => {
+    try {
+      window.localStorage.removeItem(COLOR_PALETTE_STORAGE_KEY)
+    } catch {
+      // Older locally saved palettes are no longer used.
+    }
+  }, [])
 
   useEffect(() => {
     if (!activeLanguage) return

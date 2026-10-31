@@ -18,7 +18,7 @@
     "title": "Customize site colors",
     "open": "Colors",
     "close": "Close",
-    "description": "Changes preview immediately and are saved on this device.",
+    "description": "Color changes stay in this browser session. Apply them to preview the selected theme across the site; refreshing restores the project defaults.",
     "reset": "Reset this palette",
     "groups": {
       "page": "Page",
@@ -80,7 +80,8 @@
     },
     "editingTheme": "Edit theme colors",
     "lightMode": "Light mode",
-    "darkMode": "Dark mode"
+    "darkMode": "Dark mode",
+    "apply": "Apply colors to the whole site"
   },
   "brandName": "Erica Santini",
   "pageTitles": {

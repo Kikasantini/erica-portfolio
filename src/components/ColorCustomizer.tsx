@@ -159,7 +159,6 @@ type PaletteId = keyof typeof PALETTE_PRESETS
 type ColorKey = keyof typeof DEFAULT_COLORS
 type ColorPalette = Record<ColorKey, string>
 type SavedPalettes = Record<PaletteId, ColorPalette>
-type PaletteStorage = { activePaletteId: PaletteId; palettes: SavedPalettes; darkColors: ColorPalette }
 
 const PALETTE_SWATCH_KEYS: ColorKey[] = [
   'pageBackground',
@@ -228,7 +227,6 @@ const COLOR_GROUPS = [
   { id: "projectCards", keys: ["projectCardBackground", "projectCardBorder", "projectCardMediaBackground"] }
 ] as const
 
-const STORAGE_KEY = 'erica-portfolio-color-palette-v1'
 const HEX_COLOR = /^#[0-9a-f]{6}$/i
 
 function createDefaultPalettes(): SavedPalettes {
@@ -240,93 +238,28 @@ function createDefaultPalettes(): SavedPalettes {
   }
 }
 
-function isPaletteId(value: unknown): value is PaletteId {
-  return typeof value === 'string' &&
-    Object.prototype.hasOwnProperty.call(PALETTE_PRESETS, value)
-}
-
-function mergeSavedColors(target: ColorPalette, saved: unknown) {
-  if (!saved || typeof saved !== 'object') return
-
-  const values = saved as Partial<ColorPalette> & { controlText?: unknown }
-  if (typeof values.controlText === 'string' && HEX_COLOR.test(values.controlText)) {
-    target.buttonText = values.controlText
-    target.technologyTagsText = values.controlText
-  }
-  for (const key of Object.keys(DEFAULT_COLORS) as ColorKey[]) {
-    const value = values[key]
-    if (typeof value === 'string' && HEX_COLOR.test(value)) {
-      target[key] = value
-    }
-  }
-}
-
-function readSavedPaletteData(): PaletteStorage {
-  const palettes = createDefaultPalettes()
-  const darkColors = { ...DARK_MODE_DEFAULTS }
-  let activePaletteId: PaletteId = DEFAULT_PALETTE_ID
-
-  try {
-    const saved = JSON.parse(
-      window.localStorage.getItem(STORAGE_KEY) ?? '{}',
-    ) as {
-      activePaletteId?: unknown
-      palettes?: Partial<Record<PaletteId, Partial<ColorPalette>>>
-      darkColors?: Partial<ColorPalette>
-    } & Partial<ColorPalette>
-
-    if (isPaletteId(saved.activePaletteId)) {
-      activePaletteId = saved.activePaletteId
-    }
-
-    mergeSavedColors(darkColors, saved.darkColors)
-
-    if (saved.palettes && typeof saved.palettes === 'object') {
-      for (const id of Object.keys(PALETTE_PRESETS) as PaletteId[]) {
-        mergeSavedColors(palettes[id], saved.palettes[id])
-      }
-    } else {
-      // Migrate the previous single-palette format into the selected light palette.
-      mergeSavedColors(palettes[DEFAULT_PALETTE_ID], saved)
-    }
-  } catch {
-    // Keep the preset palettes when browser storage is unavailable.
-  }
-
-  return { activePaletteId, palettes, darkColors }
-}
-
 export default function ColorCustomizer({ theme, onThemeChange }: {
   theme: 'light' | 'dark'
   onThemeChange: (theme: 'light' | 'dark') => void
 }) {
   const { t } = useTranslation('common')
   const [isOpen, setIsOpen] = useState(false)
-  const [initialPaletteData] = useState(readSavedPaletteData)
-  const [activePaletteId, setActivePaletteId] = useState(
-    initialPaletteData.activePaletteId,
-  )
-  const [palettes, setPalettes] = useState(initialPaletteData.palettes)
-  const [darkColors, setDarkColors] = useState(initialPaletteData.darkColors)
+  const [activePaletteId, setActivePaletteId] = useState<PaletteId>(DEFAULT_PALETTE_ID)
+  const [palettes, setPalettes] = useState<SavedPalettes>(createDefaultPalettes)
+  const [darkColors, setDarkColors] = useState<ColorPalette>(() => ({ ...DARK_MODE_DEFAULTS }))
+  const [appliedLightColors, setAppliedLightColors] = useState<ColorPalette>(() => ({ ...DEFAULT_COLORS }))
+  const [appliedDarkColors, setAppliedDarkColors] = useState<ColorPalette>(() => ({ ...DARK_MODE_DEFAULTS }))
   const [drafts, setDrafts] = useState<Partial<Record<ColorKey, string>>>({})
   const [copyStatus, setCopyStatus] = useState<'copied' | 'failed' | ''>('')
   useEffect(() => setDrafts({}), [theme])
   const colors = theme === 'dark' ? darkColors : palettes[activePaletteId]
+  const appliedColors = theme === 'dark' ? appliedDarkColors : appliedLightColors
 
   useEffect(() => {
     for (const key of Object.keys(CSS_VARIABLES) as ColorKey[]) {
-      document.documentElement.style.setProperty(CSS_VARIABLES[key], colors[key])
+      document.documentElement.style.setProperty(CSS_VARIABLES[key], appliedColors[key])
     }
-
-    try {
-      window.localStorage.setItem(
-        STORAGE_KEY,
-        JSON.stringify({ activePaletteId, palettes, darkColors }),
-      )
-    } catch {
-      // The live preview still works when browser storage is unavailable.
-    }
-  }, [activePaletteId, colors, darkColors, palettes, theme])
+  }, [appliedColors])
 
   function selectPalette(id: PaletteId) {
     setActivePaletteId(id)
@@ -353,6 +286,11 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
       delete next[key]
       return next
     })
+  }
+
+  function applyColors() {
+    if (theme === 'dark') setAppliedDarkColors({ ...colors })
+    else setAppliedLightColors({ ...colors })
   }
 
   async function copyColors() {
@@ -497,6 +435,13 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
         </div>
 
         <div className="color-customizer__actions">
+          <button
+            className="color-customizer__apply"
+            type="button"
+            onClick={applyColors}
+          >
+            {t('colorEditor.apply')}
+          </button>
           <button
             className="color-customizer__copy"
             type="button"

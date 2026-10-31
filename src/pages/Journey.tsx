@@ -63,10 +63,8 @@ function CollapsibleJourneySection({
 
 function ExperienceEntry({ item }: { item: ExperienceItem }) {
   const { t } = useTranslation('journey')
-  const [showAdditional, setShowAdditional] = useState(false)
   const coreTechnologies = item.coreTechnologies ?? []
   const additionalTechnologies = item.additionalTechnologies ?? []
-  const additionalId = 'additional-technologies-' + item.id
 
   return (
     <article className="timeline-item">
@@ -95,30 +93,14 @@ function ExperienceEntry({ item }: { item: ExperienceItem }) {
 
       {additionalTechnologies.length > 0 && (
         <div className="technology-group technology-group--additional">
-          <button
-            className="technology-toggle"
-            type="button"
-            aria-expanded={showAdditional}
-            aria-controls={additionalId}
-            onClick={() => setShowAdditional((isShowing) => !isShowing)}
-          >
-            {t(
-              showAdditional
-                ? 'hideAdditionalTechnologies'
-                : 'showAdditionalTechnologies',
-            )}
-          </button>
-
-          <div id={additionalId} hidden={!showAdditional}>
-            <h4>{t('additionalTechnologiesTitle')}</h4>
-            <ul className="technology-list">
-              {additionalTechnologies.map((technology) => (
-                <li key={item.id + '-additional-' + technology}>
-                  {technology}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <h4>{t('additionalTechnologiesTitle')}</h4>
+          <ul className="technology-list">
+            {additionalTechnologies.map((technology) => (
+              <li key={item.id + '-additional-' + technology}>
+                {technology}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </article>
