@@ -1,24 +1,69 @@
 {
   "title": "Projetos",
-  "items": [
+  "sections": [
     {
-      "id": "runnerRpg",
-      "title": "RunnerRPG",
-      "description": "Um protótipo de RPG para dispositivos móveis feito com Unity e C#. Trabalhei nas mecânicas de jogo, nos combates por turnos, na progressão dos personagens, nos equipamentos e na interface. Também criei ilustrações vetoriais para a interface.",
-      "technologies": "C# · Unity · Unity UI · ScriptableObjects",
-      "githubUrl": "https://github.com/Kikasantini/RunnerRPG",
-      "githubLabel": "Ver no GitHub"
+      "id": "pastProjects",
+      "title": "Na época em que IA era um filme do Steven Spielberg com o garoto de O Sexto Sentido",
+      "items": [
+        {
+          "id": "runnerRpg",
+          "title": "RunnerRPG",
+          "description": "Um protótipo de RPG para dispositivos móveis feito com Unity e C#. Trabalhei nas mecânicas de jogo, nos combates por turnos, na progressão dos personagens, nos equipamentos e na interface. Também criei ilustrações vetoriais para a interface.",
+          "technologies": "C# · Unity · Unity UI · ScriptableObjects",
+          "githubUrl": "https://github.com/Kikasantini/RunnerRPG",
+          "githubLabel": "Ver no GitHub",
+          "media": [
+            {
+              "type": "video",
+              "src": "/projects/runner-rpg/gameplay.mp4",
+              "alt": "Vídeo de gameplay do RunnerRPG"
+            },
+            {
+              "type": "image",
+              "src": "/projects/runner-rpg/1.jpg",
+              "alt": "Imagem 1 do RunnerRPG"
+            },
+            {
+              "type": "image",
+              "src": "/projects/runner-rpg/2.jpg",
+              "alt": "Imagem 2 do RunnerRPG"
+            },
+            {
+              "type": "image",
+              "src": "/projects/runner-rpg/3.jpg",
+              "alt": "Imagem 3 do RunnerRPG"
+            },
+            {
+              "type": "image",
+              "src": "/projects/runner-rpg/4.jpg",
+              "alt": "Imagem 4 do RunnerRPG"
+            }
+          ]
+        },
+        {
+          "id": "translationCompany",
+          "title": "Automação de uma empresa de tradução",
+          "description": "Um projeto em Python que automatiza tarefas de uma empresa de tradução fictícia. Os scripts calculam os custos de tradução, adicionam dados de registro e páginas de assinatura aos arquivos traduzidos e registram a receita diária.",
+          "technologies": "Python 3 · PyPDF2 · ReportLab · Crontab · Shell · Linux",
+          "githubUrl": "https://github.com/Kikasantini/scripting-translationCompany",
+          "githubLabel": "Ver no GitHub",
+          "media": [
+            {
+              "type": "image",
+              "src": "/projects/translation-company-automation.jpg",
+              "alt": "Terminal Ubuntu mostrando um script de automação em Python"
+            }
+          ]
+        }
+      ]
     },
     {
-      "id": "translationCompany",
-      "title": "Automação de uma empresa de tradução",
-      "description": "Um projeto em Python que automatiza tarefas de uma empresa de tradução fictícia. Os scripts calculam os custos de tradução, adicionam dados de registro e páginas de assinatura aos arquivos traduzidos e registram a receita diária.",
-      "technologies": "Python 3 · PyPDF2 · ReportLab · Crontab · Shell · Linux",
-      "githubUrl": "https://github.com/Kikasantini/scripting-translationCompany",
-      "githubLabel": "Ver no GitHub",
-      "image": "/projects/translation-company-automation.jpg",
-      "imageAlt": "Terminal Ubuntu mostrando um script de automação em Python"
+      "id": "inProgress",
+      "title": "Em andamento",
+      "items": []
     }
   ],
-  "technologiesTitle": "Tecnologias"
+  "technologiesTitle": "Tecnologias",
+  "previousMedia": "Mídia anterior",
+  "nextMedia": "Próxima mídia"
 }
