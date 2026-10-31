@@ -119,6 +119,11 @@ export default function Home() {
         <p>{t('professionalSummary')}</p>
       </section>
 
+      <section className="home-section home-section--career" aria-labelledby="home-career-title">
+        <h2 id="home-career-title">{t('careerTitle')}</h2>
+        <p>{t('careerSummary')}</p>
+      </section>
+
       <section
         className="home-section home-section--personal"
         aria-labelledby="home-interests-title"
