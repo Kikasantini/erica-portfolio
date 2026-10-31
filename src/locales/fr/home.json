@@ -40,6 +40,12 @@
       "id": "email",
       "label": "Courriel",
       "url": "mailto:ericasantini92@hotmail.com"
+    },
+    {
+      "id": "resume",
+      "label": "Télécharger mon CV",
+      "url": "/Erica_Santini_Software_Developer_Resume.pdf",
+      "download": "Erica_Santini_Software_Developer_Resume.pdf"
     }
   ],
   "careerTitle": "La direction que je souhaite prendre",
