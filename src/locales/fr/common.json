@@ -10,7 +10,9 @@
       "en": "anglais",
       "fr": "français",
       "pt": "portugais"
-    }
+    },
+    "switchToDark": "Passer au mode sombre",
+    "switchToLight": "Passer au mode clair"
   },
   "colorEditor": {
     "title": "Personnaliser les couleurs du site",
@@ -26,7 +28,8 @@
       "technologyTags": "Étiquettes de technologies",
       "timeline": "Chronologie",
       "factCardsFront": "Cartes — recto",
-      "factCardsBack": "Cartes — verso"
+      "factCardsBack": "Cartes — verso",
+      "projectCards": "Cartes de projet"
     },
     "fields": {
       "pageBackground": "Arrière-plan de la page",
@@ -57,11 +60,14 @@
       "factCardBackBackground": "Fond du verso",
       "factCardBackText": "Texte du verso",
       "factCardBackBorder": "Bordure du verso",
-      "additionalTechnologiesLinkText": "Texte du lien des technologies supplémentaires"
+      "additionalTechnologiesLinkText": "Texte du lien des technologies supplémentaires",
+      "projectCardBackground": "Fond de la carte",
+      "projectCardBorder": "Bordure de la carte",
+      "projectCardMediaBackground": "Zone de l’image"
     },
     "pickerLabel": "Choisir la couleur pour {color}",
     "hexLabel": "Valeur hexadécimale pour {color}",
-    "copy": "Copier les couleurs sélectionnées",
+    "copy": "Copier toutes les couleurs sélectionnées",
     "copied": "Couleurs copiées",
     "copyFailed": "Impossible de copier les couleurs",
     "palettesTitle": "Choisir une palette",
@@ -71,7 +77,10 @@
       "inkTeal": "Encre et bleu sarcelle",
       "mauveStone": "Mauve et pierre",
       "blueFog": "Brume bleue"
-    }
+    },
+    "editingTheme": "Modifier les couleurs du thème",
+    "lightMode": "Mode clair",
+    "darkMode": "Mode sombre"
   },
   "brandName": "Erica Santini",
   "pageTitles": {

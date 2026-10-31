@@ -10,7 +10,9 @@
       "en": "inglês",
       "fr": "francês",
       "pt": "português"
-    }
+    },
+    "switchToDark": "Ativar modo escuro",
+    "switchToLight": "Ativar modo claro"
   },
   "colorEditor": {
     "title": "Personalizar cores do site",
@@ -26,7 +28,8 @@
       "technologyTags": "Etiquetas de tecnologias",
       "timeline": "Linha do tempo",
       "factCardsFront": "Frente dos cards",
-      "factCardsBack": "Verso dos cards"
+      "factCardsBack": "Verso dos cards",
+      "projectCards": "Cards de projetos"
     },
     "fields": {
       "pageBackground": "Fundo da página",
@@ -57,11 +60,14 @@
       "factCardBackBackground": "Fundo do verso",
       "factCardBackText": "Texto do verso",
       "factCardBackBorder": "Borda do verso",
-      "additionalTechnologiesLinkText": "Texto do link de tecnologias adicionais"
+      "additionalTechnologiesLinkText": "Texto do link de tecnologias adicionais",
+      "projectCardBackground": "Fundo do card",
+      "projectCardBorder": "Borda do card",
+      "projectCardMediaBackground": "Área da imagem"
     },
     "pickerLabel": "Escolher cor de {color}",
     "hexLabel": "Valor hexadecimal de {color}",
-    "copy": "Copiar cores selecionadas",
+    "copy": "Copiar todas as cores selecionadas",
     "copied": "Cores copiadas",
     "copyFailed": "Não foi possível copiar as cores",
     "palettesTitle": "Escolha uma paleta",
@@ -71,7 +77,10 @@
       "inkTeal": "Marinho e azul-petróleo",
       "mauveStone": "Malva e pedra",
       "blueFog": "Névoa azul"
-    }
+    },
+    "editingTheme": "Editar cores do tema",
+    "lightMode": "Modo claro",
+    "darkMode": "Modo escuro"
   },
   "brandName": "Érica Santini",
   "pageTitles": {

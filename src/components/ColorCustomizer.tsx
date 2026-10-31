@@ -31,10 +31,13 @@ const PALETTE_PRESETS = {
     "factCardBackBackground": "#e7eae3",
     "factCardBackText": "#363a3b",
     "factCardBackBorder": "#98a991",
-    "additionalTechnologiesLinkText": "#53685a"
+    "additionalTechnologiesLinkText": "#53685a",
+    "projectCardBackground": "#ffffff",
+    "projectCardBorder": "#dbe4e3",
+    "projectCardMediaBackground": "#e8f1f0"
   },
   inkTeal: {
-    "pageBackground": "#f2f6f5",
+    "pageBackground": "#fffdfa",
     "mainText": "#24343a",
     "paragraphText": "#435258",
     "metaText": "#667477",
@@ -59,10 +62,13 @@ const PALETTE_PRESETS = {
     "factCardFrontBackground": "#e8f1f0",
     "factCardFrontText": "#24343a",
     "factCardFrontBorder": "#c5d6d6",
-    "factCardBackBackground": "#e2eeed",
+    "factCardBackBackground": "#e2ddc6",
     "factCardBackText": "#24343a",
-    "factCardBackBorder": "#6e9fa1",
-    "additionalTechnologiesLinkText": "#1e6971"
+    "factCardBackBorder": "#796f44",
+    "additionalTechnologiesLinkText": "#1e6971",
+    "projectCardBackground": "#ffffff",
+    "projectCardBorder": "#dbe4e3",
+    "projectCardMediaBackground": "#e8f1f0"
   },
   mauveStone: {
     "pageBackground": "#f4f0f3",
@@ -93,7 +99,10 @@ const PALETTE_PRESETS = {
     "factCardBackBackground": "#eee8ee",
     "factCardBackText": "#3b353d",
     "factCardBackBorder": "#b49eb3",
-    "additionalTechnologiesLinkText": "#68576d"
+    "additionalTechnologiesLinkText": "#68576d",
+    "projectCardBackground": "#ffffff",
+    "projectCardBorder": "#dbe4e3",
+    "projectCardMediaBackground": "#e8f1f0"
   },
   blueFog: {
     "pageBackground": "#f0f4f7",
@@ -124,18 +133,33 @@ const PALETTE_PRESETS = {
     "factCardBackBackground": "#e6ecf2",
     "factCardBackText": "#303b47",
     "factCardBackBorder": "#9cafc0",
-    "additionalTechnologiesLinkText": "#50677d"
+    "additionalTechnologiesLinkText": "#50677d",
+    "projectCardBackground": "#ffffff",
+    "projectCardBorder": "#dbe4e3",
+    "projectCardMediaBackground": "#e8f1f0"
   }
 } as const
 
-const DEFAULT_PALETTE_ID = 'softSage' as const
+const DEFAULT_PALETTE_ID = 'inkTeal' as const
 const DEFAULT_COLORS = PALETTE_PRESETS[DEFAULT_PALETTE_ID]
+
+const DARK_MODE_DEFAULTS: ColorPalette = {
+  ...DEFAULT_COLORS,
+  pageBackground: '#142127', mainText: '#e8efed', paragraphText: '#c5d2cf', metaText: '#9aa9a7',
+  brandName: '#e2edeb', headings: '#eaf2f0', sectionTitles: '#80c9c3', logo: '#80c9c3', timelineMarkers: '#80c9c3',
+  headerDivider: '#34474b', navigationHover: '#26393d', languageSelectorBorder: '#425b5c', outlineButtonsBorder: '#668f90',
+  timelineLine: '#354b4e', technologyTagsBorder: '#3f5c5d', technologyTagsBackground: '#24383b', textOnAccent: '#f7fbfa',
+  buttonBackground: '#22373b', buttonText: '#a1d8d2', buttonHoverBackground: '#347b80', navigationActiveBackground: '#26393d',
+  technologyTagsText: '#a1d8d2', factCardFrontBackground: '#24383b', factCardFrontText: '#e8efed', factCardFrontBorder: '#425b5c',
+  factCardBackBackground: '#35352b', factCardBackText: '#f2efdf', factCardBackBorder: '#827957',
+  additionalTechnologiesLinkText: '#a1d8d2', projectCardBackground: '#1b2c32', projectCardBorder: '#354b50', projectCardMediaBackground: '#22363b',
+}
 
 type PaletteId = keyof typeof PALETTE_PRESETS
 type ColorKey = keyof typeof DEFAULT_COLORS
 type ColorPalette = Record<ColorKey, string>
 type SavedPalettes = Record<PaletteId, ColorPalette>
-type PaletteStorage = { activePaletteId: PaletteId; palettes: SavedPalettes }
+type PaletteStorage = { activePaletteId: PaletteId; palettes: SavedPalettes; darkColors: ColorPalette }
 
 const PALETTE_SWATCH_KEYS: ColorKey[] = [
   'pageBackground',
@@ -174,7 +198,10 @@ const CSS_VARIABLES: Record<ColorKey, string> = {
   "factCardBackBackground": "--fact-card-back-background-color",
   "factCardBackText": "--fact-card-back-text-color",
   "factCardBackBorder": "--fact-card-back-border-color",
-  "additionalTechnologiesLinkText": "--additional-technologies-link-color"
+  "additionalTechnologiesLinkText": "--additional-technologies-link-color",
+  "projectCardBackground": "--project-card-background-color",
+  "projectCardBorder": "--project-card-border-color",
+  "projectCardMediaBackground": "--project-card-media-background-color"
 }
 
 const COLOR_GROUPS = [
@@ -197,7 +224,8 @@ const COLOR_GROUPS = [
   },
   { id: "factCardsFront", keys: ["factCardFrontBackground", "factCardFrontText", "factCardFrontBorder"] },
   { id: "factCardsBack", keys: ["factCardBackBackground", "factCardBackText", "factCardBackBorder"] },
-  { id: "timeline", keys: ["timelineMarkers", "timelineLine"] }
+  { id: "timeline", keys: ["timelineMarkers", "timelineLine"] },
+  { id: "projectCards", keys: ["projectCardBackground", "projectCardBorder", "projectCardMediaBackground"] }
 ] as const
 
 const STORAGE_KEY = 'erica-portfolio-color-palette-v1'
@@ -235,6 +263,7 @@ function mergeSavedColors(target: ColorPalette, saved: unknown) {
 
 function readSavedPaletteData(): PaletteStorage {
   const palettes = createDefaultPalettes()
+  const darkColors = { ...DARK_MODE_DEFAULTS }
   let activePaletteId: PaletteId = DEFAULT_PALETTE_ID
 
   try {
@@ -243,28 +272,34 @@ function readSavedPaletteData(): PaletteStorage {
     ) as {
       activePaletteId?: unknown
       palettes?: Partial<Record<PaletteId, Partial<ColorPalette>>>
+      darkColors?: Partial<ColorPalette>
     } & Partial<ColorPalette>
 
     if (isPaletteId(saved.activePaletteId)) {
       activePaletteId = saved.activePaletteId
     }
 
+    mergeSavedColors(darkColors, saved.darkColors)
+
     if (saved.palettes && typeof saved.palettes === 'object') {
       for (const id of Object.keys(PALETTE_PRESETS) as PaletteId[]) {
         mergeSavedColors(palettes[id], saved.palettes[id])
       }
     } else {
-      // Migrate the previous single-palette format into Soft Sage.
+      // Migrate the previous single-palette format into the selected light palette.
       mergeSavedColors(palettes[DEFAULT_PALETTE_ID], saved)
     }
   } catch {
     // Keep the preset palettes when browser storage is unavailable.
   }
 
-  return { activePaletteId, palettes }
+  return { activePaletteId, palettes, darkColors }
 }
 
-export default function ColorCustomizer() {
+export default function ColorCustomizer({ theme, onThemeChange }: {
+  theme: 'light' | 'dark'
+  onThemeChange: (theme: 'light' | 'dark') => void
+}) {
   const { t } = useTranslation('common')
   const [isOpen, setIsOpen] = useState(false)
   const [initialPaletteData] = useState(readSavedPaletteData)
@@ -272,9 +307,11 @@ export default function ColorCustomizer() {
     initialPaletteData.activePaletteId,
   )
   const [palettes, setPalettes] = useState(initialPaletteData.palettes)
+  const [darkColors, setDarkColors] = useState(initialPaletteData.darkColors)
   const [drafts, setDrafts] = useState<Partial<Record<ColorKey, string>>>({})
   const [copyStatus, setCopyStatus] = useState<'copied' | 'failed' | ''>('')
-  const colors = palettes[activePaletteId]
+  useEffect(() => setDrafts({}), [theme])
+  const colors = theme === 'dark' ? darkColors : palettes[activePaletteId]
 
   useEffect(() => {
     for (const key of Object.keys(CSS_VARIABLES) as ColorKey[]) {
@@ -284,12 +321,12 @@ export default function ColorCustomizer() {
     try {
       window.localStorage.setItem(
         STORAGE_KEY,
-        JSON.stringify({ activePaletteId, palettes }),
+        JSON.stringify({ activePaletteId, palettes, darkColors }),
       )
     } catch {
       // The live preview still works when browser storage is unavailable.
     }
-  }, [activePaletteId, colors, palettes])
+  }, [activePaletteId, colors, darkColors, palettes, theme])
 
   function selectPalette(id: PaletteId) {
     setActivePaletteId(id)
@@ -297,20 +334,16 @@ export default function ColorCustomizer() {
   }
 
   function updateColor(key: ColorKey, value: string) {
-    setPalettes((current) => ({
-      ...current,
-      [activePaletteId]: { ...current[activePaletteId], [key]: value },
-    }))
+    if (theme === 'dark') setDarkColors((current) => ({ ...current, [key]: value }))
+    else setPalettes((current) => ({ ...current, [activePaletteId]: { ...current[activePaletteId], [key]: value } }))
     setDrafts((current) => ({ ...current, [key]: value }))
   }
 
   function updateHexDraft(key: ColorKey, value: string) {
     setDrafts((current) => ({ ...current, [key]: value }))
     if (HEX_COLOR.test(value)) {
-      setPalettes((current) => ({
-        ...current,
-        [activePaletteId]: { ...current[activePaletteId], [key]: value },
-      }))
+      if (theme === 'dark') setDarkColors((current) => ({ ...current, [key]: value }))
+      else setPalettes((current) => ({ ...current, [activePaletteId]: { ...current[activePaletteId], [key]: value } }))
     }
   }
 
@@ -324,7 +357,7 @@ export default function ColorCustomizer() {
 
   async function copyColors() {
     try {
-      await navigator.clipboard.writeText(JSON.stringify(colors, null, 2))
+      await navigator.clipboard.writeText(JSON.stringify({ light: palettes[activePaletteId], dark: darkColors }, null, 2))
       setCopyStatus('copied')
     } catch {
       setCopyStatus('failed')
@@ -332,10 +365,8 @@ export default function ColorCustomizer() {
   }
 
   function resetColors() {
-    setPalettes((current) => ({
-      ...current,
-      [activePaletteId]: { ...PALETTE_PRESETS[activePaletteId] },
-    }))
+    if (theme === 'dark') setDarkColors({ ...DARK_MODE_DEFAULTS })
+    else setPalettes((current) => ({ ...current, [activePaletteId]: { ...PALETTE_PRESETS[activePaletteId] } }))
     setDrafts({})
   }
 
@@ -372,7 +403,16 @@ export default function ColorCustomizer() {
           {t('colorEditor.description')}
         </p>
 
-        <fieldset className="color-customizer__palette-section">
+        <fieldset className="color-customizer__theme-section">
+          <legend>{t('colorEditor.editingTheme')}</legend>
+          <div className="color-customizer__theme-grid" role="group">
+            <button className="color-customizer__theme-button" type="button" aria-pressed={theme === 'light'} onClick={() => onThemeChange('light')}>{t('colorEditor.lightMode')}</button>
+            <button className="color-customizer__theme-button" type="button" aria-pressed={theme === 'dark'} onClick={() => onThemeChange('dark')}>{t('colorEditor.darkMode')}</button>
+          </div>
+        </fieldset>
+
+        {theme === 'light' && (
+          <fieldset className="color-customizer__palette-section">
           <legend>{t('colorEditor.palettesTitle')}</legend>
           <div className="color-customizer__palette-grid">
             {(Object.keys(PALETTE_PRESETS) as PaletteId[]).map((id) => {
@@ -402,6 +442,7 @@ export default function ColorCustomizer() {
             })}
           </div>
         </fieldset>
+        )}
 
         <div className="color-customizer__groups">
           {COLOR_GROUPS.map((group) => (

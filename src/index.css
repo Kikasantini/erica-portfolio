@@ -1,36 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap');
 
 :root {
-  --page-background: var(--page-background);
-  --main-text: var(--main-text);
-  --paragraph-text: var(--paragraph-text);
-  --meta-text: var(--meta-text);
-  --brand-name: var(--brand-name);
-  --heading-color: var(--heading-color);
-  --section-title-color: var(--section-title-color);
-  --logo-color: var(--section-title-color);
-  --timeline-marker-color: var(--timeline-marker-color);
-  --header-divider-color: var(--header-divider-color);
-  --navigation-hover-color: var(--navigation-hover-color);
-  --navigation-active-background-color: var(--navigation-active-background-color);
-  --button-background-color: var(--button-background-color);
-  --button-text-color: var(--button-text-color);
-  --button-hover-background-color: var(--button-hover-background-color);
-  --button-hover-text-color: var(--button-hover-text-color);
+  --page-background: #fffdfa;
+  --main-text: #24343a;
+  --paragraph-text: #435258;
+  --meta-text: #667477;
+  --brand-name: #16324f;
+  --heading-color: #16324f;
+  --section-title-color: #257c83;
+  --logo-color: #257c83;
+  --timeline-marker-color: #257c83;
+  --header-divider-color: #dbe4e3;
+  --navigation-hover-color: #e2eeed;
+  --navigation-active-background-color: #e2eeed;
+  --button-background-color: #f2f6f5;
+  --button-text-color: #1e6971;
+  --button-hover-background-color: #16324f;
+  --button-hover-text-color: #ffffff;
   --control-text-color: var(--button-text-color);
-  --technology-tag-text-color: var(--technology-tag-text-color);
-  --language-border-color: var(--language-border-color);
-  --outline-button-border-color: var(--outline-button-border-color);
-  --timeline-line-color: var(--timeline-line-color);
-  --technology-tag-border-color: var(--technology-tag-border-color);
-  --technology-tag-background-color: var(--technology-tag-background-color);
-  --fact-card-front-background-color: var(--fact-card-front-background-color);
-  --fact-card-front-text-color: var(--fact-card-front-text-color);
-  --fact-card-front-border-color: var(--fact-card-front-border-color);
-  --fact-card-back-background-color: var(--fact-card-back-background-color);
-  --fact-card-back-text-color: var(--fact-card-back-text-color);
-  --fact-card-back-border-color: var(--fact-card-back-border-color);
-  --additional-technologies-link-color: var(--button-text-color);
+  --technology-tag-text-color: #1e6971;
+  --language-border-color: #c5d6d6;
+  --outline-button-border-color: #6e9fa1;
+  --timeline-line-color: #d0e0df;
+  --technology-tag-border-color: #ccdddd;
+  --technology-tag-background-color: #e8f1f0;
+  --fact-card-front-background-color: #e8f1f0;
+  --fact-card-front-text-color: #24343a;
+  --fact-card-front-border-color: #c5d6d6;
+  --fact-card-back-background-color: #e2ddc6;
+  --fact-card-back-text-color: #24343a;
+  --fact-card-back-border-color: #796f44;
+  --additional-technologies-link-color: #1e6971;
+  --project-card-background-color: #ffffff;
+  --project-card-border-color: #dbe4e3;
+  --project-card-media-background-color: #e8f1f0;
   font-family: 'Roboto', Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -40,6 +43,43 @@
   color: var(--main-text);
   background: var(--page-background);
   color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --page-background: #142127;
+  --main-text: #e8efed;
+  --paragraph-text: #c5d2cf;
+  --meta-text: #9aa9a7;
+  --brand-name: #e2edeb;
+  --heading-color: #eaf2f0;
+  --section-title-color: #80c9c3;
+  --logo-color: #80c9c3;
+  --timeline-marker-color: #80c9c3;
+  --header-divider-color: #34474b;
+  --navigation-hover-color: #26393d;
+  --navigation-active-background-color: #26393d;
+  --button-background-color: #22373b;
+  --button-text-color: #a1d8d2;
+  --button-hover-background-color: #347b80;
+  --button-hover-text-color: #f7fbfa;
+  --control-text-color: var(--button-text-color);
+  --technology-tag-text-color: #a1d8d2;
+  --language-border-color: #425b5c;
+  --outline-button-border-color: #668f90;
+  --timeline-line-color: #354b4e;
+  --technology-tag-border-color: #3f5c5d;
+  --technology-tag-background-color: #24383b;
+  --fact-card-front-background-color: #24383b;
+  --fact-card-front-text-color: #e8efed;
+  --fact-card-front-border-color: #425b5c;
+  --fact-card-back-background-color: #35352b;
+  --fact-card-back-text-color: #f2efdf;
+  --fact-card-back-border-color: #827957;
+  --additional-technologies-link-color: #a1d8d2;
+  --project-card-background-color: #1b2c32;
+  --project-card-border-color: #354b50;
+  --project-card-media-background-color: #22363b;
+  color-scheme: dark;
 }
 
 * {
@@ -133,6 +173,7 @@ p {
 
 .site-brand:focus-visible,
 .site-nav a:focus-visible,
+.theme-toggle:focus-visible,
 .language-control__toggle:focus-visible,
 .language-control__option:focus-visible {
   outline: 2px solid var(--heading-color);
@@ -143,6 +184,36 @@ p {
   color: var(--heading-color);
   text-decoration: underline;
   text-underline-offset: 6px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  width: 38px;
+  height: 42px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: 0;
+  border-radius: 4px;
+  color: var(--control-text-color);
+  background: transparent;
+  cursor: pointer;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.theme-toggle:hover {
+  background: var(--navigation-hover-color);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .language-control {
@@ -1043,6 +1114,7 @@ p {
 .color-customizer__toggle:focus-visible,
 .color-customizer__close:focus-visible,
 .color-customizer__palette-button:focus-visible,
+.color-customizer__theme-button:focus-visible,
 .color-customizer__copy:focus-visible,
 .color-customizer__reset:focus-visible,
 .color-customizer__swatch:focus-visible,
@@ -1071,7 +1143,8 @@ p {
   display: none;
 }
 
-.color-customizer__palette-section {
+.color-customizer__palette-section,
+.color-customizer__theme-section {
   min-width: 0;
   margin: 0 0 14px;
   padding: 10px 0 0;
@@ -1079,12 +1152,43 @@ p {
   border-top: 1px solid var(--technology-tag-border-color);
 }
 
-.color-customizer__palette-section legend {
+.color-customizer__palette-section legend,
+.color-customizer__theme-section legend {
   padding: 0 8px 0 0;
   color: var(--section-title-color);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.04em;
+}
+
+.color-customizer__theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding-top: 2px;
+}
+
+.color-customizer__theme-button {
+  min-height: 36px;
+  padding: 7px 10px;
+  border: 1px solid var(--technology-tag-border-color);
+  border-radius: 4px;
+  color: var(--paragraph-text);
+  background: var(--page-background);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.color-customizer__theme-button[aria-pressed='true'] {
+  border-color: var(--heading-color);
+  color: var(--heading-color);
+  background: var(--navigation-hover-color);
+}
+
+.color-customizer__theme-button:focus-visible {
+  outline: 2px solid var(--heading-color);
+  outline-offset: 3px;
 }
 
 .color-customizer__palette-grid {

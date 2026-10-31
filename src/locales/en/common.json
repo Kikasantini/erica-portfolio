@@ -10,7 +10,9 @@
       "en": "English",
       "fr": "French",
       "pt": "Portuguese"
-    }
+    },
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode"
   },
   "colorEditor": {
     "title": "Customize site colors",
@@ -26,7 +28,8 @@
       "technologyTags": "Technology tags",
       "timeline": "Timeline",
       "factCardsFront": "Cards — front",
-      "factCardsBack": "Cards — back"
+      "factCardsBack": "Cards — back",
+      "projectCards": "Project cards"
     },
     "fields": {
       "pageBackground": "Page background",
@@ -57,11 +60,14 @@
       "factCardBackBackground": "Back background",
       "factCardBackText": "Back text",
       "factCardBackBorder": "Back border",
-      "additionalTechnologiesLinkText": "Additional technologies link text"
+      "additionalTechnologiesLinkText": "Additional technologies link text",
+      "projectCardBackground": "Card background",
+      "projectCardBorder": "Card border",
+      "projectCardMediaBackground": "Image area"
     },
     "pickerLabel": "Choose {color} color",
     "hexLabel": "Hex value for {color}",
-    "copy": "Copy selected colors",
+    "copy": "Copy all selected colors",
     "copied": "Colors copied",
     "copyFailed": "Could not copy colors",
     "palettesTitle": "Choose a palette",
@@ -71,7 +77,10 @@
       "inkTeal": "Ink & Teal",
       "mauveStone": "Mauve & Stone",
       "blueFog": "Blue Fog"
-    }
+    },
+    "editingTheme": "Edit theme colors",
+    "lightMode": "Light mode",
+    "darkMode": "Dark mode"
   },
   "brandName": "Erica Santini",
   "pageTitles": {
