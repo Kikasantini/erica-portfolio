@@ -5,6 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="/erica-logo.svg" />
     <link rel="apple-touch-icon" href="/erica-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('erica-portfolio-theme-v1')
+        document.documentElement.dataset.theme = savedTheme === 'dark' ? 'dark' : 'light'
+      } catch {
+        document.documentElement.dataset.theme = 'light'
+      }
+    </script>
     <title>Erica Santini | Software Developer</title>
   </head>
   <body>
