@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap');
 
 :root {
-  --page-background: #fffdfa;
+  --page-background: #f7f7f7;
   --main-text: #24343a;
   --paragraph-text: #435258;
   --meta-text: #667477;
@@ -26,11 +26,11 @@
   --technology-tag-background-color: #e8f1f0;
   --fact-card-front-background-color: #e8f1f0;
   --fact-card-front-text-color: #24343a;
-  --fact-card-front-border-color: #c5d6d6;
+  --fact-card-front-border-color: #9cb4b4;
   --fact-card-back-background-color: #e2ddc6;
   --fact-card-back-text-color: #24343a;
   --fact-card-back-border-color: #796f44;
-  --additional-technologies-link-color: #1e6971;
+  --additional-technologies-link-color: #796f44;
   --project-card-background-color: #ffffff;
   --project-card-border-color: #dbe4e3;
   --project-card-media-background-color: #e8f1f0;

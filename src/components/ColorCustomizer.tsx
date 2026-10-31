@@ -1,150 +1,46 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-const PALETTE_PRESETS = {
-  softSage: {
-    "pageBackground": "#f3f1eb",
-    "mainText": "#363a3b",
-    "paragraphText": "#4b5354",
-    "metaText": "#68706f",
-    "brandName": "#44565c",
-    "headings": "#576d73",
-    "sectionTitles": "#687f6f",
-    "logo": "#687f6f",
-    "timelineMarkers": "#728b76",
-    "headerDivider": "#dadfd8",
-    "navigationHover": "#e7eae3",
-    "languageSelectorBorder": "#cbd4ca",
-    "outlineButtonsBorder": "#98a991",
-    "timelineLine": "#d8ded5",
-    "technologyTagsBorder": "#dadbd2",
-    "technologyTagsBackground": "#ebede6",
-    "textOnAccent": "#ffffff",
-    "buttonBackground": "#f3f1eb",
-    "buttonText": "#53685a",
-    "buttonHoverBackground": "#576d73",
-    "navigationActiveBackground": "#e7eae3",
-    "technologyTagsText": "#53685a",
-    "factCardFrontBackground": "#ebede6",
-    "factCardFrontText": "#363a3b",
-    "factCardFrontBorder": "#cbd4ca",
-    "factCardBackBackground": "#e7eae3",
-    "factCardBackText": "#363a3b",
-    "factCardBackBorder": "#98a991",
-    "additionalTechnologiesLinkText": "#53685a",
-    "projectCardBackground": "#ffffff",
-    "projectCardBorder": "#dbe4e3",
-    "projectCardMediaBackground": "#e8f1f0"
-  },
-  inkTeal: {
-    "pageBackground": "#fffdfa",
-    "mainText": "#24343a",
-    "paragraphText": "#435258",
-    "metaText": "#667477",
-    "brandName": "#16324f",
-    "headings": "#16324f",
-    "sectionTitles": "#257c83",
-    "logo": "#257c83",
-    "timelineMarkers": "#257c83",
-    "headerDivider": "#dbe4e3",
-    "navigationHover": "#e2eeed",
-    "languageSelectorBorder": "#c5d6d6",
-    "outlineButtonsBorder": "#6e9fa1",
-    "timelineLine": "#d0e0df",
-    "technologyTagsBorder": "#ccdddd",
-    "technologyTagsBackground": "#e8f1f0",
-    "textOnAccent": "#ffffff",
-    "buttonBackground": "#f2f6f5",
-    "buttonText": "#1e6971",
-    "buttonHoverBackground": "#16324f",
-    "navigationActiveBackground": "#e2eeed",
-    "technologyTagsText": "#1e6971",
-    "factCardFrontBackground": "#e8f1f0",
-    "factCardFrontText": "#24343a",
-    "factCardFrontBorder": "#c5d6d6",
-    "factCardBackBackground": "#e2ddc6",
-    "factCardBackText": "#24343a",
-    "factCardBackBorder": "#796f44",
-    "additionalTechnologiesLinkText": "#1e6971",
-    "projectCardBackground": "#ffffff",
-    "projectCardBorder": "#dbe4e3",
-    "projectCardMediaBackground": "#e8f1f0"
-  },
-  mauveStone: {
-    "pageBackground": "#f4f0f3",
-    "mainText": "#3b353d",
-    "paragraphText": "#514b54",
-    "metaText": "#726973",
-    "brandName": "#544055",
-    "headings": "#6a536e",
-    "sectionTitles": "#876f87",
-    "logo": "#876f87",
-    "timelineMarkers": "#907795",
-    "headerDivider": "#e0d8e0",
-    "navigationHover": "#eee8ee",
-    "languageSelectorBorder": "#d8cad7",
-    "outlineButtonsBorder": "#b49eb3",
-    "timelineLine": "#e1d7e2",
-    "technologyTagsBorder": "#e4dbe4",
-    "technologyTagsBackground": "#f0eaf0",
-    "textOnAccent": "#ffffff",
-    "buttonBackground": "#f4f0f3",
-    "buttonText": "#68576d",
-    "buttonHoverBackground": "#6a536e",
-    "navigationActiveBackground": "#eee8ee",
-    "technologyTagsText": "#68576d",
-    "factCardFrontBackground": "#f0eaf0",
-    "factCardFrontText": "#3b353d",
-    "factCardFrontBorder": "#d8cad7",
-    "factCardBackBackground": "#eee8ee",
-    "factCardBackText": "#3b353d",
-    "factCardBackBorder": "#b49eb3",
-    "additionalTechnologiesLinkText": "#68576d",
-    "projectCardBackground": "#ffffff",
-    "projectCardBorder": "#dbe4e3",
-    "projectCardMediaBackground": "#e8f1f0"
-  },
-  blueFog: {
-    "pageBackground": "#f0f4f7",
-    "mainText": "#303b47",
-    "paragraphText": "#495660",
-    "metaText": "#697783",
-    "brandName": "#2f4358",
-    "headings": "#3d5d7a",
-    "sectionTitles": "#627f99",
-    "logo": "#627f99",
-    "timelineMarkers": "#67849f",
-    "headerDivider": "#d9e1e9",
-    "navigationHover": "#e6ecf2",
-    "languageSelectorBorder": "#c9d5e0",
-    "outlineButtonsBorder": "#9cafc0",
-    "timelineLine": "#d5dfe8",
-    "technologyTagsBorder": "#d4dee7",
-    "technologyTagsBackground": "#e9eff4",
-    "textOnAccent": "#ffffff",
-    "buttonBackground": "#f0f4f7",
-    "buttonText": "#50677d",
-    "buttonHoverBackground": "#3d5d7a",
-    "navigationActiveBackground": "#e6ecf2",
-    "technologyTagsText": "#50677d",
-    "factCardFrontBackground": "#e9eff4",
-    "factCardFrontText": "#303b47",
-    "factCardFrontBorder": "#c9d5e0",
-    "factCardBackBackground": "#e6ecf2",
-    "factCardBackText": "#303b47",
-    "factCardBackBorder": "#9cafc0",
-    "additionalTechnologiesLinkText": "#50677d",
-    "projectCardBackground": "#ffffff",
-    "projectCardBorder": "#dbe4e3",
-    "projectCardMediaBackground": "#e8f1f0"
-  }
+const LIGHT_MODE_DEFAULTS = {
+  "pageBackground": "#f7f7f7",
+  "mainText": "#24343a",
+  "paragraphText": "#435258",
+  "metaText": "#667477",
+  "brandName": "#16324f",
+  "headings": "#16324f",
+  "sectionTitles": "#257c83",
+  "logo": "#257c83",
+  "timelineMarkers": "#257c83",
+  "headerDivider": "#dbe4e3",
+  "navigationHover": "#e2eeed",
+  "languageSelectorBorder": "#c5d6d6",
+  "outlineButtonsBorder": "#6e9fa1",
+  "timelineLine": "#d0e0df",
+  "technologyTagsBorder": "#ccdddd",
+  "technologyTagsBackground": "#e8f1f0",
+  "textOnAccent": "#ffffff",
+  "buttonBackground": "#f2f6f5",
+  "buttonText": "#1e6971",
+  "buttonHoverBackground": "#16324f",
+  "navigationActiveBackground": "#e2eeed",
+  "technologyTagsText": "#1e6971",
+  "factCardFrontBackground": "#e8f1f0",
+  "factCardFrontText": "#24343a",
+  "factCardFrontBorder": "#9cb4b4",
+  "factCardBackBackground": "#e2ddc6",
+  "factCardBackText": "#24343a",
+  "factCardBackBorder": "#796f44",
+  "additionalTechnologiesLinkText": "#796f44",
+  "projectCardBackground": "#ffffff",
+  "projectCardBorder": "#dbe4e3",
+  "projectCardMediaBackground": "#e8f1f0"
 } as const
 
-const DEFAULT_PALETTE_ID = 'inkTeal' as const
-const DEFAULT_COLORS = PALETTE_PRESETS[DEFAULT_PALETTE_ID]
+type ColorKey = keyof typeof LIGHT_MODE_DEFAULTS
+type ColorPalette = Record<ColorKey, string>
 
 const DARK_MODE_DEFAULTS: ColorPalette = {
-  ...DEFAULT_COLORS,
+  ...LIGHT_MODE_DEFAULTS,
   pageBackground: '#142127', mainText: '#e8efed', paragraphText: '#c5d2cf', metaText: '#9aa9a7',
   brandName: '#e2edeb', headings: '#eaf2f0', sectionTitles: '#80c9c3', logo: '#80c9c3', timelineMarkers: '#80c9c3',
   headerDivider: '#34474b', navigationHover: '#26393d', languageSelectorBorder: '#425b5c', outlineButtonsBorder: '#668f90',
@@ -154,19 +50,6 @@ const DARK_MODE_DEFAULTS: ColorPalette = {
   factCardBackBackground: '#35352b', factCardBackText: '#f2efdf', factCardBackBorder: '#827957',
   additionalTechnologiesLinkText: '#a1d8d2', projectCardBackground: '#1b2c32', projectCardBorder: '#354b50', projectCardMediaBackground: '#22363b',
 }
-
-type PaletteId = keyof typeof PALETTE_PRESETS
-type ColorKey = keyof typeof DEFAULT_COLORS
-type ColorPalette = Record<ColorKey, string>
-type SavedPalettes = Record<PaletteId, ColorPalette>
-
-const PALETTE_SWATCH_KEYS: ColorKey[] = [
-  'pageBackground',
-  'brandName',
-  'headings',
-  'sectionTitles',
-  'logo',
-]
 
 const CSS_VARIABLES: Record<ColorKey, string> = {
   "pageBackground": "--page-background",
@@ -229,30 +112,20 @@ const COLOR_GROUPS = [
 
 const HEX_COLOR = /^#[0-9a-f]{6}$/i
 
-function createDefaultPalettes(): SavedPalettes {
-  return {
-    softSage: { ...PALETTE_PRESETS.softSage },
-    inkTeal: { ...PALETTE_PRESETS.inkTeal },
-    mauveStone: { ...PALETTE_PRESETS.mauveStone },
-    blueFog: { ...PALETTE_PRESETS.blueFog },
-  }
-}
-
 export default function ColorCustomizer({ theme, onThemeChange }: {
   theme: 'light' | 'dark'
   onThemeChange: (theme: 'light' | 'dark') => void
 }) {
   const { t } = useTranslation('common')
   const [isOpen, setIsOpen] = useState(false)
-  const [activePaletteId, setActivePaletteId] = useState<PaletteId>(DEFAULT_PALETTE_ID)
-  const [palettes, setPalettes] = useState<SavedPalettes>(createDefaultPalettes)
+  const [lightColors, setLightColors] = useState<ColorPalette>(() => ({ ...LIGHT_MODE_DEFAULTS }))
   const [darkColors, setDarkColors] = useState<ColorPalette>(() => ({ ...DARK_MODE_DEFAULTS }))
-  const [appliedLightColors, setAppliedLightColors] = useState<ColorPalette>(() => ({ ...DEFAULT_COLORS }))
+  const [appliedLightColors, setAppliedLightColors] = useState<ColorPalette>(() => ({ ...LIGHT_MODE_DEFAULTS }))
   const [appliedDarkColors, setAppliedDarkColors] = useState<ColorPalette>(() => ({ ...DARK_MODE_DEFAULTS }))
   const [drafts, setDrafts] = useState<Partial<Record<ColorKey, string>>>({})
   const [copyStatus, setCopyStatus] = useState<'copied' | 'failed' | ''>('')
   useEffect(() => setDrafts({}), [theme])
-  const colors = theme === 'dark' ? darkColors : palettes[activePaletteId]
+  const colors = theme === 'dark' ? darkColors : lightColors
   const appliedColors = theme === 'dark' ? appliedDarkColors : appliedLightColors
 
   useEffect(() => {
@@ -261,22 +134,17 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
     }
   }, [appliedColors])
 
-  function selectPalette(id: PaletteId) {
-    setActivePaletteId(id)
-    setDrafts({})
-  }
-
   function updateColor(key: ColorKey, value: string) {
-    if (theme === 'dark') setDarkColors((current) => ({ ...current, [key]: value }))
-    else setPalettes((current) => ({ ...current, [activePaletteId]: { ...current[activePaletteId], [key]: value } }))
+    const setColors = theme === 'dark' ? setDarkColors : setLightColors
+    setColors((current) => ({ ...current, [key]: value }))
     setDrafts((current) => ({ ...current, [key]: value }))
   }
 
   function updateHexDraft(key: ColorKey, value: string) {
     setDrafts((current) => ({ ...current, [key]: value }))
     if (HEX_COLOR.test(value)) {
-      if (theme === 'dark') setDarkColors((current) => ({ ...current, [key]: value }))
-      else setPalettes((current) => ({ ...current, [activePaletteId]: { ...current[activePaletteId], [key]: value } }))
+      const setColors = theme === 'dark' ? setDarkColors : setLightColors
+      setColors((current) => ({ ...current, [key]: value }))
     }
   }
 
@@ -295,7 +163,7 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
 
   async function copyColors() {
     try {
-      await navigator.clipboard.writeText(JSON.stringify({ light: palettes[activePaletteId], dark: darkColors }, null, 2))
+      await navigator.clipboard.writeText(JSON.stringify({ light: lightColors, dark: darkColors }, null, 2))
       setCopyStatus('copied')
     } catch {
       setCopyStatus('failed')
@@ -304,7 +172,7 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
 
   function resetColors() {
     if (theme === 'dark') setDarkColors({ ...DARK_MODE_DEFAULTS })
-    else setPalettes((current) => ({ ...current, [activePaletteId]: { ...PALETTE_PRESETS[activePaletteId] } }))
+    else setLightColors({ ...LIGHT_MODE_DEFAULTS })
     setDrafts({})
   }
 
@@ -348,39 +216,6 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
             <button className="color-customizer__theme-button" type="button" aria-pressed={theme === 'dark'} onClick={() => onThemeChange('dark')}>{t('colorEditor.darkMode')}</button>
           </div>
         </fieldset>
-
-        {theme === 'light' && (
-          <fieldset className="color-customizer__palette-section">
-          <legend>{t('colorEditor.palettesTitle')}</legend>
-          <div className="color-customizer__palette-grid">
-            {(Object.keys(PALETTE_PRESETS) as PaletteId[]).map((id) => {
-              const name = t('colorEditor.palettes.' + id)
-
-              return (
-                <button
-                  className="color-customizer__palette-button"
-                  type="button"
-                  key={id}
-                  aria-label={t('colorEditor.selectPalette', { palette: name })}
-                  aria-pressed={activePaletteId === id}
-                  onClick={() => selectPalette(id)}
-                >
-                  <span className="color-customizer__palette-swatches" aria-hidden="true">
-                    {PALETTE_SWATCH_KEYS.map((key) => (
-                      <span
-                        className="color-customizer__palette-swatch"
-                        key={key}
-                        style={{ backgroundColor: PALETTE_PRESETS[id][key] }}
-                      />
-                    ))}
-                  </span>
-                  <span>{name}</span>
-                </button>
-              )
-            })}
-          </div>
-        </fieldset>
-        )}
 
         <div className="color-customizer__groups">
           {COLOR_GROUPS.map((group) => (

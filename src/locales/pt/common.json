@@ -18,8 +18,8 @@
     "title": "Personalizar cores do site",
     "open": "Cores",
     "close": "Fechar",
-    "description": "As mudanças ficam apenas nesta sessão do navegador. Aplique-as para visualizar o tema no site inteiro; ao recarregar a página, as cores padrão do projeto voltam.",
-    "reset": "Restaurar esta paleta",
+    "description": "As alterações aparecem na hora e ficam salvas neste dispositivo.",
+    "reset": "Restaurar estas cores",
     "groups": {
       "page": "Página",
       "text": "Textos",
@@ -70,18 +70,9 @@
     "copy": "Copiar todas as cores selecionadas",
     "copied": "Cores copiadas",
     "copyFailed": "Não foi possível copiar as cores",
-    "palettesTitle": "Escolha uma paleta",
-    "selectPalette": "Selecionar a paleta {palette}",
-    "palettes": {
-      "softSage": "Sálvia suave",
-      "inkTeal": "Marinho e azul-petróleo",
-      "mauveStone": "Malva e pedra",
-      "blueFog": "Névoa azul"
-    },
     "editingTheme": "Editar cores do tema",
     "lightMode": "Modo claro",
-    "darkMode": "Modo escuro",
-    "apply": "Aplicar cores ao site inteiro"
+    "darkMode": "Modo escuro"
   },
   "brandName": "Érica Santini",
   "pageTitles": {

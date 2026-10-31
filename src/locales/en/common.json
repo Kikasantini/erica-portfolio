@@ -18,8 +18,8 @@
     "title": "Customize site colors",
     "open": "Colors",
     "close": "Close",
-    "description": "Color changes stay in this browser session. Apply them to preview the selected theme across the site; refreshing restores the project defaults.",
-    "reset": "Reset this palette",
+    "description": "Changes preview immediately and are saved on this device.",
+    "reset": "Reset these colors",
     "groups": {
       "page": "Page",
       "text": "Text",
@@ -70,18 +70,9 @@
     "copy": "Copy all selected colors",
     "copied": "Colors copied",
     "copyFailed": "Could not copy colors",
-    "palettesTitle": "Choose a palette",
-    "selectPalette": "Select the {palette} palette",
-    "palettes": {
-      "softSage": "Soft Sage",
-      "inkTeal": "Ink & Teal",
-      "mauveStone": "Mauve & Stone",
-      "blueFog": "Blue Fog"
-    },
     "editingTheme": "Edit theme colors",
     "lightMode": "Light mode",
-    "darkMode": "Dark mode",
-    "apply": "Apply colors to the whole site"
+    "darkMode": "Dark mode"
   },
   "brandName": "Erica Santini",
   "pageTitles": {
