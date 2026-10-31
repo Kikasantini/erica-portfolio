@@ -1,5 +1,5 @@
 {
-  "title": "Projects",
+  "title": "My Projects",
   "sections": [
     {
       "id": "recentProjects",
@@ -12,13 +12,19 @@
           "technologies": "React · TypeScript · Vite · React Router · i18next",
           "githubUrl": "https://github.com/Kikasantini/erica-portfolio",
           "githubLabel": "View on GitHub",
-          "media": []
+          "media": [
+            {
+              "type": "image",
+              "src": "/projects/portfolio-react/screenshot_1.jpg",
+              "alt": "Portfolio website screenshot"
+            }
+          ]
         }
       ]
     },
     {
       "id": "pastProjects",
-      "title": "Back when AI was a Steven Spielberg movie starring the kid from The Sixth Sense",
+      "title": "Projects from back when...",
       "items": [
         {
           "id": "runnerRpg",
@@ -65,7 +71,7 @@
           "media": [
             {
               "type": "image",
-              "src": "/projects/translation-company-automation/1.png",
+              "src": "/projects/translation-company-automation/translation-company-automation.jpg",
               "alt": "Ubuntu terminal showing Python automation scripts"
             }
           ]
@@ -77,5 +83,6 @@
   "previousMedia": "Previous media",
   "nextMedia": "Next media",
   "openMedia": "Open media viewer",
-  "closeMedia": "Close media viewer"
+  "closeMedia": "Close media viewer",
+  "imagePlaceholder": "Project image coming soon"
 }

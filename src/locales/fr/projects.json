@@ -1,5 +1,5 @@
 {
-  "title": "Projets",
+  "title": "Mes projets",
   "sections": [
     {
       "id": "recentProjects",
@@ -12,13 +12,19 @@
           "technologies": "React · TypeScript · Vite · React Router · i18next",
           "githubUrl": "https://github.com/Kikasantini/erica-portfolio",
           "githubLabel": "Voir sur GitHub",
-          "media": []
+          "media": [
+            {
+              "type": "image",
+              "src": "/projects/portfolio-react/screenshot_1.jpg",
+              "alt": "Capture d’écran du site portfolio"
+            }
+          ]
         }
       ]
     },
     {
       "id": "pastProjects",
-      "title": "À l’époque où l’IA était un film de Steven Spielberg avec le gamin du Sixième Sens",
+      "title": "Projets de l’époque où...",
       "items": [
         {
           "id": "runnerRpg",
@@ -65,7 +71,7 @@
           "media": [
             {
               "type": "image",
-              "src": "/projects/translation-company-automation/1.png",
+              "src": "/projects/translation-company-automation/translation-company-automation.jpg",
               "alt": "Terminal Ubuntu affichant des scripts d’automatisation en Python"
             }
           ]
@@ -77,5 +83,6 @@
   "previousMedia": "Média précédent",
   "nextMedia": "Média suivant",
   "openMedia": "Ouvrir le média en plein écran",
-  "closeMedia": "Fermer l’aperçu agrandi"
+  "closeMedia": "Fermer l’aperçu agrandi",
+  "imagePlaceholder": "Image du projet à venir"
 }

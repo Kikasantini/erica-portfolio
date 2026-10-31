@@ -706,22 +706,7 @@ p {
   margin-top: 16px;
 }
 
-.technology-toggle {
-  padding: 0;
-  border: 0;
-  color: var(--additional-technologies-link-color);
-  background: transparent;
-  font: inherit;
-  font-size: 14px;
-  cursor: pointer;
-  text-align: left;
-}
 
-.technology-toggle:hover,
-.technology-toggle:focus-visible {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
 
 .technology-toggle:focus-visible,
 .project-link:focus-visible,
@@ -736,7 +721,7 @@ p {
 }
 
 .project-section + .project-section {
-  margin-top: 56px;
+  margin-top: 42px;
 }
 
 .project-section > h2 {
@@ -749,19 +734,20 @@ p {
 
 .project-list {
   display: grid;
-  gap: 46px;
+  gap: 24px;
   margin-top: 24px;
 }
 
 .project-item {
-  min-width: 0;
-}
-
-.project-item--with-media {
   display: grid;
   grid-template-columns: minmax(210px, 44%) minmax(0, 1fr);
   align-items: center;
   gap: 22px;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--project-card-border-color);
+  border-radius: 8px;
+  background: var(--project-card-background-color);
 }
 
 .project-item__gallery {
@@ -771,7 +757,16 @@ p {
   overflow: hidden;
   border: 1px solid var(--technology-tag-border-color);
   border-radius: 7px;
-  background: var(--main-text);
+  background: var(--project-card-media-background-color);
+}
+
+.project-item__gallery--placeholder {
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  color: var(--meta-text);
+  font-size: 13px;
+  text-align: center;
 }
 
 .project-item__media {
@@ -843,21 +838,33 @@ p {
   font-weight: 600;
 }
 
-.project-link {
+.project-link,
+.technology-toggle {
   display: inline-block;
-  margin-top: 18px;
   padding: 0;
   border: 0;
-  color: var(--button-text-color);
   background: transparent;
   font: inherit;
   font-size: 14px;
-  text-decoration: none;
-}
-
-.project-link:hover {
+  font-weight: 600;
+  text-align: left;
   text-decoration: underline;
   text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.project-link {
+  margin-top: 18px;
+  color: var(--button-text-color);
+}
+
+.technology-toggle {
+  color: var(--additional-technologies-link-color);
+}
+
+.project-link:hover,
+.technology-toggle:hover {
+  color: var(--heading-color);
 }
 
 @media (max-width: 620px) {
@@ -925,9 +932,10 @@ p {
     margin-top: 42px;
   }
 
-  .project-item--with-media {
-    grid-template-columns: minmax(110px, 38%) minmax(0, 1fr);
-    gap: 14px;
+  .project-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding: 14px;
   }
 }
 

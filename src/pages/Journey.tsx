@@ -96,7 +96,7 @@ function ExperienceEntry({ item }: { item: ExperienceItem }) {
       {additionalTechnologies.length > 0 && (
         <div className="technology-group technology-group--additional">
           <button
-            className="outline-button technology-toggle"
+            className="technology-toggle"
             type="button"
             aria-expanded={showAdditional}
             aria-controls={additionalId}
