@@ -96,7 +96,7 @@ export default function Home() {
               target={isExternal ? '_blank' : undefined}
               rel={isExternal ? 'noreferrer' : undefined}
               aria-label={link.label}
-              title={link.label}
+              data-tooltip={link.label}
               download={link.download}
             >
               <svg className="home-contact__icon" aria-hidden="true" viewBox="0 0 24 24">
