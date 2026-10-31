@@ -29,6 +29,11 @@
           "githubLabel": "Voir sur GitHub",
           "media": [
             {
+              "type": "image",
+              "src": "/projects/runner-rpg/gameplay-03.jpg",
+              "alt": "Capture d’écran 3 du jeu RunnerRPG"
+            },
+            {
               "type": "video",
               "src": "/projects/runner-rpg/gameplay.mp4",
               "alt": "Vidéo de gameplay de RunnerRPG"
@@ -42,11 +47,6 @@
               "type": "image",
               "src": "/projects/runner-rpg/gameplay-02.jpg",
               "alt": "Capture d’écran 2 du jeu RunnerRPG"
-            },
-            {
-              "type": "image",
-              "src": "/projects/runner-rpg/gameplay-03.jpg",
-              "alt": "Capture d’écran 3 du jeu RunnerRPG"
             },
             {
               "type": "image",
