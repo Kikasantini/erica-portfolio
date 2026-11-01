@@ -30,6 +30,41 @@
       "title": "Projets de l’époque où l’IA était un film de Steven Spielberg avec le gamin du Sixième Sens",
       "items": [
         {
+          "id": "runnerRpg",
+          "title": "RunnerRPG",
+          "description": "Projet personnel de jeu de rôle pour Android, avec des combats au tour par tour, une progression des personnages, des améliorations d’équipement et des illustrations vectorielles originales pour l’interface.",
+          "technologies": "C# · Unity · Unity UI · ScriptableObjects · Adobe Illustrator · Adobe Photoshop · Inkscape",
+          "githubUrl": "https://github.com/Kikasantini/RunnerRPG",
+          "githubLabel": "Voir sur GitHub",
+          "media": [
+            {
+              "type": "image",
+              "src": "/projects/runner-rpg/gameplay-03.jpg",
+              "alt": "Capture d’écran 3 du jeu RunnerRPG"
+            },
+            {
+              "type": "video",
+              "src": "/projects/runner-rpg/gameplay.mp4",
+              "alt": "Vidéo de gameplay de RunnerRPG"
+            },
+            {
+              "type": "image",
+              "src": "/projects/runner-rpg/gameplay-01.jpg",
+              "alt": "Capture d’écran du jeu RunnerRPG"
+            },
+            {
+              "type": "image",
+              "src": "/projects/runner-rpg/gameplay-02.jpg",
+              "alt": "Capture d’écran 2 du jeu RunnerRPG"
+            },
+            {
+              "type": "image",
+              "src": "/projects/runner-rpg/gameplay-04.jpg",
+              "alt": "Capture d’écran 4 du jeu RunnerRPG"
+            }
+          ]
+        },
+        {
           "id": "esp8266WeatherStationGame",
           "title": "Station météo connectée et défi de lecture binaire",
           "description": "Projet académique d’objet connecté réalisé avec un ESP8266. Il lit les données environnementales d’un capteur BME280, les affiche sur un écran OLED et un serveur Web local, et comprend un défi de lecture binaire : trois DEL affichent une valeur en binaire. Le joueur lit les DEL, choisit le nombre décimal correspondant à l’aide du bouton, le vérifie sur l’écran OLED et confirme sa réponse.",
@@ -85,37 +120,27 @@
           ]
         },
         {
-          "id": "runnerRpg",
-          "title": "RunnerRPG",
-          "description": "Projet personnel de jeu de rôle pour Android, avec des combats au tour par tour, une progression des personnages, des améliorations d’équipement et des illustrations vectorielles originales pour l’interface.",
-          "technologies": "C# · Unity · Unity UI · ScriptableObjects · Adobe Illustrator · Adobe Photoshop · Inkscape",
-          "githubUrl": "https://github.com/Kikasantini/RunnerRPG",
+          "id": "iotSensorMonitoringZabbixMqtt",
+          "title": "Surveillance IoT de capteurs avec MQTT et Zabbix",
+          "description": "Projet académique d’objets connectés reliant trois microcontrôleurs : un ESP8266 lit les mesures du BME280, les expose en JSON et les publie par MQTT; un deuxième ESP8266 les affiche sur un écran OLED SSD1306, tandis qu’un ESP32 recueille les mesures d’accélération, de rotation et de température du GY-521. Mosquitto relaie les messages et Zabbix surveille les capteurs.",
+          "technologies": "ESP8266 · ESP32 · C++ · Arduino · MicroPython · BME280 · GY-521/MPU-6050 · SSD1306 OLED · MQTT · Mosquitto · Zabbix · HTTP/JSON · Wi‑Fi",
+          "githubUrl": "https://github.com/Kikasantini/iot-sensor-monitoring-zabbix-mqtt",
           "githubLabel": "Voir sur GitHub",
           "media": [
             {
               "type": "image",
-              "src": "/projects/runner-rpg/gameplay-03.jpg",
-              "alt": "Capture d’écran 3 du jeu RunnerRPG"
+              "src": "/projects/iot-sensor-monitoring-zabbix-mqtt/conceptual-architecture.png",
+              "alt": "Schéma conceptuel des trois microcontrôleurs, des capteurs, de Mosquitto, de Zabbix et du flux de données."
+            },
+            {
+              "type": "image",
+              "src": "/projects/iot-sensor-monitoring-zabbix-mqtt/electronic-wiring.png",
+              "alt": "Schéma de câblage des trois cartes de microcontrôleur et de leurs capteurs."
             },
             {
               "type": "video",
-              "src": "/projects/runner-rpg/gameplay.mp4",
-              "alt": "Vidéo de gameplay de RunnerRPG"
-            },
-            {
-              "type": "image",
-              "src": "/projects/runner-rpg/gameplay-01.jpg",
-              "alt": "Capture d’écran du jeu RunnerRPG"
-            },
-            {
-              "type": "image",
-              "src": "/projects/runner-rpg/gameplay-02.jpg",
-              "alt": "Capture d’écran 2 du jeu RunnerRPG"
-            },
-            {
-              "type": "image",
-              "src": "/projects/runner-rpg/gameplay-04.jpg",
-              "alt": "Capture d’écran 4 du jeu RunnerRPG"
+              "src": "https://raw.githubusercontent.com/Kikasantini/iot-sensor-monitoring-zabbix-mqtt/main/media/project-demo.mp4",
+              "alt": "Démonstration du projet de surveillance IoT avec trois cartes."
             }
           ]
         },

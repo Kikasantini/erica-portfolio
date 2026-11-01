@@ -30,6 +30,41 @@
       "title": "Projetos de quando a IA era um filme do Steven Spielberg estrelado pelo garoto de O Sexto Sentido",
       "items": [
         {
+          "id": "runnerRpg",
+          "title": "RunnerRPG",
+          "description": "Projeto pessoal de RPG para Android, com combates por turnos, progressão de personagens, melhorias de equipamento e ilustrações vetoriais próprias para a interface.",
+          "technologies": "C# · Unity · Unity UI · ScriptableObjects · Adobe Illustrator · Adobe Photoshop · Inkscape",
+          "githubUrl": "https://github.com/Kikasantini/RunnerRPG",
+          "githubLabel": "Ver no GitHub",
+          "media": [
+            {
+              "type": "image",
+              "src": "/projects/runner-rpg/gameplay-03.jpg",
+              "alt": "Imagem 3 do RunnerRPG"
+            },
+            {
+              "type": "video",
+              "src": "/projects/runner-rpg/gameplay.mp4",
+              "alt": "Vídeo de gameplay do RunnerRPG"
+            },
+            {
+              "type": "image",
+              "src": "/projects/runner-rpg/gameplay-01.jpg",
+              "alt": "Captura de tela do RunnerRPG"
+            },
+            {
+              "type": "image",
+              "src": "/projects/runner-rpg/gameplay-02.jpg",
+              "alt": "Imagem 2 do RunnerRPG"
+            },
+            {
+              "type": "image",
+              "src": "/projects/runner-rpg/gameplay-04.jpg",
+              "alt": "Imagem 4 do RunnerRPG"
+            }
+          ]
+        },
+        {
           "id": "esp8266WeatherStationGame",
           "title": "Estação meteorológica conectada e desafio de leitura binária",
           "description": "Projeto acadêmico de objeto conectado feito com ESP8266. Lê dados ambientais de um sensor BME280, mostra as informações em um display OLED e em um servidor web local e inclui um desafio de leitura binária: três LEDs mostram um valor em binário. A pessoa lê os LEDs, seleciona o número decimal correspondente com o botão, confere a escolha no display OLED e confirma a resposta.",
@@ -85,37 +120,27 @@
           ]
         },
         {
-          "id": "runnerRpg",
-          "title": "RunnerRPG",
-          "description": "Projeto pessoal de RPG para Android, com combates por turnos, progressão de personagens, melhorias de equipamento e ilustrações vetoriais próprias para a interface.",
-          "technologies": "C# · Unity · Unity UI · ScriptableObjects · Adobe Illustrator · Adobe Photoshop · Inkscape",
-          "githubUrl": "https://github.com/Kikasantini/RunnerRPG",
+          "id": "iotSensorMonitoringZabbixMqtt",
+          "title": "Monitoramento IoT de sensores com MQTT e Zabbix",
+          "description": "Projeto acadêmico de IoT com três microcontroladores: uma ESP8266 lê as medições do BME280, disponibiliza os dados em JSON e os publica por MQTT; outra ESP8266 mostra as informações em um display OLED SSD1306, enquanto uma ESP32 coleta aceleração, rotação e temperatura do GY-521. O Mosquitto encaminha as mensagens e o Zabbix monitora os sensores.",
+          "technologies": "ESP8266 · ESP32 · C++ · Arduino · MicroPython · BME280 · GY-521/MPU-6050 · SSD1306 OLED · MQTT · Mosquitto · Zabbix · HTTP/JSON · Wi‑Fi",
+          "githubUrl": "https://github.com/Kikasantini/iot-sensor-monitoring-zabbix-mqtt",
           "githubLabel": "Ver no GitHub",
           "media": [
             {
               "type": "image",
-              "src": "/projects/runner-rpg/gameplay-03.jpg",
-              "alt": "Imagem 3 do RunnerRPG"
+              "src": "/projects/iot-sensor-monitoring-zabbix-mqtt/conceptual-architecture.png",
+              "alt": "Diagrama conceitual com os três microcontroladores, sensores, Mosquitto, Zabbix e o fluxo de dados."
+            },
+            {
+              "type": "image",
+              "src": "/projects/iot-sensor-monitoring-zabbix-mqtt/electronic-wiring.png",
+              "alt": "Esquema elétrico das três placas de microcontrolador e seus sensores."
             },
             {
               "type": "video",
-              "src": "/projects/runner-rpg/gameplay.mp4",
-              "alt": "Vídeo de gameplay do RunnerRPG"
-            },
-            {
-              "type": "image",
-              "src": "/projects/runner-rpg/gameplay-01.jpg",
-              "alt": "Captura de tela do RunnerRPG"
-            },
-            {
-              "type": "image",
-              "src": "/projects/runner-rpg/gameplay-02.jpg",
-              "alt": "Imagem 2 do RunnerRPG"
-            },
-            {
-              "type": "image",
-              "src": "/projects/runner-rpg/gameplay-04.jpg",
-              "alt": "Imagem 4 do RunnerRPG"
+              "src": "https://raw.githubusercontent.com/Kikasantini/iot-sensor-monitoring-zabbix-mqtt/main/media/project-demo.mp4",
+              "alt": "Demonstração do projeto de monitoramento IoT com três placas."
             }
           ]
         },
