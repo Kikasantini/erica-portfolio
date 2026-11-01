@@ -31,8 +31,8 @@
       "items": [
         {
           "id": "esp8266WeatherStationGame",
-          "title": "ESP8266 Weather Station and Number Guessing Game",
-          "description": "An academic connected-object project built with an ESP8266. It reads environmental data from a BME280 sensor, displays the readings on an OLED and a local web server, and includes a button-controlled number game with LEDs and a buzzer.",
+          "title": "ESP8266 Weather Station and Binary Number Challenge",
+          "description": "An academic connected-object project built with an ESP8266. It reads environmental data from a BME280 sensor, displays the readings on an OLED and a local web server, and includes a binary number challenge: three LEDs show a value in binary. The player reads the LEDs, selects the matching decimal number with the button, checks it on the OLED, and confirms the answer.",
           "technologies": "ESP8266 · C++ · Arduino · BME280 · SSD1306 OLED · I²C · Wi‑Fi",
           "githubUrl": "https://github.com/Kikasantini/esp8266-weather-station-game",
           "githubLabel": "View on GitHub",
@@ -41,6 +41,11 @@
               "type": "image",
               "src": "/projects/esp8266-weather-station-game/hardware-prototype.jpeg",
               "alt": "ESP8266 prototype on a breadboard with an OLED showing the game-over score."
+            },
+            {
+              "type": "video",
+              "src": "https://raw.githubusercontent.com/Kikasantini/esp8266-weather-station-game/main/project-demo.mp4",
+              "alt": "Demonstration of the connected weather station and binary number challenge."
             },
             {
               "type": "image",

@@ -31,8 +31,8 @@
       "items": [
         {
           "id": "esp8266WeatherStationGame",
-          "title": "Station météo connectée et jeu de devinettes",
-          "description": "Projet académique d’objet connecté réalisé avec un ESP8266. Il lit les données environnementales d’un capteur BME280, les affiche sur un écran OLED et un serveur Web local, et comprend un jeu de devinettes commandé par un bouton, avec des DEL et un avertisseur sonore.",
+          "title": "Station météo connectée et défi de lecture binaire",
+          "description": "Projet académique d’objet connecté réalisé avec un ESP8266. Il lit les données environnementales d’un capteur BME280, les affiche sur un écran OLED et un serveur Web local, et comprend un défi de lecture binaire : trois DEL affichent une valeur en binaire. Le joueur lit les DEL, choisit le nombre décimal correspondant à l’aide du bouton, le vérifie sur l’écran OLED et confirme sa réponse.",
           "technologies": "ESP8266 · C++ · Arduino · BME280 · SSD1306 OLED · I²C · Wi‑Fi",
           "githubUrl": "https://github.com/Kikasantini/esp8266-weather-station-game",
           "githubLabel": "Voir sur GitHub",
@@ -41,6 +41,11 @@
               "type": "image",
               "src": "/projects/esp8266-weather-station-game/hardware-prototype.jpeg",
               "alt": "Prototype ESP8266 sur une plaque d’essai, avec l’écran OLED affichant le score final."
+            },
+            {
+              "type": "video",
+              "src": "https://raw.githubusercontent.com/Kikasantini/esp8266-weather-station-game/main/project-demo.mp4",
+              "alt": "Démonstration de la station météo connectée et du défi de lecture binaire."
             },
             {
               "type": "image",
