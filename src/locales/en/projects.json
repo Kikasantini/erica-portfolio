@@ -9,7 +9,7 @@
           "id": "productionCellSimulator",
           "title": "Production Cell Simulator",
           "description": "A Python simulation of a production-cell workflow that processes configurable sensor events, tracks work-order quantities, handles missed detections, and logs timestamped events to CSV.",
-          "technologies": "Python 3 · JSON · CSV · Git",
+          "technologies": "Python 3 · JSON · CSV · Git · Visual Studio Code",
           "githubUrl": "https://github.com/Kikasantini/production-cell-simulator",
           "githubLabel": "View on GitHub",
           "media": []
