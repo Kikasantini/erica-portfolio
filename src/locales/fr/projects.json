@@ -15,6 +15,36 @@
           "media": []
         },
         {
+          "id": "esp8266WeatherStationGame",
+          "title": "Station météo connectée et jeu de devinettes",
+          "description": "Projet académique d’objet connecté réalisé avec un ESP8266. Il lit les données environnementales d’un capteur BME280, les affiche sur un écran OLED et un serveur Web local, et comprend un jeu de devinettes commandé par un bouton, avec des DEL et un avertisseur sonore.",
+          "technologies": "ESP8266 · C++ · Arduino · BME280 · SSD1306 OLED · I²C · Wi‑Fi",
+          "githubUrl": "https://github.com/Kikasantini/esp8266-weather-station-game",
+          "githubLabel": "Voir sur GitHub",
+          "media": [
+            {
+              "type": "image",
+              "src": "/projects/esp8266-weather-station-game/hardware-prototype.jpeg",
+              "alt": "Prototype ESP8266 sur une plaque d’essai, avec l’écran OLED affichant le score final."
+            },
+            {
+              "type": "image",
+              "src": "/projects/esp8266-weather-station-game/web-interface-home.jpg",
+              "alt": "Page d’accueil de l’interface Web locale du projet ESP8266."
+            },
+            {
+              "type": "image",
+              "src": "/projects/esp8266-weather-station-game/wiring-diagram.png",
+              "alt": "Schéma de câblage de l’ESP8266, de l’écran SSD1306 et du BME280."
+            },
+            {
+              "type": "image",
+              "src": "/projects/esp8266-weather-station-game/breadboard-layout.png",
+              "alt": "Disposition du montage sur plaque d’essai avec le câblage du projet ESP8266."
+            }
+          ]
+        },
+        {
           "id": "portfolioWebsite",
           "title": "Site portfolio",
           "description": "Un portfolio multilingue (celui que vous consultez en ce moment), créé comme projet pratique pour apprendre React et approfondir mes compétences en développement web, tout en présentant mon parcours et mes projets.",

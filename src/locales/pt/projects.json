@@ -15,6 +15,36 @@
           "media": []
         },
         {
+          "id": "esp8266WeatherStationGame",
+          "title": "Estação meteorológica conectada e jogo de adivinhação",
+          "description": "Projeto acadêmico de objeto conectado feito com ESP8266. Lê dados ambientais de um sensor BME280, mostra as informações em um display OLED e em um servidor web local e inclui um jogo de adivinhação controlado por botão, com LEDs e buzzer.",
+          "technologies": "ESP8266 · C++ · Arduino · BME280 · SSD1306 OLED · I²C · Wi‑Fi",
+          "githubUrl": "https://github.com/Kikasantini/esp8266-weather-station-game",
+          "githubLabel": "Ver no GitHub",
+          "media": [
+            {
+              "type": "image",
+              "src": "/projects/esp8266-weather-station-game/hardware-prototype.jpeg",
+              "alt": "Protótipo com ESP8266 na protoboard e o display OLED mostrando o placar final."
+            },
+            {
+              "type": "image",
+              "src": "/projects/esp8266-weather-station-game/web-interface-home.jpg",
+              "alt": "Página inicial da interface web local do projeto ESP8266."
+            },
+            {
+              "type": "image",
+              "src": "/projects/esp8266-weather-station-game/wiring-diagram.png",
+              "alt": "Esquema elétrico do ESP8266, do display SSD1306 e do BME280."
+            },
+            {
+              "type": "image",
+              "src": "/projects/esp8266-weather-station-game/breadboard-layout.png",
+              "alt": "Montagem na protoboard com as conexões do projeto ESP8266."
+            }
+          ]
+        },
+        {
           "id": "portfolioWebsite",
           "title": "Site de portfólio",
           "description": "Um portfólio multilíngue (este site que você está visitando agora), desenvolvido como projeto prático para aprender React e aprimorar meus conhecimentos em desenvolvimento web, além de apresentar minha trajetória e meus projetos.",

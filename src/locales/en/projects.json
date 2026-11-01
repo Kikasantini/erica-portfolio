@@ -15,6 +15,36 @@
           "media": []
         },
         {
+          "id": "esp8266WeatherStationGame",
+          "title": "ESP8266 Weather Station and Number Guessing Game",
+          "description": "An academic connected-object project built with an ESP8266. It reads environmental data from a BME280 sensor, displays the readings on an OLED and a local web server, and includes a button-controlled number game with LEDs and a buzzer.",
+          "technologies": "ESP8266 · C++ · Arduino · BME280 · SSD1306 OLED · I²C · Wi‑Fi",
+          "githubUrl": "https://github.com/Kikasantini/esp8266-weather-station-game",
+          "githubLabel": "View on GitHub",
+          "media": [
+            {
+              "type": "image",
+              "src": "/projects/esp8266-weather-station-game/hardware-prototype.jpeg",
+              "alt": "ESP8266 prototype on a breadboard with an OLED showing the game-over score."
+            },
+            {
+              "type": "image",
+              "src": "/projects/esp8266-weather-station-game/web-interface-home.jpg",
+              "alt": "Home page of the ESP8266 project's local web interface."
+            },
+            {
+              "type": "image",
+              "src": "/projects/esp8266-weather-station-game/wiring-diagram.png",
+              "alt": "Wiring schematic for the ESP8266, SSD1306 OLED, and BME280."
+            },
+            {
+              "type": "image",
+              "src": "/projects/esp8266-weather-station-game/breadboard-layout.png",
+              "alt": "Breadboard layout showing the ESP8266 project wiring."
+            }
+          ]
+        },
+        {
           "id": "portfolioWebsite",
           "title": "Portfolio Website",
           "description": "A multilingual portfolio website (the one you're browsing right now), built as a hands-on project to learn React and strengthen my web development skills while showcasing my experience and projects.",
