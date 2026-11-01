@@ -6,6 +6,15 @@
       "title": "Projets récents",
       "items": [
         {
+          "id": "productionCellSimulator",
+          "title": "Simulateur de cellule de production",
+          "description": "Simulation en Python d’un processus de production qui traite des signaux de capteur configurables, suit les quantités d’un ordre de fabrication, gère les détections manquées et consigne les événements horodatés dans un fichier CSV.",
+          "technologies": "Python 3 · JSON · CSV · Git",
+          "githubUrl": "https://github.com/Kikasantini/production-cell-simulator",
+          "githubLabel": "Voir sur GitHub",
+          "media": []
+        },
+        {
           "id": "portfolioWebsite",
           "title": "Site portfolio",
           "description": "Un portfolio multilingue (celui que vous consultez en ce moment), créé comme projet pratique pour apprendre React et approfondir mes compétences en développement web, tout en présentant mon parcours et mes projets.",

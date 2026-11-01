@@ -6,6 +6,15 @@
       "title": "Recent Projects",
       "items": [
         {
+          "id": "productionCellSimulator",
+          "title": "Production Cell Simulator",
+          "description": "A Python simulation of a production-cell workflow that processes configurable sensor events, tracks work-order quantities, handles missed detections, and logs timestamped events to CSV.",
+          "technologies": "Python 3 · JSON · CSV · Git",
+          "githubUrl": "https://github.com/Kikasantini/production-cell-simulator",
+          "githubLabel": "View on GitHub",
+          "media": []
+        },
+        {
           "id": "portfolioWebsite",
           "title": "Portfolio Website",
           "description": "A multilingual portfolio website (the one you're browsing right now), built as a hands-on project to learn React and strengthen my web development skills while showcasing my experience and projects.",
