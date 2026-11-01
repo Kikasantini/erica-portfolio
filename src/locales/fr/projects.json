@@ -15,6 +15,21 @@
           "media": []
         },
         {
+          "id": "portfolioWebsite",
+          "title": "Site portfolio",
+          "description": "Un portfolio multilingue (celui que vous consultez en ce moment), créé comme projet pratique pour apprendre React et approfondir mes compétences en développement web, tout en présentant mon parcours et mes projets.",
+          "technologies": "React · TypeScript · Vite · React Router · i18next",
+          "githubUrl": "https://github.com/Kikasantini/erica-portfolio",
+          "githubLabel": "Voir sur GitHub",
+          "media": []
+        }
+      ]
+    },
+    {
+      "id": "pastProjects",
+      "title": "Projets de l’époque où l’IA était un film de Steven Spielberg avec le gamin du Sixième Sens",
+      "items": [
+        {
           "id": "esp8266WeatherStationGame",
           "title": "Station météo connectée et jeu de devinettes",
           "description": "Projet académique d’objet connecté réalisé avec un ESP8266. Il lit les données environnementales d’un capteur BME280, les affiche sur un écran OLED et un serveur Web local, et comprend un jeu de devinettes commandé par un bouton, avec des DEL et un avertisseur sonore.",
@@ -44,21 +59,6 @@
             }
           ]
         },
-        {
-          "id": "portfolioWebsite",
-          "title": "Site portfolio",
-          "description": "Un portfolio multilingue (celui que vous consultez en ce moment), créé comme projet pratique pour apprendre React et approfondir mes compétences en développement web, tout en présentant mon parcours et mes projets.",
-          "technologies": "React · TypeScript · Vite · React Router · i18next",
-          "githubUrl": "https://github.com/Kikasantini/erica-portfolio",
-          "githubLabel": "Voir sur GitHub",
-          "media": []
-        }
-      ]
-    },
-    {
-      "id": "pastProjects",
-      "title": "Projets de l’époque où l’IA était un film de Steven Spielberg avec le gamin du Sixième Sens",
-      "items": [
         {
           "id": "runnerRpg",
           "title": "RunnerRPG",

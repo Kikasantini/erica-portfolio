@@ -15,6 +15,21 @@
           "media": []
         },
         {
+          "id": "portfolioWebsite",
+          "title": "Portfolio Website",
+          "description": "A multilingual portfolio website (the one you're browsing right now), built as a hands-on project to learn React and strengthen my web development skills while showcasing my experience and projects.",
+          "technologies": "React · TypeScript · Vite · React Router · i18next",
+          "githubUrl": "https://github.com/Kikasantini/erica-portfolio",
+          "githubLabel": "View on GitHub",
+          "media": []
+        }
+      ]
+    },
+    {
+      "id": "pastProjects",
+      "title": "Projects from back when AI was a Steven Spielberg movie starring the kid from The Sixth Sense",
+      "items": [
+        {
           "id": "esp8266WeatherStationGame",
           "title": "ESP8266 Weather Station and Number Guessing Game",
           "description": "An academic connected-object project built with an ESP8266. It reads environmental data from a BME280 sensor, displays the readings on an OLED and a local web server, and includes a button-controlled number game with LEDs and a buzzer.",
@@ -44,21 +59,6 @@
             }
           ]
         },
-        {
-          "id": "portfolioWebsite",
-          "title": "Portfolio Website",
-          "description": "A multilingual portfolio website (the one you're browsing right now), built as a hands-on project to learn React and strengthen my web development skills while showcasing my experience and projects.",
-          "technologies": "React · TypeScript · Vite · React Router · i18next",
-          "githubUrl": "https://github.com/Kikasantini/erica-portfolio",
-          "githubLabel": "View on GitHub",
-          "media": []
-        }
-      ]
-    },
-    {
-      "id": "pastProjects",
-      "title": "Projects from back when AI was a Steven Spielberg movie starring the kid from The Sixth Sense",
-      "items": [
         {
           "id": "runnerRpg",
           "title": "RunnerRPG",
