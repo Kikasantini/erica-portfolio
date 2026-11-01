@@ -65,6 +65,26 @@
           ]
         },
         {
+          "id": "connectedWeatherStationZabbix",
+          "title": "Estação meteorológica conectada com display MicroPython e monitoramento Zabbix",
+          "description": "Projeto acadêmico de IoT que conecta duas placas ESP8266 em uma rede local. Uma placa, programada em C++ com Arduino, lê temperatura, umidade, pressão e altitude estimada de um BME280, controla dois LEDs e disponibiliza os dados em JSON. A segunda usa MicroPython para exibir as informações em um display OLED SSD1306, com um potenciômetro para ajustar o contraste. O Zabbix monitora os dados do sensor e dos LEDs.",
+          "technologies": "ESP8266 · C++ · Arduino · MicroPython · BME280 · SSD1306 OLED · Zabbix · JSON · Wi‑Fi",
+          "githubUrl": "https://github.com/Kikasantini/connected-weather-station-zabbix",
+          "githubLabel": "Ver no GitHub",
+          "media": [
+            {
+              "type": "image",
+              "src": "/projects/connected-weather-station-zabbix/wiring-diagram.png",
+              "alt": "Esquema de conexão das duas placas ESP8266, do sensor BME280, do display SSD1306, das LEDs, dos botões e do potenciômetro."
+            },
+            {
+              "type": "video",
+              "src": "https://raw.githubusercontent.com/Kikasantini/connected-weather-station-zabbix/main/media/full-project-demo.mp4",
+              "alt": "Demonstração completa da estação meteorológica conectada, do display MicroPython e do monitoramento com Zabbix."
+            }
+          ]
+        },
+        {
           "id": "runnerRpg",
           "title": "RunnerRPG",
           "description": "Projeto pessoal de RPG para Android, com combates por turnos, progressão de personagens, melhorias de equipamento e ilustrações vetoriais próprias para a interface.",
