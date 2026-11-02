@@ -2,7 +2,7 @@
 
 :root {
   --page-background: #f7f7f7;
-  --main-text: #24343a;
+  --main-text: #1d2b30;
   --paragraph-text: #435258;
   --meta-text: #667477;
   --brand-name: #16324f;
@@ -15,7 +15,7 @@
   --navigation-active-background-color: #e2eeed;
   --button-background-color: #f2f6f5;
   --button-text-color: #1e6971;
-  --button-hover-background-color: #16324f;
+  --button-hover-background-color: #46586d;
   --button-hover-text-color: #ffffff;
   --control-text-color: var(--button-text-color);
   --technology-tag-text-color: #1e6971;
@@ -24,16 +24,16 @@
   --timeline-line-color: #d0e0df;
   --technology-tag-border-color: #ccdddd;
   --technology-tag-background-color: #e8f1f0;
-  --fact-card-front-background-color: #e8f1f0;
+  --fact-card-front-background-color: #d7e0df;
   --fact-card-front-text-color: #24343a;
   --fact-card-front-border-color: #9cb4b4;
-  --fact-card-back-background-color: #e2ddc6;
+  --fact-card-back-background-color: #eee4ce;
   --fact-card-back-text-color: #24343a;
   --fact-card-back-border-color: #796f44;
   --additional-technologies-link-color: #796f44;
   --project-card-background-color: #ffffff;
-  --project-card-border-color: #dbe4e3;
-  --project-card-media-background-color: #e8f1f0;
+  --project-card-border-color: #ababab;
+  --project-card-media-background-color: #d7e0df;
   font-family: 'Roboto', Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -69,15 +69,15 @@
   --timeline-line-color: #354b4e;
   --technology-tag-border-color: #3f5c5d;
   --technology-tag-background-color: #24383b;
-  --fact-card-front-background-color: #24383b;
+  --fact-card-front-background-color: #44575a;
   --fact-card-front-text-color: #e8efed;
   --fact-card-front-border-color: #425b5c;
-  --fact-card-back-background-color: #35352b;
+  --fact-card-back-background-color: #3d3d3d;
   --fact-card-back-text-color: #f2efdf;
-  --fact-card-back-border-color: #827957;
+  --fact-card-back-border-color: #000000;
   --additional-technologies-link-color: #a1d8d2;
-  --project-card-background-color: #1b2c32;
-  --project-card-border-color: #354b50;
+  --project-card-background-color: #242f33;
+  --project-card-border-color: #919191;
   --project-card-media-background-color: #22363b;
   color-scheme: dark;
 }
@@ -278,7 +278,7 @@ p {
   border: 1px solid var(--language-border-color);
   border-radius: 5px;
   background: var(--page-background);
-  box-shadow: 0 6px 18px color-mix(in srgb, var(--main-text) 12%, transparent);
+  box-shadow: 0 3px 8px color-mix(in srgb, var(--main-text) 7%, transparent);
 }
 
 .language-control__option {
@@ -616,7 +616,7 @@ p {
 }
 
 .journey-section:first-of-type {
-  margin-top: 52px;
+  margin-top: 0;
 }
 
 .journey-section > h2 {
@@ -789,6 +789,10 @@ p {
 .project-section {
   max-width: 760px;
   margin-top: 54px;
+}
+
+.projects-page > .project-section:first-of-type {
+  margin-top: 0;
 }
 
 .project-section + .project-section {

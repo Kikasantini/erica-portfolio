@@ -27,12 +27,12 @@
     },
     {
       "id": "pastProjects",
-      "title": "Projects from back when AI was a Steven Spielberg movie starring the kid from The Sixth Sense",
+      "title": "Projects from back when AI was just a Steven Spielberg movie starring the kid from The Sixth Sense...",
       "items": [
         {
           "id": "runnerRpg",
           "title": "RunnerRPG",
-          "description": "A personal Android RPG project featuring turn-based battles, character progression, equipment upgrades, and custom vector artwork for the interface.",
+          "description": "RunnerRPG is a personal Android RPG prototype built with C# and Unity. It features turn-based combat, character skills and progression, inventory management, and equipment upgrades. I developed the mobile UI and created most of its custom vector artwork. I also implemented local save/load to preserve game progress and tested the game on my Android phone.",
           "technologies": "C# · Unity · Unity UI · ScriptableObjects · Adobe Illustrator · Adobe Photoshop · Inkscape",
           "githubUrl": "https://github.com/Kikasantini/RunnerRPG",
           "githubLabel": "View on GitHub",

@@ -27,12 +27,12 @@
     },
     {
       "id": "pastProjects",
-      "title": "Projetos de quando a IA era um filme do Steven Spielberg estrelado pelo garoto de O Sexto Sentido",
+      "title": "Projetos de quando a IA era só um filme de Steven Spielberg estrelado pelo garoto de O Sexto Sentido...",
       "items": [
         {
           "id": "runnerRpg",
           "title": "RunnerRPG",
-          "description": "Projeto pessoal de RPG para Android, com combates por turnos, progressão de personagens, melhorias de equipamento e ilustrações vetoriais próprias para a interface.",
+          "description": "RunnerRPG é um protótipo pessoal de RPG para Android, desenvolvido com C# e Unity. Ele inclui combates por turnos, habilidades e progressão de personagens, gerenciamento de inventário e melhorias de equipamento. Desenvolvi a interface mobile e criei a maior parte das ilustrações vetoriais originais. Também implementei o salvamento e o carregamento local para preservar o progresso e testei o jogo no meu telefone Android.",
           "technologies": "C# · Unity · Unity UI · ScriptableObjects · Adobe Illustrator · Adobe Photoshop · Inkscape",
           "githubUrl": "https://github.com/Kikasantini/RunnerRPG",
           "githubLabel": "Ver no GitHub",

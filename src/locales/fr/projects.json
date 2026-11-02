@@ -27,12 +27,12 @@
     },
     {
       "id": "pastProjects",
-      "title": "Projets de l’époque où l’IA était un film de Steven Spielberg avec le gamin du Sixième Sens",
+      "title": "Projets de l’époque où l’IA n’était qu’un film de Steven Spielberg avec le gamin du Sixième Sens...",
       "items": [
         {
           "id": "runnerRpg",
           "title": "RunnerRPG",
-          "description": "Projet personnel de jeu de rôle pour Android, avec des combats au tour par tour, une progression des personnages, des améliorations d’équipement et des illustrations vectorielles originales pour l’interface.",
+          "description": "RunnerRPG est un prototype personnel de jeu de rôle pour Android, développé avec C# et Unity. Il propose des combats au tour par tour, des compétences et la progression des personnages, la gestion de l’inventaire et des améliorations d’équipement. J’ai développé l’interface mobile et créé la plupart des illustrations vectorielles originales. J’ai aussi implémenté la sauvegarde et le chargement locaux pour conserver la progression, et testé le jeu sur mon téléphone Android.",
           "technologies": "C# · Unity · Unity UI · ScriptableObjects · Adobe Illustrator · Adobe Photoshop · Inkscape",
           "githubUrl": "https://github.com/Kikasantini/RunnerRPG",
           "githubLabel": "Voir sur GitHub",

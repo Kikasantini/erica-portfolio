@@ -118,8 +118,6 @@ export default function Journey() {
 
   return (
     <main className="journey-page">
-      <h1>{t('title')}</h1>
-
       <CollapsibleJourneySection
         id="experience"
         title={t('experienceTitle')}
@@ -131,7 +129,8 @@ export default function Journey() {
         </div>
       </CollapsibleJourneySection>
 
-      <CollapsibleJourneySection id="education" title={t('educationTitle')}>
+      <section className="journey-section journey-section--static">
+        <h2>{t('educationTitle')}</h2>
         <div className="timeline">
           {education.map((item) => (
             <article className="timeline-item" key={item.id}>
@@ -148,7 +147,7 @@ export default function Journey() {
             </article>
           ))}
         </div>
-      </CollapsibleJourneySection>
+      </section>
     </main>
   )
 }

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 const LIGHT_MODE_DEFAULTS = {
   "pageBackground": "#f7f7f7",
-  "mainText": "#24343a",
+  "mainText": "#1d2b30",
   "paragraphText": "#435258",
   "metaText": "#667477",
   "brandName": "#16324f",
@@ -21,34 +21,56 @@ const LIGHT_MODE_DEFAULTS = {
   "textOnAccent": "#ffffff",
   "buttonBackground": "#f2f6f5",
   "buttonText": "#1e6971",
-  "buttonHoverBackground": "#16324f",
+  "buttonHoverBackground": "#46586d",
   "navigationActiveBackground": "#e2eeed",
   "technologyTagsText": "#1e6971",
-  "factCardFrontBackground": "#e8f1f0",
+  "factCardFrontBackground": "#d7e0df",
   "factCardFrontText": "#24343a",
   "factCardFrontBorder": "#9cb4b4",
-  "factCardBackBackground": "#e2ddc6",
+  "factCardBackBackground": "#eee4ce",
   "factCardBackText": "#24343a",
   "factCardBackBorder": "#796f44",
   "additionalTechnologiesLinkText": "#796f44",
   "projectCardBackground": "#ffffff",
-  "projectCardBorder": "#dbe4e3",
-  "projectCardMediaBackground": "#e8f1f0"
+  "projectCardBorder": "#ababab",
+  "projectCardMediaBackground": "#d7e0df"
 } as const
-
 type ColorKey = keyof typeof LIGHT_MODE_DEFAULTS
 type ColorPalette = Record<ColorKey, string>
 
 const DARK_MODE_DEFAULTS: ColorPalette = {
-  ...LIGHT_MODE_DEFAULTS,
-  pageBackground: '#142127', mainText: '#e8efed', paragraphText: '#c5d2cf', metaText: '#9aa9a7',
-  brandName: '#e2edeb', headings: '#eaf2f0', sectionTitles: '#80c9c3', logo: '#80c9c3', timelineMarkers: '#80c9c3',
-  headerDivider: '#34474b', navigationHover: '#26393d', languageSelectorBorder: '#425b5c', outlineButtonsBorder: '#668f90',
-  timelineLine: '#354b4e', technologyTagsBorder: '#3f5c5d', technologyTagsBackground: '#24383b', textOnAccent: '#f7fbfa',
-  buttonBackground: '#22373b', buttonText: '#a1d8d2', buttonHoverBackground: '#347b80', navigationActiveBackground: '#26393d',
-  technologyTagsText: '#a1d8d2', factCardFrontBackground: '#24383b', factCardFrontText: '#e8efed', factCardFrontBorder: '#425b5c',
-  factCardBackBackground: '#35352b', factCardBackText: '#f2efdf', factCardBackBorder: '#827957',
-  additionalTechnologiesLinkText: '#a1d8d2', projectCardBackground: '#1b2c32', projectCardBorder: '#354b50', projectCardMediaBackground: '#22363b',
+  "pageBackground": "#142127",
+  "mainText": "#e8efed",
+  "paragraphText": "#c5d2cf",
+  "metaText": "#9aa9a7",
+  "brandName": "#e2edeb",
+  "headings": "#eaf2f0",
+  "sectionTitles": "#80c9c3",
+  "logo": "#80c9c3",
+  "timelineMarkers": "#80c9c3",
+  "headerDivider": "#34474b",
+  "navigationHover": "#26393d",
+  "languageSelectorBorder": "#425b5c",
+  "outlineButtonsBorder": "#668f90",
+  "timelineLine": "#354b4e",
+  "technologyTagsBorder": "#3f5c5d",
+  "technologyTagsBackground": "#24383b",
+  "textOnAccent": "#f7fbfa",
+  "buttonBackground": "#22373b",
+  "buttonText": "#a1d8d2",
+  "buttonHoverBackground": "#347b80",
+  "navigationActiveBackground": "#26393d",
+  "technologyTagsText": "#a1d8d2",
+  "factCardFrontBackground": "#44575a",
+  "factCardFrontText": "#e8efed",
+  "factCardFrontBorder": "#425b5c",
+  "factCardBackBackground": "#3d3d3d",
+  "factCardBackText": "#f2efdf",
+  "factCardBackBorder": "#000000",
+  "additionalTechnologiesLinkText": "#a1d8d2",
+  "projectCardBackground": "#242f33",
+  "projectCardBorder": "#919191",
+  "projectCardMediaBackground": "#22363b"
 }
 
 const CSS_VARIABLES: Record<ColorKey, string> = {
