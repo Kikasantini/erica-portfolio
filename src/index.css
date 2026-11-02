@@ -178,8 +178,10 @@ p {
     background-color 160ms ease;
 }
 
-.site-nav a:hover {
-  background: var(--navigation-hover-color);
+@media (hover: hover) {
+  .site-nav a:hover {
+    background: var(--navigation-hover-color);
+  }
 }
 
 .site-nav a[aria-current='page'] {
@@ -621,16 +623,11 @@ p {
 
 .journey-section > h2 {
   margin-bottom: 26px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .journey-section--collapsed > h2 {
   margin-bottom: 0;
-}
-
-.journey-section--static > h2 {
-  letter-spacing: normal;
-  text-transform: none;
 }
 
 .journey-section__toggle {
@@ -645,6 +642,7 @@ p {
   font: inherit;
   text-align: left;
   cursor: pointer;
+  text-transform: inherit;
 }
 
 .journey-section__toggle:focus-visible {
@@ -1023,11 +1021,13 @@ p {
 
   .project-item {
     grid-template-columns: minmax(0, 1fr);
+    align-items: start;
     gap: 16px;
     padding: 14px;
   }
 
   .project-item__gallery {
+    width: 100%;
     min-height: 0;
     aspect-ratio: 2 / 1;
   }
