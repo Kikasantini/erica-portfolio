@@ -628,6 +628,11 @@ p {
   margin-bottom: 0;
 }
 
+.journey-section--static > h2 {
+  letter-spacing: normal;
+  text-transform: none;
+}
+
 .journey-section__toggle {
   display: inline-flex;
   min-height: 44px;
@@ -1024,7 +1029,11 @@ p {
 
   .project-item__gallery {
     min-height: 0;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 2 / 1;
+  }
+
+  .project-item__gallery--placeholder {
+    display: none;
   }
 }
 
