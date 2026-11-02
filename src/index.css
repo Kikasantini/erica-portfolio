@@ -821,10 +821,18 @@ p {
   background: var(--project-card-background-color);
 }
 
+.project-item__media-column {
+  display: flex;
+  min-width: 0;
+  min-height: 240px;
+  flex-direction: column;
+}
+
 .project-item__gallery {
   position: relative;
   min-width: 0;
   min-height: 240px;
+  flex: 1 1 0%;
   aspect-ratio: auto;
   overflow: hidden;
   border: 1px solid var(--technology-tag-border-color);
@@ -929,16 +937,7 @@ p {
 }
 
 .project-item__technologies {
-  display: grid;
-  justify-items: start;
-  gap: 9px;
   margin-top: 18px;
-}
-
-.project-item__technologies > p {
-  color: var(--section-title-color);
-  font-size: 13px;
-  font-weight: 600;
 }
 
 .technology-toggle {
@@ -1027,8 +1026,13 @@ p {
     padding: 14px;
   }
 
+  .project-item__media-column {
+    min-height: 0;
+  }
+
   .project-item__gallery {
     min-height: 0;
+    flex: 0 0 auto;
     aspect-ratio: 16 / 10;
   }
 }
