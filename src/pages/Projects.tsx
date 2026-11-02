@@ -282,7 +282,16 @@ export default function Projects() {
           <div className="project-list">
             {section.items.map((project) => (
               <article className="project-item" key={project.id}>
-                <div className="project-item__media-column">
+                <ProjectMediaGallery
+                  projectTitle={project.title}
+                  media={project.media}
+                  previousLabel={t('previousMedia')}
+                  nextLabel={t('nextMedia')}
+                  openMediaLabel={t('openMedia')}
+                  placeholderLabel={t('imagePlaceholder')}
+                  onOpenMedia={(index) => openViewer(project, index)}
+                />
+                <div className="project-item__content">
                   <div className="project-item__title-row">
                     <h3>{project.title}</h3>
                     <a
@@ -297,18 +306,7 @@ export default function Projects() {
                       </svg>
                     </a>
                   </div>
-                <ProjectMediaGallery
-                  projectTitle={project.title}
-                  media={project.media}
-                  previousLabel={t('previousMedia')}
-                  nextLabel={t('nextMedia')}
-                  openMediaLabel={t('openMedia')}
-                  placeholderLabel={t('imagePlaceholder')}
-                  onOpenMedia={(index) => openViewer(project, index)}
-                />
-                </div>
 
-                <div className="project-item__content">
                   <p className="project-item__description">
                     {project.description}
                   </p>
