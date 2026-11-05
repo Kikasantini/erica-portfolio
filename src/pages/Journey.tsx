@@ -1,5 +1,16 @@
-import { useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
+
+type CertificateItem = {
+  id: string
+  title: string
+  issuer: string
+  period: string
+  description: string
+  image: string
+  imageAlt: string
+  credentialUrl: string
+}
 
 type ExperienceItem = {
   id: string
@@ -109,15 +120,83 @@ function ExperienceEntry({ item }: { item: ExperienceItem }) {
 
 export default function Journey() {
   const { t } = useTranslation('journey')
+  const certificates = t('certificates', {
+    returnObjects: true,
+  }) as CertificateItem[]
   const experience = t('experience', {
     returnObjects: true,
   }) as ExperienceItem[]
   const education = t('education', {
     returnObjects: true,
   }) as EducationItem[]
+  const [activeCertificate, setActiveCertificate] = useState<
+    CertificateItem | null
+  >(null)
+  const closeButtonRef = useRef<HTMLButtonElement>(null)
+  const thumbnailButtonRef = useRef<HTMLButtonElement | null>(null)
+
+  useEffect(() => {
+    if (!activeCertificate) return
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    closeButtonRef.current?.focus()
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') setActiveCertificate(null)
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.body.style.overflow = previousOverflow
+      document.removeEventListener('keydown', handleKeyDown)
+      thumbnailButtonRef.current?.focus()
+    }
+  }, [activeCertificate])
 
   return (
     <main className="journey-page">
+      <CollapsibleJourneySection
+        id="certificates"
+        title={t('certificatesTitle')}
+      >
+        <div className="certificate-list">
+          {certificates.map((certificate) => (
+            <article className="certificate-item" key={certificate.id}>
+              <button
+                className="certificate-item__thumbnail"
+                type="button"
+                aria-label={t('openCertificateImage') + ': ' + certificate.title}
+                onClick={(event) => {
+                  thumbnailButtonRef.current = event.currentTarget
+                  setActiveCertificate(certificate)
+                }}
+              >
+                <img
+                  src={certificate.image}
+                  alt={certificate.imageAlt}
+                  loading="lazy"
+                />
+              </button>
+              <div className="certificate-item__content">
+                <h3>{certificate.title}</h3>
+                <p className="timeline-item__meta">{certificate.issuer}</p>
+                <p className="timeline-item__period">{certificate.period}</p>
+                <p className="certificate-item__description">{certificate.description}</p>
+                <a
+                  className="certificate-item__link"
+                  href={certificate.credentialUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t('verifyCertificate')}
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </CollapsibleJourneySection>
+
       <CollapsibleJourneySection
         id="experience"
         title={t('experienceTitle')}
@@ -148,6 +227,35 @@ export default function Journey() {
           ))}
         </div>
       </section>
+
+      {activeCertificate && (
+        <div className="media-viewer" onClick={() => setActiveCertificate(null)}>
+          <div
+            className="media-viewer__dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-label={activeCertificate.title}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              className="media-viewer__button media-viewer__close"
+              type="button"
+              aria-label={t('closeCertificateImage')}
+              onClick={() => setActiveCertificate(null)}
+              ref={closeButtonRef}
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="m6 6 12 12M18 6 6 18" />
+              </svg>
+            </button>
+            <img
+              className="media-viewer__item"
+              src={activeCertificate.image}
+              alt={activeCertificate.imageAlt}
+            />
+          </div>
+        </div>
+      )}
     </main>
   )
 }

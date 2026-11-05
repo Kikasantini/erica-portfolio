@@ -727,6 +727,68 @@ p {
   font-weight: 500;
 }
 
+.certificate-list {
+  display: grid;
+  gap: 24px;
+}
+
+.certificate-item {
+  display: grid;
+  grid-template-columns: minmax(0, 190px) minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+}
+
+.certificate-item__thumbnail {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  border: 1px solid var(--project-card-border-color);
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: zoom-in;
+}
+
+.certificate-item__thumbnail img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.certificate-item__thumbnail:focus-visible,
+.certificate-item__link:focus-visible {
+  outline: 2px solid var(--heading-color);
+  outline-offset: 4px;
+}
+
+.certificate-item__content {
+  min-width: 0;
+}
+
+.certificate-item__content h3 {
+  margin: 0 0 8px;
+  color: var(--brand-name);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.certificate-item__description {
+  margin-top: 14px;
+  color: var(--paragraph-text);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.certificate-item__link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--additional-technologies-link-color);
+  font-size: 14px;
+  font-weight: 500;
+  text-underline-offset: 3px;
+}
+
 .journey-details {
   display: grid;
   gap: 8px;
@@ -1008,6 +1070,15 @@ p {
 
   .timeline-item {
     padding-bottom: 36px;
+  }
+
+  .certificate-item {
+    grid-template-columns: minmax(0, 132px) minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .certificate-item__thumbnail {
+    padding: 4px;
   }
 
   .journey-details {
