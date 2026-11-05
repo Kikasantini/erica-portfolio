@@ -761,11 +761,11 @@ p {
   outline-offset: 4px;
 }
 
-.certificate-item__content {
+.certificate-item__header {
   min-width: 0;
 }
 
-.certificate-item__content h3 {
+.certificate-item__header h3 {
   margin: 0 0 8px;
   color: var(--brand-name);
   font-size: 20px;
@@ -774,6 +774,7 @@ p {
 }
 
 .certificate-item__description {
+  grid-column: 2;
   margin-top: 14px;
   color: var(--paragraph-text);
   font-size: 14px;
@@ -781,6 +782,7 @@ p {
 }
 
 .certificate-item__link {
+  grid-column: 2;
   display: inline-block;
   margin-top: 12px;
   color: var(--additional-technologies-link-color);
@@ -1079,6 +1081,11 @@ p {
 
   .certificate-item__thumbnail {
     padding: 4px;
+  }
+
+  .certificate-item__description,
+  .certificate-item__link {
+    grid-column: 1 / -1;
   }
 
   .journey-details {
