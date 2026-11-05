@@ -178,20 +178,24 @@ export default function Journey() {
                   loading="lazy"
                 />
               </button>
-              <div className="certificate-item__header">
-                <h3>{certificate.title}</h3>
-                <p className="timeline-item__meta">{certificate.issuer}</p>
-                <p className="timeline-item__period">{certificate.period}</p>
+              <div className="certificate-item__content">
+                <div className="certificate-item__header">
+                  <h3>{certificate.title}</h3>
+                  <p className="timeline-item__meta">{certificate.issuer}</p>
+                  <p className="timeline-item__period">{certificate.period}</p>
+                </div>
+                <p className="certificate-item__description">
+                  {certificate.description}
+                </p>
+                <a
+                  className="certificate-item__link"
+                  href={certificate.credentialUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t('verifyCertificate')}
+                </a>
               </div>
-              <p className="certificate-item__description">{certificate.description}</p>
-              <a
-                className="certificate-item__link"
-                href={certificate.credentialUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {t('verifyCertificate')}
-              </a>
             </article>
           ))}
         </div>

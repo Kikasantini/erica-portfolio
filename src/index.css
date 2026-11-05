@@ -774,7 +774,6 @@ p {
 }
 
 .certificate-item__description {
-  grid-column: 2;
   margin-top: 14px;
   color: var(--paragraph-text);
   font-size: 14px;
@@ -782,7 +781,6 @@ p {
 }
 
 .certificate-item__link {
-  grid-column: 2;
   display: inline-block;
   margin-top: 12px;
   color: var(--additional-technologies-link-color);
@@ -1081,6 +1079,10 @@ p {
 
   .certificate-item__thumbnail {
     padding: 4px;
+  }
+
+  .certificate-item__content {
+    display: contents;
   }
 
   .certificate-item__description,
