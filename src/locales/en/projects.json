@@ -194,6 +194,5 @@
   "previousMedia": "Previous media",
   "nextMedia": "Next media",
   "openMedia": "Open media viewer",
-  "closeMedia": "Close media viewer",
-  "imagePlaceholder": "No image"
+  "closeMedia": "Close media viewer"
 }

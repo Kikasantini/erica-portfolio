@@ -35,7 +35,6 @@ function ProjectMediaGallery({
   previousLabel,
   nextLabel,
   openMediaLabel,
-  placeholderLabel,
   onOpenMedia,
 }: {
   projectTitle: string
@@ -43,15 +42,9 @@ function ProjectMediaGallery({
   previousLabel: string
   nextLabel: string
   openMediaLabel: string
-  placeholderLabel: string
   onOpenMedia: (index: number) => void
 }) {
   const [currentIndex, setCurrentIndex] = useState(0)
-
-  if (media.length === 0) {
-    return <div className="project-item__gallery project-item__gallery--placeholder" role="img" aria-label={placeholderLabel}>{placeholderLabel}</div>
-  }
-
   const currentMedia = media[currentIndex]
 
   function showPrevious() {
@@ -279,16 +272,20 @@ export default function Projects() {
 
           <div className="project-list">
             {section.items.map((project) => (
-              <article className="project-item" key={project.id}>
-                <ProjectMediaGallery
-                  projectTitle={project.title}
-                  media={project.media}
-                  previousLabel={t('previousMedia')}
-                  nextLabel={t('nextMedia')}
-                  openMediaLabel={t('openMedia')}
-                  placeholderLabel={t('imagePlaceholder')}
-                  onOpenMedia={(index) => openViewer(project, index)}
-                />
+              <article
+                className={`project-item${project.media.length === 0 ? ' project-item--text-only' : ''}`}
+                key={project.id}
+              >
+                {project.media.length > 0 && (
+                  <ProjectMediaGallery
+                    projectTitle={project.title}
+                    media={project.media}
+                    previousLabel={t('previousMedia')}
+                    nextLabel={t('nextMedia')}
+                    openMediaLabel={t('openMedia')}
+                    onOpenMedia={(index) => openViewer(project, index)}
+                  />
+                )}
                 <div className="project-item__content">
                   <div className="project-item__title-row">
                     <h3>{project.title}</h3>

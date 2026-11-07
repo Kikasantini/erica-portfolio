@@ -194,6 +194,5 @@
   "previousMedia": "Média précédent",
   "nextMedia": "Média suivant",
   "openMedia": "Ouvrir le média en plein écran",
-  "closeMedia": "Fermer l’aperçu agrandi",
-  "imagePlaceholder": "Aucune image"
+  "closeMedia": "Fermer l’aperçu agrandi"
 }

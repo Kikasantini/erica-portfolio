@@ -27,14 +27,19 @@
       "location": "Montréal, QC, Canada",
       "period": "Février 2024 - octobre 2026",
       "details": [
-        "Au sein de l’équipe de développement d’Aquiweb, créé et déployé des fonctionnalités full-stack pour des clients dont les systèmes MES desservaient plus de 100 personnes, dont des gestionnaires et des opérateurs en usine, pour soutenir les processus de production, d’inventaire et d’équipement.",
-        "Créé des intégrations API REST et des flux d’importation et d’exportation de données.",
+        "Développé de nouvelles fonctionnalités backend et adapté des fonctionnalités existantes à la logique métier et aux processus de fabrication propres à chaque client.",
+        "Créé et modifié des flux de travail et des interfaces frontend pour les utilisateurs d’un système MES d’entreprise.",
+        "Au sein de l’équipe de développement d’Aquiweb, développé et déployé des fonctionnalités full-stack pour des clients dont les systèmes MES desservaient plus de 100 personnes, dont des gestionnaires et des opérateurs en usine, pour soutenir les processus de production, d’inventaire et d’équipement.",
+        "Créé des intégrations API REST et des flux d’importation et d’exportation de données, notamment des imports d’ordres de fabrication reliant Aquiweb à des API et à d’autres logiciels.",
         "Créé un flux d’importation CSV qui traitait plus de 20 000 opérations complexes réparties sur plusieurs ordres de fabrication, dont certains en comptaient des centaines. Ajouté la validation, le traitement après importation et la création de dépendances, avec une annulation transactionnelle pour éviter les importations partielles.",
-        "Mis en place des vérifications de stock dans le backend qui empêchaient d’enregistrer une consommation de matériaux supérieure au stock disponible.",
-        "Créé des rapports opérationnels adaptés aux clients avec JasperReports.",
-        "Enquêté sur des problèmes en production à l’aide des journaux, de requêtes SQL et de la reproduction des parcours utilisateurs; retracé les causes, testé les correctifs et soutenu les mises en production.",
-        "Collaboré avec des développeurs, des consultants fonctionnels et des clients pour clarifier les besoins et documenter le travail technique; participé aux tests, aux revues de code, à la planification des sprints et aux flux CI/CD avec GitLab et Jenkins.",
-        "Utilisé OpenAI Codex pour explorer la base de code, déboguer, soutenir les tests et la documentation, en vérifiant ses suggestions par rapport au code et aux besoins."
+        "Généré des rapports personnalisés pour les clients avec JasperReports.",
+        "Travaillé sur des processus de fabrication et de gestion des stocks liés à l’enregistrement de la production, à la consommation de matériaux, à l’utilisation des stocks, aux unités de manutention et aux particularités des équipements.",
+        "Mis en place des validations des quantités requises et des stocks disponibles, notamment une règle empêchant de déclarer une consommation de matériaux supérieure au stock disponible.",
+        "Enquêté sur des problèmes en production à partir des journaux, des requêtes SQL et des parcours utilisateurs; reproduit les problèmes, retracé leurs causes, testé des correctifs et soutenu les mises en production.",
+        "Participé aux tests unitaires, fonctionnels et de régression, aux revues de code, à la documentation technique et aux processus CI/CD avec GitLab et Jenkins, notamment pour les compilations, les intégrations, les déploiements et la validation en production.",
+        "Participé à la planification des sprints et aux estimations avec Planning Poker.",
+        "Collaboré avec des développeurs, des consultants fonctionnels, des clients et d’autres parties prenantes afin de clarifier les besoins et de livrer des fonctionnalités adaptées aux utilisateurs et aux processus concernés.",
+        "Utilisé OpenAI Codex pour comprendre la base de code, déboguer, soutenir les tests et la documentation, et explorer des solutions."
       ],
       "coreTechnologies": [
         "Java 21",

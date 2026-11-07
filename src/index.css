@@ -890,6 +890,10 @@ p {
   background: var(--project-card-background-color);
 }
 
+.project-item--text-only {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .project-item__gallery {
   position: relative;
   min-width: 0;
@@ -899,15 +903,6 @@ p {
   border: 1px solid var(--technology-tag-border-color);
   border-radius: 7px;
   background: var(--project-card-media-background-color);
-}
-
-.project-item__gallery--placeholder {
-  display: grid;
-  place-items: center;
-  padding: 18px;
-  color: var(--meta-text);
-  font-size: 13px;
-  text-align: center;
 }
 
 .project-item__media {
@@ -1118,9 +1113,6 @@ p {
     aspect-ratio: 2 / 1;
   }
 
-  .project-item__gallery--placeholder {
-    display: none;
-  }
 }
 
 
