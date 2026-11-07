@@ -27,18 +27,14 @@
       "location": "Montreal, QC, Canada",
       "period": "February 2024 - October 2026",
       "details": [
-        "Developed new backend functionality and adapted existing features to client-specific business logic and manufacturing processes.",
-        "Created and modified frontend workflows and interfaces for users of an enterprise Manufacturing Execution System (MES).",
-        "Built data import and export workflows, including work-order imports, and integrations between Aquiweb and APIs or other software.",
-        "Generated client-specific reports with JasperReports.",
-        "Worked on manufacturing and inventory processes involving production recording, material consumption, stock use, handling units, and equipment-specific behavior.",
-        "Implemented process validations for required quantities and available stock, including a rule that prevented reporting material consumption above available inventory.",
-        "Added CSV validation and error handling to import workflows. Transactional rollback prevented partial or incomplete records when an import failed.",
-        "Investigated production issues using logs, SQL queries, and user workflows; reproduced problems, traced causes, tested fixes, and supported releases.",
-        "Participated in unit, functional, and regression testing, code reviews, technical documentation, and GitLab/Jenkins CI/CD workflows for builds, integrations, deployments, and production validation.",
-        "Participated in sprint planning and estimation using Planning Poker.",
-        "Collaborated with developers, functional consultants, clients, and other stakeholders to clarify requirements and deliver features for specific users and processes.",
-        "Used OpenAI Codex to understand the codebase, debug issues, support testing and documentation, and explore solutions."
+        "As part of the Aquiweb development team, built and deployed full-stack features for client organizations whose MES systems served 100+ users, including managers and shop-floor operators, supporting production, inventory, and equipment workflows.",
+        "Built REST API integrations and data import/export workflows.",
+        "Built a CSV import workflow that processed 20,000+ complex operations across multiple work orders, some with hundreds of operations. Added validation, post-import processing, and dependency creation, with transactional rollback to prevent partial imports.",
+        "Implemented backend stock checks that prevented users from recording material consumption above available inventory.",
+        "Created client-specific operational reports using JasperReports.",
+        "Investigated production issues using logs, SQL queries, and workflow reproduction; traced causes, tested fixes, and supported releases.",
+        "Collaborated with developers, functional consultants, and clients to clarify requirements and document technical work; participated in testing, code reviews, sprint planning, and GitLab/Jenkins CI/CD workflows.",
+        "Used OpenAI Codex for codebase exploration, debugging, test support, and documentation, reviewing suggestions against the code and requirements."
       ],
       "coreTechnologies": [
         "Java 21",
@@ -96,7 +92,8 @@
         "Adapted existing ERP behavior and functionality to client requirements and workflows.",
         "Investigated application and database issues, reproduced defects, tested changes, and supported technical troubleshooting.",
         "Worked directly with English- and French-speaking clients to clarify requirements and validate solutions.",
-        "Created and maintained client-specific Crystal Reports, including formulas, conditional logic, parameters, formatting, and subreports."
+        "Created and maintained client-specific Crystal Reports, including formulas, conditional logic, parameters, formatting, and subreports.",
+        "Streamlined the internal weekly pizza-ordering process for 40+ employees by proposing and implementing an automated workflow with a shared spreadsheet and Power Automate. It replaced manual order collection, tallied pizza choices and dietary requests, sent a reminder the day before, and reset weekly; it remains in use after more than 3 years."
       ],
       "coreTechnologies": [
         "Sage X3",

@@ -27,18 +27,14 @@
       "location": "Montréal, QC, Canada",
       "period": "Février 2024 - octobre 2026",
       "details": [
-        "Développé de nouvelles fonctionnalités backend et adapté des fonctionnalités existantes à la logique métier et aux processus de fabrication propres à chaque client.",
-        "Créé et modifié des flux de travail et des interfaces frontend pour les utilisateurs d'un système MES d'entreprise.",
-        "Créé des flux d'importation et d'exportation de données, y compris pour les ordres de fabrication, ainsi que des intégrations entre Aquiweb, des API et d'autres logiciels.",
-        "Généré des rapports personnalisés avec JasperReports.",
-        "Travaillé sur des processus de fabrication et de gestion des stocks liés à l'enregistrement de la production, à la consommation de matériaux, à l'utilisation des stocks, aux unités de manutention et aux particularités des équipements.",
-        "Mis en place des validations des quantités requises et des stocks disponibles, notamment une règle empêchant de déclarer une consommation de matériaux supérieure au stock disponible.",
-        "Ajouté la validation des fichiers CSV et la gestion des erreurs aux flux d'importation. Le rollback transactionnel empêchait la création d'enregistrements partiels ou incomplets en cas d'échec de l'importation.",
-        "Enquêté sur des problèmes en production à partir des journaux, des requêtes SQL et des parcours utilisateurs; reproduit les problèmes, recherché leurs causes, testé des correctifs et soutenu les mises en production.",
-        "Participé aux tests unitaires, fonctionnels et de régression, aux revues de code, à la documentation technique et aux processus CI/CD avec GitLab et Jenkins, notamment pour les compilations, les intégrations, les déploiements et la validation en production.",
-        "Participé à la planification des sprints et aux estimations avec Planning Poker.",
-        "Collaboré avec des développeurs, des consultants fonctionnels, des clients et d'autres parties prenantes afin de clarifier les besoins et de livrer des fonctionnalités adaptées aux utilisateurs et aux processus concernés.",
-        "Utilisé OpenAI Codex pour comprendre la base de code, déboguer, soutenir les tests et la documentation, et explorer des solutions."
+        "Au sein de l’équipe de développement d’Aquiweb, créé et déployé des fonctionnalités full-stack pour des clients dont les systèmes MES desservaient plus de 100 personnes, dont des gestionnaires et des opérateurs en usine, pour soutenir les processus de production, d’inventaire et d’équipement.",
+        "Créé des intégrations API REST et des flux d’importation et d’exportation de données.",
+        "Créé un flux d’importation CSV qui traitait plus de 20 000 opérations complexes réparties sur plusieurs ordres de fabrication, dont certains en comptaient des centaines. Ajouté la validation, le traitement après importation et la création de dépendances, avec une annulation transactionnelle pour éviter les importations partielles.",
+        "Mis en place des vérifications de stock dans le backend qui empêchaient d’enregistrer une consommation de matériaux supérieure au stock disponible.",
+        "Créé des rapports opérationnels adaptés aux clients avec JasperReports.",
+        "Enquêté sur des problèmes en production à l’aide des journaux, de requêtes SQL et de la reproduction des parcours utilisateurs; retracé les causes, testé les correctifs et soutenu les mises en production.",
+        "Collaboré avec des développeurs, des consultants fonctionnels et des clients pour clarifier les besoins et documenter le travail technique; participé aux tests, aux revues de code, à la planification des sprints et aux flux CI/CD avec GitLab et Jenkins.",
+        "Utilisé OpenAI Codex pour explorer la base de code, déboguer, soutenir les tests et la documentation, en vérifiant ses suggestions par rapport au code et aux besoins."
       ],
       "coreTechnologies": [
         "Java 21",
@@ -96,7 +92,8 @@
         "Adapté le comportement et les fonctionnalités existantes de l'ERP aux besoins et aux processus des clients.",
         "Enquêté sur des problèmes d'application et de base de données, reproduit des anomalies, testé des modifications et soutenu le dépannage technique.",
         "Collaboré directement avec des clients francophones et anglophones pour clarifier leurs besoins et valider les solutions.",
-        "Créé et maintenu des rapports Crystal Reports personnalisés, comprenant des formules, de la logique conditionnelle, des paramètres, de la mise en forme et des sous-rapports."
+        "Créé et maintenu des rapports Crystal Reports personnalisés, comprenant des formules, de la logique conditionnelle, des paramètres, de la mise en forme et des sous-rapports.",
+        "Optimisé le processus interne de commande hebdomadaire de pizzas pour plus de 40 employés en proposant et en mettant en place un flux automatisé avec un tableur partagé et Power Automate. Le flux a remplacé la collecte manuelle, comptabilisait les choix de pizzas et les demandes alimentaires, envoyait un rappel la veille et réinitialisait les choix chaque semaine; il est toujours utilisé après plus de 3 ans."
       ],
       "coreTechnologies": [
         "Sage X3",

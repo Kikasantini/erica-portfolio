@@ -991,10 +991,16 @@ p {
   background: var(--navigation-hover-color);
 }
 
-.project-item__description {
+.project-item__highlights {
+  margin: 0;
+  padding-inline-start: 1.25rem;
   color: var(--paragraph-text);
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.65;
+}
+
+.project-item__highlights li + li {
+  margin-top: 10px;
 }
 
 .project-item__technologies {

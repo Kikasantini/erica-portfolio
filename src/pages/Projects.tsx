@@ -10,7 +10,7 @@ type ProjectMedia = {
 type ProjectItem = {
   id: string
   title: string
-  description: string
+  highlights: string[]
   technologies: string
   githubUrl: string
   githubLabel: string
@@ -305,9 +305,11 @@ export default function Projects() {
                     </a>
                   </div>
 
-                  <p className="project-item__description">
-                    {project.description}
-                  </p>
+                  <ul className="project-item__highlights">
+                    {project.highlights.map((highlight, index) => (
+                      <li key={project.id + '-highlight-' + index}>{highlight}</li>
+                    ))}
+                  </ul>
                   <div className="project-item__technologies">
                     <ul className="technology-list" aria-label={t('technologiesTitle')}>
                       {project.technologies.split('·').map((technology) => (

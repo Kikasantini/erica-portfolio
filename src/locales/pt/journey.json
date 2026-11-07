@@ -27,18 +27,14 @@
       "location": "Montreal, QC, Canada",
       "period": "Fevereiro de 2024 - outubro de 2026",
       "details": [
-        "Desenvolvi novas funcionalidades no backend e adaptei funcionalidades existentes à lógica de negócio e aos processos de fabricação de cada cliente.",
-        "Criei e modifiquei fluxos de trabalho e interfaces frontend para usuários de um sistema MES corporativo.",
-        "Criei fluxos de importação e exportação de dados, inclusive para ordens de produção, e integrações entre o Aquiweb, APIs e outros sistemas.",
-        "Gerei relatórios personalizados com JasperReports.",
-        "Trabalhei em processos de fabricação e estoque que envolviam registro da produção, consumo de materiais, uso do estoque, unidades de movimentação e comportamentos específicos de equipamentos.",
-        "Implementei validações de quantidades necessárias e estoque disponível, incluindo uma regra que impedia informar um consumo de materiais superior ao estoque disponível.",
-        "Adicionei validação de arquivos CSV e tratamento de erros aos fluxos de importação. O rollback transacional evitava a criação de registros parciais ou incompletos quando uma importação falhava.",
-        "Investiguei problemas em produção usando logs, consultas SQL e fluxos de trabalho dos usuários; reproduzi os problemas, rastreei suas causas, testei correções e apoiei as liberações.",
-        "Participei de testes unitários, funcionais e de regressão, revisões de código, documentação técnica e fluxos de CI/CD com GitLab e Jenkins, incluindo builds, integrações, deploys e validação em produção.",
-        "Participei do planejamento de sprints e de estimativas usando Planning Poker.",
-        "Colaborei com desenvolvedores, consultores funcionais, clientes e outras partes interessadas para esclarecer requisitos e entregar funcionalidades adequadas aos usuários e processos envolvidos.",
-        "Usei OpenAI Codex para entender a base de código, depurar problemas, apoiar testes e documentação e explorar soluções. Revisei e validei as sugestões antes de usá-las."
+        "Como parte da equipe de desenvolvimento do Aquiweb, desenvolvi e fiz deploy de funcionalidades full-stack para clientes cujos sistemas MES atendiam mais de 100 pessoas, incluindo gestores e operadores de fábrica, apoiando fluxos de produção, estoque e equipamentos.",
+        "Criei integrações com APIs REST e fluxos de importação e exportação de dados.",
+        "Criei um fluxo de importação CSV que processava mais de 20 mil operações complexas em várias ordens de produção, algumas com centenas de operações. Adicionei validação, processamento pós-importação e criação de dependências, com rollback transacional para evitar importações parciais.",
+        "Implementei validações de estoque no backend que impediam registrar consumo de materiais acima do estoque disponível.",
+        "Criei relatórios operacionais personalizados para clientes com JasperReports.",
+        "Investiguei problemas em produção usando logs, consultas SQL e reprodução dos fluxos dos usuários; identifiquei causas, testei correções e apoiei releases.",
+        "Colaborei com desenvolvedores, consultores funcionais e clientes para esclarecer requisitos e documentar o trabalho técnico; participei de testes, revisões de código, planejamento de sprints e fluxos de CI/CD com GitLab e Jenkins.",
+        "Usei OpenAI Codex para explorar a base de código, depurar problemas e apoiar testes e documentação, conferindo as sugestões com o código e os requisitos."
       ],
       "coreTechnologies": [
         "Java 21",
@@ -96,7 +92,8 @@
         "Adaptei comportamentos e funcionalidades existentes do ERP às necessidades e aos fluxos de trabalho dos clientes.",
         "Investiguei problemas na aplicação e no banco de dados, reproduzi falhas, testei alterações e apoiei a resolução de problemas técnicos.",
         "Trabalhei diretamente com clientes francófonos e anglófonos para esclarecer requisitos e validar soluções.",
-        "Criei e mantive relatórios personalizados no Crystal Reports, incluindo fórmulas, lógica condicional, parâmetros, formatação e sub-relatórios."
+        "Criei e mantive relatórios personalizados no Crystal Reports, incluindo fórmulas, lógica condicional, parâmetros, formatação e sub-relatórios.",
+        "Otimizei o processo interno de pedidos semanais de pizza para mais de 40 funcionários ao propor e implementar um fluxo automatizado com uma planilha compartilhada e o Power Automate. O fluxo substituiu a coleta manual, contabilizava os sabores e pedidos alimentares, enviava um lembrete na véspera e zerava as escolhas semanalmente; continua em uso há mais de 3 anos."
       ],
       "coreTechnologies": [
         "Sage X3",
