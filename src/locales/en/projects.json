@@ -13,7 +13,7 @@
           "githubLabel": "View on GitHub",
           "media": [],
           "highlights": [
-            "A Python-based simulator of a manufacturing cell that models sensor signals and tracks production against work-order targets.",
+            "A command-line Python simulator of a manufacturing cell.",
             "Simulates detected and missed sensor signals, tracks produced pieces against the target, and stops when production is complete or the missed-signal limit triggers a sensor fault.",
             "Writes timestamped events and a unique run ID to CSV; includes unit tests for signal handling, work-order outcomes, and fault conditions."
           ]

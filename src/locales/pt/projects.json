@@ -13,7 +13,7 @@
           "githubLabel": "Ver no GitHub",
           "media": [],
           "highlights": [
-            "Um simulador em Python de uma célula de produção que modela sinais de sensores e acompanha a produção em relação às metas das ordens de produção.",
+            "Um simulador em Python de uma célula de produção, executado pela linha de comando.",
             "Simula sinais de sensor detectados ou perdidos, acompanha as peças produzidas em relação à meta e para ao atingir a quantidade-alvo ou quando sinais perdidos consecutivos indicam falha no sensor.",
             "Registra eventos com data e hora e um identificador único da execução em CSV; inclui testes unitários para sinais, resultados das ordens de produção e condições de falha."
           ]

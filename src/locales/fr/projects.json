@@ -13,7 +13,7 @@
           "githubLabel": "Voir sur GitHub",
           "media": [],
           "highlights": [
-            "Un simulateur Python de cellule de production qui modélise des signaux de capteur et suit la production par rapport aux objectifs des ordres de fabrication.",
+            "Un simulateur de cellule de production en Python, exécuté en ligne de commande.",
             "Simule les signaux de capteur détectés ou manqués, suit le nombre de pièces produites par rapport à la cible et s’arrête lorsque la cible est atteinte ou qu’un seuil de signaux manqués déclenche une panne de capteur.",
             "Consigne les événements horodatés et un identifiant unique d’exécution dans un fichier CSV; comprend des tests unitaires pour les signaux, les résultats des ordres de fabrication et les conditions de panne."
           ]
