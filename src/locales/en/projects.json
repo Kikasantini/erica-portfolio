@@ -13,7 +13,7 @@
           "githubLabel": "View on GitHub",
           "media": [],
           "highlights": [
-            "Work orders, target quantities, signal intervals, and missed-signal conditions are configurable for each run.",
+            "A Python-based simulator of a manufacturing cell that models sensor signals and tracks production against work-order targets.",
             "Simulates detected and missed sensor signals, tracks produced pieces against the target, and stops when production is complete or the missed-signal limit triggers a sensor fault.",
             "Writes timestamped events and a unique run ID to CSV; includes unit tests for signal handling, work-order outcomes, and fault conditions."
           ]
@@ -26,7 +26,7 @@
           "githubLabel": "View on GitHub",
           "media": [],
           "highlights": [
-            "Built with React, TypeScript, Vite, React Router, and i18next to present my experience, education, and projects.",
+            "A multilingual portfolio website built with React, TypeScript, Vite, React Router, and i18next to showcase my background, experience, and projects.",
             "Added English, French, and Portuguese routes and light and dark themes.",
             "Created project cards with image and video galleries, plus an expanded media viewer with navigation controls."
           ]
@@ -71,7 +71,7 @@
             }
           ],
           "highlights": [
-            "Built a personal Android RPG prototype in Unity and C# with turn-based battles, character skills and progression, inventory, and equipment upgrades.",
+            "A personal Android RPG prototype built with Unity and C#, featuring turn-based battles, character progression, inventory, and equipment upgrades.",
             "Developed mobile screens for character menus, battle information, inventory, equipment, and progression; created original vector artwork for much of the interface.",
             "Organized character, skill, and equipment data with ScriptableObjects and implemented local save and load; tested gameplay on an Android phone."
           ]
@@ -110,7 +110,7 @@
             }
           ],
           "highlights": [
-            "Built a connected-object prototype with an ESP8266 and BME280 sensor to read temperature, humidity, pressure, and estimated altitude; displayed readings on an OLED and local web pages.",
+            "An ESP8266-based connected weather station and binary-number game combining BME280 sensor readings, an OLED display, and a local web interface.",
             "Added network time and a binary-number challenge in which three LEDs display values from 1 to 7; players select the matching decimal number with a button.",
             "Implemented game feedback: correct answers increase the score, while a wrong answer ends the round and activates a buzzer."
           ]
@@ -134,7 +134,7 @@
             }
           ],
           "highlights": [
-            "Connected two ESP8266 boards over a local network: one running Arduino/C++ reads BME280 data and controls two LEDs; the second runs MicroPython to display readings and LED states on an OLED.",
+            "An IoT weather-station prototype connecting two ESP8266 boards over a local network: one collects BME280 readings and controls LEDs, while the other displays the data.",
             "Exposed sensor measurements and LED status through HTTP endpoints, with JSON data used by the display board.",
             "Configured Zabbix to monitor the sensor readings and LED states."
           ]
@@ -149,21 +149,21 @@
             {
               "type": "image",
               "src": "/projects/iot-sensor-monitoring-zabbix-mqtt/conceptual-architecture.png",
-              "alt": "Conceptual system architecture showing microcontrollers, sensors, Mosquitto, Zabbix, and data flow."
+              "alt": "Conceptual system architecture showing three microcontrollers (two ESP8266 boards and one ESP32), sensors, Mosquitto, Zabbix, and data flow."
             },
             {
               "type": "image",
               "src": "/projects/iot-sensor-monitoring-zabbix-mqtt/electronic-wiring.png",
-              "alt": "Wiring diagram for the microcontroller boards and their sensors."
+              "alt": "Wiring diagram for the three microcontroller boards and their sensors."
             },
             {
               "type": "video",
               "src": "https://raw.githubusercontent.com/Kikasantini/iot-sensor-monitoring-zabbix-mqtt/main/media/project-demo.mp4",
-              "alt": "Demonstration of the IoT sensor monitoring system with MQTT and Zabbix."
+              "alt": "Demonstration of the three-microcontroller IoT sensor monitoring project with MQTT and Zabbix."
             }
           ],
           "highlights": [
-            "Collected environmental measurements from a BME280 and motion and temperature readings from a GY-521/MPU-6050 sensor.",
+            "An IoT monitoring project using three microcontrollers (two ESP8266 boards and one ESP32) to collect and exchange environmental and motion-sensor data.",
             "Published BME280 readings over MQTT using Mosquitto and exposed environmental and motion data through HTTP/JSON endpoints.",
             "Configured Zabbix to monitor environmental measurements and selected motion-sensor values."
           ]
@@ -182,7 +182,7 @@
             }
           ],
           "highlights": [
-            "Automated recurring document-processing and business tasks for a fictional translation company with Python on Linux.",
+            "A Python automation project for a fictional translation company, streamlining recurring document-processing and business tasks on Linux.",
             "Calculated service prices and generated PDFs with date-stamped watermarks and registry pages.",
             "Organized files, tracked daily revenue, and scheduled recurring scripts with Crontab and Shell."
           ]

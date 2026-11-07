@@ -13,7 +13,7 @@
           "githubLabel": "Voir sur GitHub",
           "media": [],
           "highlights": [
-            "Les ordres de fabrication, les quantités cibles, l’intervalle entre les signaux et les conditions de signaux manqués sont configurables pour chaque exécution.",
+            "Un simulateur Python de cellule de production qui modélise des signaux de capteur et suit la production par rapport aux objectifs des ordres de fabrication.",
             "Simule les signaux de capteur détectés ou manqués, suit le nombre de pièces produites par rapport à la cible et s’arrête lorsque la cible est atteinte ou qu’un seuil de signaux manqués déclenche une panne de capteur.",
             "Consigne les événements horodatés et un identifiant unique d’exécution dans un fichier CSV; comprend des tests unitaires pour les signaux, les résultats des ordres de fabrication et les conditions de panne."
           ]
@@ -26,7 +26,7 @@
           "githubLabel": "Voir sur GitHub",
           "media": [],
           "highlights": [
-            "Créé avec React, TypeScript, Vite, React Router et i18next pour présenter mon parcours, mes études et mes projets.",
+            "Un portfolio multilingue créé avec React, TypeScript, Vite, React Router et i18next pour présenter mon parcours, mon expérience et mes projets.",
             "Ajout de versions en anglais, en français et en portugais, avec des routes propres à chaque langue et des thèmes clair et sombre.",
             "Créé des fiches de projets avec des galeries d’images et de vidéos ainsi qu’un affichage agrandi avec commandes de navigation."
           ]
@@ -71,7 +71,7 @@
             }
           ],
           "highlights": [
-            "Créé un prototype personnel de RPG Android avec Unity et C#, comprenant des combats au tour par tour, des compétences et la progression des personnages, un inventaire et des améliorations d’équipement.",
+            "Un prototype personnel de RPG pour Android créé avec Unity et C#, avec des combats au tour par tour, la progression des personnages, un inventaire et des améliorations d’équipement.",
             "Développé les écrans mobiles des menus de personnages, des combats, de l’inventaire, de l’équipement et de la progression; créé une grande partie des illustrations vectorielles de l’interface.",
             "Organisé les données des personnages, des compétences et de l’équipement avec ScriptableObjects et implémenté la sauvegarde et le chargement locaux; testé le jeu sur un téléphone Android."
           ]
@@ -110,7 +110,7 @@
             }
           ],
           "highlights": [
-            "Créé un prototype d’objet connecté avec un ESP8266 et un capteur BME280 pour lire la température, l’humidité, la pression et l’altitude estimée; affiché les mesures sur un écran OLED et des pages Web locales.",
+            "Une station météo connectée et un jeu de lecture binaire basés sur un ESP8266, avec un capteur BME280, un écran OLED et une interface Web locale.",
             "Ajouté l’heure réseau et un jeu de lecture binaire où trois DEL affichent des valeurs de 1 à 7; le joueur choisit le nombre décimal correspondant à l’aide d’un bouton.",
             "Programmé la rétroaction du jeu: une bonne réponse augmente le score, tandis qu’une mauvaise réponse termine la manche et active un avertisseur sonore."
           ]
@@ -134,7 +134,7 @@
             }
           ],
           "highlights": [
-            "Connecté deux cartes ESP8266 sur un réseau local: la première, programmée en Arduino/C++, lit les données du BME280 et commande deux DEL; la seconde, sous MicroPython, affiche les mesures et l’état des DEL sur un écran OLED.",
+            "Un prototype IoT de station météo reliant deux cartes ESP8266 sur un réseau local : l’une collecte les mesures du BME280 et commande des DEL, tandis que l’autre affiche les données.",
             "Exposé les mesures et l’état des DEL par des points de terminaison HTTP, avec des données JSON utilisées par la carte d’affichage.",
             "Configuré Zabbix pour surveiller les mesures du capteur et l’état des DEL."
           ]
@@ -149,21 +149,21 @@
             {
               "type": "image",
               "src": "/projects/iot-sensor-monitoring-zabbix-mqtt/conceptual-architecture.png",
-              "alt": "Schéma conceptuel de l’architecture montrant les microcontrôleurs, les capteurs, Mosquitto, Zabbix et le flux de données."
+              "alt": "Schéma conceptuel de l’architecture montrant trois microcontrôleurs (deux cartes ESP8266 et un ESP32), les capteurs, Mosquitto, Zabbix et le flux de données."
             },
             {
               "type": "image",
               "src": "/projects/iot-sensor-monitoring-zabbix-mqtt/electronic-wiring.png",
-              "alt": "Schéma de câblage des cartes de microcontrôleur et de leurs capteurs."
+              "alt": "Schéma de câblage des trois cartes de microcontrôleur et de leurs capteurs."
             },
             {
               "type": "video",
               "src": "https://raw.githubusercontent.com/Kikasantini/iot-sensor-monitoring-zabbix-mqtt/main/media/project-demo.mp4",
-              "alt": "Démonstration du système de surveillance IoT avec MQTT et Zabbix."
+              "alt": "Démonstration du projet de surveillance IoT à trois microcontrôleurs avec MQTT et Zabbix."
             }
           ],
           "highlights": [
-            "Collecté des mesures environnementales d’un BME280 ainsi que des données de mouvement et de température d’un capteur GY-521/MPU-6050.",
+            "Un projet IoT de surveillance utilisant trois microcontrôleurs — deux cartes ESP8266 et un ESP32 — pour recueillir et échanger des données environnementales et de mouvement.",
             "Publié les mesures du BME280 par MQTT avec Mosquitto et exposé les données environnementales et de mouvement par des points de terminaison HTTP/JSON.",
             "Configuré Zabbix pour surveiller les mesures environnementales et certaines valeurs du capteur de mouvement."
           ]
@@ -182,7 +182,7 @@
             }
           ],
           "highlights": [
-            "Automatisé des tâches récurrentes de traitement de documents et de gestion pour une entreprise de traduction fictive avec Python sous Linux.",
+            "Un projet d’automatisation en Python pour une entreprise de traduction fictive, qui simplifie des tâches récurrentes de traitement de documents et de gestion sous Linux.",
             "Calculé les tarifs des services et généré des PDF avec filigranes datés et pages de registre.",
             "Organisé les fichiers, suivi les revenus quotidiens et planifié les scripts récurrents avec Crontab et Shell."
           ]

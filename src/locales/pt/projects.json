@@ -13,7 +13,7 @@
           "githubLabel": "Ver no GitHub",
           "media": [],
           "highlights": [
-            "Permite configurar, em cada execução, a ordem de produção, a quantidade-alvo, o intervalo entre sinais e as condições de sinais perdidos.",
+            "Um simulador em Python de uma célula de produção que modela sinais de sensores e acompanha a produção em relação às metas das ordens de produção.",
             "Simula sinais de sensor detectados ou perdidos, acompanha as peças produzidas em relação à meta e para ao atingir a quantidade-alvo ou quando sinais perdidos consecutivos indicam falha no sensor.",
             "Registra eventos com data e hora e um identificador único da execução em CSV; inclui testes unitários para sinais, resultados das ordens de produção e condições de falha."
           ]
@@ -26,7 +26,7 @@
           "githubLabel": "Ver no GitHub",
           "media": [],
           "highlights": [
-            "Desenvolvido com React, TypeScript, Vite, React Router e i18next para apresentar minha trajetória, formação e projetos.",
+            "Um site de portfólio multilíngue criado com React, TypeScript, Vite, React Router e i18next para apresentar minha trajetória, experiência e projetos.",
             "Inclui versões em inglês, francês e português, com rotas por idioma e temas claro e escuro.",
             "Criei cartões de projetos com galerias de imagens e vídeos e uma visualização ampliada com controles de navegação."
           ]
@@ -71,7 +71,7 @@
             }
           ],
           "highlights": [
-            "Desenvolvi um protótipo pessoal de RPG para Android com Unity e C#, com batalhas por turnos, habilidades e progressão de personagens, inventário e melhorias de equipamentos.",
+            "Um protótipo pessoal de RPG para Android feito com Unity e C#, com batalhas por turnos, progressão de personagens, inventário e melhorias de equipamentos.",
             "Criei telas mobile para menus de personagens, batalhas, inventário, equipamentos e progressão; também produzi boa parte das ilustrações vetoriais da interface.",
             "Organizei os dados de personagens, habilidades e equipamentos com ScriptableObjects e implementei salvamento e carregamento local; testei o jogo em um celular Android."
           ]
@@ -110,7 +110,7 @@
             }
           ],
           "highlights": [
-            "Criei um protótipo de objeto conectado com um ESP8266 e sensor BME280 para ler temperatura, umidade, pressão e altitude estimada; exibi as medições em um display OLED e em páginas web locais.",
+            "Uma estação meteorológica conectada com um desafio de leitura binária, baseada em ESP8266 e combinando sensor BME280, display OLED e interface web local.",
             "Adicionei o horário da rede e um desafio de leitura binária em que três LEDs mostram valores de 1 a 7; a pessoa seleciona o número decimal correspondente com um botão.",
             "Implementei o retorno do jogo: respostas corretas aumentam a pontuação, enquanto uma resposta errada encerra a rodada e aciona um buzzer."
           ]
@@ -134,7 +134,7 @@
             }
           ],
           "highlights": [
-            "Conectei duas placas ESP8266 em uma rede local: uma, programada em Arduino/C++, lê dados do BME280 e controla dois LEDs; a segunda usa MicroPython para exibir as medições e o estado dos LEDs em um display OLED.",
+            "Um protótipo de estação meteorológica IoT que conecta duas placas ESP8266 em uma rede local: uma coleta dados do BME280 e controla LEDs, enquanto a outra exibe as medições.",
             "Disponibilizei medições do sensor e o estado dos LEDs por endpoints HTTP, usando dados JSON na placa do display.",
             "Configurei o Zabbix para monitorar as medições do sensor e o estado dos LEDs."
           ]
@@ -149,21 +149,21 @@
             {
               "type": "image",
               "src": "/projects/iot-sensor-monitoring-zabbix-mqtt/conceptual-architecture.png",
-              "alt": "Diagrama conceitual da arquitetura com microcontroladores, sensores, Mosquitto, Zabbix e fluxo de dados."
+              "alt": "Diagrama conceitual da arquitetura com três microcontroladores (duas placas ESP8266 e uma ESP32), sensores, Mosquitto, Zabbix e fluxo de dados."
             },
             {
               "type": "image",
               "src": "/projects/iot-sensor-monitoring-zabbix-mqtt/electronic-wiring.png",
-              "alt": "Esquema de conexão das placas de microcontrolador e seus sensores."
+              "alt": "Esquema de conexão das três placas de microcontrolador e seus sensores."
             },
             {
               "type": "video",
               "src": "https://raw.githubusercontent.com/Kikasantini/iot-sensor-monitoring-zabbix-mqtt/main/media/project-demo.mp4",
-              "alt": "Demonstração do sistema de monitoramento de sensores IoT com MQTT e Zabbix."
+              "alt": "Demonstração do projeto de monitoramento IoT com três microcontroladores, MQTT e Zabbix."
             }
           ],
           "highlights": [
-            "Coletei medições ambientais de um BME280 e dados de movimento e temperatura de um sensor GY-521/MPU-6050.",
+            "Um projeto de monitoramento IoT com três microcontroladores — duas placas ESP8266 e uma ESP32 — para coletar e trocar dados ambientais e de movimento.",
             "Publiquei medições do BME280 via MQTT com Mosquitto e disponibilizei dados ambientais e de movimento por endpoints HTTP/JSON.",
             "Configurei o Zabbix para monitorar as medições ambientais e valores selecionados do sensor de movimento."
           ]
@@ -182,7 +182,7 @@
             }
           ],
           "highlights": [
-            "Automatizei tarefas recorrentes de processamento de documentos e de negócio para uma empresa fictícia de tradução, usando Python no Linux.",
+            "Um projeto de automação em Python para uma empresa fictícia de tradução, que agiliza tarefas recorrentes de processamento de documentos e negócio no Linux.",
             "Calculei preços dos serviços e gerei PDFs com marcas-d’água datadas e páginas de registro.",
             "Organizei arquivos, acompanhei a receita diária e agendei scripts recorrentes com Crontab e Shell."
           ]
