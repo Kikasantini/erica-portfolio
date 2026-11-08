@@ -42,7 +42,7 @@ function ExperienceIcon({ id }: { id: string }) {
       ) : id === 'developerIntern' ? (
         <path d="m8 8-4 4 4 4m8-8 4 4-4 4" />
       ) : id === 'producer' ? (
-        <><rect x="2" y="6" width="20" height="12" rx="6" /><path d="M6 12h4m-2-2v4" /><circle cx="15.5" cy="13.5" r="0.75" fill="currentColor" stroke="none" /><circle cx="18" cy="10.5" r="0.75" fill="currentColor" stroke="none" /></>
+        <><rect x="13" y="3" width="8" height="8" rx="1.5" /><rect x="3" y="13" width="8" height="8" rx="1.5" /><path d="M6 13V7a1 1 0 0 1 1-1h6M11 17h6a1 1 0 0 0 1-1v-5" /></>
       ) : (
         <><circle cx="12" cy="5.5" r="2.5" /><circle cx="5" cy="11" r="2" /><circle cx="19" cy="11" r="2" /><path d="M12 8v3m-7 2v3m14-3v3M3 19h4m3 0h4m3 0h4" /></>
       )}
