@@ -3383,13 +3383,9 @@ p {
   margin: 0 0 15px;
 }
 .projects-page .project-item.project-item--editorial .project-item__illustration--square {
-  width: min(100%, 205px);
+  width: 100%;
   aspect-ratio: 1 / 1;
-  align-self: center;
-  margin: 0 auto 15px;
+  margin: 0 0 15px;
 }
-@media (max-width: 650px) {
-  .projects-page .project-item.project-item--editorial .project-item__illustration--square {
-    width: min(100%, 220px);
-  }
-}
+/* Every illustration fills the card width: landscape uses less vertical
+   room for longer text, square uses more room when text is shorter. */
