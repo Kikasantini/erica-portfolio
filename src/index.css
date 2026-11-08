@@ -3389,3 +3389,26 @@ p {
 }
 /* Every illustration fills the card width: landscape uses less vertical
    room for longer text, square uses more room when text is shorter. */
+
+/* Full-bleed editorial illustrations: no inset image frame.
+   Content keeps its own padding while artwork meets the card edges. */
+.projects-page .project-item.project-item--editorial {
+  padding: 0;
+}
+.projects-page .project-item.project-item--editorial .project-item__illustration,
+.projects-page .project-item.project-item--editorial .project-item__illustration--wide,
+.projects-page .project-item.project-item--editorial .project-item__illustration--square {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  border: 0;
+  border-radius: 11px 11px 0 0;
+  object-fit: cover;
+  cursor: default;
+  pointer-events: none;
+}
+.projects-page .project-item.project-item--editorial .project-item__content {
+  padding: 17px 15px 15px;
+}
