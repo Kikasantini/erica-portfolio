@@ -9,7 +9,7 @@
           "id": "careerPilotAi",
           "title": "CareerPilot AI",
           "status": "Em desenvolvimento",
-          "technologies": "Java · Spring Boot · JUnit · React · TypeScript · JavaScript · Node.js · Maven · Spotless · Git · GitHub",
+          "technologies": "React · TypeScript · JavaScript · Java 21 · Spring Boot · Maven · Python · FastAPI · LangGraph · Ollama · PostgreSQL · JUnit · FastAPI TestClient · Node.js · Maven Wrapper · Husky · lint-staged · Ruff · Spotless · VS Code · Git · GitHub",
           "githubUrl": "https://github.com/Kikasantini/careerpilot-ai",
           "githubLabel": "Ver no GitHub",
           "media": [],
@@ -22,7 +22,7 @@
         {
           "id": "productionCellSimulator",
           "title": "Simulador de célula de produção",
-          "technologies": "Python 3 · JSON · CSV · Git · Visual Studio Code",
+          "technologies": "Python 3 · JSON · CSV · UUID · datetime · unittest · unittest.mock · Git · GitHub · Visual Studio Code",
           "githubUrl": "https://github.com/Kikasantini/production-cell-simulator",
           "githubLabel": "Ver no GitHub",
           "media": [],
@@ -35,7 +35,7 @@
         {
           "id": "portfolioWebsite",
           "title": "Site de portfólio",
-          "technologies": "React · TypeScript · Vite · React Router · i18next",
+          "technologies": "React · TypeScript · JavaScript · HTML · CSS · React Router · i18next · react-i18next · Vite · Node.js · npm · VS Code · Git Bash · ESLint · Prettier · Husky · lint-staged · Git · GitHub · GitHub Actions · GitHub Pages",
           "githubUrl": "https://github.com/Kikasantini/erica-portfolio",
           "githubLabel": "Ver no GitHub",
           "media": [],
@@ -54,7 +54,7 @@
         {
           "id": "runnerRpg",
           "title": "RunnerRPG",
-          "technologies": "C# · Unity · Unity UI · ScriptableObjects · Adobe Illustrator · Adobe Photoshop · Inkscape",
+          "technologies": "C# · Unity · Unity UI · ScriptableObjects · DOTween · Adobe Illustrator · Adobe Photoshop · Inkscape · Android",
           "githubUrl": "https://github.com/Kikasantini/RunnerRPG",
           "githubLabel": "Ver no GitHub",
           "media": [
@@ -73,7 +73,7 @@
         {
           "id": "esp8266WeatherStationGame",
           "title": "Estação meteorológica conectada e desafio de leitura binária",
-          "technologies": "ESP8266 · C++ · Arduino · BME280 · SSD1306 OLED · I²C · Wi‑Fi",
+          "technologies": "ESP8266 · BME280 · SSD1306 OLED · LEDs · Push button · Buzzer · C++ · Arduino · Wi-Fi · I²C · HTTP · NTP · NTPClient · PinButton · Adafruit GFX · Adafruit SSD1306 · Adafruit Unified Sensor · Adafruit BME280 · Arduino IDE · draw.io",
           "githubUrl": "https://github.com/Kikasantini/esp8266-weather-station-game",
           "githubLabel": "Ver no GitHub",
           "media": [
@@ -92,7 +92,7 @@
         {
           "id": "connectedWeatherStationZabbix",
           "title": "Estação meteorológica conectada com display MicroPython e monitoramento Zabbix",
-          "technologies": "ESP8266 · C++ · Arduino · MicroPython · BME280 · SSD1306 OLED · Zabbix · JSON · Wi‑Fi",
+          "technologies": "2× ESP8266 · BME280 · SSD1306 OLED · LEDs · Push buttons · Potentiometer · C++ · Arduino · MicroPython · Wi-Fi · HTTP · JSON · I²C · mDNS · Zabbix · PinButton · Adafruit Unified Sensor · Adafruit BME280 · SSD1306 driver · Arduino IDE · draw.io",
           "githubUrl": "https://github.com/Kikasantini/connected-weather-station-zabbix",
           "githubLabel": "Ver no GitHub",
           "media": [
@@ -111,7 +111,7 @@
         {
           "id": "iotSensorMonitoringZabbixMqtt",
           "title": "Monitoramento IoT de sensores com MQTT e Zabbix",
-          "technologies": "ESP8266 · ESP32 · C++ · Arduino · MicroPython · BME280 · GY-521/MPU-6050 · SSD1306 OLED · MQTT · Mosquitto · Zabbix · HTTP/JSON · Wi‑Fi",
+          "technologies": "2× ESP8266 · ESP32 · BME280 · GY-521/MPU-6050 · SSD1306 OLED · C++ · Arduino · MicroPython · Wi-Fi · MQTT · HTTP · JSON · Mosquitto · Zabbix · Arduino IDE · draw.io",
           "githubUrl": "https://github.com/Kikasantini/iot-sensor-monitoring-zabbix-mqtt",
           "githubLabel": "Ver no GitHub",
           "media": [
@@ -130,7 +130,7 @@
         {
           "id": "translationCompany",
           "title": "Automação de uma empresa de tradução",
-          "technologies": "Python 3 · PyPDF2 · ReportLab · Crontab · Shell · Linux",
+          "technologies": "Python 3 · Shell · PyPDF2 · ReportLab · Crontab · Linux (VM) · Git · GitHub",
           "githubUrl": "https://github.com/Kikasantini/scripting-translationCompany",
           "githubLabel": "Ver no GitHub",
           "media": [],
@@ -154,15 +154,26 @@
   "technologyGroups": {
     "frontend": "Frontend",
     "backend": "Backend",
+    "ai": "Serviço de IA",
+    "database": "Banco de dados",
     "testing": "Testes",
-    "tools": "Ferramentas",
-    "data": "Dados",
-    "simulation": "Programação",
+    "automation": "Scripts e automação",
+    "tools": "Ferramentas de desenvolvimento e design",
+    "programming": "Programação",
+    "data": "Dados e registros",
+    "routing": "Rotas e internacionalização",
+    "quality": "Qualidade de código",
+    "versioning": "Versionamento e publicação",
     "game": "Desenvolvimento de jogos",
+    "libraries": "Bibliotecas e pacotes",
+    "design": "Ferramentas de design",
+    "platform": "Plataforma",
     "hardware": "Hardware",
-    "connectivity": "Conectividade e APIs",
+    "connectivity": "Redes e protocolos",
     "monitoring": "Monitoramento",
-    "automation": "Automação",
-    "libraries": "Bibliotecas"
+    "messaging": "Mensageria",
+    "document": "Processamento de documentos",
+    "scheduling": "Agendamento e automação",
+    "environment": "Ambiente de desenvolvimento"
   }
 }
