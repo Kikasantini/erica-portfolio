@@ -3545,11 +3545,22 @@ p {
     display: none;
   }
   .home-page .home-hero .home-title {
-    min-height: 1.2em;
+    display: block;
+    min-height: 0;
     height: auto;
     margin: 14px 0 16px;
     font-size: clamp(32px, 8.5vw, 43px);
     line-height: 1.15;
+  }
+  /* On touch screens, the unused nickname animation layer must not
+     enlarge the heading when its translation wraps onto multiple lines. */
+  .home-page .home-hero .home-title__layer--original {
+    display: flex;
+    position: static;
+    width: 100%;
+  }
+  .home-page .home-hero .home-title__layer--nickname {
+    display: none;
   }
   .home-page .home-intro.home-stable-copy {
     width: 100%;
