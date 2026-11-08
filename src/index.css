@@ -2712,3 +2712,22 @@ p {
 .journey-page .journey-overview__education .journey-details {
   margin-top: 10px;
 }
+
+/* My Journey refinements: avoid redundant section rule and group education as a card. */
+.journey-page .journey-overview__experience > .journey-overview__heading {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.journey-page .journey-overview__education {
+  padding: 22px 22px 24px;
+  border: 1px solid var(--soft-border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.journey-page .journey-overview__education > .journey-overview__heading {
+  margin-bottom: 21px;
+  padding-bottom: 12px;
+}
+@media (max-width: 760px) {
+  .journey-page .journey-overview__education { padding: 18px; }
+}

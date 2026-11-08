@@ -116,10 +116,6 @@ export default function Journey() {
 
   return (
     <main className="journey-page">
-      <header className="subpage-intro journey-overview__intro">
-        <h1>{t('title')}</h1>
-      </header>
-
       <div className="journey-overview">
         <section className="journey-overview__experience" aria-labelledby="journey-experience-title">
           <h2 id="journey-experience-title" className="journey-overview__heading">
