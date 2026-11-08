@@ -6,10 +6,14 @@ const LIGHT_MODE_DEFAULTS = {
   "mainText": "#1d2b30",
   "paragraphText": "#435258",
   "metaText": "#667477",
-  "brandName": "#16324f",
   "headings": "#16324f",
   "sectionTitles": "#257c83",
-  "logo": "#257c83",
+  "buttonBackground": "#f2f6f5",
+  "buttonText": "#1e6971",
+  "buttonHoverBackground": "#46586d",
+  "textOnAccent": "#ffffff",
+  "navigationActiveBackground": "#e2eeed",
+  "technologyTagsText": "#1e6971",
   "timelineMarkers": "#257c83",
   "headerDivider": "#dbe4e3",
   "navigationHover": "#e2eeed",
@@ -18,70 +22,88 @@ const LIGHT_MODE_DEFAULTS = {
   "timelineLine": "#d0e0df",
   "technologyTagsBorder": "#ccdddd",
   "technologyTagsBackground": "#e8f1f0",
-  "textOnAccent": "#ffffff",
-  "buttonBackground": "#f2f6f5",
-  "buttonText": "#1e6971",
-  "buttonHoverBackground": "#46586d",
-  "navigationActiveBackground": "#e2eeed",
-  "technologyTagsText": "#1e6971",
-  "factCardFrontBackground": "#d7e0df",
-  "factCardFrontText": "#24343a",
-  "factCardFrontBorder": "#9cb4b4",
-  "factCardBackBackground": "#eee4ce",
-  "factCardBackText": "#24343a",
-  "factCardBackBorder": "#796f44",
-  "additionalTechnologiesLinkText": "#796f44",
   "projectCardBackground": "#ffffff",
   "projectCardBorder": "#ababab",
-  "projectCardMediaBackground": "#d7e0df"
+  "projectCardMediaBackground": "#d7e0df",
+  "surface": "#ffffff",
+  "softBorder": "#ccdcda",
+  "heroBackground": "#edf4f2",
+  "heroIllustrationBackground": "#edf4f2",
+  "accentFill": "#437f7e",
+  "accentContrast": "#ffffff",
+  "statusText": "#216c69",
+  "statusBorder": "#4d9c92",
+  "statusSurface": "#e4f2ee",
+  "experienceAlternateBackground": "#e2eeeb",
+  "timelineIconHoverBackground": "#2b8b83",
+  "timelineIconHoverText": "#ffffff",
+  "coreStackBackground": "#fdfdfd",
+  "badgeCardStart": "#e1f2ef",
+  "badgeCardEnd": "#edf8f6",
+  "badgeCardBorder": "#b8d4d1",
+  "badgeLabelBackground": "#cae9e5",
+  "badgeLabelText": "#235c5b",
+  "badgeLink": "#137a80",
+  "badgeLinkHover": "#119ca0",
+  "badgeThumbnailBorder": "#8d65cc"
 } as const
 type ColorKey = keyof typeof LIGHT_MODE_DEFAULTS
 type ColorPalette = Record<ColorKey, string>
-
+type ThemeMode = 'light' | 'dark'
+type ColorHistory = Record<ThemeMode, Partial<Record<ColorKey, string[]>>>
 const DARK_MODE_DEFAULTS: ColorPalette = {
-  "pageBackground": "#142127",
-  "mainText": "#e8efed",
-  "paragraphText": "#c5d2cf",
-  "metaText": "#9aa9a7",
-  "brandName": "#e2edeb",
-  "headings": "#eaf2f0",
-  "sectionTitles": "#80c9c3",
-  "logo": "#80c9c3",
-  "timelineMarkers": "#80c9c3",
-  "headerDivider": "#34474b",
-  "navigationHover": "#26393d",
-  "languageSelectorBorder": "#425b5c",
-  "outlineButtonsBorder": "#668f90",
-  "timelineLine": "#354b4e",
-  "technologyTagsBorder": "#3f5c5d",
-  "technologyTagsBackground": "#24383b",
-  "textOnAccent": "#f7fbfa",
-  "buttonBackground": "#22373b",
-  "buttonText": "#a1d8d2",
-  "buttonHoverBackground": "#347b80",
-  "navigationActiveBackground": "#26393d",
-  "technologyTagsText": "#a1d8d2",
-  "factCardFrontBackground": "#44575a",
-  "factCardFrontText": "#e8efed",
-  "factCardFrontBorder": "#425b5c",
-  "factCardBackBackground": "#3d3d3d",
-  "factCardBackText": "#f2efdf",
-  "factCardBackBorder": "#000000",
-  "additionalTechnologiesLinkText": "#a1d8d2",
-  "projectCardBackground": "#242f33",
-  "projectCardBorder": "#919191",
-  "projectCardMediaBackground": "#22363b"
+  "pageBackground": "#14191c",
+  "mainText": "#e5ebee",
+  "paragraphText": "#b7c1c7",
+  "metaText": "#93a2a8",
+  "headings": "#e5ebee",
+  "sectionTitles": "#91b4ae",
+  "buttonBackground": "#202b2f",
+  "buttonText": "#a7d1c8",
+  "buttonHoverBackground": "#314347",
+  "textOnAccent": "#e5ebee",
+  "navigationActiveBackground": "#27373b",
+  "technologyTagsText": "#b3d4ca",
+  "timelineMarkers": "#7fa9a5",
+  "headerDivider": "#303b40",
+  "navigationHover": "#253136",
+  "languageSelectorBorder": "#405056",
+  "outlineButtonsBorder": "#536e70",
+  "timelineLine": "#36474c",
+  "technologyTagsBorder": "#384c50",
+  "technologyTagsBackground": "#27383a",
+  "projectCardBackground": "#1d252a",
+  "projectCardBorder": "#34464b",
+  "projectCardMediaBackground": "#202c30",
+  "surface": "#1d282d",
+  "softBorder": "#34484d",
+  "heroBackground": "#192328",
+  "heroIllustrationBackground": "#192328",
+  "accentFill": "#85b6ac",
+  "accentContrast": "#142328",
+  "statusText": "#c3e7d6",
+  "statusBorder": "#70b2a3",
+  "statusSurface": "#294b45",
+  "experienceAlternateBackground": "#22343a",
+  "timelineIconHoverBackground": "#83cbbd",
+  "timelineIconHoverText": "#142127",
+  "coreStackBackground": "#2a3a3f",
+  "badgeCardStart": "#203a40",
+  "badgeCardEnd": "#192d32",
+  "badgeCardBorder": "#2d4d54",
+  "badgeLabelBackground": "#2e5a58",
+  "badgeLabelText": "#c1e9e2",
+  "badgeLink": "#69e4dc",
+  "badgeLinkHover": "#119ca0",
+  "badgeThumbnailBorder": "#8d65cc"
 }
-
 const CSS_VARIABLES: Record<ColorKey, string> = {
   "pageBackground": "--page-background",
   "mainText": "--main-text",
   "paragraphText": "--paragraph-text",
   "metaText": "--meta-text",
-  "brandName": "--brand-name",
   "headings": "--heading-color",
   "sectionTitles": "--section-title-color",
-  "logo": "--logo-color",
   "buttonBackground": "--button-background-color",
   "buttonText": "--button-text-color",
   "buttonHoverBackground": "--button-hover-background-color",
@@ -96,43 +118,143 @@ const CSS_VARIABLES: Record<ColorKey, string> = {
   "timelineLine": "--timeline-line-color",
   "technologyTagsBorder": "--technology-tag-border-color",
   "technologyTagsBackground": "--technology-tag-background-color",
-  "factCardFrontBackground": "--fact-card-front-background-color",
-  "factCardFrontText": "--fact-card-front-text-color",
-  "factCardFrontBorder": "--fact-card-front-border-color",
-  "factCardBackBackground": "--fact-card-back-background-color",
-  "factCardBackText": "--fact-card-back-text-color",
-  "factCardBackBorder": "--fact-card-back-border-color",
-  "additionalTechnologiesLinkText": "--additional-technologies-link-color",
   "projectCardBackground": "--project-card-background-color",
   "projectCardBorder": "--project-card-border-color",
-  "projectCardMediaBackground": "--project-card-media-background-color"
+  "projectCardMediaBackground": "--project-card-media-background-color",
+  "surface": "--surface",
+  "softBorder": "--soft-border",
+  "heroBackground": "--hero-bg",
+  "heroIllustrationBackground": "--hero-illustration-background",
+  "accentFill": "--accent-fill",
+  "accentContrast": "--accent-contrast",
+  "statusText": "--status-text",
+  "statusBorder": "--status-border",
+  "statusSurface": "--status-surface",
+  "experienceAlternateBackground": "--experience-alternate-background",
+  "timelineIconHoverBackground": "--timeline-icon-hover-background",
+  "timelineIconHoverText": "--timeline-icon-hover-text",
+  "coreStackBackground": "--core-stack-background",
+  "badgeCardStart": "--badge-card-start",
+  "badgeCardEnd": "--badge-card-end",
+  "badgeCardBorder": "--badge-card-border",
+  "badgeLabelBackground": "--badge-label-background",
+  "badgeLabelText": "--badge-label-text",
+  "badgeLink": "--badge-link",
+  "badgeLinkHover": "--badge-link-hover",
+  "badgeThumbnailBorder": "--badge-thumbnail-border"
 }
-
-const COLOR_GROUPS = [
-  { id: "page", keys: ["pageBackground"] },
+const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
   {
-    id: "text",
-    keys: ["mainText", "paragraphText", "metaText", "brandName", "headings", "sectionTitles"]
+    "id": "page",
+    "keys": [
+      "pageBackground",
+      "surface",
+      "softBorder",
+      "heroBackground",
+      "heroIllustrationBackground"
+    ]
   },
   {
-    id: "headerNavigation",
-    keys: ["logo", "headerDivider", "navigationHover", "navigationActiveBackground", "languageSelectorBorder"]
+    "id": "text",
+    "keys": [
+      "mainText",
+      "paragraphText",
+      "metaText",
+      "headings",
+      "sectionTitles"
+    ]
   },
   {
-    id: "buttons",
-    keys: ["buttonBackground", "buttonText", "outlineButtonsBorder", "buttonHoverBackground", "textOnAccent", "additionalTechnologiesLinkText"]
+    "id": "headerNavigation",
+    "keys": [
+      "headerDivider",
+      "navigationHover",
+      "navigationActiveBackground",
+      "languageSelectorBorder"
+    ]
   },
   {
-    id: "technologyTags",
-    keys: ["technologyTagsBackground", "technologyTagsBorder", "technologyTagsText"]
+    "id": "buttons",
+    "keys": [
+      "buttonBackground",
+      "buttonText",
+      "outlineButtonsBorder",
+      "buttonHoverBackground",
+      "textOnAccent",
+      "accentFill",
+      "accentContrast"
+    ]
   },
-  { id: "factCardsFront", keys: ["factCardFrontBackground", "factCardFrontText", "factCardFrontBorder"] },
-  { id: "factCardsBack", keys: ["factCardBackBackground", "factCardBackText", "factCardBackBorder"] },
-  { id: "timeline", keys: ["timelineMarkers", "timelineLine"] },
-  { id: "projectCards", keys: ["projectCardBackground", "projectCardBorder", "projectCardMediaBackground"] }
-] as const
-
+  {
+    "id": "technologyTags",
+    "keys": [
+      "technologyTagsBackground",
+      "technologyTagsBorder",
+      "technologyTagsText",
+      "coreStackBackground"
+    ]
+  },
+  {
+    "id": "timeline",
+    "keys": [
+      "timelineMarkers",
+      "timelineLine",
+      "experienceAlternateBackground",
+      "timelineIconHoverBackground",
+      "timelineIconHoverText"
+    ]
+  },
+  {
+    "id": "certificates",
+    "keys": [
+      "badgeCardStart",
+      "badgeCardEnd",
+      "badgeCardBorder",
+      "badgeLabelBackground",
+      "badgeLabelText",
+      "badgeLink",
+      "badgeLinkHover",
+      "badgeThumbnailBorder"
+    ]
+  },
+  {
+    "id": "projectCards",
+    "keys": [
+      "projectCardBackground",
+      "projectCardBorder",
+      "projectCardMediaBackground",
+      "statusSurface",
+      "statusBorder",
+      "statusText"
+    ]
+  }
+]
 const HEX_COLOR = /^#[0-9a-f]{6}$/i
+const STORAGE_KEY = 'erica-portfolio-custom-colors-v2'
+
+function readStoredColors(): { light: ColorPalette; dark: ColorPalette; history: ColorHistory } {
+  const state = {
+    light: { ...LIGHT_MODE_DEFAULTS } as ColorPalette,
+    dark: { ...DARK_MODE_DEFAULTS },
+    history: { light: {}, dark: {} } as ColorHistory
+  }
+  try {
+    const saved = JSON.parse(window.localStorage.getItem(STORAGE_KEY) ?? 'null')
+    for (const mode of ['light', 'dark'] as const) {
+      for (const key of Object.keys(CSS_VARIABLES) as ColorKey[]) {
+        const color = saved?.[mode]?.[key]
+        if (typeof color === 'string' && HEX_COLOR.test(color)) state[mode][key] = color.toLowerCase()
+        const recent = saved?.history?.[mode]?.[key]
+        if (Array.isArray(recent)) {
+          state.history[mode][key] = [...new Set(recent.filter((c): c is string => typeof c === 'string' && HEX_COLOR.test(c)).map((c: string) => c.toLowerCase()))].slice(0, 2)
+        }
+      }
+    }
+  } catch {
+    // Use the design palette if saved values are unavailable or invalid.
+  }
+  return state
+}
 
 export default function ColorCustomizer({ theme, onThemeChange }: {
   theme: 'light' | 'dark'
@@ -140,33 +262,54 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
 }) {
   const { t } = useTranslation('common')
   const [isOpen, setIsOpen] = useState(false)
-  const [lightColors, setLightColors] = useState<ColorPalette>(() => ({ ...LIGHT_MODE_DEFAULTS }))
-  const [darkColors, setDarkColors] = useState<ColorPalette>(() => ({ ...DARK_MODE_DEFAULTS }))
-  const [appliedLightColors, setAppliedLightColors] = useState<ColorPalette>(() => ({ ...LIGHT_MODE_DEFAULTS }))
-  const [appliedDarkColors, setAppliedDarkColors] = useState<ColorPalette>(() => ({ ...DARK_MODE_DEFAULTS }))
+  const [stored] = useState(readStoredColors)
+  const [lightColors, setLightColors] = useState<ColorPalette>(stored.light)
+  const [darkColors, setDarkColors] = useState<ColorPalette>(stored.dark)
+  const [history, setHistory] = useState<ColorHistory>(stored.history)
   const [drafts, setDrafts] = useState<Partial<Record<ColorKey, string>>>({})
   const [copyStatus, setCopyStatus] = useState<'copied' | 'failed' | ''>('')
   useEffect(() => setDrafts({}), [theme])
   const colors = theme === 'dark' ? darkColors : lightColors
-  const appliedColors = theme === 'dark' ? appliedDarkColors : appliedLightColors
 
   useEffect(() => {
     for (const key of Object.keys(CSS_VARIABLES) as ColorKey[]) {
-      document.documentElement.style.setProperty(CSS_VARIABLES[key], appliedColors[key])
+      document.documentElement.style.setProperty(CSS_VARIABLES[key], colors[key])
     }
-  }, [appliedColors])
+  }, [colors])
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify({ light: lightColors, dark: darkColors, history }))
+    } catch {
+      // Color previews remain available even if storage is unavailable.
+    }
+  }, [lightColors, darkColors, history])
+
+  function setColor(key: ColorKey, value: string) {
+    if (!HEX_COLOR.test(value)) return
+    const next = value.toLowerCase()
+    const old = colors[key].toLowerCase()
+    if (next === old) return
+    setHistory(previous => ({
+      ...previous,
+      [theme]: {
+        ...previous[theme],
+        [key]: [old, ...(previous[theme][key] ?? []).filter(color => color !== old && color !== next)].slice(0, 2)
+      }
+    }))
+    const setter = theme === 'dark' ? setDarkColors : setLightColors
+    setter(current => ({ ...current, [key]: next }))
+  }
 
   function updateColor(key: ColorKey, value: string) {
-    const setColors = theme === 'dark' ? setDarkColors : setLightColors
-    setColors((current) => ({ ...current, [key]: value }))
+    setColor(key, value)
     setDrafts((current) => ({ ...current, [key]: value }))
   }
 
   function updateHexDraft(key: ColorKey, value: string) {
     setDrafts((current) => ({ ...current, [key]: value }))
     if (HEX_COLOR.test(value)) {
-      const setColors = theme === 'dark' ? setDarkColors : setLightColors
-      setColors((current) => ({ ...current, [key]: value }))
+      setColor(key, value)
     }
   }
 
@@ -176,11 +319,6 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
       delete next[key]
       return next
     })
-  }
-
-  function applyColors() {
-    if (theme === 'dark') setAppliedDarkColors({ ...colors })
-    else setAppliedLightColors({ ...colors })
   }
 
   async function copyColors() {
@@ -193,8 +331,19 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
   }
 
   function resetColors() {
-    if (theme === 'dark') setDarkColors({ ...DARK_MODE_DEFAULTS })
-    else setLightColors({ ...LIGHT_MODE_DEFAULTS })
+    const defaults = theme === 'dark' ? DARK_MODE_DEFAULTS : LIGHT_MODE_DEFAULTS
+    const setter = theme === 'dark' ? setDarkColors : setLightColors
+    setHistory(previous => {
+      const values = { ...previous[theme] }
+      for (const key of Object.keys(CSS_VARIABLES) as ColorKey[]) {
+        const old = colors[key].toLowerCase()
+        if (old !== defaults[key]) {
+          values[key] = [old, ...(values[key] ?? []).filter(color => color !== old && color !== defaults[key])].slice(0, 2)
+        }
+      }
+      return { ...previous, [theme]: values }
+    })
+    setter({ ...defaults })
     setDrafts({})
   }
 
@@ -249,6 +398,7 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
                   const inputId = 'color-' + colorKey
                   const colorName = t('colorEditor.fields.' + colorKey)
                   const hexValue = drafts[colorKey] ?? colors[colorKey]
+                  const recentColors = history[theme][colorKey] ?? []
 
                   return (
                     <div className="color-customizer__field" key={colorKey}>
@@ -283,6 +433,28 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
                           onBlur={() => finishHexEdit(colorKey)}
                         />
                       </div>
+                      {recentColors.length > 0 && (
+                        <div className="color-customizer__recent" role="group" aria-label={t('colorEditor.recentColorsFor', { color: colorName })}>
+                          {recentColors.map((recent, index) => (
+                            <button
+                              className="color-customizer__recent-swatch"
+                              type="button"
+                              key={recent}
+                              style={{ backgroundColor: recent }}
+                              aria-label={t('colorEditor.restoreColor', { color: colorName, value: recent, position: index + 1 })}
+                              title={recent}
+                              onClick={() => {
+                                setColor(colorKey, recent)
+                                setDrafts(current => {
+                                  const next = { ...current }
+                                  delete next[colorKey]
+                                  return next
+                                })
+                              }}
+                            />
+                          ))}
+                        </div>
+                      )}
                     </div>
                   )
                 })}
@@ -292,13 +464,6 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
         </div>
 
         <div className="color-customizer__actions">
-          <button
-            className="color-customizer__apply"
-            type="button"
-            onClick={applyColors}
-          >
-            {t('colorEditor.apply')}
-          </button>
           <button
             className="color-customizer__copy"
             type="button"
