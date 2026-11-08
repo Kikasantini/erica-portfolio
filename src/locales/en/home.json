@@ -15,13 +15,13 @@
     },
     {
       "id": "oneWord",
-      "front": "If I had to describe myself in one word, I'd say...",
-      "back": "... practical and thorough — and that's two words."
+      "front": "If I had to describe myself in one word...",
+      "back": "Practical and thorough — and that's two words."
     },
     {
       "id": "gamer",
       "front": "My favorite way to unwind is obviously...",
-      "back": "... a jigsaw puzzle, music in the background, good food & the right company."
+      "back": "A jigsaw puzzle, music in the background, good food & the right company."
     }
   ],
   "contactTitle": "Contact links",
@@ -49,5 +49,12 @@
     }
   ],
   "careerTitle": "Where I’m headed",
-  "careerSummary": "Building on my full-stack background, I’m open to a wide range of software development roles and technologies. I’m curious about areas such as AI, cloud computing, automation, data systems, and observability, and I’m eager to keep learning while contributing to useful products."
+  "careerSummary": "Building on my full-stack background, I’m open to a wide range of software development roles and technologies. I’m curious about areas such as AI, cloud computing, automation, data systems, and observability, and I’m eager to keep learning while contributing to useful products.",
+  "workspaceArtworkAlt": "Cozy coding desk illustration with a laptop, plants and two cats",
+  "viewAllProjects": "All projects",
+  "personalNoteTitles": {
+    "conversationStarter": "Conversation starter",
+    "oneWord": "Me in one word",
+    "gamer": "Off the clock"
+  }
 }

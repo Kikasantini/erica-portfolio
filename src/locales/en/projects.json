@@ -62,26 +62,6 @@
               "type": "image",
               "src": "/projects/runner-rpg/gameplay-03.jpg",
               "alt": "RunnerRPG gameplay screenshot 3"
-            },
-            {
-              "type": "video",
-              "src": "/projects/runner-rpg/gameplay.mp4",
-              "alt": "RunnerRPG gameplay video"
-            },
-            {
-              "type": "image",
-              "src": "/projects/runner-rpg/gameplay-01.jpg",
-              "alt": "RunnerRPG gameplay screenshot"
-            },
-            {
-              "type": "image",
-              "src": "/projects/runner-rpg/gameplay-02.jpg",
-              "alt": "RunnerRPG gameplay screenshot 2"
-            },
-            {
-              "type": "image",
-              "src": "/projects/runner-rpg/gameplay-04.jpg",
-              "alt": "RunnerRPG gameplay screenshot 4"
             }
           ],
           "highlights": [
@@ -99,28 +79,8 @@
           "media": [
             {
               "type": "image",
-              "src": "/projects/esp8266-weather-station-game/hardware-prototype.jpeg",
-              "alt": "ESP8266 prototype on a breadboard with an OLED showing the game-over score."
-            },
-            {
-              "type": "video",
-              "src": "https://raw.githubusercontent.com/Kikasantini/esp8266-weather-station-game/main/project-demo.mp4",
-              "alt": "Demonstration of the connected weather station and binary number challenge."
-            },
-            {
-              "type": "image",
-              "src": "/projects/esp8266-weather-station-game/web-interface-home.jpg",
-              "alt": "Home page of the ESP8266 project's local web interface."
-            },
-            {
-              "type": "image",
               "src": "/projects/esp8266-weather-station-game/wiring-diagram.png",
               "alt": "Wiring schematic for the ESP8266, SSD1306 OLED, and BME280."
-            },
-            {
-              "type": "image",
-              "src": "/projects/esp8266-weather-station-game/breadboard-layout.png",
-              "alt": "Breadboard layout showing the ESP8266 project wiring."
             }
           ],
           "highlights": [
@@ -140,11 +100,6 @@
               "type": "image",
               "src": "/projects/connected-weather-station-zabbix/wiring-diagram.png",
               "alt": "Wiring diagram for the two ESP8266 boards, BME280 sensor, SSD1306 OLED, LEDs, buttons, and potentiometer."
-            },
-            {
-              "type": "video",
-              "src": "https://raw.githubusercontent.com/Kikasantini/connected-weather-station-zabbix/main/media/full-project-demo.mp4",
-              "alt": "Full demonstration of the connected weather station, MicroPython display, and Zabbix monitoring."
             }
           ],
           "highlights": [
@@ -164,16 +119,6 @@
               "type": "image",
               "src": "/projects/iot-sensor-monitoring-zabbix-mqtt/conceptual-architecture.png",
               "alt": "Conceptual system architecture showing three microcontrollers (two ESP8266 boards and one ESP32), sensors, Mosquitto, Zabbix, and data flow."
-            },
-            {
-              "type": "image",
-              "src": "/projects/iot-sensor-monitoring-zabbix-mqtt/electronic-wiring.png",
-              "alt": "Wiring diagram for the three microcontroller boards and their sensors."
-            },
-            {
-              "type": "video",
-              "src": "https://raw.githubusercontent.com/Kikasantini/iot-sensor-monitoring-zabbix-mqtt/main/media/project-demo.mp4",
-              "alt": "Demonstration of the three-microcontroller IoT sensor monitoring project with MQTT and Zabbix."
             }
           ],
           "highlights": [
@@ -188,13 +133,7 @@
           "technologies": "Python 3 · PyPDF2 · ReportLab · Crontab · Shell · Linux",
           "githubUrl": "https://github.com/Kikasantini/scripting-translationCompany",
           "githubLabel": "View on GitHub",
-          "media": [
-            {
-              "type": "image",
-              "src": "/projects/translation-company-automation/translation-company-automation.jpg",
-              "alt": "Ubuntu terminal showing Python automation scripts"
-            }
-          ],
+          "media": [],
           "highlights": [
             "A Python automation project for a fictional translation company, streamlining recurring document-processing and business tasks on Linux.",
             "Calculated service prices and generated PDFs with date-stamped watermarks and registry pages.",

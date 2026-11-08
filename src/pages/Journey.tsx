@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 type CertificateItem = {
@@ -32,43 +32,21 @@ type EducationItem = {
   details: string[]
 }
 
-function CollapsibleJourneySection({
-  id,
-  title,
-  children,
-}: {
-  id: string
-  title: string
-  children: ReactNode
-}) {
-  const [isExpanded, setIsExpanded] = useState(true)
-  const { t } = useTranslation('journey')
-  const contentId = 'journey-section-' + id
-
+function ExperienceIcon({ id }: { id: string }) {
   return (
-    <section className={`journey-section${isExpanded ? '' : ' journey-section--collapsed'}`}>
-      <h2>
-        <button
-          className="journey-section__toggle"
-          type="button"
-          aria-expanded={isExpanded}
-          aria-controls={contentId}
-          onClick={() => setIsExpanded((expanded) => !expanded)}
-        >
-          <span>{title}</span>
-          <span className="journey-section__action">
-            <span>{t(isExpanded ? 'hideSection' : 'showSection')}</span>
-            <span
-              className={`journey-section__chevron${isExpanded ? ' is-expanded' : ''}`}
-              aria-hidden="true"
-            />
-          </span>
-        </button>
-      </h2>
-      <div id={contentId} hidden={!isExpanded}>
-        {children}
-      </div>
-    </section>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      {id === 'fullStackDeveloper' ? (
+        <><rect x="3" y="4" width="18" height="14" rx="2" /><path d="M8 9 5.5 11.5 8 14m8-5 2.5 2.5L16 14m-6 6h4m-2-2v2" /></>
+      ) : id === 'sageConsultant' ? (
+        <><ellipse cx="12" cy="5" rx="8" ry="3" /><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7" /></>
+      ) : id === 'developerIntern' ? (
+        <path d="m8 8-4 4 4 4m8-8 4 4-4 4" />
+      ) : id === 'producer' ? (
+        <><rect x="13" y="3" width="8" height="8" rx="1.5" /><rect x="3" y="13" width="8" height="8" rx="1.5" /><path d="M6 13V7a1 1 0 0 1 1-1h6M11 17h6a1 1 0 0 0 1-1v-5" /></>
+      ) : (
+        <><circle cx="12" cy="5.5" r="2.5" /><circle cx="5" cy="11" r="2" /><circle cx="19" cy="11" r="2" /><path d="M12 8v3m-7 2v3m14-3v3M3 19h4m3 0h4m3 0h4" /></>
+      )}
+    </svg>
   )
 }
 
@@ -76,20 +54,35 @@ function ExperienceEntry({ item }: { item: ExperienceItem }) {
   const { t } = useTranslation('journey')
   const coreTechnologies = item.coreTechnologies ?? []
   const additionalTechnologies = item.additionalTechnologies ?? []
+  const [expanded, setExpanded] = useState(true)
+  const detailsId = 'experience-details-' + item.id
 
   return (
-    <article className="timeline-item">
+    <article className="timeline-item experience-timeline__entry">
+      <button
+        className="experience-timeline__toggle"
+        type="button"
+        aria-label={t(expanded ? 'collapseExperience' : 'expandExperience', { role: item.role })}
+        aria-expanded={expanded}
+        aria-controls={detailsId}
+        onClick={() => setExpanded((value) => !value)}
+      >
+        <ExperienceIcon id={item.id} />
+      </button>
       <h3>{item.role}</h3>
       <p className="timeline-item__meta">
-        {item.company} · {item.location}
+        <span>{item.company}</span>
+        <span className="journey-meta-divider" aria-hidden="true" />
+        <span>{item.location}</span>
       </p>
       <p className="timeline-item__period">{item.period}</p>
 
-      <ul className="journey-details">
-        {item.details.map((detail, index) => (
-          <li key={item.id + '-detail-' + index}>{detail}</li>
-        ))}
-      </ul>
+      <div id={detailsId} className="experience-timeline__details" hidden={!expanded}>
+        <ul className="journey-details">
+          {item.details.map((detail, index) => (
+            <li key={item.id + '-detail-' + index}>{detail}</li>
+          ))}
+        </ul>
 
       {coreTechnologies.length > 0 && (
         <div className="technology-group">
@@ -114,6 +107,7 @@ function ExperienceEntry({ item }: { item: ExperienceItem }) {
           </ul>
         </div>
       )}
+      </div>
     </article>
   )
 }
@@ -129,139 +123,97 @@ export default function Journey() {
   const education = t('education', {
     returnObjects: true,
   }) as EducationItem[]
-  const [activeCertificate, setActiveCertificate] = useState<
-    CertificateItem | null
-  >(null)
-  const closeButtonRef = useRef<HTMLButtonElement>(null)
-  const thumbnailButtonRef = useRef<HTMLButtonElement | null>(null)
-
-  useEffect(() => {
-    if (!activeCertificate) return
-
-    const previousOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-    closeButtonRef.current?.focus()
-
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === 'Escape') setActiveCertificate(null)
-    }
-
-    document.addEventListener('keydown', handleKeyDown)
-    return () => {
-      document.body.style.overflow = previousOverflow
-      document.removeEventListener('keydown', handleKeyDown)
-      thumbnailButtonRef.current?.focus()
-    }
-  }, [activeCertificate])
 
   return (
     <main className="journey-page">
-      <CollapsibleJourneySection
-        id="certificates"
-        title={t('certificatesTitle')}
-      >
-        <div className="certificate-list">
-          {certificates.map((certificate) => (
-            <article className="certificate-item" key={certificate.id}>
-              <button
-                className="certificate-item__thumbnail"
-                type="button"
-                aria-label={t('openCertificateImage') + ': ' + certificate.title}
-                onClick={(event) => {
-                  thumbnailButtonRef.current = event.currentTarget
-                  setActiveCertificate(certificate)
-                }}
-              >
-                <img
-                  src={certificate.image}
-                  alt={certificate.imageAlt}
-                  loading="lazy"
-                />
-              </button>
-              <div className="certificate-item__content">
-                <div className="certificate-item__header">
-                  <h3>{certificate.title}</h3>
-                  <p className="timeline-item__meta">{certificate.issuer}</p>
-                  <div className="certificate-item__period-row">
-                    <p className="timeline-item__period">{certificate.period}</p>
-                    <a
-                      className="certificate-item__link"
-                      href={certificate.credentialUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {t('verifyCertificate')}
-                    </a>
-                  </div>
-                </div>
-                <p className="certificate-item__description">
-                  {certificate.description}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </CollapsibleJourneySection>
-
-      <CollapsibleJourneySection
-        id="experience"
-        title={t('experienceTitle')}
-      >
-        <div className="timeline">
-          {experience.map((item) => (
-            <ExperienceEntry item={item} key={item.id} />
-          ))}
-        </div>
-      </CollapsibleJourneySection>
-
-      <section className="journey-section journey-section--static">
-        <h2>{t('educationTitle')}</h2>
-        <div className="timeline">
-          {education.map((item) => (
-            <article className="timeline-item" key={item.id}>
-              <h3>{item.program}</h3>
-              <p className="timeline-item__meta">
-                {item.institution} · {item.location}
-              </p>
-              <p className="timeline-item__period">{item.period}</p>
-              <ul className="journey-details">
-                {item.details.map((detail, index) => (
-                  <li key={item.id + '-detail-' + index}>{detail}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      {activeCertificate && (
-        <div className="media-viewer" onClick={() => setActiveCertificate(null)}>
-          <div
-            className="media-viewer__dialog"
-            role="dialog"
-            aria-modal="true"
-            aria-label={activeCertificate.title}
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              className="media-viewer__button media-viewer__close"
-              type="button"
-              aria-label={t('closeCertificateImage')}
-              onClick={() => setActiveCertificate(null)}
-              ref={closeButtonRef}
-            >
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="m6 6 12 12M18 6 6 18" />
-              </svg>
-            </button>
-            <img
-              className="media-viewer__item"
-              src={activeCertificate.image}
-              alt={activeCertificate.imageAlt}
-            />
+      <div className="journey-overview">
+        <section className="journey-overview__experience" aria-labelledby="journey-experience-title">
+          <h2 id="journey-experience-title" className="journey-overview__heading">
+            {t('experienceTitle')}
+          </h2>
+          <div className="timeline">
+            {experience.map((item) => (
+              <ExperienceEntry item={item} key={item.id} />
+            ))}
           </div>
-        </div>
-      )}
+        </section>
+
+        <aside className="journey-overview__side">
+          <section className="journey-overview__certificates" aria-labelledby="journey-certificates-title">
+            <h2 id="journey-certificates-title" className="journey-overview__heading">
+              {t('certificatesTitle')}
+            </h2>
+            <div className="certificate-list">
+              {certificates.map((certificate) => (
+                <article className="certificate-item" key={certificate.id}>
+                  <img
+                    className="certificate-item__thumbnail"
+                    src={certificate.image}
+                    alt={certificate.imageAlt}
+                    loading="lazy"
+                  />
+                  <div className="certificate-item__content">
+                    <div className="certificate-item__header">
+                      <span className="certificate-item__kind">{t('digitalBadge')}</span>
+                      <h3>{certificate.title}</h3>
+                      <p className="certificate-item__detail">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="m3 9 9-6 9 6M4 10h16M6 10v9m4-9v9m4-9v9m4-9v9M3 21h18" />
+                        </svg>
+                        <span>{certificate.issuer}</span>
+                      </p>
+                      <p className="certificate-item__detail">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="3" y="5" width="18" height="16" rx="2"/>
+                          <path d="M7 3v4m10-4v4M3 10h18" />
+                        </svg>
+                        <span>{certificate.period}</span>
+                      </p>
+                      <a
+                        className="certificate-item__link"
+                        href={certificate.credentialUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <span>{t('verifyCertificate')}</span>
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M13 5h6v6m0-6-9 9"/>
+                          <path d="M19 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="journey-overview__education" aria-labelledby="journey-education-title">
+            <h2 id="journey-education-title" className="journey-overview__heading">
+              {t('educationTitle')}
+            </h2>
+            <div className="timeline">
+              {education.map((item) => (
+                <article className="timeline-item" key={item.id}>
+                  <h3>{item.program}</h3>
+                  <p className="timeline-item__meta">
+                    <span>{item.institution}</span>
+                  <span className="journey-meta-divider" aria-hidden="true" />
+                  <span>{item.location}</span>
+                  </p>
+                  <p className="timeline-item__period">{item.period}</p>
+                  <ul className="journey-details">
+                    {item.details.map((detail, index) => (
+                      <li key={item.id + '-detail-' + index}>{detail}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+        </aside>
+      </div>
+
     </main>
   )
 }

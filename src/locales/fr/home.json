@@ -15,13 +15,13 @@
     },
     {
       "id": "oneWord",
-      "front": "Si je devais me décrire en un mot, je dirais...",
-      "back": "... pragmatique et méticuleuse — ça fait deux mots."
+      "front": "Si je devais me décrire en un mot...",
+      "back": "Pragmatique et méticuleuse — ça fait deux mots."
     },
     {
       "id": "gamer",
       "front": "Ma façon préférée de décrocher, c'est évidemment...",
-      "back": "... un puzzle, de la musique en fond, de bons petits plats et la bonne compagnie."
+      "back": "Un puzzle, de la musique en fond, de bons petits plats et la bonne compagnie."
     }
   ],
   "contactTitle": "Liens de contact",
@@ -49,5 +49,12 @@
     }
   ],
   "careerTitle": "La direction que je souhaite prendre",
-  "careerSummary": "Forte de mon expérience full-stack, je suis ouverte à un large éventail de postes et de technologies en développement logiciel. Je m’intéresse à des domaines comme l’intelligence artificielle, l’infonuagique, l’automatisation, les systèmes de données et l’observabilité, et je souhaite continuer à apprendre tout en contribuant à des produits utiles."
+  "careerSummary": "Forte de mon expérience full-stack, je suis ouverte à un large éventail de postes et de technologies en développement logiciel. Je m’intéresse à des domaines comme l’intelligence artificielle, l’infonuagique, l’automatisation, les systèmes de données et l’observabilité, et je souhaite continuer à apprendre tout en contribuant à des produits utiles.",
+  "workspaceArtworkAlt": "Illustration d'un bureau de programmation avec ordinateur, plantes et deux chats",
+  "viewAllProjects": "Tous les projets",
+  "personalNoteTitles": {
+    "conversationStarter": "Pour briser la glace",
+    "oneWord": "Moi en un mot",
+    "gamer": "Après le travail"
+  }
 }

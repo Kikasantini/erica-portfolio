@@ -15,13 +15,13 @@
     },
     {
       "id": "oneWord",
-      "front": "Se eu tivesse que me definir em uma palavra, diria...",
-      "back": "... prática e meticulosa — mas aí já são duas palavras."
+      "front": "Se eu tivesse que me definir em uma palavra...",
+      "back": "Prática e meticulosa — mas aí já são duas palavras."
     },
     {
       "id": "gamer",
       "front": "Meu jeito favorito de relaxar é, obviamente...",
-      "back": "... um quebra-cabeça, música de fundo, comida boa e a companhia certa."
+      "back": "Um quebra-cabeça, música de fundo, comida boa e a companhia certa."
     }
   ],
   "contactTitle": "Links de contato",
@@ -49,5 +49,12 @@
     }
   ],
   "careerTitle": "O caminho que quero seguir",
-  "careerSummary": "Com minha experiência full-stack, estou aberta a uma ampla variedade de vagas e tecnologias em desenvolvimento de software. Tenho curiosidade por áreas como inteligência artificial, computação em nuvem, automação, sistemas de dados e observabilidade, e quero continuar aprendendo enquanto contribuo para produtos úteis."
+  "careerSummary": "Com minha experiência full-stack, estou aberta a uma ampla variedade de vagas e tecnologias em desenvolvimento de software. Tenho curiosidade por áreas como inteligência artificial, computação em nuvem, automação, sistemas de dados e observabilidade, e quero continuar aprendendo enquanto contribuo para produtos úteis.",
+  "workspaceArtworkAlt": "Ilustração de uma mesa de trabalho com notebook, plantas e dois gatos",
+  "viewAllProjects": "Todos os projetos",
+  "personalNoteTitles": {
+    "conversationStarter": "Para começar uma conversa",
+    "oneWord": "Eu em uma palavra",
+    "gamer": "Fora do expediente"
+  }
 }

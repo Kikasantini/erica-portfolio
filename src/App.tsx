@@ -9,7 +9,7 @@ import {
   useNavigate,
   useParams,
 } from 'react-router-dom'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Home from './pages/Home'
 import Journey from './pages/Journey'
@@ -52,6 +52,11 @@ function LocalizedLayout() {
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false)
   const [theme, setTheme] = useState<ThemeMode>(readSavedTheme)
   const languageControlRef = useRef<HTMLDivElement>(null)
+
+  // A new page must open at the top, regardless of scroll position on the previous route.
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
 
   const activeLanguage = supportedLanguages.includes(language ?? '')
     ? language!
@@ -134,11 +139,6 @@ function LocalizedLayout() {
   return (
     <>
       <header className="site-header">
-        <NavLink className="site-brand" to={'/' + activeLanguage} end>
-          <span className="site-brand__logo" aria-hidden="true" />
-          <span>{t('brandName')}</span>
-        </NavLink>
-
         <nav className="site-nav" aria-label={t('navigation.accessibilityLabel')}>
           <NavLink to={'/' + activeLanguage} end>
             {t('navigation.home')}

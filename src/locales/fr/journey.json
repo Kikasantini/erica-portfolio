@@ -7,8 +7,8 @@
       "title": "AI Literacy",
       "issuer": "IBM SkillsBuild",
       "period": "Novembre 2026",
-      "description": "Le cours m’a appris à définir l’IA, à comprendre comment elle apprend et s’améliore, à la distinguer de l’automatisation et à reconnaître ses formes et ses technologies habilitantes. J’ai aussi exploré ses avantages et ses usages au quotidien et dans différents secteurs, identifié des défis liés aux données qu’elle peut aider à résoudre et utilisé un assistant d’IA pour améliorer une solution et créer un plan de lancement de produit.",
-      "image": "/images/ai-literacy-certificate.png",
+      "description": "Présente les concepts fondamentaux de l’IA, ses applications concrètes et son utilisation responsable.",
+      "image": "/images/ai-literacy-badge-thumbnail.webp",
       "imageAlt": "Certificat AI Literacy d’IBM SkillsBuild délivré à Erica Santini de Lima",
       "credentialUrl": "https://www.credly.com/go/BYUN0pw9"
     }
@@ -76,7 +76,6 @@
         "JSON",
         "YAML",
         "Confluence",
-        "Microsoft Teams",
         "Notion",
         "JasperReports",
         "OpenAI Codex",
@@ -104,12 +103,9 @@
         "Sage X3",
         "Sage X3 4GL",
         "SQL",
-        "Microsoft SQL Server",
         "Crystal Reports",
         "Eclipse",
-        "SQL Server Management Studio",
-        "Microsoft Teams",
-        "Postman"
+        "SQL Server Management Studio"
       ],
       "additionalTechnologies": []
     },
@@ -124,47 +120,27 @@
       ],
       "coreTechnologies": [
         "Node.js",
-        "Sage X3 REST API",
-        "Microsoft Teams"
+        "Sage X3 REST API"
       ],
       "additionalTechnologies": []
     },
     {
       "id": "producer",
-      "role": "Productrice",
+      "role": "Productrice / Stagiaire en gestion de projet",
       "company": "Imgnation Studios",
       "location": "Brésil",
-      "period": "Février 2021 - décembre 2021",
+      "period": "Août 2020 - décembre 2021",
       "details": [
         "Développé et débogué des fonctionnalités de jeux mobiles avec C# et Unity.",
-        "Participé au développement Agile, à la planification et à l'estimation des sprints avec Planning Poker, aux tests, à l'assurance qualité, au suivi et à la documentation des bogues, ainsi qu'à la livraison des versions.",
-        "Soutenu la mise en œuvre des fonctionnalités et validé leur fonctionnement avant les mises en version."
+        "Participé au développement Agile, aux tests, à l’assurance qualité, au suivi des anomalies, à la documentation et à la validation avant livraison.",
+        "Assumé le rôle de Scrum Master par intérim au sein d’une petite équipe de développement de jeux mobiles, en soutenant la planification des sprints, la coordination des tâches, la communication et les estimations avec Planning Poker."
       ],
       "coreTechnologies": [
         "C#",
         "Unity",
+        "Notion",
         "Trello",
-        "Miro",
-        "Discord",
-        "Notion"
-      ],
-      "additionalTechnologies": []
-    },
-    {
-      "id": "projectManagementIntern",
-      "role": "Stagiaire en gestion de projet",
-      "company": "Imgnation Studios",
-      "location": "Brésil",
-      "period": "Août 2020 - janvier 2021",
-      "details": [
-        "Assumé le rôle de Scrum Master par intérim pour une petite équipe de développement de jeux mobiles.",
-        "Soutenu la planification des sprints, l'organisation des tâches, la coordination et la communication de l'équipe, la résolution de problèmes et la livraison, avec des estimations utilisant Planning Poker."
-      ],
-      "coreTechnologies": [
-        "Trello",
-        "Miro",
-        "Discord",
-        "Notion"
+        "Miro"
       ],
       "additionalTechnologies": []
     }
@@ -179,7 +155,7 @@
       "details": [
         "Diplômée au premier rang de la classe avec une moyenne pondérée de 94 %.",
         "Le programme couvrait le développement web, JavaScript, Node.js, les bases de données, la programmation orientée objet et d’autres matières.",
-        "J’ai été invitée par mon professeur de programmation à aider mes collègues de classe en C++ pendant un semestre.",
+        "Sélectionnée parmi deux étudiants sur une classe de 15 pour donner du tutorat en C++ pendant un semestre. Les séances ont reçu des commentaires très positifs des participants et ont contribué à améliorer la moyenne de la classe.",
         "J’ai suivi des cours pratiques sur Arduino et réalisé de petits projets personnels avec cette plateforme."
       ]
     },
@@ -204,7 +180,7 @@
       "details": [
         "Suivi des cours sur les structures de données, les algorithmes, C, C++, la programmation orientée objet et les bases de données.",
         "J’ai été tutrice en programmation C auprès d’autres étudiants pendant deux semestres.",
-        "J’ai participé à un concours de programmation de l’ICPC après avoir été sélectionnée par mon professeur de logique et d’algorithmes comme l’une des deux étudiantes.",
+        "Sélectionnée par mon professeur de logique et d’algorithmes parmi deux étudiants sur 40 pour participer à un concours de programmation de l’ICPC.",
         "J’ai contribué à animer des ateliers d’introduction à la logique de programmation destinés aux élèves du secondaire."
       ]
     }
@@ -213,5 +189,8 @@
   "hideSection": "Masquer",
   "openCertificateImage": "Agrandir le certificat",
   "closeCertificateImage": "Fermer l’image du certificat",
-  "verifyCertificate": "Vérifier le badge"
+  "verifyCertificate": "Vérifier le badge",
+  "digitalBadge": "Badge numérique",
+  "collapseExperience": "Masquer les détails de {{role}}",
+  "expandExperience": "Afficher les détails de {{role}}"
 }

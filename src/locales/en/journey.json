@@ -7,8 +7,8 @@
       "title": "AI Literacy",
       "issuer": "IBM SkillsBuild",
       "period": "November 2026",
-      "description": "The course covered what AI is, how it learns and improves, how it differs from automation, and the forms and enabling technologies behind AI applications. I explored its benefits and everyday and industry applications, identified data challenges it can help solve, and practiced using an AI assistant to improve a solution and create a product launch plan.",
-      "image": "/images/ai-literacy-certificate.png",
+      "description": "Introduces basic AI concepts, real-world applications, and responsible usage.",
+      "image": "/images/ai-literacy-badge-thumbnail.webp",
       "imageAlt": "IBM SkillsBuild AI Literacy certificate issued to Erica Santini de Lima",
       "credentialUrl": "https://www.credly.com/go/BYUN0pw9"
     }
@@ -77,7 +77,6 @@
         "JSON",
         "YAML",
         "Confluence",
-        "Microsoft Teams",
         "Notion",
         "JasperReports",
         "OpenAI Codex",
@@ -104,12 +103,9 @@
         "Sage X3",
         "Sage X3 4GL",
         "SQL",
-        "Microsoft SQL Server",
         "Crystal Reports",
         "Eclipse",
-        "SQL Server Management Studio",
-        "Microsoft Teams",
-        "Postman"
+        "SQL Server Management Studio"
       ],
       "additionalTechnologies": []
     },
@@ -124,47 +120,27 @@
       ],
       "coreTechnologies": [
         "Node.js",
-        "Sage X3 REST API",
-        "Microsoft Teams"
+        "Sage X3 REST API"
       ],
       "additionalTechnologies": []
     },
     {
       "id": "producer",
-      "role": "Producer",
+      "role": "Producer / Project Management Intern",
       "company": "Imgnation Studios",
       "location": "Brazil",
-      "period": "February 2021 - December 2021",
+      "period": "August 2020 - December 2021",
       "details": [
         "Developed and debugged mobile game functionality using C# and Unity.",
-        "Participated in Agile development, sprint planning, estimation using Planning Poker, testing, QA, bug tracking and documentation, and release delivery.",
-        "Supported feature implementation and validated functionality before releases."
+        "Participated in Agile development, testing, QA, bug tracking, documentation, and release validation.",
+        "Served as acting Scrum Master for a small mobile game development team, supporting sprint planning, task coordination, communication, and estimation using Planning Poker."
       ],
       "coreTechnologies": [
         "C#",
         "Unity",
+        "Notion",
         "Trello",
-        "Miro",
-        "Discord",
-        "Notion"
-      ],
-      "additionalTechnologies": []
-    },
-    {
-      "id": "projectManagementIntern",
-      "role": "Project Management Intern",
-      "company": "Imgnation Studios",
-      "location": "Brazil",
-      "period": "August 2020 - January 2021",
-      "details": [
-        "Served as acting Scrum Master for a small mobile game development team.",
-        "Supported sprint planning, task organization, team coordination, communication, problem solving, and delivery, including estimation using Planning Poker."
-      ],
-      "coreTechnologies": [
-        "Trello",
-        "Miro",
-        "Discord",
-        "Notion"
+        "Miro"
       ],
       "additionalTechnologies": []
     }
@@ -179,7 +155,7 @@
       "details": [
         "Graduated at the top of the class with a 94% weighted average.",
         "Coursework covered web development, JavaScript, Node.js, databases, object-oriented programming, and other areas of the program.",
-        "Invited by my programming professor to tutor classmates in C++ for one semester.",
+        "Selected as one of two students out of a class of 15 to tutor classmates in C++ for one semester. The sessions received very positive feedback from participants and helped improve the class average.",
         "Completed hands-on Arduino coursework and built small personal Arduino projects."
       ]
     },
@@ -204,7 +180,7 @@
       "details": [
         "Completed coursework in data structures, algorithms, C, C++, object-oriented programming, and databases.",
         "Tutored fellow students in C programming for two semesters.",
-        "Competed in an ICPC programming contest after my Logic and Algorithms professor selected me as one of two students.",
+        "Selected by my Logic and Algorithms professor as one of two students out of 40 to compete in an ICPC programming contest.",
         "Helped deliver introductory logic-programming workshops for high school students."
       ]
     }
@@ -213,5 +189,8 @@
   "hideSection": "Hide",
   "openCertificateImage": "Open certificate image",
   "closeCertificateImage": "Close certificate image",
-  "verifyCertificate": "Verify badge"
+  "verifyCertificate": "Verify badge",
+  "digitalBadge": "Digital badge",
+  "collapseExperience": "Collapse details for {{role}}",
+  "expandExperience": "Expand details for {{role}}"
 }
