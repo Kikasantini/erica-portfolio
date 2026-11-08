@@ -2953,8 +2953,7 @@ p {
   .journey-page .journey-overview__certificates .certificate-item__header h3 { padding-right: 0; }
 }
 
-/* Professional experience: timeline with role-specific icon toggles.
-   Hover highlights both the entry and icon without moving the layout. */
+/* Professional experience: role-specific icon toggles and static alternating backgrounds. */
 .journey-page .journey-overview__experience .experience-timeline__entry {
   position: relative;
   isolation: isolate;
@@ -2967,16 +2966,15 @@ p {
   position: absolute;
   inset: -9px -11px;
   z-index: -1;
-  border-radius: 10px;
+  border-radius: 3px;
   background: transparent;
   pointer-events: none;
-  transition: background-color 180ms ease;
 }
-.journey-page .journey-overview__experience .experience-timeline__entry:hover::after {
-  background: #e4f0ee;
+.journey-page .journey-overview__experience .experience-timeline__entry:nth-child(even)::after {
+  background: #e2eeeb;
 }
-:root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__entry:hover::after {
-  background: #213a40;
+:root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__entry:nth-child(even)::after {
+  background: #22343a;
 }
 .journey-page .journey-overview__experience .experience-timeline__toggle {
   position: absolute;
@@ -3000,7 +2998,6 @@ p {
   width: 20px;
   height: 20px;
 }
-.journey-page .journey-overview__experience .experience-timeline__entry:hover .experience-timeline__toggle,
 .journey-page .journey-overview__experience .experience-timeline__toggle:hover,
 .journey-page .journey-overview__experience .experience-timeline__toggle:focus-visible {
   background: #2b8b83;
@@ -3008,7 +3005,6 @@ p {
   border-color: #2b8b83;
   box-shadow: 0 0 0 4px rgba(74, 166, 155, .17);
 }
-:root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__entry:hover .experience-timeline__toggle,
 :root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__toggle:hover,
 :root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__toggle:focus-visible {
   background: #83cbbd;
@@ -3030,7 +3026,6 @@ p {
   display: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  .journey-page .journey-overview__experience .experience-timeline__entry::after,
   .journey-page .journey-overview__experience .experience-timeline__toggle {
     transition: none;
   }

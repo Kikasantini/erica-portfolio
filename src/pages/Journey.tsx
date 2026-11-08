@@ -65,7 +65,6 @@ function ExperienceEntry({ item }: { item: ExperienceItem }) {
         aria-label={t(expanded ? 'collapseExperience' : 'expandExperience', { role: item.role })}
         aria-expanded={expanded}
         aria-controls={detailsId}
-        title={t(expanded ? 'collapseExperience' : 'expandExperience', { role: item.role })}
         onClick={() => setExpanded((value) => !value)}
       >
         <ExperienceIcon id={item.id} />
