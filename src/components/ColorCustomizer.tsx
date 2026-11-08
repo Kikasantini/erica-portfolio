@@ -45,11 +45,11 @@ const LIGHT_MODE_DEFAULTS = {
   "projectTagBorder": "#ccdddd",
   "projectTagText": "#1e6971",
   "coreTechnologiesText": "#435258",
-  "projectBackBackground": "#f2f4f4",
+  "projectBackBackground": "#ffffff",
   "projectBackBorder": "#becbca",
   "projectBackHeading": "#16324f",
   "projectBackLabel": "#257c83",
-  "projectBackTechnology": "#435258",
+  "projectBackTechnology": "#2a3e47",
   "projectBackIcon": "#257c83",
   "projectBackDivider": "#d4dddd",
   "projectBackLink": "#137a80"
@@ -106,7 +106,7 @@ const DARK_MODE_DEFAULTS: ColorPalette = {
   "projectBackBorder": "#425054",
   "projectBackHeading": "#e5ebee",
   "projectBackLabel": "#91b4ae",
-  "projectBackTechnology": "#c5d2cf",
+  "projectBackTechnology": "#b7c1c7",
   "projectBackIcon": "#91b4ae",
   "projectBackDivider": "#3e4b50",
   "projectBackLink": "#69e4dc"
@@ -280,12 +280,14 @@ function readStoredColors(): { light: ColorPalette; dark: ColorPalette; history:
         if (typeof color === 'string' && HEX_COLOR.test(color)) {
           const normalized = color.toLowerCase()
           const previousDefaults: Partial<Record<ColorKey, { light: string; dark: string }>> = {
-            projectBackBackground: { light: '#eef5f2', dark: '#223139' },
+            projectBackBackground: { light: '#f2f4f4', dark: '#223139' },
             projectBackBorder: { light: '#b6cecb', dark: '#456063' },
-            projectBackDivider: { light: '#ccdcda', dark: '#34484d' }
+            projectBackDivider: { light: '#ccdcda', dark: '#34484d' },
+            projectBackTechnology: { light: '#435258', dark: '#c5d2cf' }
           }
           // Keep genuinely customized values, but update the previous built-in palette.
-          state[mode][key] = normalized === previousDefaults[key]?.[mode]
+          state[mode][key] = (normalized === previousDefaults[key]?.[mode] ||
+            (key === 'projectBackBackground' && mode === 'light' && normalized === '#eef5f2'))
             ? (mode === 'light' ? LIGHT_MODE_DEFAULTS : DARK_MODE_DEFAULTS)[key]
             : normalized
         }

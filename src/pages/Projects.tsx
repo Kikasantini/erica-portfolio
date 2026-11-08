@@ -550,7 +550,7 @@ function ProjectCard({ project, illustrationSrc, labels }: {
                 <span className="project-item__tech-category"><TechnologyGroupIcon name={group.key} /><strong>{labels.groups[group.key]}</strong></span>
                 <span>{group.items.map((tech, index) => (
                   <span className="project-item__tech-name" key={tech}>
-                    <strong>{tech}</strong>{index < group.items.length - 1 ? ' · ' : ''}
+                    {tech}{index < group.items.length - 1 ? ' · ' : ''}
                   </span>
                 ))}</span>
               </div>

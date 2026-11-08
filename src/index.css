@@ -37,11 +37,11 @@
   --project-card-back-link: #137a80;
   --project-card-back-divider: #d4dddd;
   --project-card-back-icon: #257c83;
-  --project-card-back-technology: #435258;
+  --project-card-back-technology: var(--paragraph-text);
   --project-card-back-label: #257c83;
   --project-card-back-heading: #16324f;
   --project-card-back-border: #becbca;
-  --project-card-back-background: #f2f4f4;
+  --project-card-back-background: #ffffff;
   font-family: 'Roboto', Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -90,7 +90,7 @@
   --project-card-back-link: #69e4dc;
   --project-card-back-divider: #3e4b50;
   --project-card-back-icon: #91b4ae;
-  --project-card-back-technology: #c5d2cf;
+  --project-card-back-technology: var(--paragraph-text);
   --project-card-back-label: #91b4ae;
   --project-card-back-heading: #e5ebee;
   --project-card-back-border: #425054;
@@ -4347,4 +4347,55 @@ p {
 /* Home: status badge overlays the card and must never shift the grid item. */
 .home-page .home-featured__grid .home-project:has(> .project-status) {
   margin-top: 0;
+}
+
+/* Unified project card backs: comfortable category icons and regular-weight technology text. */
+.projects-page .project-item__face--back .project-item__tech-name {
+  color: var(--project-card-back-technology);
+  font-size: 12px;
+  font-weight: 400;
+}
+.projects-page .project-item__face--back .project-item__tech-category svg {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 19px;
+}
+
+/* Recent Projects GitHub actions match the circular hover from Projects. */
+.home-page .home-featured__grid .home-project__github {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--button-text-color);
+  background: transparent;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+.home-page .home-featured__grid .home-project__github:is(:hover, :focus-visible) {
+  color: var(--heading-color);
+  background: var(--navigation-hover-color);
+}
+.home-page .home-featured__grid .home-project__github:focus-visible {
+  outline: 2px solid var(--section-title-color);
+  outline-offset: 2px;
+}
+
+/* Stable layout for Education and Certificates when switching color themes.
+   Colors may transition, but dimensions, spacing and typography must not. */
+html {
+  scrollbar-gutter: stable;
+}
+.journey-page .journey-overview__side,
+.journey-page .journey-overview__education,
+.journey-page .journey-overview__certificates {
+  min-width: 0;
+  box-sizing: border-box;
+  transition-property: color, background-color, border-color;
+}
+.journey-page .journey-overview__education .timeline-item,
+.journey-page .journey-overview__certificates .certificate-item,
+:root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item {
+  transition-property: color, background-color, border-color;
 }
