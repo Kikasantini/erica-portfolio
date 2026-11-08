@@ -132,10 +132,8 @@
       "period": "Août 2020 - décembre 2021",
       "details": [
         "Développé et débogué des fonctionnalités de jeux mobiles avec C# et Unity.",
-        "Participé au développement Agile, à la planification et à l'estimation des sprints avec Planning Poker, aux tests, à l'assurance qualité, au suivi et à la documentation des bogues, ainsi qu'à la livraison des versions.",
-        "Soutenu la mise en œuvre des fonctionnalités et validé leur fonctionnement avant les mises en version.",
-        "Assumé le rôle de Scrum Master par intérim pour une petite équipe de développement de jeux mobiles.",
-        "Soutenu la planification des sprints, l'organisation des tâches, la coordination et la communication de l'équipe, la résolution de problèmes et la livraison, avec des estimations utilisant Planning Poker."
+        "Participé au développement Agile, aux tests, à l’assurance qualité, au suivi des anomalies, à la documentation et à la validation avant livraison.",
+        "Assumé le rôle de Scrum Master par intérim au sein d’une petite équipe de développement de jeux mobiles, en soutenant la planification des sprints, la coordination des tâches, la communication et les estimations avec Planning Poker."
       ],
       "coreTechnologies": [
         "C#",

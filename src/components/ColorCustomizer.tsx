@@ -33,14 +33,14 @@ const LIGHT_MODE_DEFAULTS = {
   "experienceAlternateBackground": "#e6ebe9",
   "timelineIconHoverBackground": "#2b8b83",
   "timelineIconHoverText": "#ffffff",
-  "badgeCardStart": "#a6bfba",
-  "badgeCardEnd": "#edf8f6",
-  "badgeCardBorder": "#b8d4d1",
-  "badgeLabelBackground": "#cae9e5",
-  "badgeLabelText": "#235c5b",
+  "badgeCardStart": "#d0e1dc",
+  "badgeCardEnd": "#d0e1dc",
+  "badgeCardBorder": "#9bbbb8",
+  "badgeLabelBackground": "#a7d7d1",
+  "badgeLabelText": "#0f3e3d",
   "badgeLink": "#137a80",
   "badgeLinkHover": "#119ca0",
-  "badgeThumbnailBorder": "#121212",
+  "badgeThumbnailBorder": "#d0e1dc",
   "projectTagBackground": "#e8f1f0",
   "projectTagBorder": "#ccdddd",
   "projectTagText": "#1e6971",
@@ -231,7 +231,7 @@ const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
   }
 ]
 const HEX_COLOR = /^#[0-9a-f]{6}$/i
-const STORAGE_KEY = 'erica-portfolio-custom-colors-v3'
+const STORAGE_KEY = 'erica-portfolio-custom-colors-v4'
 
 function readStoredColors(): { light: ColorPalette; dark: ColorPalette; history: ColorHistory } {
   const state = {

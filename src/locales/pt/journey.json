@@ -131,11 +131,9 @@
       "location": "Brasil",
       "period": "Agosto de 2020 - dezembro de 2021",
       "details": [
-        "Desenvolvi e depurei funcionalidades para jogos mobile usando C# e Unity.",
-        "Participei do desenvolvimento ágil, do planejamento e das estimativas de sprints com Planning Poker, dos testes, do controle de qualidade, do acompanhamento e da documentação de bugs e da entrega de versões.",
-        "Apoiei a implementação de funcionalidades e validei seu funcionamento antes das versões.",
-        "Atuei como Scrum Master interina de uma pequena equipe de desenvolvimento de jogos mobile.",
-        "Apoiei o planejamento de sprints, a organização de tarefas, a coordenação e comunicação da equipe, a resolução de problemas e as entregas, incluindo estimativas com Planning Poker."
+        "Desenvolvi e depurei funcionalidades de jogos para dispositivos móveis usando C# e Unity.",
+        "Participei do desenvolvimento Agile, testes, QA, acompanhamento de bugs, documentação e validação antes das entregas.",
+        "Atuei como Scrum Master interina em uma pequena equipe de desenvolvimento de jogos para dispositivos móveis, apoiando o planejamento das sprints, a coordenação de tarefas, a comunicação e as estimativas com Planning Poker."
       ],
       "coreTechnologies": [
         "C#",
