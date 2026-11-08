@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 type ProjectImage = {
@@ -26,69 +25,21 @@ type ProjectSection = {
 
 type SelectedImage = {
   title: string
-  image: ProjectImage
+  image: Projtype Illustration = { src: string; format: 'wide' | 'square' }
+
+const PROJECT_ILLUSTRATIONS: Record<string, Illustration> = {
+  careerPilotAi: { src: '/images/project-illustrations/careerpilot_ai.webp', format: 'wide' },
+  productionCellSimulator: { src: '/images/project-illustrations/production_cell_simulator.webp', format: 'wide' },
+  portfolioWebsite: { src: '/images/project-illustrations/portfolio_website.webp', format: 'wide' },
+  runnerRpg: { src: '/images/project-illustrations/runnerrpg.webp', format: 'wide' },
+  esp8266WeatherStationGame: { src: '/images/project-illustrations/esp8266_weather_game.webp', format: 'wide' },
+  connectedWeatherStationZabbix: { src: '/images/project-illustrations/connected_weather_station_zabbix.webp', format: 'square' },
+  iotSensorMonitoringZabbixMqtt: { src: '/images/project-illustrations/iot_sensor_monitoring.webp', format: 'wide' },
+  translationCompany: { src: '/images/project-illustrations/translation_company_automation.webp', format: 'square' },
 }
 
-function ImagePreview({
-  selection,
-  closeLabel,
-  onClose,
-}: {
-  selection: SelectedImage
-  closeLabel: string
-  onClose: () => void
-}) {
-  const closeRef = useRef<HTMLButtonElement>(null)
-
-  useEffect(() => {
-    const originalOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-    closeRef.current?.focus()
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') onClose()
-    }
-    document.addEventListener('keydown', handleKeyDown)
-    return () => {
-      document.body.style.overflow = originalOverflow
-      document.removeEventListener('keydown', handleKeyDown)
-    }
-  }, [onClose])
-
-  return (
-    <div className="media-viewer" onClick={onClose}>
-      <div
-        className="media-viewer__dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-label={selection.title}
-        onClick={(event) => event.stopPropagation()}
-      >
-        <button
-          className="media-viewer__button media-viewer__close"
-          type="button"
-          aria-label={closeLabel}
-          onClick={onClose}
-          ref={closeRef}
-        >
-          <svg aria-hidden="true" viewBox="0 0 24 24">
-            <path d="m6 6 12 12M18 6 6 18" />
-          </svg>
-        </button>
-        <img
-          className="media-viewer__item"
-          src={selection.image.src}
-          alt={selection.image.alt}
-        />
-      </div>
-    </div>
-  )
-}
-
-export default function Projects() {
-  const { t } = useTranslation('projects')
+ useTranslation('projects')
   const sections = t('sections', { returnObjects: true }) as ProjectSection[]
-  const [selectedImage, setSelectedImage] = useState<SelectedImage | null>(null)
 
   return (
     <main className="projects-page">
@@ -97,29 +48,21 @@ export default function Projects() {
           <h2>{section.title}</h2>
           <div className="project-list">
             {section.items.map((project) => {
-              const image = project.media[0]
+              const illustration = PROJECT_ILLUSTRATIONS[project.id]
               return (
-                <article
-                  className={`project-item project-item--editorial${image ? '' : ' project-item--text-only'}`}
-                  key={project.id}
-                >
+                <article className={`project-item project-item--editorial project-item--${illustration?.format ?? 'wide'}`} key={project.id}>
                   {project.status && (
                     <span className="project-status">{project.status}</span>
                   )}
-                  {image && (
-                    <button
-                      className="project-item__image-button project-item__cover"
-                      type="button"
-                      aria-label={t('openMedia') + ': ' + image.alt}
-                      onClick={() => setSelectedImage({ title: project.title, image })}
-                    >
-                      <img
-                        className="project-item__media"
-                        src={image.src}
-                        alt={image.alt}
-                        loading="lazy"
-                      />
-                    </button>
+                  {illustration && (
+                    <img
+                      className={`project-item__illustration project-item__illustration--${illustration.format}`}
+                      src={illustration.src}
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   )}
 
                   <div className="project-item__content">
@@ -159,13 +102,6 @@ export default function Projects() {
         </section>
       ))}
 
-      {selectedImage && (
-        <ImagePreview
-          selection={selectedImage}
-          closeLabel={t('closeMedia')}
-          onClose={() => setSelectedImage(null)}
-        />
-      )}
     </main>
   )
 }
