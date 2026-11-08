@@ -51,5 +51,10 @@
   "careerTitle": "Where I’m headed",
   "careerSummary": "Building on my full-stack background, I’m open to a wide range of software development roles and technologies. I’m curious about areas such as AI, cloud computing, automation, data systems, and observability, and I’m eager to keep learning while contributing to useful products.",
   "workspaceArtworkAlt": "Cozy coding desk illustration with a laptop, plants and two cats",
-  "viewAllProjects": "All projects"
+  "viewAllProjects": "All projects",
+  "personalNoteTitles": {
+    "conversationStarter": "Conversation starter",
+    "oneWord": "In two words",
+    "gamer": "Off the clock"
+  }
 }

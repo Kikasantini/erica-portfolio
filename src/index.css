@@ -2255,3 +2255,101 @@ p {
     padding: 18px 20px;
   }
 }
+
+/* Editorial personal notes: wide professional column + narrow, borderless personal column. */
+.home-overview {
+  grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
+  align-items: stretch;
+  gap: 28px;
+}
+.home-overview__work { min-width: 0; }
+.home-overview .home-section--personal {
+  display: block;
+  align-self: start;
+  min-width: 0;
+  padding: 10px 0 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.home-overview .home-section--personal h2 {
+  margin: 0 0 19px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+.home-personal-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.home-personal-note {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  position: relative;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--soft-border);
+}
+.home-personal-note:first-child { padding-top: 4px; }
+.home-personal-note:last-child { border-bottom: none; }
+.home-personal-note__icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--technology-tag-background-color);
+  color: var(--button-text-color);
+}
+.home-personal-note__icon svg { width: 21px; height: 21px; }
+.home-personal-note__content { min-width: 0; }
+.home-personal-note__content h3 {
+  margin: 0 0 5px;
+  color: var(--section-title-color);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.home-personal-note__content p {
+  margin: 0;
+  color: var(--paragraph-text);
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.home-personal-note__number { display: none; }
+
+/* Transparent artwork blends with whichever theme's page background is active. */
+.home-hero { background: var(--page-background); }
+.home-hero__art {
+  background-image: url('/soft-slate-cats-transparent.png');
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: right center;
+  background-size: cover;
+  filter: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.home-hero::before { display: none; }
+@media (min-width: 901px) {
+  .home-hero__art {
+    background-size: auto 100%;
+    background-position: right center;
+  }
+}
+@media (max-width: 700px) {
+  .home-overview { grid-template-columns: minmax(0, 1fr); gap: 25px; }
+  .home-overview .home-section--personal {
+    padding: 0;
+  }
+  .home-hero__art {
+    background-size: auto 250px;
+    background-position: right bottom;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}

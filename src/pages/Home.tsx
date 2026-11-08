@@ -112,7 +112,6 @@ export default function Home() {
   const recentProjects = projectSections.flatMap((section) => section.items).slice(0, 3)
   const recentSectionTitle = projectSections.find((section) => section.id === 'recentProjects')?.title
   const [isHovered, setIsHovered] = useState(false)
-  const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({})
   const title = t('title')
   const nicknameTitle = t('hoverTitle')
   const contactLinks = t('contactLinks', {
@@ -200,51 +199,29 @@ export default function Home() {
         aria-labelledby="home-interests-title"
       >
         <h2 id="home-interests-title">{t('interestsTitle')}</h2>
-        <div className="home-fun-cards">
-          {personalHighlights.map((card) => {
-            const isFlipped = Boolean(flippedCards[card.id])
-
-            return (
-              <button
-                className={`home-fun-card${isFlipped ? ' is-flipped' : ''}`}
-                type="button"
-                key={card.id}
-                aria-label={isFlipped ? card.back : card.front}
-                aria-pressed={isFlipped}
-                onClick={() =>
-                  setFlippedCards((current) => ({
-                    ...current,
-                    [card.id]: !current[card.id],
-                  }))
-                }
-              >
-                <span className="home-fun-card__inner" aria-hidden="true">
-                  <span className="home-fun-card__face home-fun-card__face--front">
-                    <span className="home-fun-card__topline">
-                      <span className="home-fun-card__symbol" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                          {card.id === 'conversationStarter' ? (
-                            <><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5 8 8 0 0 1-3.3-.7L4 20l1.7-4.6A7.5 7.5 0 1 1 20 11.5Z" /><path d="M9 11h6" /></>
-                          ) : card.id === 'oneWord' ? (
-                            <><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2Z" /></>
-                          ) : (
-                            <><path d="M8 3v4a2 2 0 1 1-4 0V3H2v7h5v4H3v5h7v-3a2 2 0 1 1 4 0v3h7v-7h-4a2 2 0 1 1 0-4h4V3H8Z" /></>
-                          )}
-                        </svg>
-                      </span>
-                      <span className="home-fun-card__index">{String(personalHighlights.indexOf(card) + 1).padStart(2, '0')}</span>
-                    </span>
-                    <span className="home-fun-card__copy">{card.front}</span>
-                    <span className="home-fun-card__hint" aria-hidden="true">↗</span>
-                  </span>
-                  <span className="home-fun-card__face home-fun-card__face--back">
-                    <span className="home-fun-card__copy">{card.back}</span>
-                    <span className="home-fun-card__hint" aria-hidden="true">↶</span>
-                  </span>
-                </span>
-              </button>
-            )
-          })}
+        <div className="home-personal-notes">
+          {personalHighlights.map((note, index) => (
+            <div className="home-personal-note" key={note.id}>
+              <span className="home-personal-note__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  {note.id === 'conversationStarter' ? (
+                    <><path d="M5 10V7L8 5l4 2 4-2 3 2v3a7 7 0 1 1-14 0Z" /><path d="M9 12h.01M15 12h.01M10 15q2 2 4 0M3 11l3 1m15-1-3 1" /></>
+                  ) : note.id === 'oneWord' ? (
+                    <><path d="m12 2 2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2Z" /></>
+                  ) : (
+                    <><path d="M8 3v4a2 2 0 1 1-4 0V3H2v7h5v4H3v5h7v-3a2 2 0 1 1 4 0v3h7v-7h-4a2 2 0 1 1 0-4h4V3H8Z" /></>
+                  )}
+                </svg>
+              </span>
+              <div className="home-personal-note__content">
+                <h3>{t('personalNoteTitles.' + note.id)}</h3>
+                <p>{note.back}</p>
+              </div>
+              <span className="home-personal-note__number" aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+            </div>
+          ))}
         </div>
       </section>
       </div>
