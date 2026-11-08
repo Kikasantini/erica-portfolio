@@ -281,7 +281,10 @@ export default function Home() {
       {recentProjects.length > 0 && (
         <section className="home-featured" aria-labelledby="home-featured-title">
           <div className="home-featured__heading">
-            <div id="home-featured-title"><StableCopy as="h2" text={recentSectionTitle ?? ''} variants={homeLanguages.map((lng) => projectT('sections', { lng, returnObjects: true }).find((section: { id: string }) => section.id === 'recentProjects')?.title ?? '')} /></div>
+            <div id="home-featured-title"><StableCopy as="h2" text={recentSectionTitle ?? ''} variants={homeLanguages.map((lng) => {
+                  const sections = projectT('sections', { lng, returnObjects: true }) as Array<{ id: string; title: string }>
+                  return sections.find((section) => section.id === 'recentProjects')?.title ?? ''
+                })} /></div>
             <Link to={`/${language}/projects`} className="home-featured__all">
               {t('viewAllProjects')} <span aria-hidden="true">→</span>
             </Link>

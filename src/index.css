@@ -2366,9 +2366,6 @@ p {
   grid-area: copy;
   min-width: 0;
   margin: 0;
-  font: inherit;
-  line-height: inherit;
-  letter-spacing: inherit;
   overflow-wrap: break-word;
 }
 .home-page .home-stable-copy__measure {
@@ -2459,4 +2456,10 @@ p {
 }
 @media (max-width: 700px) {
   .home-page .home-title { min-height: 2.4em; }
+}
+
+/* Explicit typography for translated hero text; don't override component fonts. */
+.home-page .home-intro.home-stable-copy > p { font-size: 15px; line-height: 1.7; }
+@media (max-width: 420px) {
+  .home-page .home-title { min-height: 3.4em; }
 }
