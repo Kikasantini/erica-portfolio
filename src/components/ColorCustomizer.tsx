@@ -13,15 +13,12 @@ const LIGHT_MODE_DEFAULTS = {
   "buttonHoverBackground": "#46586d",
   "textOnAccent": "#ffffff",
   "navigationActiveBackground": "#e2eeed",
-  "technologyTagsText": "#1e6971",
   "timelineMarkers": "#257c83",
   "headerDivider": "#dbe4e3",
   "navigationHover": "#e2eeed",
   "languageSelectorBorder": "#c5d6d6",
   "outlineButtonsBorder": "#6e9fa1",
   "timelineLine": "#d0e0df",
-  "technologyTagsBorder": "#ccdddd",
-  "technologyTagsBackground": "#e8f1f0",
   "projectCardBackground": "#ffffff",
   "projectCardBorder": "#ababab",
   "projectCardMediaBackground": "#d7e0df",
@@ -36,7 +33,6 @@ const LIGHT_MODE_DEFAULTS = {
   "experienceAlternateBackground": "#e2eeeb",
   "timelineIconHoverBackground": "#2b8b83",
   "timelineIconHoverText": "#ffffff",
-  "coreStackBackground": "#fdfdfd",
   "badgeCardStart": "#e1f2ef",
   "badgeCardEnd": "#edf8f6",
   "badgeCardBorder": "#b8d4d1",
@@ -44,7 +40,16 @@ const LIGHT_MODE_DEFAULTS = {
   "badgeLabelText": "#235c5b",
   "badgeLink": "#137a80",
   "badgeLinkHover": "#119ca0",
-  "badgeThumbnailBorder": "#8d65cc"
+  "badgeThumbnailBorder": "#8d65cc",
+  "journeyPlainTagBackground": "#fdfdfd",
+  "journeyPlainTagBorder": "#fdfdfd",
+  "journeyPlainTagText": "#435258",
+  "journeyAlternateTagBackground": "#ffffff",
+  "journeyAlternateTagBorder": "#ffffff",
+  "journeyAlternateTagText": "#435258",
+  "projectTagBackground": "#e8f1f0",
+  "projectTagBorder": "#ccdddd",
+  "projectTagText": "#1e6971"
 } as const
 type ColorKey = keyof typeof LIGHT_MODE_DEFAULTS
 type ColorPalette = Record<ColorKey, string>
@@ -62,15 +67,12 @@ const DARK_MODE_DEFAULTS: ColorPalette = {
   "buttonHoverBackground": "#314347",
   "textOnAccent": "#e5ebee",
   "navigationActiveBackground": "#27373b",
-  "technologyTagsText": "#b3d4ca",
   "timelineMarkers": "#7fa9a5",
   "headerDivider": "#303b40",
   "navigationHover": "#253136",
   "languageSelectorBorder": "#405056",
   "outlineButtonsBorder": "#536e70",
   "timelineLine": "#36474c",
-  "technologyTagsBorder": "#384c50",
-  "technologyTagsBackground": "#27383a",
   "projectCardBackground": "#1d252a",
   "projectCardBorder": "#34464b",
   "projectCardMediaBackground": "#202c30",
@@ -85,7 +87,6 @@ const DARK_MODE_DEFAULTS: ColorPalette = {
   "experienceAlternateBackground": "#22343a",
   "timelineIconHoverBackground": "#83cbbd",
   "timelineIconHoverText": "#142127",
-  "coreStackBackground": "#2a3a3f",
   "badgeCardStart": "#203a40",
   "badgeCardEnd": "#192d32",
   "badgeCardBorder": "#2d4d54",
@@ -93,7 +94,16 @@ const DARK_MODE_DEFAULTS: ColorPalette = {
   "badgeLabelText": "#c1e9e2",
   "badgeLink": "#69e4dc",
   "badgeLinkHover": "#119ca0",
-  "badgeThumbnailBorder": "#8d65cc"
+  "badgeThumbnailBorder": "#8d65cc",
+  "journeyPlainTagBackground": "#2a3a3f",
+  "journeyPlainTagBorder": "#2a3a3f",
+  "journeyPlainTagText": "#c5d2cf",
+  "journeyAlternateTagBackground": "#32484d",
+  "journeyAlternateTagBorder": "#32484d",
+  "journeyAlternateTagText": "#c5d2cf",
+  "projectTagBackground": "#27383a",
+  "projectTagBorder": "#384c50",
+  "projectTagText": "#b3d4ca"
 }
 const CSS_VARIABLES: Record<ColorKey, string> = {
   "pageBackground": "--page-background",
@@ -107,15 +117,12 @@ const CSS_VARIABLES: Record<ColorKey, string> = {
   "buttonHoverBackground": "--button-hover-background-color",
   "textOnAccent": "--button-hover-text-color",
   "navigationActiveBackground": "--navigation-active-background-color",
-  "technologyTagsText": "--technology-tag-text-color",
   "timelineMarkers": "--timeline-marker-color",
   "headerDivider": "--header-divider-color",
   "navigationHover": "--navigation-hover-color",
   "languageSelectorBorder": "--language-border-color",
   "outlineButtonsBorder": "--outline-button-border-color",
   "timelineLine": "--timeline-line-color",
-  "technologyTagsBorder": "--technology-tag-border-color",
-  "technologyTagsBackground": "--technology-tag-background-color",
   "projectCardBackground": "--project-card-background-color",
   "projectCardBorder": "--project-card-border-color",
   "projectCardMediaBackground": "--project-card-media-background-color",
@@ -130,7 +137,6 @@ const CSS_VARIABLES: Record<ColorKey, string> = {
   "experienceAlternateBackground": "--experience-alternate-background",
   "timelineIconHoverBackground": "--timeline-icon-hover-background",
   "timelineIconHoverText": "--timeline-icon-hover-text",
-  "coreStackBackground": "--core-stack-background",
   "badgeCardStart": "--badge-card-start",
   "badgeCardEnd": "--badge-card-end",
   "badgeCardBorder": "--badge-card-border",
@@ -138,7 +144,16 @@ const CSS_VARIABLES: Record<ColorKey, string> = {
   "badgeLabelText": "--badge-label-text",
   "badgeLink": "--badge-link",
   "badgeLinkHover": "--badge-link-hover",
-  "badgeThumbnailBorder": "--badge-thumbnail-border"
+  "badgeThumbnailBorder": "--badge-thumbnail-border",
+  "journeyPlainTagBackground": "--journey-plain-tag-background",
+  "journeyPlainTagBorder": "--journey-plain-tag-border",
+  "journeyPlainTagText": "--journey-plain-tag-text",
+  "journeyAlternateTagBackground": "--journey-alternate-tag-background",
+  "journeyAlternateTagBorder": "--journey-alternate-tag-border",
+  "journeyAlternateTagText": "--journey-alternate-tag-text",
+  "projectTagBackground": "--project-tag-background",
+  "projectTagBorder": "--project-tag-border",
+  "projectTagText": "--project-tag-text"
 }
 const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
   {
@@ -148,7 +163,6 @@ const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
       "surface",
       "softBorder",
       "heroBackground"
-  
     ]
   },
   {
@@ -183,12 +197,27 @@ const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
     ]
   },
   {
-    "id": "technologyTags",
+    "id": "journeyPlainTags",
     "keys": [
-      "technologyTagsBackground",
-      "technologyTagsBorder",
-      "technologyTagsText",
-      "coreStackBackground"
+      "journeyPlainTagBackground",
+      "journeyPlainTagBorder",
+      "journeyPlainTagText"
+    ]
+  },
+  {
+    "id": "journeyAlternateTags",
+    "keys": [
+      "journeyAlternateTagBackground",
+      "journeyAlternateTagBorder",
+      "journeyAlternateTagText"
+    ]
+  },
+  {
+    "id": "projectTags",
+    "keys": [
+      "projectTagBackground",
+      "projectTagBorder",
+      "projectTagText"
     ]
   },
   {

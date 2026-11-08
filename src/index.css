@@ -3167,12 +3167,12 @@ p {
 }
 .color-customizer__recent {
   grid-column: 2;
+  grid-row: 1;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  gap: 7px;
-  padding-bottom: 3px;
+  gap: 6px;
+  padding: 0;
 }
 .color-customizer__recent-swatch {
   width: 25px;
@@ -3214,4 +3214,78 @@ p {
 }
 :root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item__link:hover {
   color: var(--badge-link-hover);
+}
+
+/* Three independently editable technology chip palettes. */
+:root {
+  --journey-plain-tag-background: #fdfdfd;
+  --journey-plain-tag-border: #fdfdfd;
+  --journey-plain-tag-text: #435258;
+  --journey-alternate-tag-background: #ffffff;
+  --journey-alternate-tag-border: #ffffff;
+  --journey-alternate-tag-text: #435258;
+  --project-tag-background: #e8f1f0;
+  --project-tag-border: #ccdddd;
+  --project-tag-text: #1e6971;
+}
+:root[data-theme='dark'] {
+  --journey-plain-tag-background: #2a3a3f;
+  --journey-plain-tag-border: #2a3a3f;
+  --journey-plain-tag-text: #c5d2cf;
+  --journey-alternate-tag-background: #32484d;
+  --journey-alternate-tag-border: #32484d;
+  --journey-alternate-tag-text: #c5d2cf;
+  --project-tag-background: #27383a;
+  --project-tag-border: #384c50;
+  --project-tag-text: #b3d4ca;
+}
+.journey-page .journey-overview__experience .experience-timeline__entry:nth-child(odd) .technology-group:not(.technology-group--additional) .technology-list li,
+:root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__entry:nth-child(odd) .technology-group:not(.technology-group--additional) .technology-list li {
+  background: var(--journey-plain-tag-background);
+  border: 1px solid var(--journey-plain-tag-border);
+  color: var(--journey-plain-tag-text);
+}
+.journey-page .journey-overview__experience .experience-timeline__entry:nth-child(even) .technology-group:not(.technology-group--additional) .technology-list li,
+:root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__entry:nth-child(even) .technology-group:not(.technology-group--additional) .technology-list li {
+  background: var(--journey-alternate-tag-background);
+  border: 1px solid var(--journey-alternate-tag-border);
+  color: var(--journey-alternate-tag-text);
+}
+.projects-page .project-item__technologies .technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.projects-page .project-item__technologies .technology-list li {
+  padding: 6px 10px;
+  border: 1px solid var(--project-tag-border);
+  border-radius: 5px;
+  background: var(--project-tag-background);
+  color: var(--project-tag-text);
+  font-size: 12px;
+  font-weight: 400;
+}
+.journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li {
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+/* No unused separator padding after consultant or other entries. */
+.journey-page .journey-overview__experience .timeline-item:not(:last-child) {
+  padding-bottom: 0;
+  margin-bottom: 22px;
+}
+
+/* Recent colors stay to the left of the picker, on the same row. */
+.color-customizer__field {
+  grid-template-columns: minmax(0, 1fr) auto auto;
+}
+.color-customizer__field > label { grid-column: 1; grid-row: 1; }
+.color-customizer__recent { grid-column: 2; grid-row: 1; }
+.color-customizer__inputs { grid-column: 3; grid-row: 1; }
+.color-customizer__recent-swatch { width: 22px; height: 22px; }
+@media (max-width: 420px) {
+  .color-customizer__field { gap: 5px; }
+  .color-customizer__hex { width: 74px; }
+  .color-customizer__swatch { width: 32px; }
+  .color-customizer__recent-swatch { width: 20px; height: 20px; }
 }
