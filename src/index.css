@@ -4097,3 +4097,36 @@ p {
     margin-left: 0;
   }
 }
+
+/* Minimal, left-aligned technology filter: no enclosing card. */
+.projects-page .project-filter {
+  width: 100%;
+  margin: 0 0 27px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.projects-page .project-filter__controls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 0;
+}
+.projects-page .project-filter__search {
+  flex: 0 1 260px;
+  width: 260px;
+  max-width: min(100%, 320px);
+  min-width: 165px;
+  margin-left: 0;
+}
+@media (max-width: 650px) {
+  .projects-page .project-filter { padding: 0; }
+  .projects-page .project-filter__search {
+    flex: 1 1 200px;
+    width: auto;
+    max-width: none;
+  }
+}

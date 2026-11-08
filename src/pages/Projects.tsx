@@ -600,8 +600,6 @@ export default function Projects() {
     }
   }
   const allTechnologies = [...technologyCounts.keys()].sort((a, b) => a.localeCompare(b))
-  const featuredFilters = ['React', 'Python 3', 'TypeScript', 'ESP8266', 'Zabbix', 'Java 21']
-    .filter((technology) => technologyCounts.has(technology))
   const searchTerm = technologySearch.trim().toLocaleLowerCase()
   // Match any substring and common aliases, e.g. "udio" or "vscode".
   const searchMatches = searchTerm
@@ -638,14 +636,6 @@ export default function Projects() {
   return (
     <main className="projects-page">
       <div className="project-filter" aria-label={t('filter.label')}>
-        <div className="project-filter__heading">
-          <span className="project-filter__label">{t('filter.label')}</span>
-          {selectedTechnology && (
-            <button className="project-filter__clear" type="button" onClick={() => selectTechnology(null)}>
-              <span aria-hidden="true">×</span> {t('filter.clear')}
-            </button>
-          )}
-        </div>
         <div className="project-filter__controls">
           <button
             type="button"
@@ -655,17 +645,6 @@ export default function Projects() {
           >
             {t('filter.all')}
           </button>
-          {featuredFilters.map((technology) => (
-            <button
-              type="button"
-              className={`project-filter__chip${selectedTechnology === technology ? ' is-active' : ''}`}
-              key={technology}
-              aria-pressed={selectedTechnology === technology}
-              onClick={() => selectTechnology(technology)}
-            >
-              {technology}
-            </button>
-          ))}
           <div
             className="project-filter__search"
             onBlur={(event) => {
