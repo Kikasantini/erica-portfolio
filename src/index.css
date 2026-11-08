@@ -1642,7 +1642,7 @@ p {
 .journey-overview__side {
   display: flex;
   flex-direction: column;
-  gap: 38px;
+  gap: 28px;
   padding-left: 26px;
   border-left: 1px solid var(--soft-border);
 }
@@ -1778,7 +1778,7 @@ p {
     width: 100%;
     padding: 0;
     border-left: 0;
-    gap: 34px;
+    gap: 26px;
   }
   .journey-overview__experience { width: 100%; }
   .journey-overview .timeline-item { grid-template-columns: minmax(0, 1fr); }
