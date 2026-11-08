@@ -1,5 +1,6 @@
 import { useState, type CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link, useParams } from 'react-router-dom'
 
 type ContactLink = {
   id: string
@@ -53,6 +54,31 @@ function AnimatedTitleLayer({
 
 export default function Home() {
   const { t } = useTranslation('home')
+  const { t: projectT } = useTranslation('projects')
+  const { t: journeyT } = useTranslation('journey')
+  const { language = 'en' } = useParams()
+  const recentSection = (projectT('sections', { returnObjects: true }) as Array<{
+    id: string
+    title: string
+    items: Array<{
+      id: string
+      title: string
+      status?: string
+      highlights: string[]
+      githubUrl: string
+      technologies: string
+    }>
+  }>).find((section) => section.id === 'recentProjects')
+  const certificates = journeyT('certificates', { returnObjects: true }) as Array<{
+    id: string
+    title: string
+    issuer: string
+    period: string
+    image: string
+    imageAlt: string
+    credentialUrl: string
+  }>
+  const firstCertificate = certificates[0]
   const [isHovered, setIsHovered] = useState(false)
   const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({})
   const title = t('title')
@@ -66,6 +92,8 @@ export default function Home() {
 
   return (
     <main className="home-page">
+      <div className="home-hero">
+        <div className="home-hero__copy">
       <p className="home-eyebrow">{t('roleLocation')}</p>
       <h1
         className={`home-title${isHovered ? ' home-title--hovered' : ''}`}
@@ -118,7 +146,11 @@ export default function Home() {
           )
         })}
       </nav>
+        </div>
+        <div className="home-hero__art" role="img" aria-label={t('workspaceArtworkAlt')} />
+      </div>
 
+      <div className="home-overview">
       <section className="home-section" aria-labelledby="home-work-title">
         <h2 id="home-work-title">{t('workTitle')}</h2>
         <p>{t('professionalSummary')}</p>
@@ -128,6 +160,56 @@ export default function Home() {
         <h2 id="home-career-title">{t('careerTitle')}</h2>
         <p>{t('careerSummary')}</p>
       </section>
+      </div>
+
+      {recentSection && (
+        <section className="home-featured" aria-labelledby="home-featured-title">
+          <div className="home-featured__heading">
+            <h2 id="home-featured-title">{recentSection.title}</h2>
+            <Link to={`/${language}/projects`} className="home-featured__all">
+              {t('viewAllProjects')} <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+          <div className="home-featured__grid">
+            {recentSection.items.map((project) => (
+              <article className="home-project" key={project.id}>
+                <div className="home-project__heading">
+                  <h3>{project.title}</h3>
+                  <a href={project.githubUrl} target="_blank" rel="noreferrer"
+                     aria-label={project.title + ' — GitHub'} className="home-project__github">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 .297a12 12 0 0 0-3.79 23.385c.6.111.82-.26.82-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.746.083-.73.083-.73 1.205.084 1.84 1.238 1.84 1.238 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.762-1.604-2.665-.304-5.467-1.334-5.467-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.652.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.221 0 4.61-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.216.694.825.576A12.001 12.001 0 0 0 12 .297" />
+                    </svg>
+                  </a>
+                </div>
+                {project.status && <span className="project-status">{project.status}</span>}
+                <p>{project.highlights[0]}</p>
+                <ul className="home-project__tags" aria-label={projectT('technologiesTitle')}>
+                  {project.technologies.split(' · ').slice(0, 5).map((tech) => (
+                    <li key={tech}>{tech}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {firstCertificate && (
+        <section className="home-badge" aria-labelledby="home-badge-title">
+          <h2 id="home-badge-title">{journeyT('certificatesTitle')}</h2>
+          <div className="home-badge__content">
+            <img src={firstCertificate.image} alt={firstCertificate.imageAlt} loading="lazy" />
+            <div>
+              <h3>{firstCertificate.title}</h3>
+              <p>{firstCertificate.issuer} · {firstCertificate.period}</p>
+            </div>
+            <a href={firstCertificate.credentialUrl} target="_blank" rel="noreferrer">
+              {journeyT('verifyCertificate')} <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+      )}
 
       <section
         className="home-section home-section--personal"

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350" role="img" aria-labelledby="title desc">
+<title id="title">Cozy coding workspace with cats</title>
+<desc id="desc">Soft Slate illustration inspired by a sunlit desk with a laptop, plants, a coffee cup and two black-and-white cats</desc>
+<defs><linearGradient id="room" x2="0" y2="1"><stop stop-color="#27383a"/><stop offset="1" stop-color="#1b292e"/></linearGradient>
+<linearGradient id="desk" x2="0" y2="1"><stop stop-color="#425254"/><stop offset="1" stop-color="#28373a"/></linearGradient>
+<linearGradient id="screen" x2="0" y2="1"><stop stop-color="#101b20"/><stop offset="1" stop-color="#182a2e"/></linearGradient></defs>
+<path d="M25 267 0 305 700 305 700 350 0 350 0 310Z" fill="url(#desk)"/>
+<path d="M60 0V215M235 0V165M414 0V160" stroke="#54716f" stroke-width="5" opacity=".35"/>
+<path d="M0 45 170 0 260 0 0 157Z" fill="#8daaa1" opacity=".08"/>
+<path d="M390 300Q394 200 424 171" fill="none" stroke="#82a69c" stroke-width="4"/>
+<path d="M422 175Q373 166 385 126Q421 134 422 175ZM419 204Q463 173 475 207Q448 233 419 204ZM412 251Q369 222 360 252Q384 274 412 251Z" fill="#719b88"/>
+<path d="M116 256 125 147Q125 141 133 141H368Q378 141 376 150L362 256Z" fill="#7e9698" stroke="#b1c4c3" stroke-width="4"/>
+<path d="M133 151H365L353 244H124Z" fill="url(#screen)"/>
+<path d="M147 171h69m-57 21h112m-104 18h64m27 0h61m-162 20h93" stroke="#71a9a3" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+<path d="M108 259h270l36 18H77Z" fill="#92a5a3"/><path d="M184 266h125" stroke="#5f797d" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="517" cy="284" rx="103" ry="16" fill="#0c171a" opacity=".3"/>
+<path d="M459 222Q449 199 459 175L472 159 485 174Q511 159 528 175L540 155 557 177Q566 222 547 241Q512 261 480 241Z" fill="#1b2529" stroke="#a6b3ae" stroke-width="2"/>
+<path d="M479 204q10-4 18 0m25 0q10-4 18 0" stroke="#a0c1a8" stroke-width="3" stroke-linecap="round"/>
+<path d="M454 247q55-17 100 4 34 14 21 29H446q-31-18 8-33Z" fill="#344448"/>
+<path d="M551 279q36-6 24-38" fill="none" stroke="#526666" stroke-width="9" stroke-linecap="round"/>
+<path d="M568 245 580 218 593 234Q608 226 617 235L630 215 645 237Q660 264 643 282Q606 294 576 280Z" fill="#172126" stroke="#92aaa6" stroke-width="2"/>
+<path d="M594 254h7m19 0h7" stroke="#94bcad" stroke-width="3" stroke-linecap="round"/>
+<path d="M580 281q37-9 65 1" stroke="#71817e" stroke-width="3"/>
+<path d="M28 250h71l-7 45H36Z" fill="#859997"/><path d="M98 258q29-8 20 17-6 13-24 7" fill="none" stroke="#859997" stroke-width="9"/>
+<path d="M36 224q-14-14 0-27m19 26q-11-17 1-30" stroke="#89a8a2" stroke-width="3" fill="none" opacity=".5"/>
+<path d="M465 303h192" stroke="#78928e" stroke-width="3" stroke-linecap="round" opacity=".35"/>
+</svg>
