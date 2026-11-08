@@ -3481,3 +3481,107 @@ p {
   background-position: center;
   pointer-events: none;
 }
+
+/* Mobile-only: single-row navigation and text-first Home hero.
+   Desktop styles and the desktop cat illustration remain unchanged. */
+@media (max-width: 700px) {
+  .site-header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 3px;
+    padding: 10px 12px;
+  }
+  .site-header .site-nav {
+    order: 0;
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+    justify-content: space-between;
+    gap: 1px;
+    margin: 0;
+    font-size: 12px;
+  }
+  .site-header .site-nav a {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 42px;
+    padding: 9px 3px;
+    font-size: clamp(10px, 2.7vw, 12px);
+    white-space: nowrap;
+    border-radius: 7px;
+  }
+  .site-header .theme-toggle {
+    order: 1;
+    width: 36px;
+    height: 42px;
+    padding: 8px;
+  }
+  .site-header .language-control {
+    order: 2;
+    flex: 0 0 36px;
+  }
+  .site-header .language-control__toggle {
+    width: 36px;
+    min-height: 42px;
+    padding: 8px;
+  }
+  .site-header .language-control__toggle > span {
+    display: none;
+  }
+
+  .home-page .home-hero {
+    display: block;
+    min-height: 0;
+    height: auto;
+    padding: 24px 20px 20px;
+    overflow: hidden;
+  }
+  .home-page .home-hero__copy {
+    width: 100%;
+    max-width: none;
+  }
+  .home-page .home-hero__art {
+    display: none;
+  }
+  .home-page .home-hero .home-title {
+    min-height: 1.2em;
+    height: auto;
+    margin: 14px 0 16px;
+    font-size: clamp(32px, 8.5vw, 43px);
+    line-height: 1.15;
+  }
+  .home-page .home-intro.home-stable-copy {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+  /* The desktop multilingual height reservation creates an unused gap on phones. */
+  .home-page .home-intro.home-stable-copy > .home-stable-copy__measure {
+    display: none;
+  }
+  .home-page .home-intro.home-stable-copy > p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .home-page .home-contact {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+    margin-top: 22px;
+  }
+  .home-page .home-contact__link {
+    display: inline-flex;
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    justify-content: center;
+    margin: 0;
+    padding: 9px 7px !important;
+  }
+  .home-page .home-contact__label {
+    min-width: 0;
+    font-size: 12px;
+  }
+}
