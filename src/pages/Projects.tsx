@@ -23,9 +23,7 @@ type ProjectSection = {
   items: ProjectItem[]
 }
 
-type SelectedImage = {
-  title: string
-  image: Projtype Illustration = { src: string; format: 'wide' | 'square' }
+type Illustration = { src: string; format: 'wide' | 'square' }
 
 const PROJECT_ILLUSTRATIONS: Record<string, Illustration> = {
   careerPilotAi: { src: '/images/project-illustrations/careerpilot_ai.webp', format: 'wide' },
@@ -38,7 +36,8 @@ const PROJECT_ILLUSTRATIONS: Record<string, Illustration> = {
   translationCompany: { src: '/images/project-illustrations/translation_company_automation.webp', format: 'square' },
 }
 
- useTranslation('projects')
+export default function Projects() {
+  const { t } = useTranslation('projects')
   const sections = t('sections', { returnObjects: true }) as ProjectSection[]
 
   return (
