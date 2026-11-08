@@ -89,7 +89,6 @@ export default function Journey() {
   const education = t('education', {
     returnObjects: true,
   }) as EducationItem[]
-  const [activeTab, setActiveTab] = useState<'experience' | 'education' | 'certificates'>('experience')
   const [activeCertificate, setActiveCertificate] = useState<
     CertificateItem | null
   >(null)
@@ -117,121 +116,87 @@ export default function Journey() {
 
   return (
     <main className="journey-page">
-      <header className="subpage-intro">
+      <header className="subpage-intro journey-overview__intro">
         <h1>{t('title')}</h1>
-        <div className="journey-tabs" role="tablist" aria-label={t('title')}>
-          {([
-            ['experience', t('experienceTitle')],
-            ['education', t('educationTitle')],
-            ['certificates', t('certificatesTitle')],
-          ] as const).map(([id, label]) => (
-            <button
-              type="button"
-              role="tab"
-              id={'journey-tab-' + id}
-              aria-controls={'journey-panel-' + id}
-              aria-selected={activeTab === id}
-              tabIndex={activeTab === id ? 0 : -1}
-              className={'journey-tab' + (activeTab === id ? ' is-active' : '')}
-              key={id}
-              onClick={() => setActiveTab(id)}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
       </header>
-      {activeTab === 'certificates' && (
-        <section
-          id="journey-panel-certificates"
-          role="tabpanel"
-          aria-labelledby="journey-tab-certificates"
-          className="journey-section journey-tab-panel"
-        >
-        <div className="certificate-list">
-          {certificates.map((certificate) => (
-            <article className="certificate-item" key={certificate.id}>
-              <button
-                className="certificate-item__thumbnail"
-                type="button"
-                aria-label={t('openCertificateImage') + ': ' + certificate.title}
-                onClick={(event) => {
-                  thumbnailButtonRef.current = event.currentTarget
-                  setActiveCertificate(certificate)
-                }}
-              >
-                <img
-                  src={certificate.image}
-                  alt={certificate.imageAlt}
-                  loading="lazy"
-                />
-              </button>
-              <div className="certificate-item__content">
-                <div className="certificate-item__header">
-                  <h3>{certificate.title}</h3>
-                  <p className="timeline-item__meta">{certificate.issuer}</p>
-                  <div className="certificate-item__period-row">
-                    <p className="timeline-item__period">{certificate.period}</p>
-                    <a
-                      className="certificate-item__link"
-                      href={certificate.credentialUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {t('verifyCertificate')}
-                    </a>
+
+      <div className="journey-overview">
+        <section className="journey-overview__experience" aria-labelledby="journey-experience-title">
+          <h2 id="journey-experience-title" className="journey-overview__heading">
+            {t('experienceTitle')}
+          </h2>
+          <div className="timeline">
+            {experience.map((item) => (
+              <ExperienceEntry item={item} key={item.id} />
+            ))}
+          </div>
+        </section>
+
+        <aside className="journey-overview__side">
+          <section className="journey-overview__education" aria-labelledby="journey-education-title">
+            <h2 id="journey-education-title" className="journey-overview__heading">
+              {t('educationTitle')}
+            </h2>
+            <div className="timeline">
+              {education.map((item) => (
+                <article className="timeline-item" key={item.id}>
+                  <h3>{item.program}</h3>
+                  <p className="timeline-item__meta">
+                    {item.institution} · {item.location}
+                  </p>
+                  <p className="timeline-item__period">{item.period}</p>
+                  <ul className="journey-details">
+                    {item.details.map((detail, index) => (
+                      <li key={item.id + '-detail-' + index}>{detail}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="journey-overview__certificates" aria-labelledby="journey-certificates-title">
+            <h2 id="journey-certificates-title" className="journey-overview__heading">
+              {t('certificatesTitle')}
+            </h2>
+            <div className="certificate-list">
+              {certificates.map((certificate) => (
+                <article className="certificate-item" key={certificate.id}>
+                  <button
+                    className="certificate-item__thumbnail"
+                    type="button"
+                    aria-label={t('openCertificateImage') + ': ' + certificate.title}
+                    onClick={(event) => {
+                      thumbnailButtonRef.current = event.currentTarget
+                      setActiveCertificate(certificate)
+                    }}
+                  >
+                    <img src={certificate.image} alt={certificate.imageAlt} loading="lazy" />
+                  </button>
+                  <div className="certificate-item__content">
+                    <div className="certificate-item__header">
+                      <h3>{certificate.title}</h3>
+                      <p className="timeline-item__meta">{certificate.issuer}</p>
+                      <div className="certificate-item__period-row">
+                        <p className="timeline-item__period">{certificate.period}</p>
+                        <a
+                          className="certificate-item__link"
+                          href={certificate.credentialUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {t('verifyCertificate')}
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <p className="certificate-item__description">
-                  {certificate.description}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-        </section>
-      )}
-
-      {activeTab === 'experience' && (
-        <section
-          id="journey-panel-experience"
-          role="tabpanel"
-          aria-labelledby="journey-tab-experience"
-          className="journey-section journey-tab-panel"
-        >
-        <div className="timeline">
-          {experience.map((item) => (
-            <ExperienceEntry item={item} key={item.id} />
-          ))}
-        </div>
-        </section>
-      )}
-
-      {activeTab === 'education' && (
-        <section
-          id="journey-panel-education"
-          role="tabpanel"
-          aria-labelledby="journey-tab-education"
-          className="journey-section journey-tab-panel"
-        >
-        <div className="timeline">
-          {education.map((item) => (
-            <article className="timeline-item" key={item.id}>
-              <h3>{item.program}</h3>
-              <p className="timeline-item__meta">
-                {item.institution} · {item.location}
-              </p>
-              <p className="timeline-item__period">{item.period}</p>
-              <ul className="journey-details">
-                {item.details.map((detail, index) => (
-                  <li key={item.id + '-detail-' + index}>{detail}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-        </section>
-      )}
+                  <p className="certificate-item__description">{certificate.description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        </aside>
+      </div>
 
       {activeCertificate && (
         <div className="media-viewer" onClick={() => setActiveCertificate(null)}>

@@ -2501,3 +2501,179 @@ p {
   .home-page .home-hero .home-title { margin-block: 9px 12px; }
   .home-page .home-contact { margin-top: 13px; }
 }
+
+/* Journey / Split editorial layout: all three sections visible, no in-page tabs.
+   Uses the same light/dark Soft Slate color tokens as Home. */
+.journey-page .journey-overview__intro {
+  margin: 0 0 28px;
+  padding-bottom: 18px;
+}
+.journey-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+}
+.journey-overview__experience,
+.journey-overview__side,
+.journey-overview__education,
+.journey-overview__certificates {
+  min-width: 0;
+}
+.journey-overview__side {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  padding-left: 26px;
+  border-left: 1px solid var(--soft-border);
+}
+.journey-page .journey-overview__heading {
+  margin: 0 0 23px;
+  padding: 0 0 13px;
+  color: var(--heading-color);
+  border-bottom: 1px solid var(--soft-border);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.journey-overview .timeline {
+  max-width: none;
+  margin: 0 0 0 7px;
+  padding-left: 24px;
+  border-left: 2px solid var(--timeline-line-color);
+}
+.journey-overview .timeline-item,
+.journey-overview .timeline-item:last-child {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 12px;
+  align-items: start;
+  gap: 4px 12px;
+  margin: 0;
+  padding: 0 0 29px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.journey-overview .timeline-item:last-child { padding-bottom: 0; }
+.journey-overview .timeline-item::before {
+  top: 8px;
+  left: -32px;
+  border-color: var(--page-background);
+}
+.journey-overview .timeline-item h3 {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.35;
+}
+.journey-overview .timeline-item__meta {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0;
+  font-size: 12px;
+}
+.journey-overview .timeline-item__period {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  margin: 0;
+  text-align: right;
+  white-space: normal;
+  color: var(--section-title-color);
+  font-size: 12px;
+}
+.journey-overview .timeline-item > .journey-details,
+.journey-overview .timeline-item > .technology-group {
+  grid-column: 1 / -1;
+}
+.journey-overview .journey-details {
+  margin-top: 9px;
+  gap: 5px;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.journey-overview .technology-group { margin-top: 12px; }
+.journey-overview .technology-group h4 {
+  margin-bottom: 8px;
+  font-size: 11px;
+}
+.journey-overview .technology-list { gap: 6px; }
+.journey-overview .technology-list li {
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+.journey-overview__education .timeline-item {
+  grid-template-columns: minmax(0, 1fr);
+}
+.journey-overview__education .timeline-item h3,
+.journey-overview__education .timeline-item__meta,
+.journey-overview__education .timeline-item__period {
+  grid-column: 1;
+  grid-row: auto;
+  text-align: left;
+}
+.journey-overview__education .timeline-item__period { margin-top: 3px; }
+.journey-overview__certificates .certificate-list { gap: 14px; }
+.journey-overview__certificates .certificate-item {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px 14px;
+  padding: 16px;
+  border: 1px solid var(--soft-border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.journey-overview__certificates .certificate-item__thumbnail {
+  margin: 0;
+  padding: 4px;
+  border-color: var(--soft-border);
+  border-radius: 8px;
+}
+.journey-overview__certificates .certificate-item__header h3 {
+  font-size: 17px;
+  margin: 0 0 5px;
+}
+.journey-overview__certificates .certificate-item__period-row {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 6px;
+}
+.journey-overview__certificates .certificate-item__description {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+@media (max-width: 1000px) {
+  .journey-overview {
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    gap: 22px;
+  }
+  .journey-overview__side { padding-left: 18px; }
+  .journey-overview__experience .timeline-item { grid-template-columns: minmax(0, 1fr); }
+  .journey-overview__experience .timeline-item__period {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: left;
+  }
+}
+@media (max-width: 760px) {
+  .journey-overview { display: flex; flex-direction: column; gap: 38px; }
+  .journey-overview__side {
+    width: 100%;
+    padding: 0;
+    border-left: 0;
+    gap: 34px;
+  }
+  .journey-overview__experience { width: 100%; }
+  .journey-overview .timeline-item { grid-template-columns: minmax(0, 1fr); }
+  .journey-overview .timeline-item__period { grid-column: 1; grid-row: 3; text-align: left; }
+}
