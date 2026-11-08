@@ -4331,3 +4331,14 @@ p {
 .journey-page .journey-overview__experience .technology-group--additional {
   margin-top: 15px;
 }
+
+/* Keep the verification icon readable alongside the shared text-link styling. */
+.journey-page .journey-overview__certificates .certificate-item__link svg {
+  display: block;
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
