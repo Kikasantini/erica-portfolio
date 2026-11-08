@@ -267,6 +267,7 @@ export default function Projects() {
 
   return (
     <main className="projects-page">
+      <header className="subpage-intro"><h1>{t('title')}</h1></header>
       {sections.map((section) => (
         <section className="project-section" key={section.id}>
           <h2>{section.title}</h2>

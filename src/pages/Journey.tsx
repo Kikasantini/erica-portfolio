@@ -156,6 +156,7 @@ export default function Journey() {
 
   return (
     <main className="journey-page">
+      <header className="subpage-intro"><h1>{t('title')}</h1></header>
       <CollapsibleJourneySection
         id="certificates"
         title={t('certificatesTitle')}

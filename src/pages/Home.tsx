@@ -55,7 +55,6 @@ function AnimatedTitleLayer({
 export default function Home() {
   const { t } = useTranslation('home')
   const { t: projectT } = useTranslation('projects')
-  const { t: journeyT } = useTranslation('journey')
   const { language = 'en' } = useParams()
   const recentSection = (projectT('sections', { returnObjects: true }) as Array<{
     id: string
@@ -69,16 +68,6 @@ export default function Home() {
       technologies: string
     }>
   }>).find((section) => section.id === 'recentProjects')
-  const certificates = journeyT('certificates', { returnObjects: true }) as Array<{
-    id: string
-    title: string
-    issuer: string
-    period: string
-    image: string
-    imageAlt: string
-    credentialUrl: string
-  }>
-  const firstCertificate = certificates[0]
   const [isHovered, setIsHovered] = useState(false)
   const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({})
   const title = t('title')
@@ -192,22 +181,6 @@ export default function Home() {
                 </ul>
               </article>
             ))}
-          </div>
-        </section>
-      )}
-
-      {firstCertificate && (
-        <section className="home-badge" aria-labelledby="home-badge-title">
-          <h2 id="home-badge-title">{journeyT('certificatesTitle')}</h2>
-          <div className="home-badge__content">
-            <img src={firstCertificate.image} alt={firstCertificate.imageAlt} loading="lazy" />
-            <div>
-              <h3>{firstCertificate.title}</h3>
-              <p>{firstCertificate.issuer} · {firstCertificate.period}</p>
-            </div>
-            <a href={firstCertificate.credentialUrl} target="_blank" rel="noreferrer">
-              {journeyT('verifyCertificate')} <span aria-hidden="true">↗</span>
-            </a>
           </div>
         </section>
       )}
