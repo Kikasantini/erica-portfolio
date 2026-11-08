@@ -147,5 +147,22 @@
   "previousMedia": "Média précédent",
   "nextMedia": "Média suivant",
   "openMedia": "Ouvrir le média en plein écran",
-  "closeMedia": "Fermer l’aperçu agrandi"
+  "closeMedia": "Fermer l’aperçu agrandi",
+  "technologiesAndTools": "Technologies et outils",
+  "viewAllTechnologies": "Voir tout",
+  "backToProject": "Retour au projet",
+  "technologyGroups": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "testing": "Tests",
+    "tools": "Outils",
+    "data": "Données",
+    "simulation": "Programmation",
+    "game": "Développement de jeu",
+    "hardware": "Matériel",
+    "connectivity": "Connectivité et API",
+    "monitoring": "Supervision",
+    "automation": "Automatisation",
+    "libraries": "Bibliothèques"
+  }
 }

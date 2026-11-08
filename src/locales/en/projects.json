@@ -147,5 +147,22 @@
   "previousMedia": "Previous media",
   "nextMedia": "Next media",
   "openMedia": "Open media viewer",
-  "closeMedia": "Close media viewer"
+  "closeMedia": "Close media viewer",
+  "technologiesAndTools": "Technologies and Tools",
+  "viewAllTechnologies": "View all",
+  "backToProject": "Back to project",
+  "technologyGroups": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "testing": "Testing",
+    "tools": "Tools",
+    "data": "Data",
+    "simulation": "Programming",
+    "game": "Game development",
+    "hardware": "Hardware",
+    "connectivity": "Connectivity & APIs",
+    "monitoring": "Monitoring",
+    "automation": "Automation",
+    "libraries": "Libraries"
+  }
 }
