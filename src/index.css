@@ -35,13 +35,13 @@
   --project-card-border-color: #ababab;
   --project-card-media-background-color: #d7e0df;
   --project-card-back-link: #137a80;
-  --project-card-back-divider: #ccdcda;
+  --project-card-back-divider: #d4dddd;
   --project-card-back-icon: #257c83;
   --project-card-back-technology: #435258;
   --project-card-back-label: #257c83;
   --project-card-back-heading: #16324f;
-  --project-card-back-border: #b6cecb;
-  --project-card-back-background: #eef5f2;
+  --project-card-back-border: #becbca;
+  --project-card-back-background: #f2f4f4;
   font-family: 'Roboto', Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -88,13 +88,13 @@
   --project-card-border-color: #34464b;
   --project-card-media-background-color: #202c30;
   --project-card-back-link: #69e4dc;
-  --project-card-back-divider: #34484d;
+  --project-card-back-divider: #3e4b50;
   --project-card-back-icon: #91b4ae;
   --project-card-back-technology: #c5d2cf;
   --project-card-back-label: #91b4ae;
   --project-card-back-heading: #e5ebee;
-  --project-card-back-border: #456063;
-  --project-card-back-background: #223139;
+  --project-card-back-border: #425054;
+  --project-card-back-background: #272e32;
   color-scheme: dark;
 }
 

@@ -45,13 +45,13 @@ const LIGHT_MODE_DEFAULTS = {
   "projectTagBorder": "#ccdddd",
   "projectTagText": "#1e6971",
   "coreTechnologiesText": "#435258",
-  "projectBackBackground": "#eef5f2",
-  "projectBackBorder": "#b6cecb",
+  "projectBackBackground": "#f2f4f4",
+  "projectBackBorder": "#becbca",
   "projectBackHeading": "#16324f",
   "projectBackLabel": "#257c83",
   "projectBackTechnology": "#435258",
   "projectBackIcon": "#257c83",
-  "projectBackDivider": "#ccdcda",
+  "projectBackDivider": "#d4dddd",
   "projectBackLink": "#137a80"
 } as const
 type ColorKey = keyof typeof LIGHT_MODE_DEFAULTS
@@ -102,13 +102,13 @@ const DARK_MODE_DEFAULTS: ColorPalette = {
   "projectTagBorder": "#384c50",
   "projectTagText": "#b3d4ca",
   "coreTechnologiesText": "#c5d2cf",
-  "projectBackBackground": "#223139",
-  "projectBackBorder": "#456063",
+  "projectBackBackground": "#272e32",
+  "projectBackBorder": "#425054",
   "projectBackHeading": "#e5ebee",
   "projectBackLabel": "#91b4ae",
   "projectBackTechnology": "#c5d2cf",
   "projectBackIcon": "#91b4ae",
-  "projectBackDivider": "#34484d",
+  "projectBackDivider": "#3e4b50",
   "projectBackLink": "#69e4dc"
 }
 const CSS_VARIABLES: Record<ColorKey, string> = {
@@ -277,7 +277,18 @@ function readStoredColors(): { light: ColorPalette; dark: ColorPalette; history:
     for (const mode of ['light', 'dark'] as const) {
       for (const key of Object.keys(CSS_VARIABLES) as ColorKey[]) {
         const color = saved?.[mode]?.[key]
-        if (typeof color === 'string' && HEX_COLOR.test(color)) state[mode][key] = color.toLowerCase()
+        if (typeof color === 'string' && HEX_COLOR.test(color)) {
+          const normalized = color.toLowerCase()
+          const previousDefaults: Partial<Record<ColorKey, { light: string; dark: string }>> = {
+            projectBackBackground: { light: '#eef5f2', dark: '#223139' },
+            projectBackBorder: { light: '#b6cecb', dark: '#456063' },
+            projectBackDivider: { light: '#ccdcda', dark: '#34484d' }
+          }
+          // Keep genuinely customized values, but update the previous built-in palette.
+          state[mode][key] = normalized === previousDefaults[key]?.[mode]
+            ? (mode === 'light' ? LIGHT_MODE_DEFAULTS : DARK_MODE_DEFAULTS)[key]
+            : normalized
+        }
         const recent = saved?.history?.[mode]?.[key]
         if (Array.isArray(recent)) {
           state.history[mode][key] = [...new Set(recent.filter((c): c is string => typeof c === 'string' && HEX_COLOR.test(c)).map((c: string) => c.toLowerCase()))].slice(0, 2)
