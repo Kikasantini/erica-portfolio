@@ -89,13 +89,10 @@ export default function Projects() {
   const { t } = useTranslation('projects')
   const sections = t('sections', { returnObjects: true }) as ProjectSection[]
   const [selectedImage, setSelectedImage] = useState<SelectedImage | null>(null)
+  const [imageShapes, setImageShapes] = useState<Record<string, 'portrait' | 'landscape' | 'square'>>({})
 
   return (
     <main className="projects-page">
-      <header className="subpage-intro">
-        <h1>{t('title')}</h1>
-      </header>
-
       {sections.map((section) => (
         <section className="project-section" key={section.id}>
           <h2>{section.title}</h2>
@@ -104,7 +101,7 @@ export default function Projects() {
               const image = project.media[0]
               return (
                 <article
-                  className={`project-item${image ? '' : ' project-item--text-only'}`}
+                  className={`project-item${image ? ` project-item--${imageShapes[project.id] ?? 'landscape'}` : ' project-item--text-only'}`}
                   key={project.id}
                 >
                   {image && (
@@ -119,6 +116,15 @@ export default function Projects() {
                         src={image.src}
                         alt={image.alt}
                         loading="lazy"
+                        onLoad={(event) => {
+                          const { naturalWidth, naturalHeight } = event.currentTarget
+                          if (naturalWidth === 0 || naturalHeight === 0) return
+                          const ratio = naturalWidth / naturalHeight
+                          const shape = ratio < 0.85 ? 'portrait' : ratio > 1.2 ? 'landscape' : 'square'
+                          setImageShapes((current) =>
+                            current[project.id] === shape ? current : { ...current, [project.id]: shape },
+                          )
+                        }}
                       />
                     </button>
                   )}

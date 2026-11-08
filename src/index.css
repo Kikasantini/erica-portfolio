@@ -2037,3 +2037,85 @@ p {
   .home-fun-card { min-height: 156px; }
   .home-fun-card__face { padding: 18px; }
 }
+
+/* Orientation-aware project covers; the image itself defines the visible area. */
+.projects-page .project-item__image-button.project-item__cover {
+  position: relative;
+  inset: auto;
+  display: block;
+  align-self: flex-start;
+  flex: 0 0 auto;
+  width: fit-content;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0 0 18px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--soft-border);
+  border-radius: 9px;
+  background: transparent;
+  line-height: 0;
+}
+.projects-page .project-item__cover img.project-item__media {
+  display: block;
+  position: static;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+}
+.projects-page .project-item--landscape .project-item__cover {
+  margin-inline: auto;
+}
+/* Portrait and square media sit beside the full text on larger screens. */
+@media (min-width: 901px) {
+  .projects-page .project-item--portrait,
+  .projects-page .project-item--square {
+    display: grid;
+    grid-template-columns: minmax(0, 34%) minmax(0, 1fr);
+    align-items: start;
+    gap: 19px;
+  }
+  .projects-page .project-item--square {
+    grid-template-columns: minmax(0, 40%) minmax(0, 1fr);
+  }
+  .projects-page .project-item--portrait .project-item__cover,
+  .projects-page .project-item--square .project-item__cover {
+    grid-column: 1;
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+  }
+  .projects-page .project-item--portrait .project-item__content,
+  .projects-page .project-item--square .project-item__content {
+    grid-column: 2;
+    align-self: stretch;
+  }
+  .projects-page .project-item--portrait .project-item__cover img,
+  .projects-page .project-item--square .project-item__cover img {
+    max-height: 340px;
+  }
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  .projects-page .project-item--portrait .project-item__cover img,
+  .projects-page .project-item--square .project-item__cover img {
+    max-height: 240px;
+  }
+}
+@media (max-width: 700px) {
+  .projects-page .project-item__image-button.project-item__cover {
+    width: fit-content;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 0 auto 16px;
+  }
+  .projects-page .project-item__cover img.project-item__media {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 220px;
+  }
+}

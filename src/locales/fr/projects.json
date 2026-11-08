@@ -133,13 +133,7 @@
           "technologies": "Python 3 · PyPDF2 · ReportLab · Crontab · Shell · Linux",
           "githubUrl": "https://github.com/Kikasantini/scripting-translationCompany",
           "githubLabel": "Voir sur GitHub",
-          "media": [
-            {
-              "type": "image",
-              "src": "/projects/translation-company-automation/translation-company-automation.jpg",
-              "alt": "Terminal Ubuntu affichant des scripts d’automatisation en Python"
-            }
-          ],
+          "media": [],
           "highlights": [
             "Un projet d’automatisation en Python pour une entreprise de traduction fictive, qui simplifie des tâches récurrentes de traitement de documents et de gestion sous Linux.",
             "Calculé les tarifs des services et généré des PDF avec filigranes datés et pages de registre.",
