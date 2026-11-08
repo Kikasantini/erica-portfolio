@@ -4342,3 +4342,9 @@ p {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+
+
+/* Home: status badge overlays the card and must never shift the grid item. */
+.home-page .home-featured__grid .home-project:has(> .project-status) {
+  margin-top: 0;
+}
