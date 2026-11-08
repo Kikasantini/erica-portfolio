@@ -52,7 +52,7 @@
   --meta-text: #9aa9a7;
   --brand-name: #e2edeb;
   --heading-color: #eaf2f0;
-  --section-title-color: #80c9c3;
+  --section-title-color: #93c2be;
   --logo-color: #80c9c3;
   --timeline-marker-color: #80c9c3;
   --header-divider-color: #34474b;
@@ -60,23 +60,23 @@
   --navigation-active-background-color: #26393d;
   --button-background-color: #22373b;
   --button-text-color: #a1d8d2;
-  --button-hover-background-color: #347b80;
+  --button-hover-background-color: #3d3d3d;
   --button-hover-text-color: #f7fbfa;
   --control-text-color: var(--button-text-color);
-  --technology-tag-text-color: #a1d8d2;
+  --technology-tag-text-color: #c2c2c2;
   --language-border-color: #425b5c;
   --outline-button-border-color: #668f90;
   --timeline-line-color: #354b4e;
-  --technology-tag-border-color: #3f5c5d;
-  --technology-tag-background-color: #24383b;
-  --fact-card-front-background-color: #44575a;
+  --technology-tag-border-color: #808080;
+  --technology-tag-background-color: #202b2d;
+  --fact-card-front-background-color: #2a3a3c;
   --fact-card-front-text-color: #e8efed;
-  --fact-card-front-border-color: #425b5c;
+  --fact-card-front-border-color: #9bc5c1;
   --fact-card-back-background-color: #3d3d3d;
   --fact-card-back-text-color: #f2efdf;
   --fact-card-back-border-color: #000000;
   --additional-technologies-link-color: #a1d8d2;
-  --project-card-background-color: #242f33;
+  --project-card-background-color: #1b2122;
   --project-card-border-color: #919191;
   --project-card-media-background-color: #22363b;
   color-scheme: dark;
@@ -280,7 +280,6 @@ p {
   border: 1px solid var(--language-border-color);
   border-radius: 5px;
   background: var(--page-background);
-  box-shadow: 0 3px 8px color-mix(in srgb, var(--main-text) 7%, transparent);
 }
 
 .language-control__option {
@@ -433,7 +432,6 @@ p {
   border-radius: 5px;
   color: var(--button-hover-text-color);
   background: var(--button-hover-background-color);
-  box-shadow: 0 4px 12px color-mix(in srgb, var(--main-text) 16%, transparent);
   content: attr(data-tooltip);
   font-size: 12px;
   font-weight: 500;
@@ -1591,4 +1589,35 @@ p {
   .color-customizer__reset {
     transition: none;
   }
+}
+
+.certificate-item__period-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+}
+
+.certificate-item__period-row .certificate-item__link {
+  display: inline;
+  margin-top: 0;
+  text-decoration: none;
+}
+
+.certificate-item__period-row .certificate-item__link:hover {
+  text-decoration: none;
+}
+
+/* Development status on active project cards. */
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 9px;
+  border: 1px solid var(--technology-tag-border-color);
+  border-radius: 999px;
+  background: var(--technology-tag-background-color);
+  color: var(--technology-tag-text-color);
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
 }

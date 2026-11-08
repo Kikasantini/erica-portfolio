@@ -12,6 +12,7 @@ type ProjectItem = {
   title: string
   highlights: string[]
   technologies: string
+  status?: string
   githubUrl: string
   githubLabel: string
   media: ProjectMedia[]
@@ -289,6 +290,9 @@ export default function Projects() {
                 <div className="project-item__content">
                   <div className="project-item__title-row">
                     <h3>{project.title}</h3>
+                    {project.status && (
+                      <span className="project-status">{project.status}</span>
+                    )}
                     <a
                       className="project-github-link"
                       href={project.githubUrl}

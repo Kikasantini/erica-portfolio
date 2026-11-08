@@ -98,7 +98,7 @@
         "Investigated application and database issues, reproduced defects, tested changes, and supported technical troubleshooting.",
         "Worked directly with English- and French-speaking clients to clarify requirements and validate solutions.",
         "Created and maintained client-specific Crystal Reports, including formulas, conditional logic, parameters, formatting, and subreports.",
-        "Streamlined the internal weekly pizza-ordering process for 40+ employees by proposing and implementing an automated workflow with a shared spreadsheet and Power Automate. It replaced manual order collection, tallied pizza choices and dietary requests, sent a reminder the day before, and reset weekly; it remains in use after more than 3 years."
+        "Streamlined an internal administrative process for 40+ employees by designing and implementing an automated workflow using a shared spreadsheet and Power Automate. Replaced manual data collection with automated tracking, reminders, and weekly resets. The solution remained in use for over 3 years."
       ],
       "coreTechnologies": [
         "Sage X3",

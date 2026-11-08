@@ -6,6 +6,20 @@
       "title": "Projetos recentes",
       "items": [
         {
+          "id": "careerPilotAi",
+          "title": "CareerPilot AI",
+          "status": "Em desenvolvimento",
+          "technologies": "Java · Spring Boot · JUnit · React · TypeScript · JavaScript · Node.js · Maven · Spotless · Git · GitHub",
+          "githubUrl": "https://github.com/Kikasantini/careerpilot-ai",
+          "githubLabel": "Ver no GitHub",
+          "media": [],
+          "highlights": [
+            "Uma aplicação com IA em desenvolvimento, criada para ajudar usuários a adaptar currículos e cartas de apresentação a vagas de emprego usando informações profissionais verificadas.",
+            "Construção gradual de uma arquitetura com múltiplos serviços, incluindo frontend React/TypeScript e backend Java/Spring Boot; integração com IA planejada para uma próxima etapa.",
+            "Desenvolvimento incremental com foco em testes automatizados, formatação de código e facilidade de manutenção."
+          ]
+        },
+        {
           "id": "productionCellSimulator",
           "title": "Simulador de célula de produção",
           "technologies": "Python 3 · JSON · CSV · Git · Visual Studio Code",
