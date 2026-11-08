@@ -547,7 +547,7 @@ function ProjectCard({ project, illustrationSrc, labels }: {
           <div className="project-item__tech-groups">
             {groupedTech.map((group) => (
               <div className="project-item__tech-group" key={group.key}>
-                <span className="project-item__tech-category"><TechnologyGroupIcon name={group.key} /><strong>{labels.groups[group.key]}:</strong></span>
+                <span className="project-item__tech-category"><TechnologyGroupIcon name={group.key} /><strong>{labels.groups[group.key]}</strong></span>
                 <span>{group.items.map((tech, index) => (
                   <span className="project-item__tech-name" key={tech}>
                     <strong>{tech}</strong>{index < group.items.length - 1 ? ' · ' : ''}
