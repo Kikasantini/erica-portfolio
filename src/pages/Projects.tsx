@@ -104,6 +104,9 @@ export default function Projects() {
                   className={`project-item${image ? ` project-item--${imageShapes[project.id] ?? 'landscape'}` : ' project-item--text-only'}`}
                   key={project.id}
                 >
+                  {project.status && (
+                    <span className="project-status">{project.status}</span>
+                  )}
                   {image && (
                     <button
                       className="project-item__image-button project-item__cover"
@@ -132,9 +135,6 @@ export default function Projects() {
                   <div className="project-item__content">
                     <div className="project-item__title-row">
                       <h3>{project.title}</h3>
-                      {project.status && (
-                        <span className="project-status">{project.status}</span>
-                      )}
                       <a
                         className="project-github-link"
                         href={project.githubUrl}

@@ -206,6 +206,7 @@ export default function Home() {
           <div className="home-featured__grid">
             {recentProjects.map((project) => (
               <article className="home-project" key={project.id}>
+                {project.status && <span className="project-status">{project.status}</span>}
                 <div className="home-project__heading">
                   <HomeCardIcon name={project.id as HomeIconName} />
                   <h3>{project.title}</h3>
@@ -216,7 +217,6 @@ export default function Home() {
                     </svg>
                   </a>
                 </div>
-                {project.status && <span className="project-status">{project.status}</span>}
                 <p>{project.highlights[0]}</p>
               </article>
             ))}
