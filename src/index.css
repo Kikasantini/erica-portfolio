@@ -1923,3 +1923,117 @@ p {
     white-space: normal;
   }
 }
+
+/* Soft Slate refinements: compact hero with one-line desktop nickname. */
+@media (min-width: 901px) {
+  .home-hero {
+    min-height: 300px;
+    padding: 28px 30px;
+  }
+  .home-hero__copy { width: min(100%, 770px); }
+  .home-page .home-title {
+    width: max-content;
+    max-width: none;
+    min-height: 1.14em;
+    font-size: clamp(36px, 3.7vw, 48px);
+    line-height: 1.08;
+    margin: 12px 0 17px;
+  }
+  .home-page .home-title__layer {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    width: max-content;
+  }
+  .home-hero__art {
+    background-size: auto 100%;
+    background-position: right center;
+  }
+  .home-hero::before {
+    background: linear-gradient(90deg, var(--hero-bg) 0%, var(--hero-bg) 20%, transparent 82%);
+  }
+}
+/* Cards on Home show the most recent project summaries, not their technology tags. */
+.home-project { min-height: 185px; }
+.home-project p { margin-bottom: 0; }
+
+/* Personal highlights: editorial flip tiles, matching the site's other sections. */
+.home-section--personal {
+  max-width: none;
+  margin-top: 39px;
+}
+.home-section--personal h2 {
+  margin: 0 0 18px;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--heading-color);
+}
+.home-fun-cards {
+  max-width: none;
+  gap: 16px;
+}
+.home-fun-card {
+  min-height: 178px;
+  border-radius: 12px;
+}
+.home-fun-card__face {
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 13px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.45;
+}
+.home-fun-card__face--front {
+  color: var(--heading-color);
+  background: var(--surface);
+  border-color: var(--soft-border);
+}
+.home-fun-card__face--back {
+  color: var(--main-text);
+  background: var(--surface-elevated, var(--fact-card-back-background-color));
+  border-color: var(--outline-button-border-color);
+}
+.home-fun-card__topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.home-fun-card__symbol {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  color: var(--button-text-color);
+  border-radius: 10px;
+  background: var(--technology-tag-background-color);
+  border: 1px solid var(--technology-tag-border-color);
+}
+.home-fun-card__symbol svg { width: 21px; height: 21px; }
+.home-fun-card__index {
+  font-size: 11px;
+  color: var(--meta-text);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .1em;
+}
+.home-fun-card__copy { display: block; font-weight: 500; overflow-wrap: break-word; }
+.home-fun-card__hint {
+  align-self: flex-end;
+  color: var(--button-text-color);
+  font-size: 19px;
+  line-height: 1;
+}
+.home-fun-card:hover .home-fun-card__face--front { border-color: var(--outline-button-border-color); }
+@media (min-width: 701px) and (max-width: 900px) {
+  .home-hero { min-height: 325px; padding: 27px; }
+  .home-page .home-title { font-size: clamp(33px, 4vw, 43px); }
+}
+@media (max-width: 620px) {
+  .home-fun-card { min-height: 156px; }
+  .home-fun-card__face { padding: 18px; }
+}

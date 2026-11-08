@@ -96,7 +96,7 @@ export default function Home() {
   const { t } = useTranslation('home')
   const { t: projectT } = useTranslation('projects')
   const { language = 'en' } = useParams()
-  const recentSection = (projectT('sections', { returnObjects: true }) as Array<{
+  const projectSections = projectT('sections', { returnObjects: true }) as Array<{
     id: string
     title: string
     items: Array<{
@@ -107,7 +107,10 @@ export default function Home() {
       githubUrl: string
       technologies: string
     }>
-  }>).find((section) => section.id === 'recentProjects')
+  }>
+  // The homepage always reflects the first three entries as ordered on Projects.
+  const recentProjects = projectSections.flatMap((section) => section.items).slice(0, 3)
+  const recentSectionTitle = projectSections.find((section) => section.id === 'recentProjects')?.title
   const [isHovered, setIsHovered] = useState(false)
   const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({})
   const title = t('title')
@@ -192,16 +195,16 @@ export default function Home() {
       </section>
       </div>
 
-      {recentSection && (
+      {recentProjects.length > 0 && (
         <section className="home-featured" aria-labelledby="home-featured-title">
           <div className="home-featured__heading">
-            <h2 id="home-featured-title">{recentSection.title}</h2>
+            <h2 id="home-featured-title">{recentSectionTitle}</h2>
             <Link to={`/${language}/projects`} className="home-featured__all">
               {t('viewAllProjects')} <span aria-hidden="true">→</span>
             </Link>
           </div>
           <div className="home-featured__grid">
-            {recentSection.items.map((project) => (
+            {recentProjects.map((project) => (
               <article className="home-project" key={project.id}>
                 <div className="home-project__heading">
                   <HomeCardIcon name={project.id as HomeIconName} />
@@ -215,11 +218,6 @@ export default function Home() {
                 </div>
                 {project.status && <span className="project-status">{project.status}</span>}
                 <p>{project.highlights[0]}</p>
-                <ul className="home-project__tags" aria-label={projectT('technologiesTitle')}>
-                  {project.technologies.split(' · ').slice(0, 5).map((tech) => (
-                    <li key={tech}>{tech}</li>
-                  ))}
-                </ul>
               </article>
             ))}
           </div>
@@ -251,10 +249,26 @@ export default function Home() {
               >
                 <span className="home-fun-card__inner" aria-hidden="true">
                   <span className="home-fun-card__face home-fun-card__face--front">
-                    {card.front}
+                    <span className="home-fun-card__topline">
+                      <span className="home-fun-card__symbol" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                          {card.id === 'conversationStarter' ? (
+                            <><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5 8 8 0 0 1-3.3-.7L4 20l1.7-4.6A7.5 7.5 0 1 1 20 11.5Z" /><path d="M9 11h6" /></>
+                          ) : card.id === 'oneWord' ? (
+                            <><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2Z" /></>
+                          ) : (
+                            <><path d="M8 3v4a2 2 0 1 1-4 0V3H2v7h5v4H3v5h7v-3a2 2 0 1 1 4 0v3h7v-7h-4a2 2 0 1 1 0-4h4V3H8Z" /></>
+                          )}
+                        </svg>
+                      </span>
+                      <span className="home-fun-card__index">{String(personalHighlights.indexOf(card) + 1).padStart(2, '0')}</span>
+                    </span>
+                    <span className="home-fun-card__copy">{card.front}</span>
+                    <span className="home-fun-card__hint" aria-hidden="true">↗</span>
                   </span>
                   <span className="home-fun-card__face home-fun-card__face--back">
-                    {card.back}
+                    <span className="home-fun-card__copy">{card.back}</span>
+                    <span className="home-fun-card__hint" aria-hidden="true">↶</span>
                   </span>
                 </span>
               </button>
