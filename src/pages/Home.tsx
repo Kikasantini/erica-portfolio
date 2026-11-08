@@ -141,6 +141,7 @@ export default function Home() {
                   </>
                 )}
               </svg>
+              <span className="home-contact__label" aria-hidden="true">{link.label}</span>
               <span className="visually-hidden">{link.label}</span>
             </a>
           )
