@@ -24,20 +24,20 @@ type ProjectSection = {
   items: ProjectItem[]
 }
 
-// Missing JPGs should not leave an empty media area in their cards.
+// Try the numbered JPG first, then PNG; missing files leave no empty media area.
 function ProjectIllustration({ src }: { src: string }) {
-  const [loadFailed, setLoadFailed] = useState(false)
+  const [imageFormat, setImageFormat] = useState<'jpg' | 'png' | null>('jpg')
 
-  if (loadFailed) return null
+  if (imageFormat === null) return null
 
   return (
     <img
       className="project-item__illustration"
-      src={src}
+      src={imageFormat === 'jpg' ? src : src.replace(/\.jpg$/i, '.png')}
       alt=""
       aria-hidden="true"
       loading="lazy"
-      onError={() => setLoadFailed(true)}
+      onError={() => setImageFormat((current) => current === 'jpg' ? 'png' : null)}
     />
   )
 }
