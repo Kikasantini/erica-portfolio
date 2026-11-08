@@ -3412,3 +3412,47 @@ p {
 .projects-page .project-item.project-item--editorial .project-item__content {
   padding: 17px 15px 15px;
 }
+
+
+/* Cards stay equal-height in each grid row; text and tech tags never clip.
+   Only illustration height changes to absorb differences in text length. */
+.projects-page .project-list {
+  align-items: stretch;
+}
+.projects-page .project-item.project-item--editorial {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  padding: 0;
+}
+.projects-page .project-item.project-item--editorial .project-item__illustration,
+.projects-page .project-item.project-item--editorial .project-item__illustration--wide,
+.projects-page .project-item.project-item--editorial .project-item__illustration--square {
+  display: block;
+  flex: 1 1 180px;
+  width: 100%;
+  max-width: none;
+  height: 180px;
+  min-height: 95px;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 11px 11px 0 0;
+  pointer-events: none;
+}
+.projects-page .project-item.project-item--editorial .project-item__content {
+  flex: 0 0 auto;
+  min-width: 0;
+  padding: 17px 15px 15px;
+}
+.projects-page .project-item.project-item--editorial .project-item__highlights {
+  flex: 0 0 auto;
+}
+.projects-page .project-item.project-item--editorial .project-item__technologies {
+  margin-top: 17px;
+}
