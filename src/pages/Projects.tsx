@@ -54,13 +54,10 @@ export default function Projects() {
                     <span className="project-status">{project.status}</span>
                   )}
                   {illustration && (
-                    <img
+                    <div
                       className={`project-item__illustration project-item__illustration--${illustration.format}`}
-                      src={illustration.src}
-                      alt=""
+                      style={{ backgroundImage: `url("${illustration.src}")` }}
                       aria-hidden="true"
-                      loading="lazy"
-                      decoding="async"
                     />
                   )}
 
