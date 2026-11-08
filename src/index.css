@@ -2680,7 +2680,7 @@ p {
 
 /* Journey editorial polish: separators for experience, plain education entries. */
 .journey-page .journey-overview__experience .timeline-item:not(:last-child) {
-  border-bottom: 1px solid var(--soft-border);
+  border-bottom: 0;
   padding-bottom: 26px;
   margin-bottom: 26px;
 }
@@ -3053,4 +3053,54 @@ p {
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
+}
+
+/* Editorial technology styling for Professional Experience only.
+   Core stack: understated, squarer tags. Additional tools: inline text. */
+.journey-page .journey-overview__experience .technology-group h4 {
+  font-weight: 500;
+  letter-spacing: .035em;
+}
+.journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li {
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 8px;
+  background: #fdfdfd;
+  color: var(--paragraph-text);
+  font-weight: 400;
+  font-size: 12px;
+}
+:root[data-theme='dark'] .journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li {
+  background: #2a3a3f;
+  color: var(--paragraph-text);
+}
+.journey-page .journey-overview__experience .technology-group--additional .technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 0;
+  align-items: baseline;
+  padding: 0;
+  list-style: none;
+}
+.journey-page .journey-overview__experience .technology-group--additional .technology-list li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--paragraph-text);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.journey-page .journey-overview__experience .technology-group--additional .technology-list li:not(:last-child)::after {
+  content: ' · ';
+  white-space: pre;
+  color: var(--section-title-color);
 }
