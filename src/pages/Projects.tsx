@@ -574,7 +574,8 @@ export default function Projects() {
   const { t } = useTranslation('projects')
   const sections = t('sections', { returnObjects: true }) as ProjectSection[]
   const [selectedTechnology, setSelectedTechnology] = useState<string | null>(null)
-  const [showAllTechnologies, setShowAllTechnologies] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [activeSuggestion, setActiveSuggestion] = useState(0)
   const [technologySearch, setTechnologySearch] = useState('')
 
   // Newest projects appear first, but image numbers increase chronologically.
@@ -601,11 +602,19 @@ export default function Projects() {
   const allTechnologies = [...technologyCounts.keys()].sort((a, b) => a.localeCompare(b))
   const featuredFilters = ['React', 'Python 3', 'TypeScript', 'ESP8266', 'Zabbix', 'Java 21']
     .filter((technology) => technologyCounts.has(technology))
-  const additionalTechnologies = allTechnologies.filter(
-    (technology) =>
-      !featuredFilters.includes(technology) &&
-      technology.toLocaleLowerCase().includes(technologySearch.trim().toLocaleLowerCase()),
-  )
+  const searchTerm = technologySearch.trim().toLocaleLowerCase()
+  // Match any substring and common aliases, e.g. "udio" or "vscode".
+  const searchMatches = searchTerm
+    ? allTechnologies.filter((technology) => {
+        const lower = technology.toLocaleLowerCase()
+        const compact = lower.replace(/[\s._-]/g, '')
+        const aliases = technology === 'Visual Studio Code' ? ['vscode', 'vs code'] : []
+        return lower.includes(searchTerm) ||
+          compact.includes(searchTerm.replace(/[\s._-]/g, '')) ||
+          aliases.some((alias) => alias.includes(searchTerm))
+      })
+    : []
+  const visibleSuggestions = searchMatches.slice(0, 12)
   const filteredProjects = selectedTechnology
     ? projectsInDisplayOrder.filter((project) =>
         project.technologies.split('·').some((technology) => technology.trim() === selectedTechnology),
@@ -621,8 +630,9 @@ export default function Projects() {
 
   function selectTechnology(technology: string | null) {
     setSelectedTechnology(technology)
-    setShowAllTechnologies(false)
+    setSearchOpen(false)
     setTechnologySearch('')
+    setActiveSuggestion(0)
   }
 
   return (
@@ -656,42 +666,83 @@ export default function Projects() {
               {technology}
             </button>
           ))}
-          <button
-            type="button"
-            className={`project-filter__more${showAllTechnologies ? ' is-open' : ''}`}
-            aria-expanded={showAllTechnologies}
-            aria-controls="project-filter-more"
-            onClick={() => setShowAllTechnologies((open) => !open)}
+          <div
+            className="project-filter__search"
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) setSearchOpen(false)
+            }}
           >
-            {t('filter.more')} <span aria-hidden="true">{showAllTechnologies ? '−' : '+'}</span>
-          </button>
-        </div>
-        {showAllTechnologies && (
-          <div className="project-filter__more-panel" id="project-filter-more">
-            <label htmlFor="project-technology-search">{t('filter.searchLabel')}</label>
+            <label className="visually-hidden" htmlFor="project-technology-search">
+              {t('filter.searchLabel')}
+            </label>
             <input
               id="project-technology-search"
               type="search"
+              role="combobox"
+              autoComplete="off"
+              aria-autocomplete="list"
+              aria-expanded={searchOpen && searchTerm.length > 0}
+              aria-controls="project-technology-suggestions"
+              aria-activedescendant={searchOpen && visibleSuggestions[activeSuggestion]
+                ? `project-tech-option-${activeSuggestion}`
+                : undefined}
               placeholder={t('filter.searchPlaceholder')}
               value={technologySearch}
-              onChange={(event) => setTechnologySearch(event.target.value)}
+              onFocus={() => setSearchOpen(true)}
+              onChange={(event) => {
+                setTechnologySearch(event.target.value)
+                setSearchOpen(true)
+                setActiveSuggestion(0)
+              }}
+              onKeyDown={(event) => {
+                if (event.key === 'Escape') {
+                  setSearchOpen(false)
+                  return
+                }
+                if (event.key === 'ArrowDown' && visibleSuggestions.length > 0) {
+                  event.preventDefault()
+                  setSearchOpen(true)
+                  setActiveSuggestion((index) => Math.min(index + 1, visibleSuggestions.length - 1))
+                }
+                if (event.key === 'ArrowUp' && visibleSuggestions.length > 0) {
+                  event.preventDefault()
+                  setSearchOpen(true)
+                  setActiveSuggestion((index) => Math.max(index - 1, 0))
+                }
+                if (event.key === 'Enter' && searchOpen && visibleSuggestions.length > 0) {
+                  event.preventDefault()
+                  selectTechnology(visibleSuggestions[activeSuggestion] ?? visibleSuggestions[0])
+                }
+              }}
             />
-            <div className="project-filter__more-options">
-              {additionalTechnologies.length > 0 ? additionalTechnologies.map((technology) => (
-                <button
-                  type="button"
-                  className={`project-filter__chip${selectedTechnology === technology ? ' is-active' : ''}`}
-                  key={technology}
-                  aria-pressed={selectedTechnology === technology}
-                  onClick={() => selectTechnology(technology)}
-                >
-                  {technology}
-                  <span className="project-filter__count">{technologyCounts.get(technology)}</span>
-                </button>
-              )) : <p className="project-filter__empty">{t('filter.noTechnology')}</p>}
-            </div>
+            {searchOpen && searchTerm.length > 0 && (
+              <div
+                className="project-filter__suggestions"
+                id="project-technology-suggestions"
+                role="listbox"
+                aria-label={t('filter.searchLabel')}
+              >
+                {visibleSuggestions.length > 0 ? visibleSuggestions.map((technology, index) => (
+                  <button
+                    type="button"
+                    id={`project-tech-option-${index}`}
+                    key={technology}
+                    role="option"
+                    aria-selected={index === activeSuggestion}
+                    className={`project-filter__suggestion${index === activeSuggestion ? ' is-highlighted' : ''}`}
+                    onMouseEnter={() => setActiveSuggestion(index)}
+                    onMouseDown={(event) => event.preventDefault()}
+                    onClick={() => selectTechnology(technology)}
+                  >
+                    <span>{technology}</span>
+                    <span className="project-filter__count">{technologyCounts.get(technology)}</span>
+                  </button>
+                )) : (
+                  <div className="project-filter__empty">{t('filter.noTechnology')}</div>
+                )}
+              </div>
+            )}
           </div>
-        )}
       </div>
 
       {selectedTechnology ? (

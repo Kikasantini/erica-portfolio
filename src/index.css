@@ -4024,3 +4024,76 @@ p {
   .projects-page .project-filter__results-heading { flex-wrap: wrap; }
   .projects-page .project-filter__results-heading h2 { overflow-wrap: anywhere; }
 }
+
+/* Inline, substring-searchable technology combobox replacing "More technologies". */
+.projects-page .project-filter__search {
+  position: relative;
+  flex: 1 1 190px;
+  min-width: 165px;
+  max-width: 290px;
+  margin-left: auto;
+}
+.projects-page .project-filter__search input {
+  width: 100%;
+  min-height: 34px;
+  padding: 7px 11px;
+  border: 1px solid var(--outline-button-border-color);
+  border-radius: 7px;
+  background: var(--page-background);
+  color: var(--main-text);
+  font: inherit;
+  font-size: 12px;
+}
+.projects-page .project-filter__search input:focus-visible {
+  outline: 2px solid var(--section-title-color);
+  outline-offset: 2px;
+}
+.projects-page .project-filter__suggestions {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 5px;
+  border: 1px solid var(--outline-button-border-color);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .15);
+}
+.projects-page .project-filter__suggestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 34px;
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--main-text);
+  text-align: left;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.projects-page .project-filter__suggestion:hover,
+.projects-page .project-filter__suggestion.is-highlighted {
+  background: var(--navigation-hover-color);
+}
+.projects-page .project-filter__suggestion:focus-visible {
+  outline: 2px solid var(--section-title-color);
+  outline-offset: -2px;
+}
+.projects-page .project-filter__suggestions .project-filter__empty {
+  padding: 9px;
+}
+@media (max-width: 650px) {
+  .projects-page .project-filter__search {
+    flex: 1 1 100%;
+    max-width: none;
+    margin-left: 0;
+  }
+}
