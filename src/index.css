@@ -3017,7 +3017,7 @@ p {
   display: block;
   margin: 0;
   padding: 0;
-  line-height: 1.75;
+  line-height: 1.4;
 }
 .journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li,
 :root[data-theme='dark'] .journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li {
