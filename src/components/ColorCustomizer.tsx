@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const LIGHT_MODE_DEFAULTS = {
@@ -294,6 +294,7 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
   const [history, setHistory] = useState<ColorHistory>(stored.history)
   const [drafts, setDrafts] = useState<Partial<Record<ColorKey, string>>>({})
   const [copyStatus, setCopyStatus] = useState<'copied' | 'failed' | ''>('')
+  const pickerSession = useRef<{ key: ColorKey; theme: ThemeMode; original: string } | null>(null)
   useEffect(() => setDrafts({}), [theme])
   const colors = theme === 'dark' ? darkColors : lightColors
 
@@ -311,25 +312,55 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
     }
   }, [lightColors, darkColors, history])
 
-  function setColor(key: ColorKey, value: string) {
+  function savePreviousColor(mode: ThemeMode, key: ColorKey, original: string, latest: string) {
+    const previousColor = original.toLowerCase()
+    const selectedColor = latest.toLowerCase()
+    if (previousColor === selectedColor) return
+    setHistory(current => ({
+      ...current,
+      [mode]: {
+        ...current[mode],
+        [key]: [
+          previousColor,
+          ...(current[mode][key] ?? []).filter(color => color !== previousColor && color !== selectedColor)
+        ].slice(0, 2)
+      }
+    }))
+  }
+
+  function setColor(key: ColorKey, value: string, recordHistory = true) {
     if (!HEX_COLOR.test(value)) return
     const next = value.toLowerCase()
     const old = colors[key].toLowerCase()
     if (next === old) return
-    setHistory(previous => ({
-      ...previous,
-      [theme]: {
-        ...previous[theme],
-        [key]: [old, ...(previous[theme][key] ?? []).filter(color => color !== old && color !== next)].slice(0, 2)
-      }
-    }))
+    if (recordHistory) savePreviousColor(theme, key, old, next)
     const setter = theme === 'dark' ? setDarkColors : setLightColors
     setter(current => ({ ...current, [key]: next }))
   }
 
+  function beginPickerSession(key: ColorKey) {
+    if (pickerSession.current?.key === key && pickerSession.current.theme === theme) return
+    pickerSession.current = { key, theme, original: colors[key].toLowerCase() }
+  }
+
   function updateColor(key: ColorKey, value: string) {
-    setColor(key, value)
-    setDrafts((current) => ({ ...current, [key]: value }))
+    beginPickerSession(key)
+    // Preview is immediate, but the two recent swatches remain fixed while the picker is in use.
+    setColor(key, value, false)
+    setDrafts(current => ({ ...current, [key]: value }))
+  }
+
+  function finishPickerSession(key: ColorKey) {
+    const session = pickerSession.current
+    if (!session || session.key !== key) return
+    pickerSession.current = null
+    const currentColors = session.theme === 'dark' ? darkColors : lightColors
+    savePreviousColor(session.theme, key, session.original, currentColors[key])
+    setDrafts(current => {
+      const next = { ...current }
+      delete next[key]
+      return next
+    })
   }
 
   function updateHexDraft(key: ColorKey, value: string) {
@@ -437,9 +468,11 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
                           aria-label={t('colorEditor.pickerLabel', {
                             color: colorName
                           })}
+                          onFocus={() => beginPickerSession(colorKey)}
                           onChange={(event) =>
                             updateColor(colorKey, event.currentTarget.value)
                           }
+                          onBlur={() => finishPickerSession(colorKey)}
                         />
                         <input
                           className="color-customizer__hex"
