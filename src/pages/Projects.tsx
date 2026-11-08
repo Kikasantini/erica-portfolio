@@ -23,22 +23,16 @@ type ProjectSection = {
   items: ProjectItem[]
 }
 
-type Illustration = { src: string; format: 'wide' | 'square' }
-
-const PROJECT_ILLUSTRATIONS: Record<string, Illustration> = {
-  careerPilotAi: { src: '/images/project-illustrations/careerpilot_ai.webp', format: 'wide' },
-  productionCellSimulator: { src: '/images/project-illustrations/production_cell_simulator.webp', format: 'wide' },
-  portfolioWebsite: { src: '/images/project-illustrations/portfolio_website.webp', format: 'wide' },
-  runnerRpg: { src: '/images/project-illustrations/runnerrpg.webp', format: 'wide' },
-  esp8266WeatherStationGame: { src: '/images/project-illustrations/esp8266_weather_game.webp', format: 'wide' },
-  connectedWeatherStationZabbix: { src: '/images/project-illustrations/connected_weather_station_zabbix.webp', format: 'square' },
-  iotSensorMonitoringZabbixMqtt: { src: '/images/project-illustrations/iot_sensor_monitoring.webp', format: 'wide' },
-  translationCompany: { src: '/images/project-illustrations/translation_company_automation.webp', format: 'square' },
-}
-
 export default function Projects() {
   const { t } = useTranslation('projects')
   const sections = t('sections', { returnObjects: true }) as ProjectSection[]
+  // Keep image numbering consistent across all sections, in displayed order.
+  const illustrationPaths = new Map(
+    sections.flatMap((section) => section.items).map((project, index) => [
+      project.id,
+      `/images/project-illustrations/${String(index + 1).padStart(2, '0')}.jpg`,
+    ]),
+  )
 
   return (
     <main className="projects-page">
@@ -47,16 +41,16 @@ export default function Projects() {
           <h2>{section.title}</h2>
           <div className="project-list">
             {section.items.map((project) => {
-              const illustration = PROJECT_ILLUSTRATIONS[project.id]
+              const illustrationSrc = illustrationPaths.get(project.id)
               return (
-                <article className={`project-item project-item--editorial project-item--${illustration?.format ?? 'wide'}`} key={project.id}>
+                <article className="project-item project-item--editorial" key={project.id}>
                   {project.status && (
                     <span className="project-status">{project.status}</span>
                   )}
-                  {illustration && (
+                  {illustrationSrc && (
                     <div
-                      className={`project-item__illustration project-item__illustration--${illustration.format}`}
-                      style={{ backgroundImage: `url("${illustration.src}")` }}
+                      className="project-item__illustration"
+                      style={{ backgroundImage: `url("${illustrationSrc}")` }}
                       aria-hidden="true"
                     />
                   )}
