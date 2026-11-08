@@ -3270,14 +3270,14 @@ p {
 :root { --core-technologies-text: #435258; }
 :root[data-theme='dark'] { --core-technologies-text: #c5d2cf; }
 .journey-page .journey-overview__experience .technology-group h4 {
-  font-size: 13px;
-  line-height: 1.4;
+  font-size: 14px;
+  line-height: 1.35;
 }
 .journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list {
   display: block;
   margin: 0;
   padding: 0;
-  line-height: 1.7;
+  line-height: 1.35;
 }
 .journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li,
 :root[data-theme='dark'] .journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li {
@@ -3291,7 +3291,7 @@ p {
   color: var(--core-technologies-text);
   font-size: 13px;
   font-weight: 600;
-  line-height: 1.7;
+  line-height: inherit;
 }
 .journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li:not(:last-child)::after {
   content: ' · ';
