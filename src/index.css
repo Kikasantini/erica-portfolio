@@ -3125,7 +3125,7 @@ p {
   --badge-label-text: #c1e9e2;
   --badge-link: #69e4dc;
   --badge-link-hover: #119ca0;
-  --badge-thumbnail-border: #ffffff;
+  --badge-thumbnail-border: #203a40;
 }
 .journey-page .journey-overview__experience .experience-timeline__entry:nth-child(even)::after {
   background: var(--experience-alternate-background);
