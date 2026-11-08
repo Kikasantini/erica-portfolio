@@ -72,7 +72,9 @@ function ExperienceEntry({ item }: { item: ExperienceItem }) {
       </button>
       <h3>{item.role}</h3>
       <p className="timeline-item__meta">
-        {item.company} · {item.location}
+        <span>{item.company}</span>
+        <span className="journey-meta-divider" aria-hidden="true" />
+        <span>{item.location}</span>
       </p>
       <p className="timeline-item__period">{item.period}</p>
 
@@ -147,7 +149,9 @@ export default function Journey() {
                 <article className="timeline-item" key={item.id}>
                   <h3>{item.program}</h3>
                   <p className="timeline-item__meta">
-                    {item.institution} · {item.location}
+                    <span>{item.institution}</span>
+                  <span className="journey-meta-divider" aria-hidden="true" />
+                  <span>{item.location}</span>
                   </p>
                   <p className="timeline-item__period">{item.period}</p>
                   <ul className="journey-details">

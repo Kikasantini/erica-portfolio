@@ -3035,3 +3035,20 @@ p {
     transition: none;
   }
 }
+
+/* Company/institution and location are separated by a subtle vertical rule. */
+.journey-page .journey-overview .timeline-item__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 9px;
+  row-gap: 2px;
+}
+.journey-page .journey-meta-divider {
+  display: inline-block;
+  width: 1px;
+  height: 0.9em;
+  flex: 0 0 1px;
+  background: var(--meta-text);
+  opacity: .65;
+}
