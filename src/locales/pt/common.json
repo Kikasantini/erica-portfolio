@@ -29,7 +29,8 @@
       "projectCards": "Cards de projetos",
       "certificates": "Certificados e badges",
       "projectTags": "Tags de tecnologias dos projetos",
-      "coreTechnologies": "Texto das tecnologias principais"
+      "coreTechnologies": "Texto das tecnologias principais",
+      "projectBack": "Verso dos cards de projetos"
     },
     "fields": {
       "pageBackground": "Fundo da página",
@@ -74,7 +75,15 @@
       "projectTagBackground": "Fundo das tags",
       "projectTagBorder": "Borda das tags",
       "projectTagText": "Texto das tags",
-      "coreTechnologiesText": "Nomes das tecnologias principais"
+      "coreTechnologiesText": "Nomes das tecnologias principais",
+      "projectBackBackground": "Fundo do verso",
+      "projectBackBorder": "Borda do verso",
+      "projectBackHeading": "Título do projeto no verso",
+      "projectBackLabel": "Título das categorias no verso",
+      "projectBackTechnology": "Nomes das tecnologias no verso",
+      "projectBackIcon": "Ícones das categorias no verso",
+      "projectBackDivider": "Divisórias do verso",
+      "projectBackLink": "Link de retorno no verso"
     },
     "pickerLabel": "Escolher cor de {color}",
     "hexLabel": "Valor hexadecimal de {color}",

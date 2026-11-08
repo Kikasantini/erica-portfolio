@@ -44,7 +44,15 @@ const LIGHT_MODE_DEFAULTS = {
   "projectTagBackground": "#e8f1f0",
   "projectTagBorder": "#ccdddd",
   "projectTagText": "#1e6971",
-  "coreTechnologiesText": "#435258"
+  "coreTechnologiesText": "#435258",
+  "projectBackBackground": "#ffffff",
+  "projectBackBorder": "#becbca",
+  "projectBackHeading": "#16324f",
+  "projectBackLabel": "#257c83",
+  "projectBackTechnology": "#2a3e47",
+  "projectBackIcon": "#257c83",
+  "projectBackDivider": "#d4dddd",
+  "projectBackLink": "#137a80"
 } as const
 type ColorKey = keyof typeof LIGHT_MODE_DEFAULTS
 type ColorPalette = Record<ColorKey, string>
@@ -93,7 +101,15 @@ const DARK_MODE_DEFAULTS: ColorPalette = {
   "projectTagBackground": "#27383a",
   "projectTagBorder": "#384c50",
   "projectTagText": "#b3d4ca",
-  "coreTechnologiesText": "#c5d2cf"
+  "coreTechnologiesText": "#c5d2cf",
+  "projectBackBackground": "#272e32",
+  "projectBackBorder": "#425054",
+  "projectBackHeading": "#e5ebee",
+  "projectBackLabel": "#91b4ae",
+  "projectBackTechnology": "#b7c1c7",
+  "projectBackIcon": "#91b4ae",
+  "projectBackDivider": "#3e4b50",
+  "projectBackLink": "#69e4dc"
 }
 const CSS_VARIABLES: Record<ColorKey, string> = {
   "pageBackground": "--page-background",
@@ -138,7 +154,15 @@ const CSS_VARIABLES: Record<ColorKey, string> = {
   "projectTagBackground": "--project-tag-background",
   "projectTagBorder": "--project-tag-border",
   "projectTagText": "--project-tag-text",
-  "coreTechnologiesText": "--core-technologies-text"
+  "coreTechnologiesText": "--core-technologies-text",
+  "projectBackBackground": "--project-card-back-background",
+  "projectBackBorder": "--project-card-back-border",
+  "projectBackHeading": "--project-card-back-heading",
+  "projectBackLabel": "--project-card-back-label",
+  "projectBackTechnology": "--project-card-back-technology",
+  "projectBackIcon": "--project-card-back-icon",
+  "projectBackDivider": "--project-card-back-divider",
+  "projectBackLink": "--project-card-back-link"
 }
 const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
   {
@@ -218,12 +242,20 @@ const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
       "badgeThumbnailBorder"
     ]
   },
+  {"id": "projectBack", "keys": ["projectBackBackground", "projectBackBorder", "projectBackHeading", "projectBackLabel", "projectBackIcon", "projectBackDivider", "projectBackLink"]},
   {
     "id": "projectCards",
     "keys": [
       "projectCardBackground",
       "projectCardBorder",
       "projectCardMediaBackground",
+      "projectBackBackground",
+      "projectBackBorder",
+      "projectBackHeading",
+      "projectBackLabel",
+      "projectBackIcon",
+      "projectBackDivider",
+      "projectBackLink",
       "statusSurface",
       "statusBorder",
       "statusText"
@@ -244,7 +276,20 @@ function readStoredColors(): { light: ColorPalette; dark: ColorPalette; history:
     for (const mode of ['light', 'dark'] as const) {
       for (const key of Object.keys(CSS_VARIABLES) as ColorKey[]) {
         const color = saved?.[mode]?.[key]
-        if (typeof color === 'string' && HEX_COLOR.test(color)) state[mode][key] = color.toLowerCase()
+        if (typeof color === 'string' && HEX_COLOR.test(color)) {
+          const normalized = color.toLowerCase()
+          const previousDefaults: Partial<Record<ColorKey, { light: string; dark: string }>> = {
+            projectBackBackground: { light: '#f2f4f4', dark: '#223139' },
+            projectBackBorder: { light: '#b6cecb', dark: '#456063' },
+            projectBackDivider: { light: '#ccdcda', dark: '#34484d' },
+            projectBackTechnology: { light: '#435258', dark: '#c5d2cf' }
+          }
+          // Keep genuinely customized values, but update the previous built-in palette.
+          state[mode][key] = (normalized === previousDefaults[key]?.[mode] ||
+            (key === 'projectBackBackground' && mode === 'light' && normalized === '#eef5f2'))
+            ? (mode === 'light' ? LIGHT_MODE_DEFAULTS : DARK_MODE_DEFAULTS)[key]
+            : normalized
+        }
         const recent = saved?.history?.[mode]?.[key]
         if (Array.isArray(recent)) {
           state.history[mode][key] = [...new Set(recent.filter((c): c is string => typeof c === 'string' && HEX_COLOR.test(c)).map((c: string) => c.toLowerCase()))].slice(0, 2)

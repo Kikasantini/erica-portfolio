@@ -154,7 +154,6 @@ export default function Journey() {
                   />
                   <div className="certificate-item__content">
                     <div className="certificate-item__header">
-                      <span className="certificate-item__kind">{t('digitalBadge')}</span>
                       <h3>{certificate.title}</h3>
                       <p className="certificate-item__detail">
                         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">

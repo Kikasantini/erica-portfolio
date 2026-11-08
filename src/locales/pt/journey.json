@@ -27,18 +27,18 @@
       "location": "Montreal, QC, Canada",
       "period": "Fevereiro de 2024 - outubro de 2026",
       "details": [
+        "Como parte da equipe de desenvolvimento do Aquiweb, desenvolvi e fiz deploy de funcionalidades full-stack para clientes cujos sistemas MES atendiam mais de 100 pessoas, incluindo gestores e operadores de fábrica, apoiando fluxos de produção, estoque e equipamentos.",
         "Desenvolvi novas funcionalidades no backend e adaptei funcionalidades existentes à lógica de negócio e aos processos de fabricação de cada cliente.",
         "Criei e modifiquei fluxos de trabalho e interfaces frontend para usuários de um sistema MES corporativo.",
-        "Como parte da equipe de desenvolvimento do Aquiweb, desenvolvi e fiz deploy de funcionalidades full-stack para clientes cujos sistemas MES atendiam mais de 100 pessoas, incluindo gestores e operadores de fábrica, apoiando fluxos de produção, estoque e equipamentos.",
         "Criei integrações com APIs REST e fluxos de importação e exportação de dados, incluindo importações de ordens de produção que conectavam o Aquiweb a APIs e outros softwares.",
         "Criei um fluxo de importação CSV que processava mais de 20 mil operações complexas em várias ordens de produção, algumas com centenas de operações. Adicionei validação, processamento pós-importação e criação de dependências, com rollback transacional para evitar importações parciais.",
-        "Gerei relatórios personalizados para clientes com JasperReports.",
-        "Trabalhei em processos de fabricação e estoque que envolviam registro da produção, consumo de materiais, uso do estoque, unidades de movimentação e comportamentos específicos de equipamentos.",
         "Implementei validações de quantidades necessárias e estoque disponível, incluindo uma regra que impedia informar consumo de materiais acima do estoque disponível.",
+        "Trabalhei em processos de fabricação e estoque que envolviam registro da produção, consumo de materiais, uso do estoque, unidades de movimentação e comportamentos específicos de equipamentos.",
+        "Gerei relatórios personalizados para clientes com JasperReports.",
         "Investiguei problemas em produção usando logs, consultas SQL e fluxos dos usuários; reproduzi os problemas, rastreei causas, testei correções e apoiei releases.",
         "Participei de testes unitários, funcionais e de regressão, revisões de código, documentação técnica e fluxos de CI/CD com GitLab e Jenkins, incluindo builds, integrações, deploys e validação em produção.",
-        "Participei do planejamento de sprints e das estimativas usando Planning Poker.",
         "Colaborei com desenvolvedores, consultores funcionais, clientes e outras partes interessadas para esclarecer requisitos e entregar funcionalidades adequadas aos usuários e processos envolvidos.",
+        "Participei do planejamento de sprints e das estimativas usando Planning Poker.",
         "Usei OpenAI Codex para entender a base de código, depurar problemas, apoiar testes e documentação e explorar soluções."
       ],
       "coreTechnologies": [
