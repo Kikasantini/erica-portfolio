@@ -41,15 +41,10 @@ const LIGHT_MODE_DEFAULTS = {
   "badgeLink": "#137a80",
   "badgeLinkHover": "#119ca0",
   "badgeThumbnailBorder": "#121212",
-  "journeyPlainTagBackground": "#fdfdfd",
-  "journeyPlainTagBorder": "#b8b8b8",
-  "journeyPlainTagText": "#435258",
-  "journeyAlternateTagBackground": "#f5f5f5",
-  "journeyAlternateTagBorder": "#9db4aa",
-  "journeyAlternateTagText": "#435258",
   "projectTagBackground": "#e8f1f0",
   "projectTagBorder": "#ccdddd",
-  "projectTagText": "#1e6971"
+  "projectTagText": "#1e6971",
+  "coreTechnologiesText": "#435258"
 } as const
 type ColorKey = keyof typeof LIGHT_MODE_DEFAULTS
 type ColorPalette = Record<ColorKey, string>
@@ -95,15 +90,10 @@ const DARK_MODE_DEFAULTS: ColorPalette = {
   "badgeLink": "#69e4dc",
   "badgeLinkHover": "#119ca0",
   "badgeThumbnailBorder": "#ffffff",
-  "journeyPlainTagBackground": "#2a3a3f",
-  "journeyPlainTagBorder": "#2a3a3f",
-  "journeyPlainTagText": "#c5d2cf",
-  "journeyAlternateTagBackground": "#32484d",
-  "journeyAlternateTagBorder": "#32484d",
-  "journeyAlternateTagText": "#c5d2cf",
   "projectTagBackground": "#27383a",
   "projectTagBorder": "#384c50",
-  "projectTagText": "#b3d4ca"
+  "projectTagText": "#b3d4ca",
+  "coreTechnologiesText": "#c5d2cf"
 }
 const CSS_VARIABLES: Record<ColorKey, string> = {
   "pageBackground": "--page-background",
@@ -145,15 +135,10 @@ const CSS_VARIABLES: Record<ColorKey, string> = {
   "badgeLink": "--badge-link",
   "badgeLinkHover": "--badge-link-hover",
   "badgeThumbnailBorder": "--badge-thumbnail-border",
-  "journeyPlainTagBackground": "--journey-plain-tag-background",
-  "journeyPlainTagBorder": "--journey-plain-tag-border",
-  "journeyPlainTagText": "--journey-plain-tag-text",
-  "journeyAlternateTagBackground": "--journey-alternate-tag-background",
-  "journeyAlternateTagBorder": "--journey-alternate-tag-border",
-  "journeyAlternateTagText": "--journey-alternate-tag-text",
   "projectTagBackground": "--project-tag-background",
   "projectTagBorder": "--project-tag-border",
-  "projectTagText": "--project-tag-text"
+  "projectTagText": "--project-tag-text",
+  "coreTechnologiesText": "--core-technologies-text"
 }
 const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
   {
@@ -197,19 +182,9 @@ const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
     ]
   },
   {
-    "id": "journeyPlainTags",
+    "id": "coreTechnologies",
     "keys": [
-      "journeyPlainTagBackground",
-      "journeyPlainTagBorder",
-      "journeyPlainTagText"
-    ]
-  },
-  {
-    "id": "journeyAlternateTags",
-    "keys": [
-      "journeyAlternateTagBackground",
-      "journeyAlternateTagBorder",
-      "journeyAlternateTagText"
+      "coreTechnologiesText"
     ]
   },
   {

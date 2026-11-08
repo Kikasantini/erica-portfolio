@@ -3218,38 +3218,14 @@ p {
 
 /* Three independently editable technology chip palettes. */
 :root {
-  --journey-plain-tag-background: #fdfdfd;
-  --journey-plain-tag-border: #b8b8b8;
-  --journey-plain-tag-text: #435258;
-  --journey-alternate-tag-background: #f5f5f5;
-  --journey-alternate-tag-border: #9db4aa;
-  --journey-alternate-tag-text: #435258;
   --project-tag-background: #e8f1f0;
   --project-tag-border: #ccdddd;
   --project-tag-text: #1e6971;
 }
 :root[data-theme='dark'] {
-  --journey-plain-tag-background: #2a3a3f;
-  --journey-plain-tag-border: #2a3a3f;
-  --journey-plain-tag-text: #c5d2cf;
-  --journey-alternate-tag-background: #32484d;
-  --journey-alternate-tag-border: #32484d;
-  --journey-alternate-tag-text: #c5d2cf;
   --project-tag-background: #27383a;
   --project-tag-border: #384c50;
   --project-tag-text: #b3d4ca;
-}
-.journey-page .journey-overview__experience .experience-timeline__entry:nth-child(odd) .technology-group:not(.technology-group--additional) .technology-list li,
-:root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__entry:nth-child(odd) .technology-group:not(.technology-group--additional) .technology-list li {
-  background: var(--journey-plain-tag-background);
-  border: 1px solid var(--journey-plain-tag-border);
-  color: var(--journey-plain-tag-text);
-}
-.journey-page .journey-overview__experience .experience-timeline__entry:nth-child(even) .technology-group:not(.technology-group--additional) .technology-list li,
-:root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__entry:nth-child(even) .technology-group:not(.technology-group--additional) .technology-list li {
-  background: var(--journey-alternate-tag-background);
-  border: 1px solid var(--journey-alternate-tag-border);
-  color: var(--journey-alternate-tag-text);
 }
 .projects-page .project-item__technologies .technology-list {
   display: flex;
@@ -3288,4 +3264,43 @@ p {
   .color-customizer__hex { width: 74px; }
   .color-customizer__swatch { width: 32px; }
   .color-customizer__recent-swatch { width: 20px; height: 20px; }
+}
+
+/* Core technologies: compact bold text with unobtrusive inline separators. */
+:root { --core-technologies-text: #435258; }
+:root[data-theme='dark'] { --core-technologies-text: #c5d2cf; }
+.journey-page .journey-overview__experience .technology-group h4 {
+  font-size: 13px;
+  line-height: 1.4;
+}
+.journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+.journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li,
+:root[data-theme='dark'] .journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--core-technologies-text);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li:not(:last-child)::after {
+  content: ' · ';
+  white-space: pre;
+  font-weight: 400;
+  color: var(--meta-text);
+}
+/* Keep the timeline airy without adding separators or changing the icon positions. */
+.journey-page .journey-overview__experience .timeline-item:not(:last-child) {
+  padding-bottom: 0;
+  margin-bottom: 42px;
 }

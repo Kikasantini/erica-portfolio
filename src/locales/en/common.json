@@ -28,9 +28,8 @@
       "timeline": "Timeline",
       "projectCards": "Project cards",
       "certificates": "Certificates & badges",
-      "journeyPlainTags": "Journey tags · page background",
-      "journeyAlternateTags": "Journey tags · alternate background",
-      "projectTags": "Project technology tags"
+      "projectTags": "Project technology tags",
+      "coreTechnologies": "Core Technologies text"
     },
     "fields": {
       "pageBackground": "Page background",
@@ -72,15 +71,10 @@
       "badgeLink": "Verify badge link",
       "badgeLinkHover": "Verify badge link hover",
       "badgeThumbnailBorder": "Badge thumbnail border",
-      "journeyPlainTagBackground": "Tag background",
-      "journeyPlainTagBorder": "Tag border",
-      "journeyPlainTagText": "Tag text",
-      "journeyAlternateTagBackground": "Tag background",
-      "journeyAlternateTagBorder": "Tag border",
-      "journeyAlternateTagText": "Tag text",
       "projectTagBackground": "Tag background",
       "projectTagBorder": "Tag border",
-      "projectTagText": "Tag text"
+      "projectTagText": "Tag text",
+      "coreTechnologiesText": "Core technology names"
     },
     "pickerLabel": "Choose {color} color",
     "hexLabel": "Hex value for {color}",

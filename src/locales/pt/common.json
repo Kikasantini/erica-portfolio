@@ -28,9 +28,8 @@
       "timeline": "Linha do tempo",
       "projectCards": "Cards de projetos",
       "certificates": "Certificados e badges",
-      "journeyPlainTags": "Tags Journey · fundo da página",
-      "journeyAlternateTags": "Tags Journey · fundo alternado",
-      "projectTags": "Tags de tecnologias dos projetos"
+      "projectTags": "Tags de tecnologias dos projetos",
+      "coreTechnologies": "Texto das tecnologias principais"
     },
     "fields": {
       "pageBackground": "Fundo da página",
@@ -72,15 +71,10 @@
       "badgeLink": "Link de verificação da badge",
       "badgeLinkHover": "Link ao passar o mouse",
       "badgeThumbnailBorder": "Borda da thumbnail da badge",
-      "journeyPlainTagBackground": "Fundo das tags",
-      "journeyPlainTagBorder": "Borda das tags",
-      "journeyPlainTagText": "Texto das tags",
-      "journeyAlternateTagBackground": "Fundo das tags",
-      "journeyAlternateTagBorder": "Borda das tags",
-      "journeyAlternateTagText": "Texto das tags",
       "projectTagBackground": "Fundo das tags",
       "projectTagBorder": "Borda das tags",
-      "projectTagText": "Texto das tags"
+      "projectTagText": "Texto das tags",
+      "coreTechnologiesText": "Nomes das tecnologias principais"
     },
     "pickerLabel": "Escolher cor de {color}",
     "hexLabel": "Valor hexadecimal de {color}",

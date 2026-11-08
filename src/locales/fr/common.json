@@ -28,9 +28,8 @@
       "timeline": "Chronologie",
       "projectCards": "Cartes de projet",
       "certificates": "Certificats et badges",
-      "journeyPlainTags": "Étiquettes Journey · fond normal",
-      "journeyAlternateTags": "Étiquettes Journey · fond alterné",
-      "projectTags": "Étiquettes des technologies des projets"
+      "projectTags": "Étiquettes des technologies des projets",
+      "coreTechnologies": "Texte des technologies principales"
     },
     "fields": {
       "pageBackground": "Arrière-plan de la page",
@@ -72,15 +71,10 @@
       "badgeLink": "Lien de vérification du badge",
       "badgeLinkHover": "Lien de vérification au survol",
       "badgeThumbnailBorder": "Bordure de la vignette du badge",
-      "journeyPlainTagBackground": "Fond des étiquettes",
-      "journeyPlainTagBorder": "Bordure des étiquettes",
-      "journeyPlainTagText": "Texte des étiquettes",
-      "journeyAlternateTagBackground": "Fond des étiquettes",
-      "journeyAlternateTagBorder": "Bordure des étiquettes",
-      "journeyAlternateTagText": "Texte des étiquettes",
       "projectTagBackground": "Fond des étiquettes",
       "projectTagBorder": "Bordure des étiquettes",
-      "projectTagText": "Texte des étiquettes"
+      "projectTagText": "Texte des étiquettes",
+      "coreTechnologiesText": "Noms des technologies principales"
     },
     "pickerLabel": "Choisir la couleur pour {color}",
     "hexLabel": "Valeur hexadécimale pour {color}",
