@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 type ProjectImage = {
@@ -21,6 +22,24 @@ type ProjectSection = {
   id: string
   title: string
   items: ProjectItem[]
+}
+
+// Missing JPGs should not leave an empty media area in their cards.
+function ProjectIllustration({ src }: { src: string }) {
+  const [loadFailed, setLoadFailed] = useState(false)
+
+  if (loadFailed) return null
+
+  return (
+    <img
+      className="project-item__illustration"
+      src={src}
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      onError={() => setLoadFailed(true)}
+    />
+  )
 }
 
 export default function Projects() {
@@ -49,13 +68,7 @@ export default function Projects() {
                   {project.status && (
                     <span className="project-status">{project.status}</span>
                   )}
-                  {illustrationSrc && (
-                    <div
-                      className="project-item__illustration"
-                      style={{ backgroundImage: `url("${illustrationSrc}")` }}
-                      aria-hidden="true"
-                    />
-                  )}
+                  {illustrationSrc && <ProjectIllustration src={illustrationSrc} />}
 
                   <div className="project-item__content">
                     <div className="project-item__title-row">

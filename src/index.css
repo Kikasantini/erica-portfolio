@@ -3596,3 +3596,49 @@ p {
     font-size: 12px;
   }
 }
+
+/* Projects: natural image dimensions, no reserved media area.
+   Equal card heights are determined by each CSS grid row.
+   The technology section stays at the bottom without cropping content. */
+.projects-page .project-list {
+  align-items: stretch;
+}
+.projects-page .project-item.project-item--editorial {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  padding: 0;
+}
+.projects-page .project-item.project-item--editorial img.project-item__illustration {
+  display: block;
+  flex: 0 0 auto;
+  align-self: stretch;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 11px 11px 0 0;
+  background: transparent;
+  object-fit: initial;
+  pointer-events: none;
+}
+.projects-page .project-item.project-item--editorial .project-item__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
+  padding: 17px 15px 15px;
+}
+.projects-page .project-item.project-item--editorial .project-item__highlights {
+  flex: 0 0 auto;
+}
+.projects-page .project-item.project-item--editorial .project-item__technologies {
+  margin-top: auto;
+  padding-top: 17px;
+}
