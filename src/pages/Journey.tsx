@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 type CertificateItem = {
@@ -30,46 +30,6 @@ type EducationItem = {
   location: string
   period: string
   details: string[]
-}
-
-function CollapsibleJourneySection({
-  id,
-  title,
-  children,
-}: {
-  id: string
-  title: string
-  children: ReactNode
-}) {
-  const [isExpanded, setIsExpanded] = useState(true)
-  const { t } = useTranslation('journey')
-  const contentId = 'journey-section-' + id
-
-  return (
-    <section className={`journey-section${isExpanded ? '' : ' journey-section--collapsed'}`}>
-      <h2>
-        <button
-          className="journey-section__toggle"
-          type="button"
-          aria-expanded={isExpanded}
-          aria-controls={contentId}
-          onClick={() => setIsExpanded((expanded) => !expanded)}
-        >
-          <span>{title}</span>
-          <span className="journey-section__action">
-            <span>{t(isExpanded ? 'hideSection' : 'showSection')}</span>
-            <span
-              className={`journey-section__chevron${isExpanded ? ' is-expanded' : ''}`}
-              aria-hidden="true"
-            />
-          </span>
-        </button>
-      </h2>
-      <div id={contentId} hidden={!isExpanded}>
-        {children}
-      </div>
-    </section>
-  )
 }
 
 function ExperienceEntry({ item }: { item: ExperienceItem }) {
@@ -129,6 +89,7 @@ export default function Journey() {
   const education = t('education', {
     returnObjects: true,
   }) as EducationItem[]
+  const [activeTab, setActiveTab] = useState<'experience' | 'education' | 'certificates'>('experience')
   const [activeCertificate, setActiveCertificate] = useState<
     CertificateItem | null
   >(null)
@@ -156,11 +117,37 @@ export default function Journey() {
 
   return (
     <main className="journey-page">
-      <header className="subpage-intro"><h1>{t('title')}</h1></header>
-      <CollapsibleJourneySection
-        id="certificates"
-        title={t('certificatesTitle')}
-      >
+      <header className="subpage-intro">
+        <h1>{t('title')}</h1>
+        <div className="journey-tabs" role="tablist" aria-label={t('title')}>
+          {([
+            ['experience', t('experienceTitle')],
+            ['education', t('educationTitle')],
+            ['certificates', t('certificatesTitle')],
+          ] as const).map(([id, label]) => (
+            <button
+              type="button"
+              role="tab"
+              id={'journey-tab-' + id}
+              aria-controls={'journey-panel-' + id}
+              aria-selected={activeTab === id}
+              tabIndex={activeTab === id ? 0 : -1}
+              className={'journey-tab' + (activeTab === id ? ' is-active' : '')}
+              key={id}
+              onClick={() => setActiveTab(id)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      </header>
+      {activeTab === 'certificates' && (
+        <section
+          id="journey-panel-certificates"
+          role="tabpanel"
+          aria-labelledby="journey-tab-certificates"
+          className="journey-section journey-tab-panel"
+        >
         <div className="certificate-list">
           {certificates.map((certificate) => (
             <article className="certificate-item" key={certificate.id}>
@@ -202,21 +189,31 @@ export default function Journey() {
             </article>
           ))}
         </div>
-      </CollapsibleJourneySection>
+        </section>
+      )}
 
-      <CollapsibleJourneySection
-        id="experience"
-        title={t('experienceTitle')}
-      >
+      {activeTab === 'experience' && (
+        <section
+          id="journey-panel-experience"
+          role="tabpanel"
+          aria-labelledby="journey-tab-experience"
+          className="journey-section journey-tab-panel"
+        >
         <div className="timeline">
           {experience.map((item) => (
             <ExperienceEntry item={item} key={item.id} />
           ))}
         </div>
-      </CollapsibleJourneySection>
+        </section>
+      )}
 
-      <section className="journey-section journey-section--static">
-        <h2>{t('educationTitle')}</h2>
+      {activeTab === 'education' && (
+        <section
+          id="journey-panel-education"
+          role="tabpanel"
+          aria-labelledby="journey-tab-education"
+          className="journey-section journey-tab-panel"
+        >
         <div className="timeline">
           {education.map((item) => (
             <article className="timeline-item" key={item.id}>
@@ -233,7 +230,8 @@ export default function Journey() {
             </article>
           ))}
         </div>
-      </section>
+        </section>
+      )}
 
       {activeCertificate && (
         <div className="media-viewer" onClick={() => setActiveCertificate(null)}>

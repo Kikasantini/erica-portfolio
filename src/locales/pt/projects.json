@@ -62,26 +62,6 @@
               "type": "image",
               "src": "/projects/runner-rpg/gameplay-03.jpg",
               "alt": "Imagem 3 do RunnerRPG"
-            },
-            {
-              "type": "video",
-              "src": "/projects/runner-rpg/gameplay.mp4",
-              "alt": "Vídeo de gameplay do RunnerRPG"
-            },
-            {
-              "type": "image",
-              "src": "/projects/runner-rpg/gameplay-01.jpg",
-              "alt": "Captura de tela do RunnerRPG"
-            },
-            {
-              "type": "image",
-              "src": "/projects/runner-rpg/gameplay-02.jpg",
-              "alt": "Imagem 2 do RunnerRPG"
-            },
-            {
-              "type": "image",
-              "src": "/projects/runner-rpg/gameplay-04.jpg",
-              "alt": "Imagem 4 do RunnerRPG"
             }
           ],
           "highlights": [
@@ -99,28 +79,8 @@
           "media": [
             {
               "type": "image",
-              "src": "/projects/esp8266-weather-station-game/hardware-prototype.jpeg",
-              "alt": "Protótipo com ESP8266 na protoboard e o display OLED mostrando o placar final."
-            },
-            {
-              "type": "video",
-              "src": "https://raw.githubusercontent.com/Kikasantini/esp8266-weather-station-game/main/project-demo.mp4",
-              "alt": "Demonstração da estação meteorológica conectada e do desafio de leitura binária."
-            },
-            {
-              "type": "image",
-              "src": "/projects/esp8266-weather-station-game/web-interface-home.jpg",
-              "alt": "Página inicial da interface web local do projeto ESP8266."
-            },
-            {
-              "type": "image",
               "src": "/projects/esp8266-weather-station-game/wiring-diagram.png",
               "alt": "Esquema elétrico do ESP8266, do display SSD1306 e do BME280."
-            },
-            {
-              "type": "image",
-              "src": "/projects/esp8266-weather-station-game/breadboard-layout.png",
-              "alt": "Montagem na protoboard com as conexões do projeto ESP8266."
             }
           ],
           "highlights": [
@@ -140,11 +100,6 @@
               "type": "image",
               "src": "/projects/connected-weather-station-zabbix/wiring-diagram.png",
               "alt": "Esquema de conexão das duas placas ESP8266, do sensor BME280, do display SSD1306, das LEDs, dos botões e do potenciômetro."
-            },
-            {
-              "type": "video",
-              "src": "https://raw.githubusercontent.com/Kikasantini/connected-weather-station-zabbix/main/media/full-project-demo.mp4",
-              "alt": "Demonstração completa da estação meteorológica conectada, do display MicroPython e do monitoramento com Zabbix."
             }
           ],
           "highlights": [
@@ -164,16 +119,6 @@
               "type": "image",
               "src": "/projects/iot-sensor-monitoring-zabbix-mqtt/conceptual-architecture.png",
               "alt": "Diagrama conceitual da arquitetura com três microcontroladores (duas placas ESP8266 e uma ESP32), sensores, Mosquitto, Zabbix e fluxo de dados."
-            },
-            {
-              "type": "image",
-              "src": "/projects/iot-sensor-monitoring-zabbix-mqtt/electronic-wiring.png",
-              "alt": "Esquema de conexão das três placas de microcontrolador e seus sensores."
-            },
-            {
-              "type": "video",
-              "src": "https://raw.githubusercontent.com/Kikasantini/iot-sensor-monitoring-zabbix-mqtt/main/media/project-demo.mp4",
-              "alt": "Demonstração do projeto de monitoramento IoT com três microcontroladores, MQTT e Zabbix."
             }
           ],
           "highlights": [
