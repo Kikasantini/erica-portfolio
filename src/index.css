@@ -4142,12 +4142,12 @@ p {
 .journey-page .journey-overview__certificates .certificate-item,
 :root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item {
   display: grid;
-  grid-template-columns: minmax(90px, 132px) minmax(0, 1fr);
+  grid-template-columns: minmax(90px, 119px) minmax(0, 1fr);
   align-items: center;
   gap: 22px;
   padding: 18px 0;
   border: 0;
-  border-bottom: 1px solid var(--soft-border);
+  border-bottom: 0;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
@@ -4157,7 +4157,7 @@ p {
 }
 .journey-page .journey-overview__certificates .certificate-item__thumbnail {
   width: 100%;
-  max-width: 132px;
+  max-width: 119px;
   height: auto;
   aspect-ratio: 1 / 1;
   object-fit: contain;
@@ -4182,11 +4182,15 @@ p {
 .journey-page .journey-overview__certificates .certificate-item__header h3 {
   order: 0;
   margin: 0 0 5px;
-  padding: 0 112px 0 0;
+  padding: 0;
   color: var(--heading-color);
   font-size: 19px;
   font-weight: 600;
   line-height: 1.35;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .journey-page .journey-overview__certificates .certificate-item__detail {
   font-size: 13px;
@@ -4198,26 +4202,16 @@ p {
   height: 16px;
   flex: 0 0 16px;
 }
-.journey-page .journey-overview__certificates .certificate-item__kind {
-  position: absolute;
-  inset: 0 0 auto auto;
-  align-self: auto;
-  order: 0;
-  margin: 0;
-  padding: 4px 11px;
-  font-size: 11px;
-  white-space: nowrap;
-}
 @media (max-width: 650px) {
   .journey-page .journey-overview__certificates .certificate-item,
   :root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item {
-    grid-template-columns: minmax(76px, 100px) minmax(0, 1fr);
+    grid-template-columns: minmax(68px, 90px) minmax(0, 1fr);
     gap: 12px;
     padding: 15px 0;
   }
   .journey-page .journey-overview__certificates .certificate-item__thumbnail {
     width: 100%;
-    max-width: 100px;
+    max-width: 90px;
   }
   .journey-page .journey-overview__certificates .certificate-item__content {
     padding: 0 0 0 13px;
@@ -4226,20 +4220,12 @@ p {
     padding-right: 0;
     font-size: 16px;
   }
-  .journey-page .journey-overview__certificates .certificate-item__kind {
-    position: static;
-    order: -1;
-    align-self: flex-start;
-    margin-bottom: 2px;
-    padding: 3px 8px;
-    font-size: 10px;
-  }
   .journey-page .journey-overview__certificates .certificate-item__detail { font-size: 12px; }
 }
 @media (max-width: 380px) {
   .journey-page .journey-overview__certificates .certificate-item,
   :root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item {
-    grid-template-columns: 78px minmax(0, 1fr);
+    grid-template-columns: 70px minmax(0, 1fr);
     gap: 9px;
   }
 }
