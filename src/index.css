@@ -3164,3 +3164,61 @@ p {
 .journey-page .journey-overview__certificates .certificate-item__link:hover {
   color: var(--badge-link-hover);
 }
+
+/* Recent palettes: two clickable swatches underneath each field. */
+.color-customizer__field {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 5px 10px;
+}
+.color-customizer__recent {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  padding-bottom: 3px;
+}
+.color-customizer__recent-swatch {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: 1px solid var(--outline-button-border-color);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 2px var(--page-background);
+}
+.color-customizer__recent-swatch:hover,
+.color-customizer__recent-swatch:focus-visible {
+  outline: 2px solid var(--section-title-color);
+  outline-offset: 2px;
+}
+/* Match original dark selector specificity so custom palette values win. */
+:root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__entry:nth-child(even)::after {
+  background: var(--experience-alternate-background);
+}
+:root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__toggle:hover,
+:root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__toggle:focus-visible {
+  background: var(--timeline-icon-hover-background);
+  color: var(--timeline-icon-hover-text);
+  border-color: var(--timeline-icon-hover-background);
+}
+:root[data-theme='dark'] .journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li {
+  background: var(--core-stack-background);
+}
+:root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item {
+  background: linear-gradient(110deg, var(--badge-card-start), var(--badge-card-end));
+  border-color: var(--badge-card-border);
+}
+:root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item__kind {
+  background: var(--badge-label-background);
+  color: var(--badge-label-text);
+}
+:root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item__link {
+  color: var(--badge-link);
+}
+:root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item__link:hover {
+  color: var(--badge-link-hover);
+}
