@@ -175,5 +175,17 @@
     "document": "Document Processing",
     "scheduling": "Scheduling & Automation",
     "environment": "Development Environment"
+  },
+  "filter": {
+    "label": "Filter by technology",
+    "all": "All",
+    "more": "More technologies",
+    "clear": "Clear filter",
+    "searchLabel": "Find a technology",
+    "searchPlaceholder": "Search technologies...",
+    "resultsTitle": "Projects using {{technology}}",
+    "resultCount_one": "{{count}} project",
+    "resultCount_other": "{{count}} projects",
+    "noTechnology": "No matching technologies."
   }
 }

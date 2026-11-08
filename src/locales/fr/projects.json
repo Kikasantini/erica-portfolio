@@ -175,5 +175,17 @@
     "document": "Traitement de documents",
     "scheduling": "Planification et automatisation",
     "environment": "Environnement de développement"
+  },
+  "filter": {
+    "label": "Filtrer par technologie",
+    "all": "Tous",
+    "more": "Plus de technologies",
+    "clear": "Effacer le filtre",
+    "searchLabel": "Rechercher une technologie",
+    "searchPlaceholder": "Rechercher une technologie...",
+    "resultsTitle": "Projets utilisant {{technology}}",
+    "resultCount_one": "{{count}} projet",
+    "resultCount_other": "{{count}} projets",
+    "noTechnology": "Aucune technologie correspondante."
   }
 }

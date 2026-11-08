@@ -175,5 +175,17 @@
     "document": "Processamento de documentos",
     "scheduling": "Agendamento e automação",
     "environment": "Ambiente de desenvolvimento"
+  },
+  "filter": {
+    "label": "Filtrar por tecnologia",
+    "all": "Todos",
+    "more": "Mais tecnologias",
+    "clear": "Limpar filtro",
+    "searchLabel": "Buscar tecnologia",
+    "searchPlaceholder": "Buscar tecnologias...",
+    "resultsTitle": "Projetos que usam {{technology}}",
+    "resultCount_one": "{{count}} projeto",
+    "resultCount_other": "{{count}} projetos",
+    "noTechnology": "Nenhuma tecnologia encontrada."
   }
 }

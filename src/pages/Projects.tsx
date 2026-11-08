@@ -573,6 +573,10 @@ function ProjectCard({ project, illustrationSrc, labels }: {
 export default function Projects() {
   const { t } = useTranslation('projects')
   const sections = t('sections', { returnObjects: true }) as ProjectSection[]
+  const [selectedTechnology, setSelectedTechnology] = useState<string | null>(null)
+  const [showAllTechnologies, setShowAllTechnologies] = useState(false)
+  const [technologySearch, setTechnologySearch] = useState('')
+
   // Newest projects appear first, but image numbers increase chronologically.
   // Adding a new project at the top gives it the next number without renaming old images.
   const projectsInDisplayOrder = sections.flatMap((section) => section.items)
@@ -583,28 +587,147 @@ export default function Projects() {
     ]),
   )
 
+  // Use the full technology inventory, including items displayed on the card back.
+  // Locale strings do not alter technology names, so the selection survives language changes.
+  const technologyCounts = new Map<string, number>()
+  for (const project of projectsInDisplayOrder) {
+    const uniqueTechnologies = new Set(
+      project.technologies.split('·').map((technology) => technology.trim()).filter(Boolean),
+    )
+    for (const technology of uniqueTechnologies) {
+      technologyCounts.set(technology, (technologyCounts.get(technology) ?? 0) + 1)
+    }
+  }
+  const allTechnologies = [...technologyCounts.keys()].sort((a, b) => a.localeCompare(b))
+  const featuredFilters = ['React', 'Python 3', 'TypeScript', 'ESP8266', 'Zabbix', 'Java 21']
+    .filter((technology) => technologyCounts.has(technology))
+  const additionalTechnologies = allTechnologies.filter(
+    (technology) =>
+      !featuredFilters.includes(technology) &&
+      technology.toLocaleLowerCase().includes(technologySearch.trim().toLocaleLowerCase()),
+  )
+  const filteredProjects = selectedTechnology
+    ? projectsInDisplayOrder.filter((project) =>
+        project.technologies.split('·').some((technology) => technology.trim() === selectedTechnology),
+      )
+    : []
+
+  const cardLabels = {
+    technologies: t('technologiesAndTools'),
+    viewAll: t('viewAllTechnologies'),
+    backToProject: t('backToProject'),
+    groups: t('technologyGroups', { returnObjects: true }) as Record<GroupKey, string>,
+  }
+
+  function selectTechnology(technology: string | null) {
+    setSelectedTechnology(technology)
+    setShowAllTechnologies(false)
+    setTechnologySearch('')
+  }
+
   return (
     <main className="projects-page">
-      {sections.map((section) => (
-        <section className="project-section" key={section.id}>
-          <h2>{section.title}</h2>
+      <div className="project-filter" aria-label={t('filter.label')}>
+        <div className="project-filter__heading">
+          <span className="project-filter__label">{t('filter.label')}</span>
+          {selectedTechnology && (
+            <button className="project-filter__clear" type="button" onClick={() => selectTechnology(null)}>
+              <span aria-hidden="true">×</span> {t('filter.clear')}
+            </button>
+          )}
+        </div>
+        <div className="project-filter__controls">
+          <button
+            type="button"
+            className={`project-filter__chip${!selectedTechnology ? ' is-active' : ''}`}
+            aria-pressed={!selectedTechnology}
+            onClick={() => selectTechnology(null)}
+          >
+            {t('filter.all')}
+          </button>
+          {featuredFilters.map((technology) => (
+            <button
+              type="button"
+              className={`project-filter__chip${selectedTechnology === technology ? ' is-active' : ''}`}
+              key={technology}
+              aria-pressed={selectedTechnology === technology}
+              onClick={() => selectTechnology(technology)}
+            >
+              {technology}
+            </button>
+          ))}
+          <button
+            type="button"
+            className={`project-filter__more${showAllTechnologies ? ' is-open' : ''}`}
+            aria-expanded={showAllTechnologies}
+            aria-controls="project-filter-more"
+            onClick={() => setShowAllTechnologies((open) => !open)}
+          >
+            {t('filter.more')} <span aria-hidden="true">{showAllTechnologies ? '−' : '+'}</span>
+          </button>
+        </div>
+        {showAllTechnologies && (
+          <div className="project-filter__more-panel" id="project-filter-more">
+            <label htmlFor="project-technology-search">{t('filter.searchLabel')}</label>
+            <input
+              id="project-technology-search"
+              type="search"
+              placeholder={t('filter.searchPlaceholder')}
+              value={technologySearch}
+              onChange={(event) => setTechnologySearch(event.target.value)}
+            />
+            <div className="project-filter__more-options">
+              {additionalTechnologies.length > 0 ? additionalTechnologies.map((technology) => (
+                <button
+                  type="button"
+                  className={`project-filter__chip${selectedTechnology === technology ? ' is-active' : ''}`}
+                  key={technology}
+                  aria-pressed={selectedTechnology === technology}
+                  onClick={() => selectTechnology(technology)}
+                >
+                  {technology}
+                  <span className="project-filter__count">{technologyCounts.get(technology)}</span>
+                </button>
+              )) : <p className="project-filter__empty">{t('filter.noTechnology')}</p>}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {selectedTechnology ? (
+        <section className="project-section project-section--filtered" aria-live="polite">
+          <div className="project-filter__results-heading">
+            <h2>{t('filter.resultsTitle', { technology: selectedTechnology })}</h2>
+            <span>{t('filter.resultCount', { count: filteredProjects.length })}</span>
+          </div>
           <div className="project-list">
-            {section.items.map((project) => (
+            {filteredProjects.map((project) => (
               <ProjectCard
                 key={project.id}
                 project={project}
                 illustrationSrc={illustrationPaths.get(project.id)}
-                labels={{
-                  technologies: t('technologiesAndTools'),
-                  viewAll: t('viewAllTechnologies'),
-                  backToProject: t('backToProject'),
-                  groups: t('technologyGroups', { returnObjects: true }) as Record<GroupKey, string>,
-                }}
+                labels={cardLabels}
               />
             ))}
           </div>
         </section>
-      ))}
+      ) : (
+        sections.map((section) => (
+          <section className="project-section" key={section.id}>
+            <h2>{section.title}</h2>
+            <div className="project-list">
+              {section.items.map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  illustrationSrc={illustrationPaths.get(project.id)}
+                  labels={cardLabels}
+                />
+              ))}
+            </div>
+          </section>
+        ))
+      )}
 
     </main>
   )
