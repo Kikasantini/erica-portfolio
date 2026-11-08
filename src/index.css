@@ -4130,3 +4130,189 @@ p {
     max-width: none;
   }
 }
+
+
+/* Certificates & Badges — editorial list (option A).
+   Preserve the thumbnail, issuer, date, verification icon, and editable theme colors. */
+.journey-page .journey-overview__certificates .certificate-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.journey-page .journey-overview__certificates .certificate-item,
+:root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item {
+  display: grid;
+  grid-template-columns: minmax(90px, 132px) minmax(0, 1fr);
+  align-items: center;
+  gap: 22px;
+  padding: 18px 0;
+  border: 0;
+  border-bottom: 1px solid var(--soft-border);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.journey-page .journey-overview__certificates .certificate-item:first-child {
+  padding-top: 8px;
+}
+.journey-page .journey-overview__certificates .certificate-item__thumbnail {
+  width: 100%;
+  max-width: 132px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border: 0;
+  border-radius: 9px;
+}
+.journey-page .journey-overview__certificates .certificate-item__content {
+  display: block;
+  min-width: 0;
+  align-self: stretch;
+  padding: 4px 0 4px 22px;
+  border-left: 1px solid var(--soft-border);
+}
+.journey-page .journey-overview__certificates .certificate-item__header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+.journey-page .journey-overview__certificates .certificate-item__header h3 {
+  order: 0;
+  margin: 0 0 5px;
+  padding: 0 112px 0 0;
+  color: var(--heading-color);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.journey-page .journey-overview__certificates .certificate-item__detail {
+  font-size: 13px;
+  line-height: 1.45;
+  gap: 9px;
+}
+.journey-page .journey-overview__certificates .certificate-item__detail svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+}
+.journey-page .journey-overview__certificates .certificate-item__kind {
+  position: absolute;
+  inset: 0 0 auto auto;
+  align-self: auto;
+  order: 0;
+  margin: 0;
+  padding: 4px 11px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+@media (max-width: 650px) {
+  .journey-page .journey-overview__certificates .certificate-item,
+  :root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item {
+    grid-template-columns: minmax(76px, 100px) minmax(0, 1fr);
+    gap: 12px;
+    padding: 15px 0;
+  }
+  .journey-page .journey-overview__certificates .certificate-item__thumbnail {
+    width: 100%;
+    max-width: 100px;
+  }
+  .journey-page .journey-overview__certificates .certificate-item__content {
+    padding: 0 0 0 13px;
+  }
+  .journey-page .journey-overview__certificates .certificate-item__header h3 {
+    padding-right: 0;
+    font-size: 16px;
+  }
+  .journey-page .journey-overview__certificates .certificate-item__kind {
+    position: static;
+    order: -1;
+    align-self: flex-start;
+    margin-bottom: 2px;
+    padding: 3px 8px;
+    font-size: 10px;
+  }
+  .journey-page .journey-overview__certificates .certificate-item__detail { font-size: 12px; }
+}
+@media (max-width: 380px) {
+  .journey-page .journey-overview__certificates .certificate-item,
+  :root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item {
+    grid-template-columns: 78px minmax(0, 1fr);
+    gap: 9px;
+  }
+}
+
+/* Shared lightweight text actions across Home, Journey, and Projects.
+   Same subtle hover surface as the project GitHub icon, with no underline. */
+.home-page .home-featured__all,
+.journey-page .journey-overview__certificates .certificate-item__link,
+.projects-page .project-item__flip-link,
+.projects-page .project-item__flip-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--button-text-color);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: left;
+  text-decoration: none;
+  text-decoration-line: none;
+  cursor: pointer;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+.home-page .home-featured__all { margin: -6px -8px; white-space: nowrap; }
+.journey-page .journey-overview__certificates .certificate-item__link {
+  align-self: flex-start;
+  margin: 4px 0 0 -8px;
+}
+.projects-page .project-item__flip-link {
+  flex: 0 0 auto;
+  margin: -6px -8px;
+  white-space: nowrap;
+}
+.projects-page .project-item__flip-back {
+  align-self: flex-start;
+  margin: auto 0 -6px -8px;
+}
+.home-page .home-featured__all:is(:hover, :focus-visible, :active),
+.journey-page .journey-overview__certificates .certificate-item__link:is(:hover, :focus-visible, :active),
+.projects-page .project-item__flip-link:is(:hover, :focus-visible, :active),
+.projects-page .project-item__flip-back:is(:hover, :focus-visible, :active) {
+  color: var(--heading-color);
+  background: var(--navigation-hover-color);
+  text-decoration: none;
+  text-decoration-line: none;
+}
+.home-page .home-featured__all:visited,
+.journey-page .journey-overview__certificates .certificate-item__link:visited {
+  text-decoration: none;
+  text-decoration-line: none;
+}
+:root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item__link,
+:root[data-theme='dark'] .projects-page .project-item__flip-back {
+  color: var(--button-text-color);
+}
+:root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item__link:is(:hover, :focus-visible, :active),
+:root[data-theme='dark'] .projects-page .project-item__flip-back:is(:hover, :focus-visible, :active) {
+  color: var(--heading-color);
+  background: var(--navigation-hover-color);
+  text-decoration: none;
+}
+.home-page .home-featured__all:focus-visible,
+.journey-page .journey-overview__certificates .certificate-item__link:focus-visible,
+.projects-page .project-item__flip-link:focus-visible,
+.projects-page .project-item__flip-back:focus-visible {
+  outline: 2px solid var(--section-title-color);
+  outline-offset: 2px;
+}
