@@ -26,11 +26,13 @@ type ProjectSection = {
 export default function Projects() {
   const { t } = useTranslation('projects')
   const sections = t('sections', { returnObjects: true }) as ProjectSection[]
-  // Keep image numbering consistent across all sections, in displayed order.
+  // Newest projects appear first, but image numbers increase chronologically.
+  // Adding a new project at the top gives it the next number without renaming old images.
+  const projectsInDisplayOrder = sections.flatMap((section) => section.items)
   const illustrationPaths = new Map(
-    sections.flatMap((section) => section.items).map((project, index) => [
+    projectsInDisplayOrder.map((project, index) => [
       project.id,
-      `/images/project-illustrations/${String(index + 1).padStart(2, '0')}.jpg`,
+      `/images/project-illustrations/${String(projectsInDisplayOrder.length - index).padStart(2, '0')}.jpg`,
     ]),
   )
 
