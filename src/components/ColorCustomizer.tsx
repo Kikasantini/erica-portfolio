@@ -268,9 +268,17 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
   const [darkColors, setDarkColors] = useState<ColorPalette>(stored.dark)
   const [history, setHistory] = useState<ColorHistory>(stored.history)
   const [drafts, setDrafts] = useState<Partial<Record<ColorKey, string>>>({})
+  const [previousTheme, setPreviousTheme] = useState(theme)
   const [copyStatus, setCopyStatus] = useState<'copied' | 'failed' | ''>('')
   const pickerSession = useRef<{ key: ColorKey; theme: ThemeMode; original: string } | null>(null)
-  useEffect(() => setDrafts({}), [theme])
+
+  // Reset unfinished hex edits when switching themes, during render instead of
+  // synchronously updating state in an effect (react-hooks/set-state-in-effect).
+  if (previousTheme !== theme) {
+    setPreviousTheme(theme)
+    setDrafts({})
+  }
+
   const colors = theme === 'dark' ? darkColors : lightColors
 
   useEffect(() => {
