@@ -3849,3 +3849,40 @@ p {
 .projects-page .project-item__face--back .project-item__flip-back {
   color: var(--project-card-back-link);
 }
+
+/* Home / Recent Projects: content-driven cards.
+   The hidden multilingual copies must not reserve empty card height. */
+.home-page .home-featured__grid {
+  align-items: stretch;
+}
+.home-page .home-featured__grid .home-project {
+  height: 100%;
+  min-height: 0;
+  gap: 0;
+}
+.home-page .home-featured__grid .home-project > .home-stable-copy {
+  display: block;
+  flex: 0 0 auto;
+  width: 100%;
+}
+.home-page .home-featured__grid .home-project .home-stable-copy__measure {
+  display: none;
+}
+.home-page .home-featured__grid .home-project > .home-stable-copy p {
+  margin: 11px 0 0;
+  color: var(--paragraph-text);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.home-page .home-featured__grid .home-project__heading {
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.home-page .home-featured__grid .home-project__heading .home-card-icon {
+  flex: 0 0 34px;
+}
+.home-page .home-featured__grid .home-project__heading .home-project__github {
+  flex: 0 0 29px;
+  margin-left: auto;
+}
