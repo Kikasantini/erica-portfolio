@@ -7,8 +7,8 @@
       "title": "AI Literacy",
       "issuer": "IBM SkillsBuild",
       "period": "Novembro de 2026",
-      "description": "Aprendi a definir IA, entender como ela aprende e melhora, diferenciá-la da automação e conhecer suas formas e tecnologias habilitadoras. Também explorei seus benefícios e usos no cotidiano e em diferentes setores, identifiquei desafios de dados que ela pode ajudar a resolver e pratiquei usar um assistente de IA para aprimorar uma solução e criar um plano de lançamento de produto.",
-      "image": "/images/ai-literacy-certificate.png",
+      "description": "Apresenta conceitos básicos de IA, aplicações no mundo real e seu uso responsável.",
+      "image": "/images/ai-literacy-badge-thumbnail.webp",
       "imageAlt": "Certificado AI Literacy emitido pela IBM SkillsBuild para Erica Santini de Lima",
       "credentialUrl": "https://www.credly.com/go/BYUN0pw9"
     }
@@ -213,5 +213,6 @@
   "hideSection": "Recolher",
   "openCertificateImage": "Ampliar imagem do certificado",
   "closeCertificateImage": "Fechar imagem do certificado",
-  "verifyCertificate": "Verificar badge"
+  "verifyCertificate": "Verificar badge",
+  "digitalBadge": "Badge digital"
 }

@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 type CertificateItem = {
@@ -89,30 +88,6 @@ export default function Journey() {
   const education = t('education', {
     returnObjects: true,
   }) as EducationItem[]
-  const [activeCertificate, setActiveCertificate] = useState<
-    CertificateItem | null
-  >(null)
-  const closeButtonRef = useRef<HTMLButtonElement>(null)
-  const thumbnailButtonRef = useRef<HTMLButtonElement | null>(null)
-
-  useEffect(() => {
-    if (!activeCertificate) return
-
-    const previousOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-    closeButtonRef.current?.focus()
-
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === 'Escape') setActiveCertificate(null)
-    }
-
-    document.addEventListener('keydown', handleKeyDown)
-    return () => {
-      document.body.style.overflow = previousOverflow
-      document.removeEventListener('keydown', handleKeyDown)
-      thumbnailButtonRef.current?.focus()
-    }
-  }, [activeCertificate])
 
   return (
     <main className="journey-page">
@@ -158,19 +133,15 @@ export default function Journey() {
             <div className="certificate-list">
               {certificates.map((certificate) => (
                 <article className="certificate-item" key={certificate.id}>
-                  <button
+                  <img
                     className="certificate-item__thumbnail"
-                    type="button"
-                    aria-label={t('openCertificateImage') + ': ' + certificate.title}
-                    onClick={(event) => {
-                      thumbnailButtonRef.current = event.currentTarget
-                      setActiveCertificate(certificate)
-                    }}
-                  >
-                    <img src={certificate.image} alt={certificate.imageAlt} loading="lazy" />
-                  </button>
+                    src={certificate.image}
+                    alt={certificate.imageAlt}
+                    loading="lazy"
+                  />
                   <div className="certificate-item__content">
                     <div className="certificate-item__header">
+                      <span className="certificate-item__kind">{t('digitalBadge')}</span>
                       <h3>{certificate.title}</h3>
                       <p className="timeline-item__meta">{certificate.issuer}</p>
                       <div className="certificate-item__period-row">
@@ -185,8 +156,8 @@ export default function Journey() {
                         </a>
                       </div>
                     </div>
+                    <p className="certificate-item__description">{certificate.description}</p>
                   </div>
-                  <p className="certificate-item__description">{certificate.description}</p>
                 </article>
               ))}
             </div>
@@ -194,34 +165,6 @@ export default function Journey() {
         </aside>
       </div>
 
-      {activeCertificate && (
-        <div className="media-viewer" onClick={() => setActiveCertificate(null)}>
-          <div
-            className="media-viewer__dialog"
-            role="dialog"
-            aria-modal="true"
-            aria-label={activeCertificate.title}
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              className="media-viewer__button media-viewer__close"
-              type="button"
-              aria-label={t('closeCertificateImage')}
-              onClick={() => setActiveCertificate(null)}
-              ref={closeButtonRef}
-            >
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="m6 6 12 12M18 6 6 18" />
-              </svg>
-            </button>
-            <img
-              className="media-viewer__item"
-              src={activeCertificate.image}
-              alt={activeCertificate.imageAlt}
-            />
-          </div>
-        </div>
-      )}
     </main>
   )
 }

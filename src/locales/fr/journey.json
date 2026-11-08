@@ -7,8 +7,8 @@
       "title": "AI Literacy",
       "issuer": "IBM SkillsBuild",
       "period": "Novembre 2026",
-      "description": "Le cours m’a appris à définir l’IA, à comprendre comment elle apprend et s’améliore, à la distinguer de l’automatisation et à reconnaître ses formes et ses technologies habilitantes. J’ai aussi exploré ses avantages et ses usages au quotidien et dans différents secteurs, identifié des défis liés aux données qu’elle peut aider à résoudre et utilisé un assistant d’IA pour améliorer une solution et créer un plan de lancement de produit.",
-      "image": "/images/ai-literacy-certificate.png",
+      "description": "Présente les concepts fondamentaux de l’IA, ses applications concrètes et son utilisation responsable.",
+      "image": "/images/ai-literacy-badge-thumbnail.webp",
       "imageAlt": "Certificat AI Literacy d’IBM SkillsBuild délivré à Erica Santini de Lima",
       "credentialUrl": "https://www.credly.com/go/BYUN0pw9"
     }
@@ -213,5 +213,6 @@
   "hideSection": "Masquer",
   "openCertificateImage": "Agrandir le certificat",
   "closeCertificateImage": "Fermer l’image du certificat",
-  "verifyCertificate": "Vérifier le badge"
+  "verifyCertificate": "Vérifier le badge",
+  "digitalBadge": "Badge numérique"
 }

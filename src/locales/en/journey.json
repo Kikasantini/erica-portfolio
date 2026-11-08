@@ -7,8 +7,8 @@
       "title": "AI Literacy",
       "issuer": "IBM SkillsBuild",
       "period": "November 2026",
-      "description": "The course covered what AI is, how it learns and improves, how it differs from automation, and the forms and enabling technologies behind AI applications. I explored its benefits and everyday and industry applications, identified data challenges it can help solve, and practiced using an AI assistant to improve a solution and create a product launch plan.",
-      "image": "/images/ai-literacy-certificate.png",
+      "description": "Introduces basic AI concepts, real-world applications, and responsible usage.",
+      "image": "/images/ai-literacy-badge-thumbnail.webp",
       "imageAlt": "IBM SkillsBuild AI Literacy certificate issued to Erica Santini de Lima",
       "credentialUrl": "https://www.credly.com/go/BYUN0pw9"
     }
@@ -213,5 +213,6 @@
   "hideSection": "Hide",
   "openCertificateImage": "Open certificate image",
   "closeCertificateImage": "Close certificate image",
-  "verifyCertificate": "Verify badge"
+  "verifyCertificate": "Verify badge",
+  "digitalBadge": "Digital badge"
 }
