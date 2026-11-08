@@ -4302,3 +4302,32 @@ p {
   outline: 2px solid var(--section-title-color);
   outline-offset: 2px;
 }
+
+/* Professional Experience: text-based technology lists need text spacing, not chip spacing. */
+.journey-page .journey-overview__experience .technology-group {
+  margin-top: 18px;
+}
+.journey-page .journey-overview__experience .technology-group h4 {
+  margin: 0 0 5px;
+  line-height: 1.4;
+}
+.journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 1.75;
+}
+.journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li,
+:root[data-theme='dark'] .journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  font-size: 13px;
+  line-height: inherit;
+  vertical-align: baseline;
+}
+.journey-page .journey-overview__experience .technology-group--additional {
+  margin-top: 15px;
+}
