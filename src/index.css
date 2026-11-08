@@ -3,8 +3,8 @@
 :root {
   --page-background: #f7f7f7;
   --main-text: #1d2b30;
-  --paragraph-text: #435258;
-  --meta-text: #667477;
+  --paragraph-text: #2a3e47;
+  --meta-text: #57676b;
   --brand-name: #16324f;
   --heading-color: #16324f;
   --section-title-color: #257c83;
@@ -1625,7 +1625,7 @@ p {
 
 /* Unified Soft Slate composition shared by both color modes. */
 :root {
- --surface:#fff;--soft-border:#ccdcda;--hero-bg:#edf4f2;--accent-fill:#437f7e;--accent-contrast:#fff;
+ --surface:#fff;--soft-border:#ccdcda;--hero-bg:#d0e1dc;--accent-fill:#437f7e;--accent-contrast:#fff;
  --art-brightness:1;--art-saturation:.88;
 }
 :root[data-theme='dark'] {
@@ -3100,18 +3100,18 @@ p {
 
 /* Customizable Soft Slate surfaces introduced by the current design. */
 :root {
-  --experience-alternate-background: #e2eeeb;
+  --experience-alternate-background: #e6ebe9;
   --timeline-icon-hover-background: #2b8b83;
   --timeline-icon-hover-text: #ffffff;
   --core-stack-background: #fdfdfd;
-  --badge-card-start: #e1f2ef;
+  --badge-card-start: #a6bfba;
   --badge-card-end: #edf8f6;
   --badge-card-border: #b8d4d1;
   --badge-label-background: #cae9e5;
   --badge-label-text: #235c5b;
   --badge-link: #137a80;
   --badge-link-hover: #119ca0;
-  --badge-thumbnail-border: #8d65cc;
+  --badge-thumbnail-border: #121212;
 }
 :root[data-theme='dark'] {
   --experience-alternate-background: #22343a;
@@ -3125,7 +3125,7 @@ p {
   --badge-label-text: #c1e9e2;
   --badge-link: #69e4dc;
   --badge-link-hover: #119ca0;
-  --badge-thumbnail-border: #8d65cc;
+  --badge-thumbnail-border: #ffffff;
 }
 .journey-page .journey-overview__experience .experience-timeline__entry:nth-child(even)::after {
   background: var(--experience-alternate-background);
@@ -3219,10 +3219,10 @@ p {
 /* Three independently editable technology chip palettes. */
 :root {
   --journey-plain-tag-background: #fdfdfd;
-  --journey-plain-tag-border: #fdfdfd;
+  --journey-plain-tag-border: #b8b8b8;
   --journey-plain-tag-text: #435258;
-  --journey-alternate-tag-background: #ffffff;
-  --journey-alternate-tag-border: #ffffff;
+  --journey-alternate-tag-background: #f5f5f5;
+  --journey-alternate-tag-border: #9db4aa;
   --journey-alternate-tag-text: #435258;
   --project-tag-background: #e8f1f0;
   --project-tag-border: #ccdddd;

@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next'
 const LIGHT_MODE_DEFAULTS = {
   "pageBackground": "#f7f7f7",
   "mainText": "#1d2b30",
-  "paragraphText": "#435258",
-  "metaText": "#667477",
+  "paragraphText": "#2a3e47",
+  "metaText": "#57676b",
   "headings": "#16324f",
   "sectionTitles": "#257c83",
   "buttonBackground": "#f2f6f5",
@@ -24,28 +24,28 @@ const LIGHT_MODE_DEFAULTS = {
   "projectCardMediaBackground": "#d7e0df",
   "surface": "#ffffff",
   "softBorder": "#ccdcda",
-  "heroBackground": "#edf4f2",
+  "heroBackground": "#d0e1dc",
   "accentFill": "#437f7e",
   "accentContrast": "#ffffff",
   "statusText": "#216c69",
   "statusBorder": "#4d9c92",
   "statusSurface": "#e4f2ee",
-  "experienceAlternateBackground": "#e2eeeb",
+  "experienceAlternateBackground": "#e6ebe9",
   "timelineIconHoverBackground": "#2b8b83",
   "timelineIconHoverText": "#ffffff",
-  "badgeCardStart": "#e1f2ef",
+  "badgeCardStart": "#a6bfba",
   "badgeCardEnd": "#edf8f6",
   "badgeCardBorder": "#b8d4d1",
   "badgeLabelBackground": "#cae9e5",
   "badgeLabelText": "#235c5b",
   "badgeLink": "#137a80",
   "badgeLinkHover": "#119ca0",
-  "badgeThumbnailBorder": "#8d65cc",
+  "badgeThumbnailBorder": "#121212",
   "journeyPlainTagBackground": "#fdfdfd",
-  "journeyPlainTagBorder": "#fdfdfd",
+  "journeyPlainTagBorder": "#b8b8b8",
   "journeyPlainTagText": "#435258",
-  "journeyAlternateTagBackground": "#ffffff",
-  "journeyAlternateTagBorder": "#ffffff",
+  "journeyAlternateTagBackground": "#f5f5f5",
+  "journeyAlternateTagBorder": "#9db4aa",
   "journeyAlternateTagText": "#435258",
   "projectTagBackground": "#e8f1f0",
   "projectTagBorder": "#ccdddd",
@@ -94,7 +94,7 @@ const DARK_MODE_DEFAULTS: ColorPalette = {
   "badgeLabelText": "#c1e9e2",
   "badgeLink": "#69e4dc",
   "badgeLinkHover": "#119ca0",
-  "badgeThumbnailBorder": "#8d65cc",
+  "badgeThumbnailBorder": "#ffffff",
   "journeyPlainTagBackground": "#2a3a3f",
   "journeyPlainTagBorder": "#2a3a3f",
   "journeyPlainTagText": "#c5d2cf",
@@ -256,7 +256,7 @@ const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
   }
 ]
 const HEX_COLOR = /^#[0-9a-f]{6}$/i
-const STORAGE_KEY = 'erica-portfolio-custom-colors-v2'
+const STORAGE_KEY = 'erica-portfolio-custom-colors-v3'
 
 function readStoredColors(): { light: ColorPalette; dark: ColorPalette; history: ColorHistory } {
   const state = {
