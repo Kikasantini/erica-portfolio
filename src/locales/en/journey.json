@@ -105,8 +105,7 @@
         "SQL",
         "Crystal Reports",
         "Eclipse",
-        "SQL Server Management Studio",
-        "Postman"
+        "SQL Server Management Studio"
       ],
       "additionalTechnologies": []
     },
@@ -158,7 +157,7 @@
       "details": [
         "Graduated at the top of the class with a 94% weighted average.",
         "Coursework covered web development, JavaScript, Node.js, databases, object-oriented programming, and other areas of the program.",
-        "Invited by my programming professor to tutor classmates in C++ for one semester.",
+        "Selected as one of two students out of a class of 15 to tutor classmates in C++ for one semester. The sessions received very positive feedback from participants and helped improve the class average.",
         "Completed hands-on Arduino coursework and built small personal Arduino projects."
       ]
     },
@@ -183,7 +182,7 @@
       "details": [
         "Completed coursework in data structures, algorithms, C, C++, object-oriented programming, and databases.",
         "Tutored fellow students in C programming for two semesters.",
-        "Competed in an ICPC programming contest after my Logic and Algorithms professor selected me as one of two students.",
+        "Selected by my Logic and Algorithms professor as one of two students out of 40 to compete in an ICPC programming contest.",
         "Helped deliver introductory logic-programming workshops for high school students."
       ]
     }

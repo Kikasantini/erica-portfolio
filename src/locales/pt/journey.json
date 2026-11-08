@@ -105,8 +105,7 @@
         "SQL",
         "Crystal Reports",
         "Eclipse",
-        "SQL Server Management Studio",
-        "Postman"
+        "SQL Server Management Studio"
       ],
       "additionalTechnologies": []
     },
@@ -158,7 +157,7 @@
       "details": [
         "Concluí o curso em primeiro lugar na turma, com média ponderada de 94%.",
         "Cursei desenvolvimento web, JavaScript, Node.js, bancos de dados e programação orientada a objetos, entre outras matérias.",
-        "Fui convidada pelo meu professor de programação para dar tutoria em C++ aos meus colegas de turma durante um semestre.",
+        "Fui uma das duas pessoas selecionadas entre 15 alunos da turma para oferecer tutoria em C++ durante um semestre. As aulas receberam feedbacks muito positivos dos participantes e ajudaram a melhorar a média da turma.",
         "Concluí atividades práticas com Arduino e desenvolvi pequenos projetos pessoais com a plataforma."
       ]
     },
@@ -183,7 +182,7 @@
       "details": [
         "Cursei disciplinas de estruturas de dados, algoritmos, C, C++, programação orientada a objetos e bancos de dados.",
         "Fui tutora de programação em C por dois semestres para outros estudantes.",
-        "Disputei uma competição de programação da ICPC após ser selecionada por um professor de Lógica e Algoritmos como uma das duas estudantes.",
+        "Fui uma das duas pessoas selecionadas entre 40 alunos pelo professor de Lógica e Algoritmos para participar de uma competição de programação da ICPC.",
         "Ajudei a ministrar oficinas introdutórias de lógica de programação para estudantes do ensino médio."
       ]
     }
