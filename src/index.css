@@ -2470,3 +2470,34 @@ p {
 @media (max-width: 420px) {
   .home-page .home-title { min-height: 3.4em; }
 }
+
+/* Narrow the multilingual introduction so it does not cover the laptop.
+   Keep the hero compact by tightening spacing, not increasing its height. */
+@media (min-width: 901px) {
+  .home-page .home-intro.home-stable-copy {
+    width: min(100%, 420px);
+    max-width: 420px;
+  }
+  .home-page .home-intro.home-stable-copy > p {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .home-page .home-hero {
+    min-height: 300px;
+    padding-block: 19px;
+  }
+  .home-page .home-hero .home-title {
+    margin-top: 8px;
+    margin-bottom: 11px;
+  }
+  .home-page .home-contact { margin-top: 12px; }
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  .home-page .home-intro.home-stable-copy {
+    width: min(100%, 390px);
+    max-width: 390px;
+  }
+  .home-page .home-hero { padding-block: 20px; }
+  .home-page .home-hero .home-title { margin-block: 9px 12px; }
+  .home-page .home-contact { margin-top: 13px; }
+}

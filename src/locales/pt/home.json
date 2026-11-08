@@ -15,13 +15,13 @@
     },
     {
       "id": "oneWord",
-      "front": "Se eu tivesse que me definir em uma palavra, diria...",
-      "back": "... prática e meticulosa — mas aí já são duas palavras."
+      "front": "Se eu tivesse que me definir em uma palavra...",
+      "back": "Prática e meticulosa — mas aí já são duas palavras."
     },
     {
       "id": "gamer",
       "front": "Meu jeito favorito de relaxar é, obviamente...",
-      "back": "... um quebra-cabeça, música de fundo, comida boa e a companhia certa."
+      "back": "Um quebra-cabeça, música de fundo, comida boa e a companhia certa."
     }
   ],
   "contactTitle": "Links de contato",
@@ -54,7 +54,7 @@
   "viewAllProjects": "Todos os projetos",
   "personalNoteTitles": {
     "conversationStarter": "Para começar uma conversa",
-    "oneWord": "Em duas palavras",
+    "oneWord": "Eu em uma palavra",
     "gamer": "Fora do expediente"
   }
 }

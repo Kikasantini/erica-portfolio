@@ -15,13 +15,13 @@
     },
     {
       "id": "oneWord",
-      "front": "Si je devais me décrire en un mot, je dirais...",
-      "back": "... pragmatique et méticuleuse — ça fait deux mots."
+      "front": "Si je devais me décrire en un mot...",
+      "back": "Pragmatique et méticuleuse — ça fait deux mots."
     },
     {
       "id": "gamer",
       "front": "Ma façon préférée de décrocher, c'est évidemment...",
-      "back": "... un puzzle, de la musique en fond, de bons petits plats et la bonne compagnie."
+      "back": "Un puzzle, de la musique en fond, de bons petits plats et la bonne compagnie."
     }
   ],
   "contactTitle": "Liens de contact",
@@ -54,7 +54,7 @@
   "viewAllProjects": "Tous les projets",
   "personalNoteTitles": {
     "conversationStarter": "Pour briser la glace",
-    "oneWord": "En deux mots",
+    "oneWord": "Moi en un mot",
     "gamer": "Après le travail"
   }
 }
