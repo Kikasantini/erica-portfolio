@@ -2952,3 +2952,86 @@ p {
   .journey-page .journey-overview__certificates .certificate-item__kind { position: static; align-self: flex-start; order: -1; }
   .journey-page .journey-overview__certificates .certificate-item__header h3 { padding-right: 0; }
 }
+
+/* Professional experience: timeline with role-specific icon toggles.
+   Hover highlights both the entry and icon without moving the layout. */
+.journey-page .journey-overview__experience .experience-timeline__entry {
+  position: relative;
+  isolation: isolate;
+}
+.journey-page .journey-overview__experience .experience-timeline__entry::before {
+  content: none;
+}
+.journey-page .journey-overview__experience .experience-timeline__entry::after {
+  content: '';
+  position: absolute;
+  inset: -9px -11px;
+  z-index: -1;
+  border-radius: 10px;
+  background: transparent;
+  pointer-events: none;
+  transition: background-color 180ms ease;
+}
+.journey-page .journey-overview__experience .experience-timeline__entry:hover::after {
+  background: #e4f0ee;
+}
+:root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__entry:hover::after {
+  background: #213a40;
+}
+.journey-page .journey-overview__experience .experience-timeline__toggle {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -43px;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 6px;
+  border: 1px solid var(--technology-tag-border-color);
+  border-radius: 50%;
+  background: var(--page-background);
+  color: var(--section-title-color);
+  cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.journey-page .journey-overview__experience .experience-timeline__toggle svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.journey-page .journey-overview__experience .experience-timeline__entry:hover .experience-timeline__toggle,
+.journey-page .journey-overview__experience .experience-timeline__toggle:hover,
+.journey-page .journey-overview__experience .experience-timeline__toggle:focus-visible {
+  background: #2b8b83;
+  color: #ffffff;
+  border-color: #2b8b83;
+  box-shadow: 0 0 0 4px rgba(74, 166, 155, .17);
+}
+:root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__entry:hover .experience-timeline__toggle,
+:root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__toggle:hover,
+:root[data-theme='dark'] .journey-page .journey-overview__experience .experience-timeline__toggle:focus-visible {
+  background: #83cbbd;
+  color: #142127;
+  border-color: #83cbbd;
+}
+.journey-page .journey-overview__experience .experience-timeline__toggle[aria-expanded='false'] {
+  opacity: .8;
+}
+.journey-page .journey-overview__experience .experience-timeline__toggle:focus-visible {
+  outline: 2px solid var(--heading-color);
+  outline-offset: 4px;
+}
+.journey-page .journey-overview__experience .experience-timeline__details {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+.journey-page .journey-overview__experience .experience-timeline__details[hidden] {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .journey-page .journey-overview__experience .experience-timeline__entry::after,
+  .journey-page .journey-overview__experience .experience-timeline__toggle {
+    transition: none;
+  }
+}

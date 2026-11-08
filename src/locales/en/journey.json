@@ -214,5 +214,7 @@
   "openCertificateImage": "Open certificate image",
   "closeCertificateImage": "Close certificate image",
   "verifyCertificate": "Verify badge",
-  "digitalBadge": "Digital badge"
+  "digitalBadge": "Digital badge",
+  "collapseExperience": "Collapse details for {{role}}",
+  "expandExperience": "Expand details for {{role}}"
 }

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 type CertificateItem = {
@@ -31,24 +32,56 @@ type EducationItem = {
   details: string[]
 }
 
+function ExperienceIcon({ id }: { id: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      {id === 'fullStackDeveloper' ? (
+        <><rect x="3" y="4" width="18" height="14" rx="2" /><path d="M8 9 5.5 11.5 8 14m8-5 2.5 2.5L16 14m-6 6h4m-2-2v2" /></>
+      ) : id === 'sageConsultant' ? (
+        <><ellipse cx="12" cy="5" rx="8" ry="3" /><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7" /></>
+      ) : id === 'developerIntern' ? (
+        <><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3 13 6-16" /></>
+      ) : id === 'producer' ? (
+        <><rect x="2.5" y="7" width="19" height="12" rx="5" /><path d="M7 11v5m-2.5-2.5h5M15 12h.01M18 15h.01" /></>
+      ) : (
+        <><circle cx="12" cy="5.5" r="2.5" /><circle cx="5" cy="11" r="2" /><circle cx="19" cy="11" r="2" /><path d="M12 8v3m-7 2v3m14-3v3M3 19h4m3 0h4m3 0h4" /></>
+      )}
+    </svg>
+  )
+}
+
 function ExperienceEntry({ item }: { item: ExperienceItem }) {
   const { t } = useTranslation('journey')
   const coreTechnologies = item.coreTechnologies ?? []
   const additionalTechnologies = item.additionalTechnologies ?? []
+  const [expanded, setExpanded] = useState(true)
+  const detailsId = 'experience-details-' + item.id
 
   return (
-    <article className="timeline-item">
+    <article className="timeline-item experience-timeline__entry">
+      <button
+        className="experience-timeline__toggle"
+        type="button"
+        aria-label={t(expanded ? 'collapseExperience' : 'expandExperience', { role: item.role })}
+        aria-expanded={expanded}
+        aria-controls={detailsId}
+        title={t(expanded ? 'collapseExperience' : 'expandExperience', { role: item.role })}
+        onClick={() => setExpanded((value) => !value)}
+      >
+        <ExperienceIcon id={item.id} />
+      </button>
       <h3>{item.role}</h3>
       <p className="timeline-item__meta">
         {item.company} · {item.location}
       </p>
       <p className="timeline-item__period">{item.period}</p>
 
-      <ul className="journey-details">
-        {item.details.map((detail, index) => (
-          <li key={item.id + '-detail-' + index}>{detail}</li>
-        ))}
-      </ul>
+      <div id={detailsId} className="experience-timeline__details" hidden={!expanded}>
+        <ul className="journey-details">
+          {item.details.map((detail, index) => (
+            <li key={item.id + '-detail-' + index}>{detail}</li>
+          ))}
+        </ul>
 
       {coreTechnologies.length > 0 && (
         <div className="technology-group">
@@ -73,6 +106,7 @@ function ExperienceEntry({ item }: { item: ExperienceItem }) {
           </ul>
         </div>
       )}
+      </div>
     </article>
   )
 }
