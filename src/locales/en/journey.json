@@ -77,7 +77,6 @@
         "JSON",
         "YAML",
         "Confluence",
-        "Microsoft Teams",
         "Notion",
         "JasperReports",
         "OpenAI Codex",
@@ -104,11 +103,9 @@
         "Sage X3",
         "Sage X3 4GL",
         "SQL",
-        "Microsoft SQL Server",
         "Crystal Reports",
         "Eclipse",
         "SQL Server Management Studio",
-        "Microsoft Teams",
         "Postman"
       ],
       "additionalTechnologies": []
@@ -124,47 +121,29 @@
       ],
       "coreTechnologies": [
         "Node.js",
-        "Sage X3 REST API",
-        "Microsoft Teams"
+        "Sage X3 REST API"
       ],
       "additionalTechnologies": []
     },
     {
       "id": "producer",
-      "role": "Producer",
+      "role": "Producer / Project Management Intern",
       "company": "Imgnation Studios",
       "location": "Brazil",
-      "period": "February 2021 - December 2021",
+      "period": "August 2020 - December 2021",
       "details": [
         "Developed and debugged mobile game functionality using C# and Unity.",
         "Participated in Agile development, sprint planning, estimation using Planning Poker, testing, QA, bug tracking and documentation, and release delivery.",
-        "Supported feature implementation and validated functionality before releases."
-      ],
-      "coreTechnologies": [
-        "C#",
-        "Unity",
-        "Trello",
-        "Miro",
-        "Discord",
-        "Notion"
-      ],
-      "additionalTechnologies": []
-    },
-    {
-      "id": "projectManagementIntern",
-      "role": "Project Management Intern",
-      "company": "Imgnation Studios",
-      "location": "Brazil",
-      "period": "August 2020 - January 2021",
-      "details": [
+        "Supported feature implementation and validated functionality before releases.",
         "Served as acting Scrum Master for a small mobile game development team.",
         "Supported sprint planning, task organization, team coordination, communication, problem solving, and delivery, including estimation using Planning Poker."
       ],
       "coreTechnologies": [
+        "C#",
+        "Unity",
+        "Notion",
         "Trello",
-        "Miro",
-        "Discord",
-        "Notion"
+        "Miro"
       ],
       "additionalTechnologies": []
     }

@@ -76,7 +76,6 @@
         "JSON",
         "YAML",
         "Confluence",
-        "Microsoft Teams",
         "Notion",
         "JasperReports",
         "OpenAI Codex",
@@ -104,11 +103,9 @@
         "Sage X3",
         "Sage X3 4GL",
         "SQL",
-        "Microsoft SQL Server",
         "Crystal Reports",
         "Eclipse",
         "SQL Server Management Studio",
-        "Microsoft Teams",
         "Postman"
       ],
       "additionalTechnologies": []
@@ -124,47 +121,29 @@
       ],
       "coreTechnologies": [
         "Node.js",
-        "Sage X3 REST API",
-        "Microsoft Teams"
+        "Sage X3 REST API"
       ],
       "additionalTechnologies": []
     },
     {
       "id": "producer",
-      "role": "Produtora",
+      "role": "Produtora / Estagiária de Gestão de Projetos",
       "company": "Imgnation Studios",
       "location": "Brasil",
-      "period": "Fevereiro de 2021 - dezembro de 2021",
+      "period": "Agosto de 2020 - dezembro de 2021",
       "details": [
         "Desenvolvi e depurei funcionalidades para jogos mobile usando C# e Unity.",
         "Participei do desenvolvimento ágil, do planejamento e das estimativas de sprints com Planning Poker, dos testes, do controle de qualidade, do acompanhamento e da documentação de bugs e da entrega de versões.",
-        "Apoiei a implementação de funcionalidades e validei seu funcionamento antes das versões."
-      ],
-      "coreTechnologies": [
-        "C#",
-        "Unity",
-        "Trello",
-        "Miro",
-        "Discord",
-        "Notion"
-      ],
-      "additionalTechnologies": []
-    },
-    {
-      "id": "projectManagementIntern",
-      "role": "Estagiária de Gestão de Projetos",
-      "company": "Imgnation Studios",
-      "location": "Brasil",
-      "period": "Agosto de 2020 - janeiro de 2021",
-      "details": [
+        "Apoiei a implementação de funcionalidades e validei seu funcionamento antes das versões.",
         "Atuei como Scrum Master interina de uma pequena equipe de desenvolvimento de jogos mobile.",
         "Apoiei o planejamento de sprints, a organização de tarefas, a coordenação e comunicação da equipe, a resolução de problemas e as entregas, incluindo estimativas com Planning Poker."
       ],
       "coreTechnologies": [
+        "C#",
+        "Unity",
+        "Notion",
         "Trello",
-        "Miro",
-        "Discord",
-        "Notion"
+        "Miro"
       ],
       "additionalTechnologies": []
     }
