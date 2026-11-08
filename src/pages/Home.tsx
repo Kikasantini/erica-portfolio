@@ -52,6 +52,46 @@ function AnimatedTitleLayer({
   )
 }
 
+
+type HomeIconName = 'work' | 'direction' | 'careerPilotAi' | 'productionCellSimulator' | 'portfolioWebsite'
+
+function HomeCardIcon({ name }: { name: HomeIconName }) {
+  return (
+    <span className="home-card-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        {name === 'work' ? (
+          <>
+            <path d="m12 2 9 5-9 5-9-5 9-5Z" />
+            <path d="m3 12 9 5 9-5M3 17l9 5 9-5" />
+          </>
+        ) : name === 'direction' ? (
+          <>
+            <circle cx="12" cy="12" r="9" />
+            <circle cx="12" cy="12" r="5" />
+            <circle cx="12" cy="12" r="1" />
+            <path d="m12 12 8-8m-4 0h4v4" />
+          </>
+        ) : name === 'careerPilotAi' ? (
+          <>
+            <rect x="3" y="4" width="18" height="13" rx="2" />
+            <path d="M8 21h8m-4-4v4M9 9l-2 2 2 2m6-4 2 2-2 2" />
+          </>
+        ) : name === 'productionCellSimulator' ? (
+          <>
+            <path d="M3 20h18V9l-6 4V9l-6 4V6H3v14Z" />
+            <path d="M6 6V3h3v3M7 17h2m3 0h2m3 0h2" />
+          </>
+        ) : (
+          <>
+            <rect x="3" y="4" width="18" height="16" rx="2" />
+            <path d="M3 9h18M7 6.5h.01M10 6.5h.01" />
+          </>
+        )}
+      </svg>
+    </span>
+  )
+}
+
 export default function Home() {
   const { t } = useTranslation('home')
   const { t: projectT } = useTranslation('projects')
@@ -142,12 +182,12 @@ export default function Home() {
 
       <div className="home-overview">
       <section className="home-section" aria-labelledby="home-work-title">
-        <h2 id="home-work-title">{t('workTitle')}</h2>
+        <div className="home-overview__heading"><HomeCardIcon name="work" /><h2 id="home-work-title">{t('workTitle')}</h2></div>
         <p>{t('professionalSummary')}</p>
       </section>
 
       <section className="home-section home-section--career" aria-labelledby="home-career-title">
-        <h2 id="home-career-title">{t('careerTitle')}</h2>
+        <div className="home-overview__heading"><HomeCardIcon name="direction" /><h2 id="home-career-title">{t('careerTitle')}</h2></div>
         <p>{t('careerSummary')}</p>
       </section>
       </div>
@@ -164,6 +204,7 @@ export default function Home() {
             {recentSection.items.map((project) => (
               <article className="home-project" key={project.id}>
                 <div className="home-project__heading">
+                  <HomeCardIcon name={project.id as HomeIconName} />
                   <h3>{project.title}</h3>
                   <a href={project.githubUrl} target="_blank" rel="noreferrer"
                      aria-label={project.title + ' — GitHub'} className="home-project__github">

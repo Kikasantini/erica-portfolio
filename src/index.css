@@ -1738,3 +1738,28 @@ p {
  .certificate-item{grid-template-columns:minmax(0,120px) minmax(0,1fr);padding:14px;gap:14px}
  .timeline-item{padding:17px}
 }
+
+/* Decorative pictograms consistent across Home cards and both color themes. */
+.home-card-icon {
+  display: inline-grid;
+  flex: 0 0 auto;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  border: 1px solid var(--technology-tag-border-color);
+  border-radius: 11px;
+  background: var(--technology-tag-background-color);
+  color: var(--button-text-color);
+}
+.home-card-icon svg { width: 23px; height: 23px; }
+.home-overview__heading { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.home-overview .home-overview__heading h2 { margin: 0; }
+.home-project__heading { justify-content: flex-start; }
+.home-project__heading .home-card-icon { width: 34px; height: 34px; border: 0; border-radius: 8px; background: transparent; }
+.home-project__heading .home-card-icon svg { width: 25px; height: 25px; }
+.home-project__heading h3 { flex: 1 1 auto; min-width: 0; }
+.home-project__github { margin-left: auto; }
+@media (max-width: 620px) {
+  .home-overview__heading { align-items: flex-start; }
+  .home-project__heading { flex-wrap: wrap; }
+}
