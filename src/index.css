@@ -2677,3 +2677,38 @@ p {
   .journey-overview .timeline-item { grid-template-columns: minmax(0, 1fr); }
   .journey-overview .timeline-item__period { grid-column: 1; grid-row: 3; text-align: left; }
 }
+
+/* Journey editorial polish: separators for experience, plain education entries. */
+.journey-page .journey-overview__experience .timeline-item:not(:last-child) {
+  border-bottom: 1px solid var(--soft-border);
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+}
+.journey-page .journey-overview__education .timeline {
+  margin: 0;
+  padding: 0;
+  border-left: 0;
+}
+.journey-page .journey-overview__education .timeline-item,
+.journey-page .journey-overview__education .timeline-item:last-child {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+}
+.journey-page .journey-overview__education .timeline-item + .timeline-item {
+  margin-top: 25px;
+}
+.journey-page .journey-overview__education .timeline-item::before {
+  content: none;
+  display: none;
+}
+.journey-page .journey-overview__education .timeline-item__meta,
+.journey-page .journey-overview__education .timeline-item__period {
+  margin-top: 5px;
+  text-align: left;
+}
+.journey-page .journey-overview__education .journey-details {
+  margin-top: 10px;
+}
