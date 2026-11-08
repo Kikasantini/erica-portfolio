@@ -2179,3 +2179,62 @@ p {
     font-size: 10px;
   }
 }
+
+/* Place personal highlights beside the stacked professional overview cards. */
+.home-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 18px;
+}
+.home-overview__work {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 18px;
+}
+.home-overview__work .home-section {
+  flex: 1 1 0;
+}
+.home-overview .home-section--personal {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  margin: 0;
+  padding: 24px 25px;
+  border: 1px solid var(--soft-border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.home-overview .home-section--personal h2 {
+  margin: 0 0 16px;
+  font-size: 20px;
+}
+.home-overview .home-fun-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  flex: 1;
+  gap: 10px;
+}
+.home-overview .home-fun-card {
+  min-height: 104px;
+  height: 100%;
+}
+.home-overview .home-fun-card__face {
+  padding: 13px 16px;
+  gap: 5px;
+  font-size: 13px;
+}
+.home-overview .home-fun-card__symbol {
+  width: 29px;
+  height: 29px;
+  border-radius: 8px;
+}
+.home-overview .home-fun-card__symbol svg { width: 17px; height: 17px; }
+.home-overview .home-fun-card__hint { font-size: 15px; }
+@media (max-width: 700px) {
+  .home-overview { grid-template-columns: 1fr; }
+  .home-overview__work .home-section { flex: auto; }
+  .home-overview .home-section--personal { padding: 20px; }
+  .home-overview .home-fun-card { min-height: 105px; }
+}
