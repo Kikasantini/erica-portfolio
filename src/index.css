@@ -2238,3 +2238,20 @@ p {
   .home-overview .home-section--personal { padding: 20px; }
   .home-overview .home-fun-card { min-height: 105px; }
 }
+
+/* Equal vertical padding for the two stacked professional summary cards. */
+.home-overview__work .home-section {
+  flex: 0 0 auto;
+  min-height: 0;
+  padding: 18px 22px;
+}
+.home-overview__work .home-overview__heading {
+  margin-bottom: 10px;
+}
+@media (max-width: 700px) {
+  .home-overview__work .home-section {
+    flex: 0 0 auto;
+    min-height: 0;
+    padding: 18px 20px;
+  }
+}
