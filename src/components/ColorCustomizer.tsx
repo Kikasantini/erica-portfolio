@@ -242,7 +242,7 @@ const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
       "badgeThumbnailBorder"
     ]
   },
-  {"id": "projectBack", "keys": ["projectBackBackground", "projectBackBorder", "projectBackHeading", "projectBackLabel", "projectBackTechnology", "projectBackIcon", "projectBackDivider", "projectBackLink"]},
+  {"id": "projectBack", "keys": ["projectBackBackground", "projectBackBorder", "projectBackHeading", "projectBackLabel", "projectBackIcon", "projectBackDivider", "projectBackLink"]},
   {
     "id": "projectCards",
     "keys": [
@@ -253,7 +253,6 @@ const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
       "projectBackBorder",
       "projectBackHeading",
       "projectBackLabel",
-      "projectBackTechnology",
       "projectBackIcon",
       "projectBackDivider",
       "projectBackLink",

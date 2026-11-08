@@ -4351,7 +4351,7 @@ p {
 
 /* Unified project card backs: comfortable category icons and regular-weight technology text. */
 .projects-page .project-item__face--back .project-item__tech-name {
-  color: var(--project-card-back-technology);
+  color: var(--paragraph-text);
   font-size: 12px;
   font-weight: 400;
 }
@@ -4398,4 +4398,50 @@ html {
 .journey-page .journey-overview__certificates .certificate-item,
 :root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item {
   transition-property: color, background-color, border-color;
+}
+
+
+/* Project back icons: lighter outline; frontend uses a simple code window. */
+.projects-page .project-item__face--back .project-item__tech-category svg {
+  stroke-width: 1.25;
+}
+.projects-page .project-item__face--back .project-item__tech-group {
+  color: var(--paragraph-text);
+}
+
+/* Badge editorial row: never vertically center its contents on theme changes. */
+.journey-page .journey-overview__certificates .certificate-item,
+:root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item {
+  align-items: start;
+}
+.journey-page .journey-overview__certificates .certificate-item__thumbnail {
+  display: block;
+  width: 119px;
+  height: 119px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  align-self: start;
+  object-fit: contain;
+}
+.journey-page .journey-overview__certificates .certificate-item__content {
+  align-self: start;
+  min-height: 119px;
+}
+@media (max-width: 650px) {
+  .journey-page .journey-overview__certificates .certificate-item__thumbnail {
+    width: 90px;
+    height: 90px;
+  }
+  .journey-page .journey-overview__certificates .certificate-item__content {
+    min-height: 90px;
+  }
+}
+@media (max-width: 380px) {
+  .journey-page .journey-overview__certificates .certificate-item__thumbnail {
+    width: 70px;
+    height: 70px;
+  }
+  .journey-page .journey-overview__certificates .certificate-item__content {
+    min-height: 70px;
+  }
 }

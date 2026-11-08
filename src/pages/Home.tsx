@@ -242,7 +242,7 @@ export default function Home() {
           {personalHighlights.map((note, index) => (
             <div className="home-personal-note" key={note.id}>
               <span className="home-personal-note__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.55" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.15" strokeLinecap="round" strokeLinejoin="round">
                   {note.id === 'conversationStarter' ? (
                     <>
                       <path d="M12 5c-2 0-3 1-4 2L5 3 3 7v6c0 4.4 4 8 9 8s9-3.6 9-8V7l-2-4-3 4c-1-1-2-2-4-2Z" />

@@ -453,7 +453,7 @@ const primaryTech: Record<string, string[]> = {
 // Simple line icons match the portfolio's existing icon language.
 function TechnologyGroupIcon({ name }: { name: GroupKey }) {
   switch (name) {
-    case 'frontend': return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M12 .297a12 12 0 0 0-3.79 23.385c.6.111.82-.26.82-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.746.083-.73.083-.73 1.205.084 1.84 1.238 1.84 1.238 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.762-1.604-2.665-.304-5.467-1.334-5.467-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.652.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.221 0 4.61-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.216.694.825.576A12.001 12.001 0 0 0 12 .297"/></svg>
+    case 'frontend': return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="3.5" width="19" height="17" rx="2"/><path d="M2.5 8h19m-11 3.5-3 2.5 3 2.5m3-5 3 2.5-3 2.5"/></svg>
     case 'backend': return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6h.01M7 17h.01"/></svg>
     case 'ai': return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5a3 3 0 0 0-5 1 4 4 0 0 0-2 7 4 4 0 0 0 3 6 3 3 0 0 0 4-2V5ZM12 5a3 3 0 0 1 5 1 4 4 0 0 1 2 7 4 4 0 0 1-3 6 3 3 0 0 1-4-2V5Z"/></svg>
     case 'database': return <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0"/></svg>
