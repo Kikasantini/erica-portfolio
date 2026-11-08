@@ -40,9 +40,9 @@ function ExperienceIcon({ id }: { id: string }) {
       ) : id === 'sageConsultant' ? (
         <><ellipse cx="12" cy="5" rx="8" ry="3" /><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7" /></>
       ) : id === 'developerIntern' ? (
-        <><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3 13 6-16" /></>
+        <path d="m8 8-4 4 4 4m8-8 4 4-4 4" />
       ) : id === 'producer' ? (
-        <><rect x="2.5" y="7" width="19" height="12" rx="5" /><path d="M7 11v5m-2.5-2.5h5M15 12h.01M18 15h.01" /></>
+        <><rect x="2" y="6" width="20" height="12" rx="6" /><path d="M6 12h4m-2-2v4" /><circle cx="15.5" cy="13.5" r="0.75" fill="currentColor" stroke="none" /><circle cx="18" cy="10.5" r="0.75" fill="currentColor" stroke="none" /></>
       ) : (
         <><circle cx="12" cy="5.5" r="2.5" /><circle cx="5" cy="11" r="2" /><circle cx="19" cy="11" r="2" /><path d="M12 8v3m-7 2v3m14-3v3M3 19h4m3 0h4m3 0h4" /></>
       )}
