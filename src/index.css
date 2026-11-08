@@ -34,6 +34,14 @@
   --project-card-background-color: #ffffff;
   --project-card-border-color: #ababab;
   --project-card-media-background-color: #d7e0df;
+  --project-card-back-link: #137a80;
+  --project-card-back-divider: #ccdcda;
+  --project-card-back-icon: #257c83;
+  --project-card-back-technology: #435258;
+  --project-card-back-label: #257c83;
+  --project-card-back-heading: #16324f;
+  --project-card-back-border: #b6cecb;
+  --project-card-back-background: #eef5f2;
   font-family: 'Roboto', Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -79,6 +87,14 @@
   --project-card-background-color: #1d252a;
   --project-card-border-color: #34464b;
   --project-card-media-background-color: #202c30;
+  --project-card-back-link: #69e4dc;
+  --project-card-back-divider: #34484d;
+  --project-card-back-icon: #91b4ae;
+  --project-card-back-technology: #c5d2cf;
+  --project-card-back-label: #91b4ae;
+  --project-card-back-heading: #e5ebee;
+  --project-card-back-border: #456063;
+  --project-card-back-background: #223139;
   color-scheme: dark;
 }
 
@@ -3793,4 +3809,43 @@ p {
 }
 @media (prefers-reduced-motion: reduce) {
   .projects-page .project-item__flip-inner { transition: none; }
+}
+
+/* Project card back colors are independent color-editor controls. */
+.projects-page .project-item.project-item--editorial .project-item__face--back {
+  background-color: var(--project-card-back-background);
+  border-color: var(--project-card-back-border);
+  color: var(--project-card-back-technology);
+}
+.projects-page .project-item__face--back > h3 { color: var(--project-card-back-heading); }
+.projects-page .project-item__face--back > h4 { color: var(--project-card-back-label); }
+.projects-page .project-item__face--back .project-item__tech-group {
+  border-bottom-color: var(--project-card-back-divider);
+  color: var(--project-card-back-technology);
+}
+.projects-page .project-item__face--back .project-item__tech-group > strong,
+.projects-page .project-item__face--back .project-item__tech-category > strong {
+  color: var(--project-card-back-label);
+}
+.projects-page .project-item__face--back .project-item__tech-name strong {
+  color: var(--project-card-back-technology);
+}
+.projects-page .project-item__face--back .project-item__tech-category svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  fill: none;
+  stroke: var(--project-card-back-icon);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.projects-page .project-item__face--back .project-item__tech-category {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  min-width: 0;
+}
+.projects-page .project-item__face--back .project-item__flip-back {
+  color: var(--project-card-back-link);
 }

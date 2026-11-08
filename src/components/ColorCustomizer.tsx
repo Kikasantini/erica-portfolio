@@ -44,7 +44,15 @@ const LIGHT_MODE_DEFAULTS = {
   "projectTagBackground": "#e8f1f0",
   "projectTagBorder": "#ccdddd",
   "projectTagText": "#1e6971",
-  "coreTechnologiesText": "#435258"
+  "coreTechnologiesText": "#435258",
+  "projectBackBackground": "#eef5f2",
+  "projectBackBorder": "#b6cecb",
+  "projectBackHeading": "#16324f",
+  "projectBackLabel": "#257c83",
+  "projectBackTechnology": "#435258",
+  "projectBackIcon": "#257c83",
+  "projectBackDivider": "#ccdcda",
+  "projectBackLink": "#137a80"
 } as const
 type ColorKey = keyof typeof LIGHT_MODE_DEFAULTS
 type ColorPalette = Record<ColorKey, string>
@@ -93,7 +101,15 @@ const DARK_MODE_DEFAULTS: ColorPalette = {
   "projectTagBackground": "#27383a",
   "projectTagBorder": "#384c50",
   "projectTagText": "#b3d4ca",
-  "coreTechnologiesText": "#c5d2cf"
+  "coreTechnologiesText": "#c5d2cf",
+  "projectBackBackground": "#223139",
+  "projectBackBorder": "#456063",
+  "projectBackHeading": "#e5ebee",
+  "projectBackLabel": "#91b4ae",
+  "projectBackTechnology": "#c5d2cf",
+  "projectBackIcon": "#91b4ae",
+  "projectBackDivider": "#34484d",
+  "projectBackLink": "#69e4dc"
 }
 const CSS_VARIABLES: Record<ColorKey, string> = {
   "pageBackground": "--page-background",
@@ -138,7 +154,15 @@ const CSS_VARIABLES: Record<ColorKey, string> = {
   "projectTagBackground": "--project-tag-background",
   "projectTagBorder": "--project-tag-border",
   "projectTagText": "--project-tag-text",
-  "coreTechnologiesText": "--core-technologies-text"
+  "coreTechnologiesText": "--core-technologies-text",
+  "projectBackBackground": "--project-card-back-background",
+  "projectBackBorder": "--project-card-back-border",
+  "projectBackHeading": "--project-card-back-heading",
+  "projectBackLabel": "--project-card-back-label",
+  "projectBackTechnology": "--project-card-back-technology",
+  "projectBackIcon": "--project-card-back-icon",
+  "projectBackDivider": "--project-card-back-divider",
+  "projectBackLink": "--project-card-back-link"
 }
 const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
   {
@@ -218,12 +242,21 @@ const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
       "badgeThumbnailBorder"
     ]
   },
+  {"id": "projectBack", "keys": ["projectBackBackground", "projectBackBorder", "projectBackHeading", "projectBackLabel", "projectBackTechnology", "projectBackIcon", "projectBackDivider", "projectBackLink"]},
   {
     "id": "projectCards",
     "keys": [
       "projectCardBackground",
       "projectCardBorder",
       "projectCardMediaBackground",
+      "projectBackBackground",
+      "projectBackBorder",
+      "projectBackHeading",
+      "projectBackLabel",
+      "projectBackTechnology",
+      "projectBackIcon",
+      "projectBackDivider",
+      "projectBackLink",
       "statusSurface",
       "statusBorder",
       "statusText"
