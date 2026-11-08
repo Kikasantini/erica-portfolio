@@ -139,30 +139,6 @@ export default function Journey() {
         </section>
 
         <aside className="journey-overview__side">
-          <section className="journey-overview__education" aria-labelledby="journey-education-title">
-            <h2 id="journey-education-title" className="journey-overview__heading">
-              {t('educationTitle')}
-            </h2>
-            <div className="timeline">
-              {education.map((item) => (
-                <article className="timeline-item" key={item.id}>
-                  <h3>{item.program}</h3>
-                  <p className="timeline-item__meta">
-                    <span>{item.institution}</span>
-                  <span className="journey-meta-divider" aria-hidden="true" />
-                  <span>{item.location}</span>
-                  </p>
-                  <p className="timeline-item__period">{item.period}</p>
-                  <ul className="journey-details">
-                    {item.details.map((detail, index) => (
-                      <li key={item.id + '-detail-' + index}>{detail}</li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-            </div>
-          </section>
-
           <section className="journey-overview__certificates" aria-labelledby="journey-certificates-title">
             <h2 id="journey-certificates-title" className="journey-overview__heading">
               {t('certificatesTitle')}
@@ -207,6 +183,30 @@ export default function Journey() {
                       </a>
                     </div>
                   </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="journey-overview__education" aria-labelledby="journey-education-title">
+            <h2 id="journey-education-title" className="journey-overview__heading">
+              {t('educationTitle')}
+            </h2>
+            <div className="timeline">
+              {education.map((item) => (
+                <article className="timeline-item" key={item.id}>
+                  <h3>{item.program}</h3>
+                  <p className="timeline-item__meta">
+                    <span>{item.institution}</span>
+                  <span className="journey-meta-divider" aria-hidden="true" />
+                  <span>{item.location}</span>
+                  </p>
+                  <p className="timeline-item__period">{item.period}</p>
+                  <ul className="journey-details">
+                    {item.details.map((detail, index) => (
+                      <li key={item.id + '-detail-' + index}>{detail}</li>
+                    ))}
+                  </ul>
                 </article>
               ))}
             </div>

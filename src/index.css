@@ -3104,3 +3104,63 @@ p {
   white-space: pre;
   color: var(--section-title-color);
 }
+
+/* Customizable Soft Slate surfaces introduced by the current design. */
+:root {
+  --experience-alternate-background: #e2eeeb;
+  --timeline-icon-hover-background: #2b8b83;
+  --timeline-icon-hover-text: #ffffff;
+  --core-stack-background: #fdfdfd;
+  --badge-card-start: #e1f2ef;
+  --badge-card-end: #edf8f6;
+  --badge-card-border: #b8d4d1;
+  --badge-label-background: #cae9e5;
+  --badge-label-text: #235c5b;
+  --badge-link: #137a80;
+  --badge-link-hover: #119ca0;
+  --badge-thumbnail-border: #8d65cc;
+}
+:root[data-theme='dark'] {
+  --experience-alternate-background: #22343a;
+  --timeline-icon-hover-background: #83cbbd;
+  --timeline-icon-hover-text: #142127;
+  --core-stack-background: #2a3a3f;
+  --badge-card-start: #203a40;
+  --badge-card-end: #192d32;
+  --badge-card-border: #2d4d54;
+  --badge-label-background: #2e5a58;
+  --badge-label-text: #c1e9e2;
+  --badge-link: #69e4dc;
+  --badge-link-hover: #119ca0;
+  --badge-thumbnail-border: #8d65cc;
+}
+.journey-page .journey-overview__experience .experience-timeline__entry:nth-child(even)::after {
+  background: var(--experience-alternate-background);
+}
+.journey-page .journey-overview__experience .experience-timeline__toggle:hover,
+.journey-page .journey-overview__experience .experience-timeline__toggle:focus-visible {
+  background: var(--timeline-icon-hover-background);
+  color: var(--timeline-icon-hover-text);
+  border-color: var(--timeline-icon-hover-background);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--timeline-icon-hover-background) 17%, transparent);
+}
+.journey-page .journey-overview__experience .technology-group:not(.technology-group--additional) .technology-list li {
+  background: var(--core-stack-background);
+}
+.journey-page .journey-overview__certificates .certificate-item {
+  border-color: var(--badge-card-border);
+  background: linear-gradient(110deg, var(--badge-card-start), var(--badge-card-end));
+}
+.journey-page .journey-overview__certificates .certificate-item__kind {
+  background: var(--badge-label-background);
+  color: var(--badge-label-text);
+}
+.journey-page .journey-overview__certificates .certificate-item__thumbnail {
+  border-color: var(--badge-thumbnail-border);
+}
+.journey-page .journey-overview__certificates .certificate-item__link {
+  color: var(--badge-link);
+}
+.journey-page .journey-overview__certificates .certificate-item__link:hover {
+  color: var(--badge-link-hover);
+}
