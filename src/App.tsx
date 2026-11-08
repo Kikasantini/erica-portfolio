@@ -139,11 +139,6 @@ function LocalizedLayout() {
   return (
     <>
       <header className="site-header">
-        <NavLink className="site-brand" to={'/' + activeLanguage} end>
-          <span className="site-brand__logo" aria-hidden="true" />
-          <span>{t('brandName')}</span>
-        </NavLink>
-
         <nav className="site-nav" aria-label={t('navigation.accessibilityLabel')}>
           <NavLink to={'/' + activeLanguage} end>
             {t('navigation.home')}
