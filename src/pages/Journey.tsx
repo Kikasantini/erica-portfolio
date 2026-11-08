@@ -143,20 +143,32 @@ export default function Journey() {
                     <div className="certificate-item__header">
                       <span className="certificate-item__kind">{t('digitalBadge')}</span>
                       <h3>{certificate.title}</h3>
-                      <p className="timeline-item__meta">{certificate.issuer}</p>
-                      <div className="certificate-item__period-row">
-                        <p className="timeline-item__period">{certificate.period}</p>
-                        <a
-                          className="certificate-item__link"
-                          href={certificate.credentialUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          {t('verifyCertificate')}
-                        </a>
-                      </div>
+                      <p className="certificate-item__detail">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="m3 9 9-6 9 6M4 10h16M6 10v9m4-9v9m4-9v9m4-9v9M3 21h18" />
+                        </svg>
+                        <span>{certificate.issuer}</span>
+                      </p>
+                      <p className="certificate-item__detail">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="3" y="5" width="18" height="16" rx="2"/>
+                          <path d="M7 3v4m10-4v4M3 10h18" />
+                        </svg>
+                        <span>{certificate.period}</span>
+                      </p>
+                      <a
+                        className="certificate-item__link"
+                        href={certificate.credentialUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <span>{t('verifyCertificate')}</span>
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M13 5h6v6m0-6-9 9"/>
+                          <path d="M19 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/>
+                        </svg>
+                      </a>
                     </div>
-                    <p className="certificate-item__description">{certificate.description}</p>
                   </div>
                 </article>
               ))}

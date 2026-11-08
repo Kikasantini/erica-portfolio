@@ -2848,3 +2848,107 @@ p {
   font-size: 12px;
   line-height: 1.5;
 }
+
+/* Badge reference: dense horizontal card, small metadata icons and cyan link. */
+.journey-page .journey-overview__certificates .certificate-item {
+  grid-template-columns: 105px minmax(0, 1fr);
+  align-items: start;
+  gap: 15px;
+  padding: 8px;
+  border-radius: 9px;
+  border: 1px solid #b8d4d1;
+  background: linear-gradient(115deg, #e1f2ef, #edf8f6);
+}
+:root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item {
+  background: linear-gradient(110deg, #203a40 0%, #192d32 100%);
+  border-color: #2d4d54;
+}
+.journey-page .journey-overview__certificates .certificate-item__thumbnail {
+  width: 105px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  border: 1px solid #8d65cc;
+  border-radius: 6px;
+}
+.journey-page .journey-overview__certificates .certificate-item__content {
+  padding: 0;
+}
+.journey-page .journey-overview__certificates .certificate-item__header {
+  align-items: stretch;
+  gap: 3px;
+}
+.journey-page .journey-overview__certificates .certificate-item__header h3 {
+  padding-right: 88px;
+  margin: 0 0 3px;
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+.journey-page .journey-overview__certificates .certificate-item__detail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  margin: 0;
+  color: var(--paragraph-text);
+  font-size: 11px;
+  line-height: 1.45;
+}
+.journey-page .journey-overview__certificates .certificate-item__detail svg {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
+}
+.journey-page .journey-overview__certificates .certificate-item__kind {
+  top: 7px;
+  right: 8px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+}
+.journey-page .journey-overview__certificates .certificate-item__link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 4px;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #137a80;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+:root[data-theme='dark'] .journey-page .journey-overview__certificates .certificate-item__link {
+  color: #69e4dc;
+}
+.journey-page .journey-overview__certificates .certificate-item__link svg {
+  width: 13px;
+  height: 13px;
+  flex: 0 0 13px;
+}
+.journey-page .journey-overview__certificates .certificate-item__link:hover {
+  text-decoration: underline;
+  color: #119ca0;
+}
+@media (max-width: 1100px) {
+  .journey-page .journey-overview__certificates .certificate-item {
+    grid-template-columns: 84px minmax(0, 1fr);
+    gap: 10px;
+  }
+  .journey-page .journey-overview__certificates .certificate-item__thumbnail {
+    width: 84px;
+    max-width: 84px;
+  }
+  .journey-page .journey-overview__certificates .certificate-item__kind {
+    position: absolute;
+    order: 0;
+    margin: 0;
+    font-size: 9px;
+  }
+  .journey-page .journey-overview__certificates .certificate-item__header h3 { padding-right: 79px; }
+}
+@media (max-width: 380px) {
+  .journey-page .journey-overview__certificates .certificate-item__kind { position: static; align-self: flex-start; order: -1; }
+  .journey-page .journey-overview__certificates .certificate-item__header h3 { padding-right: 0; }
+}
