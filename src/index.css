@@ -2353,3 +2353,110 @@ p {
     mask-image: none;
   }
 }
+
+/* Home: reserve the longest of all three language variants at each breakpoint.
+   The invisible copies participate in layout, but not in assistive technology. */
+.home-page .home-stable-copy {
+  display: grid;
+  grid-template-areas: "copy";
+  min-width: 0;
+  width: 100%;
+}
+.home-page .home-stable-copy > * {
+  grid-area: copy;
+  min-width: 0;
+  margin: 0;
+  font: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  overflow-wrap: break-word;
+}
+.home-page .home-stable-copy__measure {
+  visibility: hidden;
+  pointer-events: none;
+}
+.home-page .home-featured__heading > #home-featured-title {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.home-page .home-featured__heading > #home-featured-title h2 {
+  font-size: 23px;
+  font-weight: 500;
+}
+.home-page .home-featured__heading #home-featured-title {
+  color: var(--heading-color);
+}
+.home-page .home-project__heading .home-stable-copy {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.home-page .home-project__heading .home-stable-copy h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+.home-page .home-overview__heading > [id] {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.home-page .home-overview__heading > [id] h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+.home-page #home-interests-title {
+  margin-bottom: 19px;
+}
+.home-page #home-interests-title h2 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.home-page .home-personal-note__content .home-stable-copy + .home-stable-copy {
+  margin-top: 5px;
+}
+.home-page .home-personal-note__content .home-stable-copy h3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.home-page .home-personal-note__content .home-stable-copy p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+.home-page .home-intro.home-stable-copy {
+  max-width: 550px;
+}
+.home-page .home-intro.home-stable-copy > p { line-height: 1.7; }
+.home-page .home-eyebrow.home-stable-copy > p {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+/* Editorial icons: larger outlines without colored squares or outlines. */
+.home-page .home-personal-note {
+  grid-template-columns: 48px minmax(0, 1fr);
+  column-gap: 10px;
+}
+.home-page .home-personal-note__icon {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--button-text-color);
+}
+.home-page .home-personal-note__icon svg {
+  width: 33px;
+  height: 33px;
+}
+/* Keep the title's allocated height stable across translations without a layout resize. */
+.home-page .home-title {
+  min-height: 1.2em;
+}
+@media (max-width: 700px) {
+  .home-page .home-title { min-height: 2.4em; }
+}

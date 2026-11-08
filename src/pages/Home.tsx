@@ -2,6 +2,34 @@ import { useState, type CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
 
+
+const homeLanguages = ['en', 'fr', 'pt'] as const
+
+// Hidden translated copies take up space without appearing or being announced.
+// This keeps the Home layout stationary as the visible language changes.
+function StableCopy({
+  text,
+  variants,
+  as: Tag = 'p',
+  className = '',
+}: {
+  text: string
+  variants: string[]
+  as?: 'p' | 'h2' | 'h3'
+  className?: string
+}) {
+  return (
+    <div className={`home-stable-copy ${className}`}>
+      <Tag className="home-stable-copy__visible">{text}</Tag>
+      {variants.map((copy, index) => (
+        <Tag className="home-stable-copy__measure" aria-hidden="true" key={index}>
+          {copy}
+        </Tag>
+      ))}
+    </div>
+  )
+}
+
 type ContactLink = {
   id: string
   label: string
@@ -120,12 +148,21 @@ export default function Home() {
   const personalHighlights = t('personalHighlights', {
     returnObjects: true,
   }) as PersonalHighlight[]
+  const homeCopies = (key: string) => homeLanguages.map((lng) => t(key, { lng }))
+  const projectCopies = (projectId: string, property: 'title' | 'firstHighlight') =>
+    homeLanguages.map((lng) => {
+      const sections = projectT('sections', { lng, returnObjects: true }) as Array<{
+        items: Array<{ id: string; title: string; highlights: string[] }>
+      }>
+      const project = sections.flatMap((section) => section.items).find((item) => item.id === projectId)
+      return property === 'title' ? (project?.title ?? '') : (project?.highlights[0] ?? '')
+    })
 
   return (
     <main className="home-page">
       <div className="home-hero">
         <div className="home-hero__copy">
-      <p className="home-eyebrow">{t('roleLocation')}</p>
+      <StableCopy text={t('roleLocation')} variants={homeCopies('roleLocation')} className="home-eyebrow" />
       <h1
         className={`home-title${isHovered ? ' home-title--hovered' : ''}`}
         aria-label={title}
@@ -139,9 +176,11 @@ export default function Home() {
         <AnimatedTitleLayer text={title} variant="original" />
         <AnimatedTitleLayer text={nicknameTitle} variant="nickname" />
       </h1>
-      <p className="home-intro">
-        {t('aiIntro')} {t('personalIntro')}
-      </p>
+      <StableCopy
+        className="home-intro"
+        text={t('aiIntro') + ' ' + t('personalIntro')}
+        variants={homeLanguages.map((lng) => t('aiIntro', { lng }) + ' ' + t('personalIntro', { lng }))}
+      />
 
       <nav className="home-contact" aria-label={t('contactTitle')}>
         {contactLinks.map((link) => {
@@ -185,27 +224,30 @@ export default function Home() {
       <div className="home-overview">
         <div className="home-overview__work">
       <section className="home-section" aria-labelledby="home-work-title">
-        <div className="home-overview__heading"><HomeCardIcon name="work" /><h2 id="home-work-title">{t('workTitle')}</h2></div>
-        <p>{t('professionalSummary')}</p>
+        <div className="home-overview__heading"><HomeCardIcon name="work" /><div id="home-work-title"><StableCopy as="h2" text={t('workTitle')} variants={homeCopies('workTitle')} /></div></div>
+        <StableCopy text={t('professionalSummary')} variants={homeCopies('professionalSummary')} />
       </section>
 
       <section className="home-section home-section--career" aria-labelledby="home-career-title">
-        <div className="home-overview__heading"><HomeCardIcon name="direction" /><h2 id="home-career-title">{t('careerTitle')}</h2></div>
-        <p>{t('careerSummary')}</p>
+        <div className="home-overview__heading"><HomeCardIcon name="direction" /><div id="home-career-title"><StableCopy as="h2" text={t('careerTitle')} variants={homeCopies('careerTitle')} /></div></div>
+        <StableCopy text={t('careerSummary')} variants={homeCopies('careerSummary')} />
       </section>
         </div>
       <section
         className="home-section home-section--personal"
         aria-labelledby="home-interests-title"
       >
-        <h2 id="home-interests-title">{t('interestsTitle')}</h2>
+        <div id="home-interests-title"><StableCopy as="h2" text={t('interestsTitle')} variants={homeCopies('interestsTitle')} /></div>
         <div className="home-personal-notes">
           {personalHighlights.map((note, index) => (
             <div className="home-personal-note" key={note.id}>
               <span className="home-personal-note__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                   {note.id === 'conversationStarter' ? (
-                    <><path d="M5 10V7L8 5l4 2 4-2 3 2v3a7 7 0 1 1-14 0Z" /><path d="M9 12h.01M15 12h.01M10 15q2 2 4 0M3 11l3 1m15-1-3 1" /></>
+                    <>
+                      <path d="M12 5c-2 0-3 1-4 2L5 3 3 7v6c0 4.4 4 8 9 8s9-3.6 9-8V7l-2-4-3 4c-1-1-2-2-4-2Z" />
+                      <path d="M9 13h.01M15 13h.01M11 16l1 1 1-1M2 15l5 1m15-1-5 1" />
+                    </>
                   ) : note.id === 'oneWord' ? (
                     <><path d="m12 2 2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2Z" /></>
                   ) : (
@@ -214,8 +256,18 @@ export default function Home() {
                 </svg>
               </span>
               <div className="home-personal-note__content">
-                <h3>{t('personalNoteTitles.' + note.id)}</h3>
-                <p>{note.back}</p>
+                <StableCopy
+                  as="h3"
+                  text={t('personalNoteTitles.' + note.id)}
+                  variants={homeCopies('personalNoteTitles.' + note.id)}
+                />
+                <StableCopy
+                  text={note.back}
+                  variants={homeLanguages.map((lng) => {
+                    const items = t('personalHighlights', { lng, returnObjects: true }) as PersonalHighlight[]
+                    return items.find((item) => item.id === note.id)?.back ?? ''
+                  })}
+                />
               </div>
               <span className="home-personal-note__number" aria-hidden="true">
                 {String(index + 1).padStart(2, '0')}
@@ -229,7 +281,7 @@ export default function Home() {
       {recentProjects.length > 0 && (
         <section className="home-featured" aria-labelledby="home-featured-title">
           <div className="home-featured__heading">
-            <h2 id="home-featured-title">{recentSectionTitle}</h2>
+            <div id="home-featured-title"><StableCopy as="h2" text={recentSectionTitle ?? ''} variants={homeLanguages.map((lng) => projectT('sections', { lng, returnObjects: true }).find((section: { id: string }) => section.id === 'recentProjects')?.title ?? '')} /></div>
             <Link to={`/${language}/projects`} className="home-featured__all">
               {t('viewAllProjects')} <span aria-hidden="true">→</span>
             </Link>
@@ -240,7 +292,7 @@ export default function Home() {
                 {project.status && <span className="project-status">{project.status}</span>}
                 <div className="home-project__heading">
                   <HomeCardIcon name={project.id as HomeIconName} />
-                  <h3>{project.title}</h3>
+                  <StableCopy as="h3" text={project.title} variants={projectCopies(project.id, 'title')} />
                   <a href={project.githubUrl} target="_blank" rel="noreferrer"
                      aria-label={project.title + ' — GitHub'} className="home-project__github">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -248,7 +300,7 @@ export default function Home() {
                     </svg>
                   </a>
                 </div>
-                <p>{project.highlights[0]}</p>
+                <StableCopy text={project.highlights[0]} variants={projectCopies(project.id, 'firstHighlight')} />
               </article>
             ))}
           </div>
