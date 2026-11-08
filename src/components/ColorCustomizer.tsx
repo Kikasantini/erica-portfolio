@@ -28,7 +28,6 @@ const LIGHT_MODE_DEFAULTS = {
   "surface": "#ffffff",
   "softBorder": "#ccdcda",
   "heroBackground": "#edf4f2",
-  "heroIllustrationBackground": "#edf4f2",
   "accentFill": "#437f7e",
   "accentContrast": "#ffffff",
   "statusText": "#216c69",
@@ -78,7 +77,6 @@ const DARK_MODE_DEFAULTS: ColorPalette = {
   "surface": "#1d282d",
   "softBorder": "#34484d",
   "heroBackground": "#192328",
-  "heroIllustrationBackground": "#192328",
   "accentFill": "#85b6ac",
   "accentContrast": "#142328",
   "statusText": "#c3e7d6",
@@ -124,7 +122,6 @@ const CSS_VARIABLES: Record<ColorKey, string> = {
   "surface": "--surface",
   "softBorder": "--soft-border",
   "heroBackground": "--hero-bg",
-  "heroIllustrationBackground": "--hero-illustration-background",
   "accentFill": "--accent-fill",
   "accentContrast": "--accent-contrast",
   "statusText": "--status-text",
@@ -150,8 +147,8 @@ const COLOR_GROUPS: { id: string; keys: ColorKey[] }[] = [
       "pageBackground",
       "surface",
       "softBorder",
-      "heroBackground",
-      "heroIllustrationBackground"
+      "heroBackground"
+  
     ]
   },
   {
@@ -409,7 +406,7 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
                           type="color"
                           value={colors[colorKey]}
                           aria-label={t('colorEditor.pickerLabel', {
-                            color: colorName,
+                            color: colorName
                           })}
                           onChange={(event) =>
                             updateColor(colorKey, event.currentTarget.value)
@@ -425,7 +422,7 @@ export default function ColorCustomizer({ theme, onThemeChange }: {
                           maxLength={7}
                           value={hexValue}
                           aria-label={t('colorEditor.hexLabel', {
-                            color: colorName,
+                            color: colorName
                           })}
                           onChange={(event) =>
                             updateHexDraft(colorKey, event.currentTarget.value)

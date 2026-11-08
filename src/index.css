@@ -2322,15 +2322,8 @@ p {
 }
 .home-personal-note__number { display: none; }
 
-/* Hero illustration backdrop: edit these two independent colors to fine-tune
-   how the transparent left edge blends in each theme. */
-:root {
-  --hero-illustration-background: #edf4f2; /* Light: original soft green */
-}
-:root[data-theme='dark'] {
-  --hero-illustration-background: #192328; /* Dark: Soft Slate charcoal teal */
-}
-.home-hero { background: var(--hero-illustration-background); }
+/* Use the same editable hero color behind the transparent illustration. */
+.home-hero { background: var(--hero-bg); }
 .home-hero__art {
   background-image: url('/soft-slate-cats-transparent.png');
   background-repeat: no-repeat;
