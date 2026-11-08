@@ -3052,3 +3052,10 @@ p {
   background: var(--meta-text);
   opacity: .65;
 }
+
+/* Justify only the descriptive bullets in Professional Experience. */
+.journey-page .journey-overview__experience .journey-details li {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
