@@ -27,7 +27,7 @@
       "location": "Montréal, QC, Canada",
       "period": "Février 2024 - octobre 2026",
       "details": [
-        "Au sein de l’équipe de développement d’Aquiweb, développé et déployé des fonctionnalités full-stack pour des clients dont les systèmes MES desservaient plus de 100 personnes, dont des gestionnaires et des opérateurs en usine, pour soutenir les processus de production, d’inventaire et d’équipement.",
+        "Au sein de l’équipe de développement d’Aquiweb, développé et déployé des fonctionnalités full-stack utilisées par plus de 100 personnes sur le terrain de production et environ 20 gestionnaires, pour soutenir les processus de production, de gestion des stocks et d’équipement.",
         "Développé de nouvelles fonctionnalités backend et adapté des fonctionnalités existantes à la logique métier et aux processus de fabrication propres à chaque client.",
         "Créé et modifié des flux de travail et des interfaces frontend pour les utilisateurs d’un système MES d’entreprise.",
         "Créé des intégrations API REST et des flux d’importation et d’exportation de données, notamment des imports d’ordres de fabrication reliant Aquiweb à des API et à d’autres logiciels.",
