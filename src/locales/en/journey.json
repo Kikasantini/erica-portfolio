@@ -27,7 +27,7 @@
       "location": "Montreal, QC, Canada",
       "period": "February 2024 - October 2026",
       "details": [
-        "As part of the Aquiweb development team, built and deployed full-stack features for client organizations whose MES systems served 100+ users, including managers and shop-floor operators, supporting production, inventory, and equipment workflows.",
+        "As part of the Aquiweb development team, built and deployed full-stack features used by 100+ shop-floor users and approximately 20 managers, supporting production, inventory, and equipment workflows.",
         "Developed new backend functionality and adapted existing features to client-specific business logic and manufacturing processes.",
         "Created and modified frontend workflows and interfaces for users of an enterprise Manufacturing Execution System (MES).",
         "Built REST API integrations and data import/export workflows, including work-order imports connecting Aquiweb with APIs and other software.",
