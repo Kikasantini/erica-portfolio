@@ -27,7 +27,7 @@
       "location": "Montreal, QC, Canada",
       "period": "Fevereiro de 2024 - outubro de 2026",
       "details": [
-        "Como parte da equipe de desenvolvimento do Aquiweb, desenvolvi e fiz deploy de funcionalidades full-stack para clientes cujos sistemas MES atendiam mais de 100 pessoas, incluindo gestores e operadores de fábrica, apoiando fluxos de produção, estoque e equipamentos.",
+        "Como parte da equipe de desenvolvimento do Aquiweb, desenvolvi e fiz deploy de funcionalidades full-stack utilizadas por mais de 100 usuários no chão de fábrica e cerca de 20 gestores, apoiando fluxos de produção, estoque e equipamentos.",
         "Desenvolvi novas funcionalidades no backend e adaptei funcionalidades existentes à lógica de negócio e aos processos de fabricação de cada cliente.",
         "Criei e modifiquei fluxos de trabalho e interfaces frontend para usuários de um sistema MES corporativo.",
         "Criei integrações com APIs REST e fluxos de importação e exportação de dados, incluindo importações de ordens de produção que conectavam o Aquiweb a APIs e outros softwares.",
