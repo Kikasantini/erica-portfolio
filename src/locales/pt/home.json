@@ -51,6 +51,18 @@
   "careerTitle": "O caminho que quero seguir",
   "careerSummary": "Com minha experiência full-stack, estou aberta a uma ampla variedade de vagas e tecnologias em desenvolvimento de software. Tenho curiosidade por áreas como inteligência artificial, computação em nuvem, automação, sistemas de dados e observabilidade, e quero continuar aprendendo enquanto contribuo para produtos úteis.",
   "workspaceArtworkAlt": "Ilustração de uma mesa de trabalho com notebook, plantas e dois gatos",
+  "recommendations": {
+    "title": "Recomendações",
+    "role": "Gerente de projetos na 4CAD Canada",
+    "date": "5 de outubro de 2026",
+    "viewOnLinkedIn": "Ver no LinkedIn",
+    "paragraphs": [
+      "Como gerente de projetos, tive o prazer de trabalhar com Erica em vários projetos.",
+      "Gostei especialmente do seu profissionalismo, iniciativa e comprometimento. Ela sempre fazia as perguntas certas, questionava os requisitos quando necessário e contribuía com ideias e soluções valiosas. Sua postura proativa e sua capacidade de manter os projetos avançando fizeram dela uma integrante valiosa da equipe e uma ótima pessoa com quem trabalhar.",
+      "Gostei muito da nossa colaboração e a recomendo sem hesitar."
+    ],
+    "translationNote": "Traduzido do inglês."
+  },
   "viewAllProjects": "Todos os projetos",
   "personalNoteTitles": {
     "conversationStarter": "Para começar uma conversa",

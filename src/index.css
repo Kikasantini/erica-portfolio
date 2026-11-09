@@ -2935,6 +2935,7 @@ p {
 /* Shared lightweight text actions across Home, Journey, and Projects.
    Same subtle hover surface as the project GitHub icon, with no underline. */
 .home-page .home-featured__all,
+.home-page .home-recommendation__link,
 .journey-page .journey-overview__certificates .certificate-item__link,
 .projects-page .project-item__flip-link,
 .projects-page .project-item__flip-back {
@@ -2974,6 +2975,7 @@ p {
   margin: auto 0 -6px -8px;
 }
 .home-page .home-featured__all:is(:hover, :focus-visible, :active),
+.home-page .home-recommendation__link:is(:hover, :focus-visible, :active),
 .journey-page .journey-overview__certificates .certificate-item__link:is(:hover, :focus-visible, :active),
 .projects-page .project-item__flip-link:is(:hover, :focus-visible, :active),
 .projects-page .project-item__flip-back:is(:hover, :focus-visible, :active) {
@@ -2983,6 +2985,7 @@ p {
   text-decoration-line: none;
 }
 .home-page .home-featured__all:visited,
+.home-page .home-recommendation__link:visited,
 .journey-page .journey-overview__certificates .certificate-item__link:visited {
   text-decoration: none;
   text-decoration-line: none;
@@ -2998,6 +3001,7 @@ p {
   text-decoration: none;
 }
 .home-page .home-featured__all:focus-visible,
+.home-page .home-recommendation__link:focus-visible,
 .journey-page .journey-overview__certificates .certificate-item__link:focus-visible,
 .projects-page .project-item__flip-link:focus-visible,
 .projects-page .project-item__flip-back:focus-visible {
@@ -3146,4 +3150,88 @@ html {
   .journey-page .journey-overview__certificates .certificate-item__content {
     min-height: 70px;
   }
+}
+
+
+/* Home recommendations: full-width testimonial under Recent Projects. */
+.home-recommendations {
+  margin-top: 46px;
+}
+.home-recommendations > h2 {
+  margin: 0 0 18px;
+  color: var(--heading-color);
+  font-size: 23px;
+  font-weight: 500;
+}
+.home-recommendation {
+  display: grid;
+  grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+  gap: 28px;
+  padding: 26px 0;
+}
+.home-recommendation__author {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  padding-right: 24px;
+}
+.home-recommendation__avatar {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--button-text-color);
+  background: var(--technology-tag-background-color);
+}
+.home-recommendation__avatar svg { width: 27px; height: 27px; }
+.home-recommendation__author h3 {
+  margin: 2px 0 5px;
+  color: var(--heading-color);
+  font-size: 16px;
+  font-weight: 600;
+}
+.home-recommendation__author p,
+.home-recommendation__author time {
+  display: block;
+  color: var(--meta-text);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.home-recommendation__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.home-recommendation__body blockquote {
+  margin: 0;
+  padding-left: 19px;
+  border-left: 3px solid var(--section-title-color);
+  color: var(--paragraph-text);
+}
+.home-recommendation__body blockquote p {
+  margin: 0 0 13px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.home-recommendation__body blockquote p:last-child { margin-bottom: 0; }
+.home-page .home-recommendation__link {
+  align-self: flex-end;
+  margin: 12px 0 0;
+}
+.home-recommendation__link svg { width: 16px; height: 16px; }
+@media (max-width: 760px) {
+  .home-recommendation { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 20px 0; }
+  .home-recommendation__author { padding: 0; }
+  .home-recommendations { margin-top: 38px; }
+}
+
+.home-recommendation__translation-note {
+  margin: 12px 0 0 22px;
+  color: var(--meta-text);
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.5;
 }
