@@ -152,7 +152,7 @@ p {
   align-items: center;
   gap: 4px;
   margin-left: auto;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .site-nav a {
@@ -2323,7 +2323,7 @@ p {
     min-width: 0;
     min-height: 42px;
     padding: 9px 3px;
-    font-size: clamp(10px, 3.5vw, 12px);
+    font-size: clamp(12px, 3.5vw, 14px);
     white-space: nowrap;
     border-radius: 7px;
   }
