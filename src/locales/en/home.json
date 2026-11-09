@@ -51,6 +51,12 @@
   "careerTitle": "Where I’m headed",
   "careerSummary": "Building on my full-stack background, I’m open to a wide range of software development roles and technologies. I’m curious about areas such as AI, cloud computing, automation, data systems, and observability, and I’m eager to keep learning while contributing to useful products.",
   "workspaceArtworkAlt": "Cozy coding desk illustration with a laptop, plants and two cats",
+  "recommendations": {
+    "title": "Recommendations",
+    "role": "Project Manager at 4CAD Canada",
+    "date": "October 5, 2026",
+    "viewOnLinkedIn": "View on LinkedIn"
+  },
   "viewAllProjects": "All projects",
   "personalNoteTitles": {
     "conversationStarter": "Conversation starter",
