@@ -3163,10 +3163,7 @@ html {
   display: grid;
   grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
   gap: 28px;
-  padding: 26px;
-  border: 1px solid var(--soft-border);
-  border-radius: 12px;
-  background: var(--surface);
+  padding: 26px 0;
 }
 .home-recommendation__author {
   display: flex;
@@ -3174,7 +3171,6 @@ html {
   gap: 12px;
   min-width: 0;
   padding-right: 24px;
-  border-right: 1px solid var(--soft-border);
 }
 .home-recommendation__avatar {
   display: grid;
@@ -3227,7 +3223,7 @@ html {
 .home-recommendation__link:hover { text-decoration: underline; text-underline-offset: 3px; }
 .home-recommendation__link:focus-visible { outline: 2px solid var(--heading-color); outline-offset: 4px; }
 @media (max-width: 760px) {
-  .home-recommendation { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 20px; }
-  .home-recommendation__author { padding: 0 0 17px; border-right: 0; border-bottom: 1px solid var(--soft-border); }
+  .home-recommendation { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 20px 0; }
+  .home-recommendation__author { padding: 0; }
   .home-recommendations { margin-top: 38px; }
 }
