@@ -311,6 +311,40 @@ export default function Home() {
       )}
 
 
+      <section className="home-recommendations" aria-labelledby="home-recommendations-title">
+        <h2 id="home-recommendations-title">{t('recommendations.title')}</h2>
+        <article className="home-recommendation">
+          <div className="home-recommendation__author">
+            <span className="home-recommendation__avatar" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="8" r="3.5" />
+                <path d="M5 20v-1.5a7 7 0 0 1 14 0V20" />
+              </svg>
+            </span>
+            <div>
+              <h3>Alexandre Basset</h3>
+              <p>{t('recommendations.role')}</p>
+              <time dateTime="2026-10-05">{t('recommendations.date')}</time>
+            </div>
+          </div>
+          <div className="home-recommendation__body">
+            <blockquote lang="en">
+              <p>As a Project Manager, I had the pleasure of working with Erica on several projects.</p>
+              <p>I particularly appreciated her professionalism, initiative, and commitment. She consistently asked the right questions, challenged requirements when needed, and contributed valuable ideas and solutions. Her proactive approach and ability to keep projects moving forward made her a valuable team member and a pleasure to work with.</p>
+              <p>I truly enjoyed our collaboration and would highly recommend her.</p>
+            </blockquote>
+            <a className="home-recommendation__link" href="https://www.linkedin.com/in/erica-santini/" target="_blank" rel="noreferrer">
+              {t('recommendations.viewOnLinkedIn')}
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 4h6v6m0-6L10 14" />
+                <path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5" />
+              </svg>
+            </a>
+          </div>
+        </article>
+      </section>
+
+
     </main>
   )
 }
