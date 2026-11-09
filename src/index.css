@@ -3222,3 +3222,11 @@ html {
   .home-recommendation__author { padding: 0; }
   .home-recommendations { margin-top: 38px; }
 }
+
+.home-recommendation__translation-note {
+  margin: 12px 0 0 22px;
+  color: var(--meta-text);
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.5;
+}
