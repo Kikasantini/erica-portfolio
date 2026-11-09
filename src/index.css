@@ -3147,3 +3147,87 @@ html {
     min-height: 70px;
   }
 }
+
+
+/* Home recommendations: full-width testimonial under Recent Projects. */
+.home-recommendations {
+  margin-top: 46px;
+}
+.home-recommendations > h2 {
+  margin: 0 0 18px;
+  color: var(--heading-color);
+  font-size: 23px;
+  font-weight: 500;
+}
+.home-recommendation {
+  display: grid;
+  grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+  gap: 28px;
+  padding: 26px;
+  border: 1px solid var(--soft-border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.home-recommendation__author {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  padding-right: 24px;
+  border-right: 1px solid var(--soft-border);
+}
+.home-recommendation__avatar {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--button-text-color);
+  background: var(--technology-tag-background-color);
+}
+.home-recommendation__avatar svg { width: 27px; height: 27px; }
+.home-recommendation__author h3 {
+  margin: 2px 0 5px;
+  color: var(--heading-color);
+  font-size: 16px;
+  font-weight: 600;
+}
+.home-recommendation__author p,
+.home-recommendation__author time {
+  display: block;
+  color: var(--meta-text);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.home-recommendation__body { min-width: 0; }
+.home-recommendation__body blockquote {
+  margin: 0;
+  padding-left: 19px;
+  border-left: 3px solid var(--section-title-color);
+  color: var(--paragraph-text);
+}
+.home-recommendation__body blockquote p {
+  margin: 0 0 13px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.home-recommendation__body blockquote p:last-child { margin-bottom: 0; }
+.home-recommendation__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+  color: var(--button-text-color);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.home-recommendation__link svg { width: 16px; height: 16px; }
+.home-recommendation__link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.home-recommendation__link:focus-visible { outline: 2px solid var(--heading-color); outline-offset: 4px; }
+@media (max-width: 760px) {
+  .home-recommendation { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 20px; }
+  .home-recommendation__author { padding: 0 0 17px; border-right: 0; border-bottom: 1px solid var(--soft-border); }
+  .home-recommendations { margin-top: 38px; }
+}
