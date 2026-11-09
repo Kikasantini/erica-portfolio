@@ -3200,7 +3200,11 @@ html {
   font-size: 13px;
   line-height: 1.5;
 }
-.home-recommendation__body { min-width: 0; }
+.home-recommendation__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
 .home-recommendation__body blockquote {
   margin: 0;
   padding-left: 19px;
@@ -3214,7 +3218,8 @@ html {
 }
 .home-recommendation__body blockquote p:last-child { margin-bottom: 0; }
 .home-page .home-recommendation__link {
-  margin: 12px 0 0 -8px;
+  align-self: flex-end;
+  margin: 12px 0 0;
 }
 .home-recommendation__link svg { width: 16px; height: 16px; }
 @media (max-width: 760px) {
