@@ -175,7 +175,8 @@
     "messaging": "Messagerie",
     "document": "Traitement de documents",
     "scheduling": "Planification et automatisation",
-    "environment": "Environnement de développement"
+    "environment": "Environnement de développement",
+    "analytics": "Analyse Web"
   },
   "filter": {
     "label": "Filtrer par technologie",

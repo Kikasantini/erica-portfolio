@@ -175,7 +175,8 @@
     "messaging": "Messaging",
     "document": "Document Processing",
     "scheduling": "Scheduling & Automation",
-    "environment": "Development Environment"
+    "environment": "Development Environment",
+    "analytics": "Analytics"
   },
   "filter": {
     "label": "Filter by technology",

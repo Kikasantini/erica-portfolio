@@ -65,6 +65,7 @@ type GroupKey =
   | 'hardware'
   | 'connectivity'
   | 'monitoring'
+  | 'analytics'
   | 'messaging'
   | 'document'
   | 'scheduling'
@@ -135,7 +136,11 @@ const projectTechGroups: Record<string, TechnologyGroup[]> = {
     },
     {
       key: 'tools',
-      items: ['Vite', 'Node.js', 'npm', 'VS Code', 'Git Bash', 'Cloudflare Web Analytics'],
+      items: ['Vite', 'Node.js', 'npm', 'VS Code', 'Git Bash'],
+    },
+    {
+      key: 'analytics',
+      items: ['Cloudflare Web Analytics'],
     },
     {
       key: 'quality',
@@ -430,6 +435,12 @@ function TechnologyGroupIcon({ name }: { name: GroupKey }) {
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M9 16a5 5 0 0 1 6 0" />
           <circle cx="12" cy="20" r="1" />
+        </svg>
+      )
+    case 'analytics':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 20h18M6 16v-5m6 5V6m6 10V9" />
         </svg>
       )
     case 'monitoring':

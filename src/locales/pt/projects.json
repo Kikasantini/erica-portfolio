@@ -175,7 +175,8 @@
     "messaging": "Mensageria",
     "document": "Processamento de documentos",
     "scheduling": "Agendamento e automação",
-    "environment": "Ambiente de desenvolvimento"
+    "environment": "Ambiente de desenvolvimento",
+    "analytics": "Análise web"
   },
   "filter": {
     "label": "Filtrar por tecnologia",
