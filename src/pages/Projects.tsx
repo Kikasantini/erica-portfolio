@@ -492,7 +492,8 @@ function ProjectCard({
     groups: Record<GroupKey, string>
   }
 }) {
-  const [isFlipped, setIsFlipped] = useState(false)
+  const [flipRotation, setFlipRotation] = useState(0)
+  const isFlipped = Math.abs(flipRotation % 360) === 180
   const featuredTech =
     primaryTech[project.id] ?? project.technologies.split('·').slice(0, 3)
   const groupedTech = projectTechGroups[project.id] ?? [
@@ -510,6 +511,7 @@ function ProjectCard({
       )}
       <div
         className={`project-item__flip-inner${isFlipped ? ' is-flipped' : ''}`}
+        style={{ transform: `rotateY(${flipRotation}deg)` }}
       >
         <div
           className="project-item__face project-item__face--front"
@@ -559,7 +561,7 @@ function ProjectCard({
                   className="project-item__flip-link"
                   type="button"
                   tabIndex={isFlipped ? -1 : undefined}
-                  onClick={() => setIsFlipped(true)}
+                  onClick={() => setFlipRotation((rotation) => rotation + 180)}
                   aria-label={labels.viewAll + ': ' + project.title}
                 >
                   {labels.viewAll} <span aria-hidden="true">›</span>
@@ -596,9 +598,9 @@ function ProjectCard({
             className="project-item__flip-back"
             type="button"
             tabIndex={isFlipped ? undefined : -1}
-            onClick={() => setIsFlipped(false)}
+            onClick={() => setFlipRotation((rotation) => rotation + 180)}
           >
-            <span aria-hidden="true">‹</span> {labels.backToProject}
+            {labels.backToProject} <span aria-hidden="true">›</span>
           </button>
         </div>
       </div>
