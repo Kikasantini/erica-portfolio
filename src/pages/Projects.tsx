@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import LatestCommit from '../components/LatestCommit'
 
 type ProjectImage = {
   type: 'image'
@@ -37,449 +38,440 @@ function ProjectIllustration({ src }: { src: string }) {
       alt=""
       aria-hidden="true"
       loading="lazy"
-      onError={() => setImageFormat((current) => current === 'jpg' ? 'png' : null)}
+      onError={() =>
+        setImageFormat((current) => (current === 'jpg' ? 'png' : null))
+      }
     />
   )
 }
 
-type GroupKey = 'frontend' | 'backend' | 'ai' | 'database' | 'testing' | 'automation' | 'quality' | 'tools' | 'programming' | 'data' | 'routing' | 'versioning' | 'game' | 'libraries' | 'design' | 'platform' | 'hardware' | 'connectivity' | 'monitoring' | 'messaging' | 'document' | 'scheduling' | 'environment'
+type GroupKey =
+  | 'frontend'
+  | 'backend'
+  | 'ai'
+  | 'database'
+  | 'testing'
+  | 'automation'
+  | 'quality'
+  | 'tools'
+  | 'programming'
+  | 'data'
+  | 'routing'
+  | 'versioning'
+  | 'game'
+  | 'libraries'
+  | 'design'
+  | 'platform'
+  | 'hardware'
+  | 'connectivity'
+  | 'monitoring'
+  | 'messaging'
+  | 'document'
+  | 'scheduling'
+  | 'environment'
 type TechnologyGroup = { key: GroupKey; items: string[] }
 
 const projectTechGroups: Record<string, TechnologyGroup[]> = {
-  "careerPilotAi": [
+  careerPilotAi: [
     {
-      "key": "frontend",
-      "items": [
-        "React",
-        "TypeScript",
-        "JavaScript"
-      ]
+      key: 'frontend',
+      items: ['React', 'TypeScript', 'JavaScript'],
     },
     {
-      "key": "backend",
-      "items": [
-        "Java 21",
-        "Spring Boot",
-        "Maven"
-      ]
+      key: 'backend',
+      items: ['Java 21', 'Spring Boot', 'Maven'],
     },
     {
-      "key": "ai",
-      "items": [
-        "Python",
-        "FastAPI",
-        "LangGraph",
-        "Ollama"
-      ]
+      key: 'ai',
+      items: ['Python', 'FastAPI', 'LangGraph', 'Ollama'],
     },
     {
-      "key": "database",
-      "items": [
-        "PostgreSQL"
-      ]
+      key: 'database',
+      items: ['PostgreSQL'],
     },
     {
-      "key": "testing",
-      "items": [
-        "JUnit",
-        "FastAPI TestClient"
-      ]
+      key: 'testing',
+      items: ['JUnit', 'FastAPI TestClient'],
     },
     {
-      "key": "automation",
-      "items": [
-        "JavaScript",
-        "Node.js",
-        "Maven Wrapper",
-        "Husky",
-        "lint-staged"
-      ]
+      key: 'automation',
+      items: ['JavaScript', 'Node.js', 'Maven Wrapper', 'Husky', 'lint-staged'],
     },
     {
-      "key": "quality",
-      "items": [
-        "Ruff",
-        "Spotless"
-      ]
+      key: 'quality',
+      items: ['Ruff', 'Spotless'],
     },
     {
-      "key": "tools",
-      "items": [
-        "VS Code",
-        "Git",
-        "GitHub"
-      ]
-    }
+      key: 'tools',
+      items: ['VS Code', 'Git', 'GitHub'],
+    },
   ],
-  "productionCellSimulator": [
+  productionCellSimulator: [
     {
-      "key": "programming",
-      "items": [
-        "Python 3"
-      ]
+      key: 'programming',
+      items: ['Python 3'],
     },
     {
-      "key": "data",
-      "items": [
-        "JSON",
-        "CSV",
-        "UUID",
-        "datetime"
-      ]
+      key: 'data',
+      items: ['JSON', 'CSV', 'UUID', 'datetime'],
     },
     {
-      "key": "testing",
-      "items": [
-        "unittest",
-        "unittest.mock"
-      ]
+      key: 'testing',
+      items: ['unittest', 'unittest.mock'],
     },
     {
-      "key": "tools",
-      "items": [
-        "Git",
-        "GitHub",
-        "Visual Studio Code"
-      ]
-    }
+      key: 'tools',
+      items: ['Git', 'GitHub', 'Visual Studio Code'],
+    },
   ],
-  "portfolioWebsite": [
+  portfolioWebsite: [
     {
-      "key": "frontend",
-      "items": [
-        "React",
-        "TypeScript",
-        "JavaScript",
-        "HTML",
-        "CSS"
-      ]
+      key: 'frontend',
+      items: ['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS'],
     },
     {
-      "key": "routing",
-      "items": [
-        "React Router",
-        "i18next",
-        "react-i18next"
-      ]
+      key: 'routing',
+      items: ['React Router', 'i18next', 'react-i18next'],
     },
     {
-      "key": "tools",
-      "items": [
-        "Vite",
-        "Node.js",
-        "npm",
-        "VS Code",
-        "Git Bash"
-      ]
+      key: 'tools',
+      items: ['Vite', 'Node.js', 'npm', 'VS Code', 'Git Bash'],
     },
     {
-      "key": "quality",
-      "items": [
-        "ESLint",
-        "Prettier",
-        "Husky",
-        "lint-staged"
-      ]
+      key: 'quality',
+      items: ['ESLint', 'Prettier', 'Husky', 'lint-staged'],
     },
     {
-      "key": "versioning",
-      "items": [
-        "Git",
-        "GitHub",
-        "GitHub Actions",
-        "GitHub Pages"
-      ]
-    }
+      key: 'versioning',
+      items: ['Git', 'GitHub', 'GitHub Actions', 'GitHub Pages'],
+    },
   ],
-  "runnerRpg": [
+  runnerRpg: [
     {
-      "key": "game",
-      "items": [
-        "C#",
-        "Unity",
-        "Unity UI",
-        "ScriptableObjects"
-      ]
+      key: 'game',
+      items: ['C#', 'Unity', 'Unity UI', 'ScriptableObjects'],
     },
     {
-      "key": "libraries",
-      "items": [
-        "DOTween"
-      ]
+      key: 'libraries',
+      items: ['DOTween'],
     },
     {
-      "key": "design",
-      "items": [
-        "Adobe Illustrator",
-        "Adobe Photoshop",
-        "Inkscape"
-      ]
+      key: 'design',
+      items: ['Adobe Illustrator', 'Adobe Photoshop', 'Inkscape'],
     },
     {
-      "key": "platform",
-      "items": [
-        "Android"
-      ]
-    }
+      key: 'platform',
+      items: ['Android'],
+    },
   ],
-  "esp8266WeatherStationGame": [
+  esp8266WeatherStationGame: [
     {
-      "key": "hardware",
-      "items": [
-        "ESP8266",
-        "BME280",
-        "SSD1306 OLED",
-        "LEDs",
-        "Push button",
-        "Buzzer"
-      ]
+      key: 'hardware',
+      items: [
+        'ESP8266',
+        'BME280',
+        'SSD1306 OLED',
+        'LEDs',
+        'Push button',
+        'Buzzer',
+      ],
     },
     {
-      "key": "programming",
-      "items": [
-        "C++",
-        "Arduino"
-      ]
+      key: 'programming',
+      items: ['C++', 'Arduino'],
     },
     {
-      "key": "connectivity",
-      "items": [
-        "Wi-Fi",
-        "I²C",
-        "HTTP",
-        "NTP"
-      ]
+      key: 'connectivity',
+      items: ['Wi-Fi', 'I²C', 'HTTP', 'NTP'],
     },
     {
-      "key": "libraries",
-      "items": [
-        "NTPClient",
-        "PinButton",
-        "Adafruit GFX",
-        "Adafruit SSD1306",
-        "Adafruit Unified Sensor",
-        "Adafruit BME280"
-      ]
+      key: 'libraries',
+      items: [
+        'NTPClient',
+        'PinButton',
+        'Adafruit GFX',
+        'Adafruit SSD1306',
+        'Adafruit Unified Sensor',
+        'Adafruit BME280',
+      ],
     },
     {
-      "key": "tools",
-      "items": [
-        "Arduino IDE",
-        "draw.io"
-      ]
-    }
+      key: 'tools',
+      items: ['Arduino IDE', 'draw.io'],
+    },
   ],
-  "connectedWeatherStationZabbix": [
+  connectedWeatherStationZabbix: [
     {
-      "key": "hardware",
-      "items": [
-        "2× ESP8266",
-        "BME280",
-        "SSD1306 OLED",
-        "LEDs",
-        "Push buttons",
-        "Potentiometer"
-      ]
+      key: 'hardware',
+      items: [
+        '2× ESP8266',
+        'BME280',
+        'SSD1306 OLED',
+        'LEDs',
+        'Push buttons',
+        'Potentiometer',
+      ],
     },
     {
-      "key": "programming",
-      "items": [
-        "C++",
-        "Arduino",
-        "MicroPython"
-      ]
+      key: 'programming',
+      items: ['C++', 'Arduino', 'MicroPython'],
     },
     {
-      "key": "connectivity",
-      "items": [
-        "Wi-Fi",
-        "HTTP",
-        "JSON",
-        "I²C",
-        "mDNS"
-      ]
+      key: 'connectivity',
+      items: ['Wi-Fi', 'HTTP', 'JSON', 'I²C', 'mDNS'],
     },
     {
-      "key": "monitoring",
-      "items": [
-        "Zabbix"
-      ]
+      key: 'monitoring',
+      items: ['Zabbix'],
     },
     {
-      "key": "libraries",
-      "items": [
-        "PinButton",
-        "Adafruit Unified Sensor",
-        "Adafruit BME280",
-        "SSD1306 driver"
-      ]
+      key: 'libraries',
+      items: [
+        'PinButton',
+        'Adafruit Unified Sensor',
+        'Adafruit BME280',
+        'SSD1306 driver',
+      ],
     },
     {
-      "key": "tools",
-      "items": [
-        "Arduino IDE",
-        "draw.io"
-      ]
-    }
+      key: 'tools',
+      items: ['Arduino IDE', 'draw.io'],
+    },
   ],
-  "iotSensorMonitoringZabbixMqtt": [
+  iotSensorMonitoringZabbixMqtt: [
     {
-      "key": "hardware",
-      "items": [
-        "2× ESP8266",
-        "ESP32",
-        "BME280",
-        "GY-521/MPU-6050",
-        "SSD1306 OLED"
-      ]
+      key: 'hardware',
+      items: [
+        '2× ESP8266',
+        'ESP32',
+        'BME280',
+        'GY-521/MPU-6050',
+        'SSD1306 OLED',
+      ],
     },
     {
-      "key": "programming",
-      "items": [
-        "C++",
-        "Arduino",
-        "MicroPython"
-      ]
+      key: 'programming',
+      items: ['C++', 'Arduino', 'MicroPython'],
     },
     {
-      "key": "connectivity",
-      "items": [
-        "Wi-Fi",
-        "MQTT",
-        "HTTP",
-        "JSON"
-      ]
+      key: 'connectivity',
+      items: ['Wi-Fi', 'MQTT', 'HTTP', 'JSON'],
     },
     {
-      "key": "messaging",
-      "items": [
-        "Mosquitto"
-      ]
+      key: 'messaging',
+      items: ['Mosquitto'],
     },
     {
-      "key": "monitoring",
-      "items": [
-        "Zabbix"
-      ]
+      key: 'monitoring',
+      items: ['Zabbix'],
     },
     {
-      "key": "tools",
-      "items": [
-        "Arduino IDE",
-        "draw.io"
-      ]
-    }
+      key: 'tools',
+      items: ['Arduino IDE', 'draw.io'],
+    },
   ],
-  "translationCompany": [
+  translationCompany: [
     {
-      "key": "programming",
-      "items": [
-        "Python 3",
-        "Shell"
-      ]
+      key: 'programming',
+      items: ['Python 3', 'Shell'],
     },
     {
-      "key": "document",
-      "items": [
-        "PyPDF2",
-        "ReportLab"
-      ]
+      key: 'document',
+      items: ['PyPDF2', 'ReportLab'],
     },
     {
-      "key": "scheduling",
-      "items": [
-        "Crontab"
-      ]
+      key: 'scheduling',
+      items: ['Crontab'],
     },
     {
-      "key": "environment",
-      "items": [
-        "Linux (VM)"
-      ]
+      key: 'environment',
+      items: ['Linux (VM)'],
     },
     {
-      "key": "versioning",
-      "items": [
-        "Git",
-        "GitHub"
-      ]
-    }
-  ]
+      key: 'versioning',
+      items: ['Git', 'GitHub'],
+    },
+  ],
 }
 
 const primaryTech: Record<string, string[]> = {
-  "careerPilotAi": [
-    "React",
-    "Spring Boot",
-    "FastAPI"
-  ],
-  "productionCellSimulator": [
-    "Python 3",
-    "JSON",
-    "CSV"
-  ],
-  "portfolioWebsite": [
-    "React",
-    "TypeScript",
-    "Vite"
-  ],
-  "runnerRpg": [
-    "C#",
-    "Unity",
-    "ScriptableObjects"
-  ],
-  "esp8266WeatherStationGame": [
-    "ESP8266",
-    "C++",
-    "Arduino"
-  ],
-  "connectedWeatherStationZabbix": [
-    "ESP8266",
-    "MicroPython",
-    "Zabbix"
-  ],
-  "iotSensorMonitoringZabbixMqtt": [
-    "ESP32",
-    "MQTT",
-    "Zabbix"
-  ],
-  "translationCompany": [
-    "Python 3",
-    "PyPDF2",
-    "ReportLab"
-  ]
+  careerPilotAi: ['React', 'Spring Boot', 'FastAPI'],
+  productionCellSimulator: ['Python 3', 'JSON', 'CSV'],
+  portfolioWebsite: ['React', 'TypeScript', 'Vite'],
+  runnerRpg: ['C#', 'Unity', 'ScriptableObjects'],
+  esp8266WeatherStationGame: ['ESP8266', 'C++', 'Arduino'],
+  connectedWeatherStationZabbix: ['ESP8266', 'MicroPython', 'Zabbix'],
+  iotSensorMonitoringZabbixMqtt: ['ESP32', 'MQTT', 'Zabbix'],
+  translationCompany: ['Python 3', 'PyPDF2', 'ReportLab'],
 }
 
 // Simple line icons match the portfolio's existing icon language.
 function TechnologyGroupIcon({ name }: { name: GroupKey }) {
   switch (name) {
-    case 'frontend': return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="3.5" width="19" height="17" rx="2"/><path d="M2.5 8h19m-11 3.5-3 2.5 3 2.5m3-5 3 2.5-3 2.5"/></svg>
-    case 'backend': return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6h.01M7 17h.01"/></svg>
-    case 'ai': return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5a3 3 0 0 0-5 1 4 4 0 0 0-2 7 4 4 0 0 0 3 6 3 3 0 0 0 4-2V5ZM12 5a3 3 0 0 1 5 1 4 4 0 0 1 2 7 4 4 0 0 1-3 6 3 3 0 0 1-4-2V5Z"/></svg>
-    case 'database': return <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0"/></svg>
-    case 'testing': return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v7l-6 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-6-9V3M8 16h8"/></svg>
-    case 'automation': return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 10 3 2-3 2m5 0h3"/></svg>
-    case 'quality': return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>
-    case 'tools': return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 17.5 6.5 21l5.2-5.3a5 5 0 0 0 6.4-6.4l-3.2 3.2-3.4-3.4Z"/></svg>
-    case 'programming': return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4m8-8 4 4-4 4m-3-11-2 14"/></svg>
-    case 'data': return <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0"/></svg>
-    case 'routing': return <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 5h7a5 5 0 0 1 0 10H9a4 4 0 0 0-4 4"/></svg>
-    case 'versioning': return <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="4" r="2"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="6" r="2"/><path d="M6 6v12M8 8c6 0 10-2 10-2"/></svg>
-    case 'game': return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h4m-2-2v4m7-1h.01M18 11h.01M5 7h14l3 9a3 3 0 0 1-5 3l-2-2H9l-2 2a3 3 0 0 1-5-3Z"/></svg>
-    case 'libraries': return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="6" height="18"/><rect x="11" y="3" width="4" height="18"/><path d="m17 7 4-1 2 14-4 1z"/></svg>
-    case 'design': return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 4 7 7-9 9-7-7 9-9ZM4 20h16M15 6l3 3"/></svg>
-    case 'platform': return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg>
-    case 'hardware': return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v5m6-5v5M9 18v5m6-5v5M1 9h5M1 15h5m12-6h5m-5 6h5"/></svg>
-    case 'connectivity': return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1"/></svg>
-    case 'monitoring': return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>
-    case 'messaging': return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v13H9l-5 4Z"/></svg>
-    case 'document': return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6zM15 2v5h5M9 12h8M9 16h8"/></svg>
-    case 'scheduling': return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6M17 2v6M3 11h18M9 15h3"/></svg>
-    case 'environment': return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 10 3 2-3 2m5 0h3"/></svg>
+    case 'frontend':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2.5" y="3.5" width="19" height="17" rx="2" />
+          <path d="M2.5 8h19m-11 3.5-3 2.5 3 2.5m3-5 3 2.5-3 2.5" />
+        </svg>
+      )
+    case 'backend':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="7" rx="2" />
+          <rect x="3" y="14" width="18" height="7" rx="2" />
+          <path d="M7 6h.01M7 17h.01" />
+        </svg>
+      )
+    case 'ai':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 5a3 3 0 0 0-5 1 4 4 0 0 0-2 7 4 4 0 0 0 3 6 3 3 0 0 0 4-2V5ZM12 5a3 3 0 0 1 5 1 4 4 0 0 1 2 7 4 4 0 0 1-3 6 3 3 0 0 1-4-2V5Z" />
+        </svg>
+      )
+    case 'database':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <ellipse cx="12" cy="5" rx="9" ry="3" />
+          <path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0" />
+        </svg>
+      )
+    case 'testing':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 3h6M10 3v7l-6 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-6-9V3M8 16h8" />
+        </svg>
+      )
+    case 'automation':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <path d="m8 10 3 2-3 2m5 0h3" />
+        </svg>
+      )
+    case 'quality':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m4 12 5 5L20 6" />
+        </svg>
+      )
+    case 'tools':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 17.5 6.5 21l5.2-5.3a5 5 0 0 0 6.4-6.4l-3.2 3.2-3.4-3.4Z" />
+        </svg>
+      )
+    case 'programming':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m8 8-4 4 4 4m8-8 4 4-4 4m-3-11-2 14" />
+        </svg>
+      )
+    case 'data':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <ellipse cx="12" cy="5" rx="9" ry="3" />
+          <path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0" />
+        </svg>
+      )
+    case 'routing':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="5" cy="5" r="2" />
+          <circle cx="19" cy="19" r="2" />
+          <path d="M7 5h7a5 5 0 0 1 0 10H9a4 4 0 0 0-4 4" />
+        </svg>
+      )
+    case 'versioning':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="6" cy="4" r="2" />
+          <circle cx="6" cy="20" r="2" />
+          <circle cx="18" cy="6" r="2" />
+          <path d="M6 6v12M8 8c6 0 10-2 10-2" />
+        </svg>
+      )
+    case 'game':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 12h4m-2-2v4m7-1h.01M18 11h.01M5 7h14l3 9a3 3 0 0 1-5 3l-2-2H9l-2 2a3 3 0 0 1-5-3Z" />
+        </svg>
+      )
+    case 'libraries':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="4" y="3" width="6" height="18" />
+          <rect x="11" y="3" width="4" height="18" />
+          <path d="m17 7 4-1 2 14-4 1z" />
+        </svg>
+      )
+    case 'design':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m13 4 7 7-9 9-7-7 9-9ZM4 20h16M15 6l3 3" />
+        </svg>
+      )
+    case 'platform':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="6" y="2" width="12" height="20" rx="2" />
+          <path d="M10 18h4" />
+        </svg>
+      )
+    case 'hardware':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="6" y="6" width="12" height="12" rx="2" />
+          <path d="M9 1v5m6-5v5M9 18v5m6-5v5M1 9h5M1 15h5m12-6h5m-5 6h5" />
+        </svg>
+      )
+    case 'connectivity':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M9 16a5 5 0 0 1 6 0" />
+          <circle cx="12" cy="20" r="1" />
+        </svg>
+      )
+    case 'monitoring':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 12h4l3-7 4 14 3-7h4" />
+        </svg>
+      )
+    case 'messaging':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 4h16v13H9l-5 4Z" />
+        </svg>
+      )
+    case 'document':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 2h9l5 5v15H6zM15 2v5h5M9 12h8M9 16h8" />
+        </svg>
+      )
+    case 'scheduling':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="16" rx="2" />
+          <path d="M7 2v6M17 2v6M3 11h18M9 15h3" />
+        </svg>
+      )
+    case 'environment':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <path d="m8 10 3 2-3 2m5 0h3" />
+        </svg>
+      )
   }
 }
 
-function ProjectCard({ project, illustrationSrc, labels }: {
+function ProjectCard({
+  project,
+  illustrationSrc,
+  labels,
+}: {
   project: ProjectItem
   illustrationSrc?: string
   labels: {
@@ -490,16 +482,28 @@ function ProjectCard({ project, illustrationSrc, labels }: {
   }
 }) {
   const [isFlipped, setIsFlipped] = useState(false)
-  const featuredTech = primaryTech[project.id] ?? project.technologies.split('·').slice(0, 3)
+  const featuredTech =
+    primaryTech[project.id] ?? project.technologies.split('·').slice(0, 3)
   const groupedTech = projectTechGroups[project.id] ?? [
-    { key: 'tools' as const, items: project.technologies.split('·').map((tech) => tech.trim()) },
+    {
+      key: 'tools' as const,
+      items: project.technologies.split('·').map((tech) => tech.trim()),
+    },
   ]
+  const { t: projectT, i18n } = useTranslation('projects')
 
   return (
     <article className="project-item project-item--editorial" key={project.id}>
-      {project.status && <span className="project-status">{project.status}</span>}
-      <div className={`project-item__flip-inner${isFlipped ? ' is-flipped' : ''}`}>
-        <div className="project-item__face project-item__face--front" aria-hidden={isFlipped}>
+      {project.status && (
+        <span className="project-status">{project.status}</span>
+      )}
+      <div
+        className={`project-item__flip-inner${isFlipped ? ' is-flipped' : ''}`}
+      >
+        <div
+          className="project-item__face project-item__face--front"
+          aria-hidden={isFlipped}
+        >
           {illustrationSrc && <ProjectIllustration src={illustrationSrc} />}
           <div className="project-item__content">
             <div className="project-item__title-row">
@@ -522,11 +526,23 @@ function ProjectCard({ project, illustrationSrc, labels }: {
                 <li key={project.id + '-highlight-' + index}>{highlight}</li>
               ))}
             </ul>
+            {project.status && (
+              <LatestCommit
+                githubUrl={project.githubUrl}
+                label={projectT('latestCommit')}
+                language={i18n.resolvedLanguage ?? 'en'}
+              />
+            )}
             <div className="project-item__technologies">
               <h4>{labels.technologies}</h4>
               <div className="project-item__tech-preview">
-                <ul className="technology-list project-item__main-tech-list" aria-label={labels.technologies}>
-                  {featuredTech.map((tech) => <li key={tech}>{tech}</li>)}
+                <ul
+                  className="technology-list project-item__main-tech-list"
+                  aria-label={labels.technologies}
+                >
+                  {featuredTech.map((tech) => (
+                    <li key={tech}>{tech}</li>
+                  ))}
                 </ul>
                 <button
                   className="project-item__flip-link"
@@ -541,18 +557,27 @@ function ProjectCard({ project, illustrationSrc, labels }: {
             </div>
           </div>
         </div>
-        <div className="project-item__face project-item__face--back" aria-hidden={!isFlipped}>
+        <div
+          className="project-item__face project-item__face--back"
+          aria-hidden={!isFlipped}
+        >
           <h3>{project.title}</h3>
           <h4>{labels.technologies}</h4>
           <div className="project-item__tech-groups">
             {groupedTech.map((group) => (
               <div className="project-item__tech-group" key={group.key}>
-                <span className="project-item__tech-category"><TechnologyGroupIcon name={group.key} /><strong>{labels.groups[group.key]}</strong></span>
-                <span>{group.items.map((tech, index) => (
-                  <span className="project-item__tech-name" key={tech}>
-                    {tech}{index < group.items.length - 1 ? ' · ' : ''}
-                  </span>
-                ))}</span>
+                <span className="project-item__tech-category">
+                  <TechnologyGroupIcon name={group.key} />
+                  <strong>{labels.groups[group.key]}</strong>
+                </span>
+                <span>
+                  {group.items.map((tech, index) => (
+                    <span className="project-item__tech-name" key={tech}>
+                      {tech}
+                      {index < group.items.length - 1 ? ' · ' : ''}
+                    </span>
+                  ))}
+                </span>
               </div>
             ))}
           </div>
@@ -573,7 +598,9 @@ function ProjectCard({ project, illustrationSrc, labels }: {
 export default function Projects() {
   const { t } = useTranslation('projects')
   const sections = t('sections', { returnObjects: true }) as ProjectSection[]
-  const [selectedTechnology, setSelectedTechnology] = useState<string | null>(null)
+  const [selectedTechnology, setSelectedTechnology] = useState<string | null>(
+    null,
+  )
   const [searchOpen, setSearchOpen] = useState(false)
   const [activeSuggestion, setActiveSuggestion] = useState(0)
   const [technologySearch, setTechnologySearch] = useState('')
@@ -593,29 +620,42 @@ export default function Projects() {
   const technologyCounts = new Map<string, number>()
   for (const project of projectsInDisplayOrder) {
     const uniqueTechnologies = new Set(
-      project.technologies.split('·').map((technology) => technology.trim()).filter(Boolean),
+      project.technologies
+        .split('·')
+        .map((technology) => technology.trim())
+        .filter(Boolean),
     )
     for (const technology of uniqueTechnologies) {
-      technologyCounts.set(technology, (technologyCounts.get(technology) ?? 0) + 1)
+      technologyCounts.set(
+        technology,
+        (technologyCounts.get(technology) ?? 0) + 1,
+      )
     }
   }
-  const allTechnologies = [...technologyCounts.keys()].sort((a, b) => a.localeCompare(b))
+  const allTechnologies = [...technologyCounts.keys()].sort((a, b) =>
+    a.localeCompare(b),
+  )
   const searchTerm = technologySearch.trim().toLocaleLowerCase()
   // Match any substring and common aliases, e.g. "udio" or "vscode".
   const searchMatches = searchTerm
     ? allTechnologies.filter((technology) => {
         const lower = technology.toLocaleLowerCase()
         const compact = lower.replace(/[\s._-]/g, '')
-        const aliases = technology === 'Visual Studio Code' ? ['vscode', 'vs code'] : []
-        return lower.includes(searchTerm) ||
+        const aliases =
+          technology === 'Visual Studio Code' ? ['vscode', 'vs code'] : []
+        return (
+          lower.includes(searchTerm) ||
           compact.includes(searchTerm.replace(/[\s._-]/g, '')) ||
           aliases.some((alias) => alias.includes(searchTerm))
+        )
       })
     : []
   const visibleSuggestions = searchMatches.slice(0, 12)
   const filteredProjects = selectedTechnology
     ? projectsInDisplayOrder.filter((project) =>
-        project.technologies.split('·').some((technology) => technology.trim() === selectedTechnology),
+        project.technologies
+          .split('·')
+          .some((technology) => technology.trim() === selectedTechnology),
       )
     : []
 
@@ -623,7 +663,10 @@ export default function Projects() {
     technologies: t('technologiesAndTools'),
     viewAll: t('viewAllTechnologies'),
     backToProject: t('backToProject'),
-    groups: t('technologyGroups', { returnObjects: true }) as Record<GroupKey, string>,
+    groups: t('technologyGroups', { returnObjects: true }) as Record<
+      GroupKey,
+      string
+    >,
   }
 
   function selectTechnology(technology: string | null) {
@@ -648,10 +691,14 @@ export default function Projects() {
           <div
             className="project-filter__search"
             onBlur={(event) => {
-              if (!event.currentTarget.contains(event.relatedTarget)) setSearchOpen(false)
+              if (!event.currentTarget.contains(event.relatedTarget))
+                setSearchOpen(false)
             }}
           >
-            <label className="visually-hidden" htmlFor="project-technology-search">
+            <label
+              className="visually-hidden"
+              htmlFor="project-technology-search"
+            >
               {t('filter.searchLabel')}
             </label>
             <input
@@ -662,9 +709,11 @@ export default function Projects() {
               aria-autocomplete="list"
               aria-expanded={searchOpen && searchTerm.length > 0}
               aria-controls="project-technology-suggestions"
-              aria-activedescendant={searchOpen && visibleSuggestions[activeSuggestion]
-                ? `project-tech-option-${activeSuggestion}`
-                : undefined}
+              aria-activedescendant={
+                searchOpen && visibleSuggestions[activeSuggestion]
+                  ? `project-tech-option-${activeSuggestion}`
+                  : undefined
+              }
               placeholder={t('filter.searchPlaceholder')}
               value={technologySearch}
               onFocus={() => setSearchOpen(true)}
@@ -678,19 +727,31 @@ export default function Projects() {
                   setSearchOpen(false)
                   return
                 }
-                if (event.key === 'ArrowDown' && visibleSuggestions.length > 0) {
+                if (
+                  event.key === 'ArrowDown' &&
+                  visibleSuggestions.length > 0
+                ) {
                   event.preventDefault()
                   setSearchOpen(true)
-                  setActiveSuggestion((index) => Math.min(index + 1, visibleSuggestions.length - 1))
+                  setActiveSuggestion((index) =>
+                    Math.min(index + 1, visibleSuggestions.length - 1),
+                  )
                 }
                 if (event.key === 'ArrowUp' && visibleSuggestions.length > 0) {
                   event.preventDefault()
                   setSearchOpen(true)
                   setActiveSuggestion((index) => Math.max(index - 1, 0))
                 }
-                if (event.key === 'Enter' && searchOpen && visibleSuggestions.length > 0) {
+                if (
+                  event.key === 'Enter' &&
+                  searchOpen &&
+                  visibleSuggestions.length > 0
+                ) {
                   event.preventDefault()
-                  selectTechnology(visibleSuggestions[activeSuggestion] ?? visibleSuggestions[0])
+                  selectTechnology(
+                    visibleSuggestions[activeSuggestion] ??
+                      visibleSuggestions[0],
+                  )
                 }
               }}
             />
@@ -701,23 +762,29 @@ export default function Projects() {
                 role="listbox"
                 aria-label={t('filter.searchLabel')}
               >
-                {visibleSuggestions.length > 0 ? visibleSuggestions.map((technology, index) => (
-                  <button
-                    type="button"
-                    id={`project-tech-option-${index}`}
-                    key={technology}
-                    role="option"
-                    aria-selected={index === activeSuggestion}
-                    className={`project-filter__suggestion${index === activeSuggestion ? ' is-highlighted' : ''}`}
-                    onMouseEnter={() => setActiveSuggestion(index)}
-                    onMouseDown={(event) => event.preventDefault()}
-                    onClick={() => selectTechnology(technology)}
-                  >
-                    <span>{technology}</span>
-                    <span className="project-filter__count">{technologyCounts.get(technology)}</span>
-                  </button>
-                )) : (
-                  <div className="project-filter__empty">{t('filter.noTechnology')}</div>
+                {visibleSuggestions.length > 0 ? (
+                  visibleSuggestions.map((technology, index) => (
+                    <button
+                      type="button"
+                      id={`project-tech-option-${index}`}
+                      key={technology}
+                      role="option"
+                      aria-selected={index === activeSuggestion}
+                      className={`project-filter__suggestion${index === activeSuggestion ? ' is-highlighted' : ''}`}
+                      onMouseEnter={() => setActiveSuggestion(index)}
+                      onMouseDown={(event) => event.preventDefault()}
+                      onClick={() => selectTechnology(technology)}
+                    >
+                      <span>{technology}</span>
+                      <span className="project-filter__count">
+                        {technologyCounts.get(technology)}
+                      </span>
+                    </button>
+                  ))
+                ) : (
+                  <div className="project-filter__empty">
+                    {t('filter.noTechnology')}
+                  </div>
                 )}
               </div>
             )}
@@ -726,10 +793,17 @@ export default function Projects() {
       </div>
 
       {selectedTechnology ? (
-        <section className="project-section project-section--filtered" aria-live="polite">
+        <section
+          className="project-section project-section--filtered"
+          aria-live="polite"
+        >
           <div className="project-filter__results-heading">
-            <h2>{t('filter.resultsTitle', { technology: selectedTechnology })}</h2>
-            <span>{t('filter.resultCount', { count: filteredProjects.length })}</span>
+            <h2>
+              {t('filter.resultsTitle', { technology: selectedTechnology })}
+            </h2>
+            <span>
+              {t('filter.resultCount', { count: filteredProjects.length })}
+            </span>
           </div>
           <div className="project-list">
             {filteredProjects.map((project) => (
@@ -759,7 +833,6 @@ export default function Projects() {
           </section>
         ))
       )}
-
     </main>
   )
 }
