@@ -36,7 +36,7 @@
         {
           "id": "portfolioWebsite",
           "title": "Site de portfólio",
-          "technologies": "React · TypeScript · Cloudflare Web Analytics · JavaScript · HTML · CSS · React Router · i18next · react-i18next · Vite · Node.js · npm · VS Code · Git Bash · ESLint · Prettier · Husky · lint-staged · Git · GitHub · GitHub Actions · GitHub Pages",
+          "technologies": "React · TypeScript · JavaScript · HTML · CSS · React Router · i18next · react-i18next · Vite · Node.js · npm · VS Code · Git Bash · ESLint · Prettier · Husky · lint-staged · Git · GitHub · GitHub Actions · GitHub Pages · Cloudflare Web Analytics",
           "githubUrl": "https://github.com/Kikasantini/erica-portfolio",
           "githubLabel": "Ver no GitHub",
           "media": [],

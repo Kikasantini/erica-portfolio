@@ -135,7 +135,7 @@ const projectTechGroups: Record<string, TechnologyGroup[]> = {
     },
     {
       key: 'tools',
-      items: ['Vite', 'Node.js', 'npm', 'VS Code', 'Git Bash'],
+      items: ['Vite', 'Node.js', 'npm', 'VS Code', 'Git Bash', 'Cloudflare Web Analytics'],
     },
     {
       key: 'quality',
