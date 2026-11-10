@@ -8,7 +8,8 @@
     <script>
       try {
         const savedTheme = localStorage.getItem('erica-portfolio-theme-v1')
-        document.documentElement.dataset.theme = savedTheme === 'dark' ? 'dark' : 'light'
+        document.documentElement.dataset.theme =
+          savedTheme === 'dark' ? 'dark' : 'light'
       } catch {
         document.documentElement.dataset.theme = 'light'
       }
@@ -18,5 +19,27 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      let analyticsOptOut = false
+
+      try {
+        analyticsOptOut =
+          localStorage.getItem('portfolioAnalyticsOptOut') === 'true'
+      } catch {
+        // Se o armazenamento estiver indisponível, o analytics continua ativo.
+      }
+
+      if (!analyticsOptOut) {
+        const analyticsScript = document.createElement('script')
+        analyticsScript.type = 'module'
+        analyticsScript.src =
+          'https://static.cloudflareinsights.com/beacon.min.js'
+        analyticsScript.setAttribute(
+          'data-cf-beacon',
+          JSON.stringify({ token: '703edaddccd64da69f30a4385a39b133' }),
+        )
+        document.body.appendChild(analyticsScript)
+      }
+    </script>
   </body>
 </html>
