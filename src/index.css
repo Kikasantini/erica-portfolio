@@ -3677,8 +3677,8 @@ p {
   white-space: nowrap;
 }
 .projects-page .project-item__flip-back {
-  align-self: flex-start;
-  margin: auto 0 -6px -8px;
+  align-self: flex-end;
+  margin: auto -8px -6px 0;
 }
 .home-page .home-featured__all:is(:hover, :focus-visible, :active),
 .home-page .home-recommendation__link:is(:hover, :focus-visible, :active),
