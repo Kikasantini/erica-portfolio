@@ -83,7 +83,8 @@
         "Flyway",
         "Bean Validation",
         "XML"
-      ]
+      ],
+      "companyDescription": "Une entreprise de logiciels spécialisée dans la transformation numérique de l’industrie manufacturière, offrant des solutions ERP, MES et d’autres logiciels industriels."
     },
     {
       "id": "sageConsultant",
@@ -142,7 +143,8 @@
         "Trello",
         "Miro"
       ],
-      "additionalTechnologies": []
+      "additionalTechnologies": [],
+      "companyDescription": "Un studio de développement de jeux vidéo axé sur les jeux hypercasual et les jeux en réalité virtuelle (VR)."
     }
   ],
   "education": [
@@ -179,7 +181,7 @@
       "period": "Mars 2013 - novembre 2016",
       "details": [
         "Suivi des cours sur les structures de données, les algorithmes, C, C++, la programmation orientée objet et les bases de données.",
-        "J’ai été tutrice en programmation C auprès d’autres étudiants pendant deux semestres.",
+        "J’ai accompagné plus de 20 étudiants en programmation C pendant deux semestres.",
         "Sélectionnée par mon professeur de logique et d’algorithmes parmi deux étudiants sur 50 pour participer à un concours de programmation de l’ICPC.",
         "J’ai contribué à animer des ateliers d’introduction à la logique de programmation destinés aux élèves du secondaire."
       ]
