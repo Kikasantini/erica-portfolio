@@ -17,6 +17,7 @@ type ExperienceItem = {
   role: string
   company: string
   location: string
+  companyDescription?: string
   period: string
   details: string[]
   coreTechnologies: string[]
@@ -100,6 +101,11 @@ function ExperienceEntry({ item }: { item: ExperienceItem }) {
         <span className="journey-meta-divider" aria-hidden="true" />
         <span>{item.location}</span>
       </p>
+      {item.companyDescription && (
+        <p className="timeline-item__meta timeline-item__company-description">
+          <em>{item.companyDescription}</em>
+        </p>
+      )}
       <p className="timeline-item__period">{item.period}</p>
 
       <div
