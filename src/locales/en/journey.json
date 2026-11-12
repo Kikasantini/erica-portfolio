@@ -83,7 +83,8 @@
         "Hibernate/JPA",
         "Flyway",
         "XML"
-      ]
+      ],
+      "companyDescription": "A software company specializing in digital transformation for the manufacturing industry, offering ERP, MES, and other industrial software solutions."
     },
     {
       "id": "sageConsultant",
@@ -142,7 +143,8 @@
         "Trello",
         "Miro"
       ],
-      "additionalTechnologies": []
+      "additionalTechnologies": [],
+      "companyDescription": "A game development studio focused on hypercasual and virtual reality (VR) games."
     }
   ],
   "education": [
@@ -179,7 +181,7 @@
       "period": "March 2013 - November 2016",
       "details": [
         "Completed coursework in data structures, algorithms, C, C++, object-oriented programming, and databases.",
-        "Tutored fellow students in C programming for two semesters.",
+        "Tutored over 20 students in C programming across two semesters.",
         "Selected by my Logic and Algorithms professor as one of two students out of 50 to compete in an ICPC programming contest.",
         "Helped deliver introductory logic-programming workshops for high school students."
       ]
