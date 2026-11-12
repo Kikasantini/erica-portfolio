@@ -548,6 +548,10 @@ p {
 }
 
 .timeline-item__meta,
+.timeline-item__company-description {
+  margin: 0;
+}
+
 .timeline-item__period {
   color: var(--meta-text);
   font-size: 14px;
