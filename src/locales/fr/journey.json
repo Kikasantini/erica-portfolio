@@ -28,7 +28,7 @@
       "period": "Février 2024 - octobre 2026",
       "details": [
         "Au sein de l’équipe de développement d’Aquiweb, développé et déployé des fonctionnalités full-stack utilisées par plus de 100 personnes sur le terrain de production et environ 20 gestionnaires, pour soutenir les processus de production, de gestion des stocks et d’équipement.",
-        "Développé de nouvelles fonctionnalités backend et adapté des fonctionnalités existantes à la logique métier et aux processus de fabrication propres à chaque client.",
+        "Développé et maintenu des fonctionnalités backend avec Java, Spring Boot, les principes de la programmation orientée objet (POO) et SOLID, en adaptant les fonctionnalités à la logique métier et aux processus de fabrication propres à chaque client, tout en veillant à la modularité et à la maintenabilité du code.",
         "Créé et modifié des flux de travail et des interfaces frontend pour les utilisateurs d’un système MES d’entreprise.",
         "Créé des intégrations API REST et des flux d’importation et d’exportation de données, notamment des imports d’ordres de fabrication reliant Aquiweb à des API et à d’autres logiciels.",
         "Créé un flux d’importation CSV qui traitait plus de 20 000 opérations complexes réparties sur plusieurs ordres de fabrication, dont certains en comptaient des centaines. Ajouté la validation, le traitement après importation et la création de dépendances, avec une annulation transactionnelle pour éviter les importations partielles.",
