@@ -2456,6 +2456,22 @@ p {
   }
 }
 
+/* Keep the optional company summary on its own grid row below company/location. */
+.journey-page .journey-overview__experience .experience-timeline__entry .timeline-item__company-description {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  display: block;
+  margin: 3px 0 0;
+  color: var(--meta-text);
+  font-size: 12px;
+  line-height: 1.6;
+}
+@media (max-width: 1000px) {
+  .journey-page .journey-overview__experience .experience-timeline__entry:has(.timeline-item__company-description) .timeline-item__period {
+    grid-row: 4;
+  }
+}
+
 /* Company/institution and location are separated by a subtle vertical rule. */
 .journey-page .journey-overview .timeline-item__meta {
   display: flex;
