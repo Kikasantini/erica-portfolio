@@ -28,7 +28,7 @@
       "period": "February 2024 - October 2026",
       "details": [
         "As part of the Aquiweb development team, built and deployed full-stack features used by 100+ shop-floor users and approximately 20 managers, supporting production, inventory, and equipment workflows.",
-        "Developed new backend functionality and adapted existing features to client-specific business logic and manufacturing processes.",
+        "Developed and maintained backend functionality using Java, Spring Boot, OOP, and SOLID principles, adapting features to client-specific business logic and manufacturing processes while keeping code modular and maintainable.",
         "Created and modified frontend workflows and interfaces for users of an enterprise Manufacturing Execution System (MES).",
         "Built REST API integrations and data import/export workflows, including work-order imports connecting Aquiweb with APIs and other software.",
         "Built a CSV import workflow that processed 20,000+ complex operations across multiple work orders, some with hundreds of operations. Added validation, post-import processing, and dependency creation, with transactional rollback to prevent partial imports.",
